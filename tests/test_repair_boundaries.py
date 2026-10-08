@@ -13,7 +13,7 @@ import unittest
 from unittest import mock
 
 from wheelgate import footprint, worker
-from wheelgate.runner import parsed_report, qualify, validate
+from wheelgate.runner import execute, parsed_report, qualify, validate
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
@@ -259,6 +259,37 @@ class ConsoleTimeoutReceipt(unittest.TestCase):
         self.assertEqual(result["status"], "FAIL")
         self.assertEqual(result["exception"], "AssertionError")
         self.assertIn("Expected", result["message"])
+
+
+class CapturedByteStreams(unittest.TestCase):
+    def test_non_utf8_child_output_roundtrips(self):
+        with tempfile.TemporaryDirectory() as td:
+            cp = execute([sys.executable, '-I', '-c',
+                          "import sys;sys.stdout.buffer.write(b'valid\\xc4\\xe3');"
+                          "sys.stderr.buffer.write(b'diagnostic\\xff')"],
+                         td, {}, timeout=10)
+        self.assertEqual(cp['returncode'], 0)
+        self.assertFalse(cp['timeout'])
+        self.assertEqual(cp['stdout'].encode('utf-8', 'surrogateescape'), b'valid\xc4\xe3')
+        self.assertEqual(cp['stderr'].encode('utf-8', 'surrogateescape'), b'diagnostic\xff')
+
+    def test_utf8_child_output_is_not_replaced(self):
+        with tempfile.TemporaryDirectory() as td:
+            cp = execute([sys.executable, '-I', '-c',
+                          "import sys;sys.stdout.buffer.write(bytes.fromhex('e4b8ade69687'))"],
+                         td, {}, timeout=10)
+        self.assertEqual(cp['returncode'], 0)
+        self.assertEqual(cp['stdout'], '\u4e2d\u6587')
+
+    def test_timeout_preserves_partial_bytes(self):
+        with mock.patch('wheelgate.runner.subprocess.run',
+                        side_effect=subprocess.TimeoutExpired(['owned'], 1,
+                            output=b'partial\xff', stderr=b'diagnostic\xc4\xe3')):
+            cp = execute(['owned'], '.', {}, timeout=1)
+        self.assertEqual(cp['returncode'], 124)
+        self.assertTrue(cp['timeout'])
+        self.assertEqual(cp['stdout'].encode('utf-8', 'surrogateescape'), b'partial\xff')
+        self.assertEqual(cp['stderr'].encode('utf-8', 'surrogateescape'), b'diagnostic\xc4\xe3')
 
 
 class ReproductionEntrypoint(unittest.TestCase):

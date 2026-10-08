@@ -33,6 +33,8 @@ def main():
     wheel=next(folder.glob('*.whl'));work=t/name;work.mkdir();subject,subenv,setup=prepare(work,wheel)
     if setup['status']!='READY':raise RuntimeError(str(setup))
     neutral=work/'neutral';neutral.mkdir();tests=neutral/'tests';shutil.copytree(ROOT/'tests',tests,ignore=shutil.ignore_patterns('__pycache__'));shutil.copytree(ROOT/'contracts',neutral/'contracts')
+    # The source-entrypoint test parses this file; it is not installed or run.
+    (neutral/'scripts').mkdir();shutil.copyfile(ROOT/'scripts/reproduce.py',neutral/'scripts/reproduce.py')
     (neutral/'inputs/fixture-direct').mkdir(parents=True);shutil.copyfile(ROOT/'inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl',neutral/'inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl')
     identity=run([subject,'-I','-c','import wheelgate,pathlib,sys,json;assert pathlib.Path(wheelgate.__file__).is_relative_to(pathlib.Path(sys.prefix));print(json.dumps({"module":wheelgate.__file__,"version":wheelgate.__version__,"prefix":sys.prefix}))'],neutral,subenv)
     check=run([subject,'-I','-m','unittest','discover','-s',tests,'-v'],neutral,subenv)

@@ -99,12 +99,13 @@ def parsed_report(cp, prefix, ids, batch=False):
 def execute(argv, cwd, env, timeout=60, stdin=None):
     start=time.perf_counter()
     try:
-        cp=subprocess.run(list(map(str,argv)),cwd=cwd,env=env,text=True,capture_output=True,input=stdin,timeout=timeout)
+        cp=subprocess.run(list(map(str,argv)),cwd=cwd,env=env,text=True,capture_output=True,input=stdin,timeout=timeout,
+                          encoding='utf-8',errors='surrogateescape')
         rc=cp.returncode;out=cp.stdout;err=cp.stderr;timed=False
     except subprocess.TimeoutExpired as exc:
         rc=124;out=exc.stdout or '';err=exc.stderr or '';timed=True
-        if isinstance(out,bytes): out=out.decode(errors='replace')
-        if isinstance(err,bytes): err=err.decode(errors='replace')
+        if isinstance(out,bytes): out=out.decode('utf-8',errors='surrogateescape')
+        if isinstance(err,bytes): err=err.decode('utf-8',errors='surrogateescape')
     except OSError as exc:
         rc=127;out='';err=str(exc);timed=False
     return {'argv':list(map(str,argv)), 'returncode':rc, 'stdout':out, 'stderr':err,
