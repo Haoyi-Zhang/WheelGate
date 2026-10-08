@@ -1,7 +1,7 @@
-"""Strict JSON loading and explicit schema-2 contract validation.
+"""Strict JSON loading and validation of both accepted contract schemas.
 
-Schema 1 is retained for replaying the earlier experiment. Schema 2 rejects
-silently ignored fields and uses literal installed-version dependency guards;
+Schema 1 remains accepted, with the same field and assertion applicability
+checks as schema 2. Dependency guards use literal installed versions;
 it is not a general PEP 508 resolver or an oracle inference mechanism.
 """
 from __future__ import annotations
@@ -60,7 +60,7 @@ def normalized_name(value: str) -> str:
 
 
 def validate_v2(spec: dict[str, Any]) -> None:
-    """Additional validation; the shared schema-1 checks still run first."""
+    """Strict validation for schemas 1 and 2, after the shared basic checks."""
     unknown = set(spec) - {"schema", "contracts", "profile_dependencies"}
     if unknown:
         raise ValueError(f"Unknown document fields: {sorted(unknown)}")

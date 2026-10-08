@@ -27,6 +27,13 @@ Decisions are:
 The wheel is not a security sandbox. Contracts and subject packages are trusted
 research or release-test inputs.
 
+Both accepted contract schemas (1 and 2) reject unknown fields and assertions
+that do not apply to the operation before installation. Import obligations do
+not accept value assertions; entry-point arguments and value assertions require
+`invoke: true`. The retained schema-1 smoke contract remains accepted unchanged.
+Console-child timeouts are `INVALID`, with partial output retained in the
+receipt; completed command failures and oracle mismatches remain `FAIL`.
+
 ## Retained studies
 
 | Record | Scope | Executed observations |
@@ -37,8 +44,8 @@ research or release-test inputs.
 | `results/footprint/matrix.json` | Eight support/code/data context controls | 24 |
 | `results/package/self-check.json` | Direct and sdist-derived installation of WheelGate itself | 2 routes |
 
-The source suite contains 140 tests plus six subtests. Each installed WheelGate
-route in `self-check.json` runs the same suite outside the checkout, verifies
+The retained source-suite records contain 140 tests plus six subtests. Each installed WheelGate
+route in `self-check.json` runs that recorded suite outside the checkout, verifies
 module origin and version, and exercises healthy and missing-resource fixtures.
 The direct and sdist-derived software wheels have equal package-payload hashes.
 

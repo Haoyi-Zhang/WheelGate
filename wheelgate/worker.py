@@ -201,12 +201,32 @@ def _evaluate_console_child(c: dict) -> dict:
 def _invoke_console_child(c: dict) -> dict:
     request = pathlib.Path.cwd() / "console-contract.json"
     request.write_text(json.dumps(c, sort_keys=True), encoding="utf-8")
-    cp = subprocess.run(
-        [sys.executable, "-I", pathlib.Path(__file__).resolve(), "--console-child", request],
-        capture_output=True,
-        text=True,
-        timeout=c.get("timeout", 10) + 1,
-    )
+    try:
+        cp = subprocess.run(
+            [sys.executable, "-I", pathlib.Path(__file__).resolve(), "--console-child", request],
+            capture_output=True,
+            text=True,
+            timeout=c.get("timeout", 10) + 1,
+        )
+    except subprocess.TimeoutExpired as exc:
+        output, errors = exc.stdout or "", exc.stderr or ""
+        if isinstance(output, bytes):
+            output = output.decode(errors="replace")
+        if isinstance(errors, bytes):
+            errors = errors.decode(errors="replace")
+        return {
+            "exception": type(exc).__name__,
+            "message": str(exc),
+            "console_process": {
+                "argv": list(map(str, exc.cmd)),
+                "returncode": 124,
+                "timeout": True,
+                "timeout_seconds": exc.timeout,
+                "stdout": output,
+                "stderr": errors,
+            },
+            "_forced_status": "INVALID",
+        }
     prefix = "WHEELGATE_CONSOLE="
     lines = [line[len(prefix) :] for line in cp.stdout.splitlines() if line.startswith(prefix)]
     if len(lines) != 1:

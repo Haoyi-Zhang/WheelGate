@@ -111,7 +111,7 @@ def main() -> int:
     stages.append(("installed-package", [sys.executable, "scripts/package_check.py"], artifact))
     stages.append(("summary", [sys.executable, "scripts/summarize.py"], artifact))
     if args.compile_paper:
-        stages.append(("paper-build", ["sh", "build.sh"], paper))
+        stages.append(("paper-build", [sys.executable, "build.py"], paper))
         stages.append(
             (
                 "paper-verify",

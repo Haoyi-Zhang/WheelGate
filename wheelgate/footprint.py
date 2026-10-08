@@ -54,6 +54,12 @@ def _roots() -> tuple[tuple[pathlib.Path, ...], tuple[pathlib.Path, ...]]:
         root = _resolved(paths.get(key, ""))
         if root is not None and root not in stdlib_roots:
             stdlib_roots.append(root)
+    # Windows venvs share the base interpreter's standard-library extensions.
+    # Only its DLLs directory is allowed, never the whole base prefix.
+    if sys.platform == "win32":
+        root = _resolved(pathlib.Path(sys.base_prefix) / "DLLs")
+        if root is not None and root.is_dir() and root not in stdlib_roots:
+            stdlib_roots.append(root)
     # A base interpreter's third-party directory is not part of the stdlib,
     # even when a venv's sysconfig only reports its own site-packages roots.
     for root in stdlib_roots:

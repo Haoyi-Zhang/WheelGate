@@ -37,8 +37,7 @@ def validate(spec: dict) -> None:
         timeout = c.get('timeout', 10)
         if isinstance(timeout,bool) or not isinstance(timeout,(int,float)) or not 0 < timeout <= 60:
             raise ValueError('timeout must be >0 and <=60 seconds')
-    if spec['schema'] == 2:
-        validate_v2(spec)
+    validate_v2(spec)
 
 def normalized_name(value):
     return re.sub(r"[-_.]+", "-", value).lower()

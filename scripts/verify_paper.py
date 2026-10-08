@@ -35,9 +35,9 @@ AUTHORS = [
     {
         "name": "Xunzhu Tang",
         "orcid": "0000-0002-6377-0884",
-        "institution": "University of Luxembourg",
-        "city_country": "Luxembourg, Luxembourg",
-        "emails": ["xunzhu.tang@uni.lu", "realdanieltang@gmail.com"],
+        "institution": "AutoTrust AI",
+        "city_country": None,
+        "emails": ["realdanieltang@gmail.com"],
         "corresponding": True,
     },
 ]
@@ -102,7 +102,8 @@ def main() -> int:
 
     for author in AUTHORS:
         for value in [author["name"], author["orcid"], author["institution"], author["city_country"], *author["emails"]]:
-            require(value in tex, f"author metadata missing: {value}")
+            if value is not None:
+                require(value in tex, f"author metadata missing: {value}")
     require(tex.count("Corresponding author") == 1, "corresponding-author marker must appear exactly once")
 
     keys = bib_keys(bib)
@@ -179,7 +180,7 @@ def main() -> int:
     if args.render_dir is not None:
         render_dir = args.render_dir.resolve()
         if render_dir.exists():
-            shutil.rmtree(render_dir)
+            raise ValueError("Use a new render directory; existing contents are preserved.")
         render_dir.mkdir(parents=True)
         render = subprocess.run(
             ["pdftoppm", "-png", "-r", "120", str(pdf_path), str(render_dir / "page")],
