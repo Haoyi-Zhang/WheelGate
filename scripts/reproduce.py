@@ -98,6 +98,7 @@ def main() -> int:
 
     if args.full_route:
         remove(artifact / "results/routes/matrix.json")
+        remove(artifact / "results/routes/matrix-assets")
         remove(artifact / "results/routes/routes-complete-assets")
         shutil.copyfile(artifact / "scripts/route_matrix.py", artifact / "results/routes/provenance/route_matrix.py")
         stages.append(("route-matrix", [sys.executable, "scripts/route_matrix.py"], artifact))
