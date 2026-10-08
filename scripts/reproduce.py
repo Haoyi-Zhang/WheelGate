@@ -60,6 +60,7 @@ def main() -> int:
         "*.fls",
         "*.fdb_latexmk",
         "reproduction-logs",
+        ".git",
     )
     shutil.copytree(PACKAGE, copy_root, ignore=ignore)
     artifact = copy_root / "artifact" if HAS_PAPER else copy_root
@@ -142,6 +143,7 @@ def main() -> int:
         (logs / "stages.json").write_text(json.dumps(outcomes, indent=2) + "\n", encoding="utf-8")
         if process.returncode != 0:
             print(f"stage failed: {name}; see {logs / (name + '.txt')}", file=sys.stderr)
+            print(log[-12000:], file=sys.stderr)
             return process.returncode
         print(f"{name}: PASS ({duration:.2f}s)", flush=True)
 
