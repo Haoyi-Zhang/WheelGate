@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "title": "WheelGate: Context-Valid Qualification of Python Release Artifacts",
+  "total_pages": 12,
+  "main_content_pages": 10,
+  "reference_only_pages": 2,
+  "references_start_page": 11,
+  "data_availability_page": 10,
+  "reference_count": 70,
+  "reference_categories": {
+    "specification": 17,
+    "research": 16,
+    "case": 14,
+    "software": 8,
+    "documentation": 15
+  },
+  "all_references_cited": true,
+  "template_sha256": {
+    "IEEEtran.cls": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7",
+    "IEEEtran.bst": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f"
+  },
+  "source_sha256": {
+    "main.tex": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "references.bib": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab",
+    "main.pdf": "425d600e1a09e63fd5a5baa183bdc37c07d5d07f9b816217ecf04e1ce394d4d6"
+  },
+  "pdfinfo": {
+    "Title": "WheelGate: Context-Valid Qualification of Python Release Artifacts",
+    "Subject": "",
+    "Keywords": "",
+    "Author": "Haoyi Zhang, Huaijin Ran, Xunzhu Tang",
+    "Creator": "LaTeX with hyperref",
+    "Producer": "pdfTeX-1.40.26",
+    "CreationDate": "Thu Oct  8 13:53:55 2026 UTC",
+    "ModDate": "Thu Oct  8 13:53:55 2026 UTC",
+    "Custom Metadata": "yes",
+    "Metadata Stream": "no",
+    "Tagged": "no",
+    "UserProperties": "no",
+    "Suspects": "no",
+    "Form": "none",
+    "JavaScript": "no",
+    "Pages": "12",
+    "Encrypted": "no",
+    "Page size": "612 x 792 pts (letter)",
+    "Page rot": "0",
+    "File size": "210660 bytes",
+    "Optimized": "no",
+    "PDF version": "1.7"
+  },
+  "latex_log": {
+    "available": true,
+    "overfull": false,
+    "undefined": false
+  },
+  "embedded_font_rows": 11,
+  "rendered_pages": 12,
+  "visual_layout_review": {
+    "completed": true,
+    "scope": "all 12 rendered pages",
+    "result": "no visible clipping, overlap, or connector collision"
+  },
+  "authors": [
+    {
+      "name": "Haoyi Zhang",
+      "orcid": "0009-0009-3693-786X",
+      "institution": "Xi'an Jiaotong-Liverpool University",
+      "city_country": "Suzhou, China",
+      "emails": [
+        "hyeliozhang@gmail.com"
+      ],
+      "corresponding": false
+    },
+    {
+      "name": "Huaijin Ran",
+      "orcid": "0009-0009-2482-2344",
+      "institution": "Nanyang Technological University",
+      "city_country": "Singapore, Singapore",
+      "emails": [
+        "huaijin003@e.ntu.edu.sg"
+      ],
+      "corresponding": false
+    },
+    {
+      "name": "Xunzhu Tang",
+      "orcid": "0000-0002-6377-0884",
+      "institution": "University of Luxembourg",
+      "city_country": "Luxembourg, Luxembourg",
+      "emails": [
+        "xunzhu.tang@uni.lu",
+        "realdanieltang@gmail.com"
+      ],
+      "corresponding": true
+    }
+  ]
+}

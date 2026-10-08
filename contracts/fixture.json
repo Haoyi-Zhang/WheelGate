@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "contracts": [
+    {
+      "id": "import",
+      "kind": "import",
+      "distribution": "wg-fixture",
+      "modules": [
+        "wg_fixture"
+      ],
+      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle"
+    },
+    {
+      "id": "consumer",
+      "kind": "call",
+      "distribution": "wg-fixture",
+      "modules": [
+        "wg_fixture"
+      ],
+      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle",
+      "target": "wg_fixture:consumer",
+      "equals": "hello"
+    },
+    {
+      "id": "resource",
+      "kind": "resource",
+      "distribution": "wg-fixture",
+      "modules": [
+        "wg_fixture"
+      ],
+      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle",
+      "package": "wg_fixture",
+      "resource": "template.json",
+      "format": "json",
+      "equals": {
+        "schema": 1,
+        "message": "hello"
+      }
+    },
+    {
+      "id": "cli",
+      "kind": "cli",
+      "distribution": "wg-fixture",
+      "modules": [
+        "wg_fixture"
+      ],
+      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle",
+      "command": "wg-fixture",
+      "equals": "hello\n"
+    },
+    {
+      "id": "plugin",
+      "kind": "entrypoint",
+      "distribution": "wg-fixture",
+      "modules": [
+        "wg_fixture"
+      ],
+      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle",
+      "group": "wheelgate.fixture_plugins",
+      "name": "demo",
+      "invoke": true,
+      "equals": "hello"
+    }
+  ]
+}

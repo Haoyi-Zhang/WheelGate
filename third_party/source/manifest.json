@@ -1,0 +1,104 @@
+[
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/__main__.py",
+    "git_blob_sha1": "fa30cfbff49df6c1295ed3a380876abb0802e7f5",
+    "sha256": "36b548e8e7af0436a142571fedd0bb77fa4d0b87b5c1df6caac4e95c9cec0444",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/__main__.py",
+    "bytes": 4561
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/checks.py",
+    "git_blob_sha1": "d630cfbaf8704d717cdf5cebcbcb7a2bc901d58b",
+    "sha256": "06a64fce2da32aeefd5b18a8b4e124b15de1e637ef94fe3813ad2b62db7871af",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/checks.py",
+    "bytes": 2727
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/util.py",
+    "git_blob_sha1": "a69d5ba29cbe6344ef858f62841c53f6547e0774",
+    "sha256": "e221d0075a5041ec84c289603c11e93bdb14f8d824743c7919e4e7e0a76c32c6",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/util.py",
+    "bytes": 5054
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/contents.py",
+    "git_blob_sha1": "b9c3263ed725dd21762f4c449bc43e91eeb50a7e",
+    "sha256": "f298fe9ce3b6df659f1c79790fcb214c72ad97f8cdb7e8f1b8dca371aaf140d4",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/contents.py",
+    "bytes": 9406
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/filetree.py",
+    "git_blob_sha1": "57cb21520e92aaa2f685b0d38894daf1652cfd5c",
+    "sha256": "96cac2e39a73b2775dccc4e116669572854e308303f0c522b2e7458f8c2ef829",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/filetree.py",
+    "bytes": 11112
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/config.py",
+    "git_blob_sha1": "ef1d9e14e362e2670e60a10e54636939f9640349",
+    "sha256": "701e9f3382badb01b2db66e73a2b16b9ff13118203b8496c61024279842ef715",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/config.py",
+    "bytes": 10867
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/checker.py",
+    "git_blob_sha1": "87d2d412bd570918e98f864e4d706dbaa081f597",
+    "sha256": "93aac41ca931c5ce9860b320c70db595fc90eea0f42aae802a9052f5c55e8f67",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/checker.py",
+    "bytes": 13695
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/__init__.py",
+    "git_blob_sha1": "6d1d09398a43529ccbab97d8b3dd28a3dc5d9e5f",
+    "sha256": "7c914425cff4f70091160a9e85782be95c1b1d03e58f6ac555317ae1ad20c316",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/__init__.py",
+    "bytes": 850
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/src/check_wheel_contents/errors.py",
+    "git_blob_sha1": "f15a494f1d98176132832464b890cfafff129452",
+    "sha256": "3eedbabc3fc0aed04becc37be38dadd177ab8ba9e220783ea9c50e3e1ea182c6",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/src/check_wheel_contents/errors.py",
+    "bytes": 285
+  },
+  {
+    "path": "check-wheel-contents-0.6.1/LICENSE",
+    "git_blob_sha1": "607d3cf9ac7de0a90e61d4ed4f997265c7867e21",
+    "sha256": "28bcdd68113acf7f0d4308876c078a66d3b06e320140d3d12fc4764afc07a030",
+    "source": "https://github.com/jwodder/check-wheel-contents/blob/v0.6.1/LICENSE",
+    "bytes": 1112
+  },
+  {
+    "path": "wheel-filename-1.4.2/src/wheel_filename/__init__.py",
+    "git_blob_sha1": "9a33b865445175046db160620d9f3e8df3580982",
+    "sha256": "0648818daa154d0aab570ac7ef974fee5f82f4c73ed5a7354a345a48151eb5d9",
+    "source": "https://github.com/wheelodex/wheel-filename/blob/v1.4.2/src/wheel_filename/__init__.py",
+    "bytes": 3631
+  },
+  {
+    "path": "wheel-filename-1.4.2/LICENSE",
+    "git_blob_sha1": "0ba18dde4c4e868aec507f8228ac1f50c0d7477c",
+    "sha256": "e3c175d88ab0d270dd058e6237a875c1ecd24ff3830e6e850c065bcf5f0240f3",
+    "source": "https://github.com/wheelodex/wheel-filename/blob/v1.4.2/LICENSE",
+    "bytes": 1095
+  },
+  {
+    "path": "check-manifest-0.50/check_manifest.py",
+    "sha256": "08fd021fd097c7a1d7098bfc7fd2e801d5bf781f31e300fa69bb283cd0989655",
+    "revision": "0.50",
+    "retrieved_date": "2026-10-07",
+    "git_blob_sha1": "7f30109d84aca666cc3091d30674f8914ebb4a36",
+    "source": "https://github.com/mgedmin/check-manifest/blob/0.50/check_manifest.py",
+    "bytes": 40134
+  },
+  {
+    "path": "check-manifest-0.50/LICENSE.rst",
+    "sha256": "bf6af43e995943b187d05a56e5f93b17d786b268291286ca9b52349b86b9d8a9",
+    "revision": "0.50",
+    "retrieved_date": "2026-10-07",
+    "git_blob_sha1": "6d8cc4355850d5a19fb6d1b7cb7c5f239b222a22",
+    "source": "https://github.com/mgedmin/check-manifest/blob/0.50/LICENSE.rst",
+    "bytes": 1099
+  }
+]

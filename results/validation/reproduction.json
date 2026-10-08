@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "validated_at": "2026-10-08T13:59:09.607944+00:00",
+  "method": "Fresh copy outside the delivered package; dynamic context study, django-xml configuration replay, route-wheel requalification, WheelGate packaging check, manuscript generation, and audit rerun. The retained 45-observation route matrix was re-audited rather than rebuilt in this validation; use reproduce.py --full-route to rebuild it.",
+  "fresh_copy": "/mnt/data/wheelgate_replay_check/wheelgate",
+  "stages": {
+    "source_unittest": "PASS",
+    "source_pytest": "PASS",
+    "footprint_matrix": "PASS",
+    "historical_configuration_replay": "PASS",
+    "route_requalification": "PASS",
+    "installed_package_check": "PASS",
+    "summary_generation": "PASS",
+    "paper_build": "PASS",
+    "paper_verification": "PASS",
+    "evidence_audit": "PASS"
+  },
+  "tests": {
+    "unittest": 137,
+    "pytest": 137,
+    "pytest_subtests": 6
+  },
+  "paper_pages": 12,
+  "retained_selected_record_sha256": {
+    "footprint": "3f8dac22903eeda30ad1413f2a2b6d040eae70839a21cd78b2ab8d086b5886a6",
+    "historical": "4d432263c443950bc785fe977f1b7f53c87b8b36aff0653bb57bb551238c10c2",
+    "routes": "3ce3ad9175d0e9ed1f4f6c049ebab6a3ef0771050411b5a03cf2e7956f116edd",
+    "route_requalification": "f363af86e653be3d5547ff886d348ea5967413e0f96d024b9889bd0b538119e3",
+    "package": "9c4fb7f7dfa4d7188e3ee26c61cd992e16bd9fe61dcfe27e484e112ffef55503"
+  },
+  "fresh_selected_record_sha256": {
+    "footprint": "7e9372745423f9b3e18e74ffffcdb21187f68b4ae203948c42196db69aa6fdf3",
+    "historical": "9cf0da4468f5f57dcb975376ba7e613bbf8c276952d7f5fdceb135dca8c1d9a5",
+    "routes": "3ce3ad9175d0e9ed1f4f6c049ebab6a3ef0771050411b5a03cf2e7956f116edd",
+    "route_requalification": "0fc479015277af8df6bd4876392aea35aa3e65e091c4e2930bda6af594a373ce",
+    "package": "0281aaab95ffb11afd04e1f20b70257d341aba834bca34ca6cab134ab045a20c"
+  },
+  "interpretation": "Fresh records have new timings, temporary paths, and rebuilt archive bytes and are not pooled with the retained measurements. Their categorical decisions and audit invariants agree."
+}

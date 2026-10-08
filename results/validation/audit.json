@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "Internal consistency and reproducibility audit; not independent peer review or a guarantee of acceptance.",
+  "third_party": {
+    "retained_wheels": 4,
+    "upstream_source_files": 14
+  },
+  "footprint": {
+    "observations": 24,
+    "ordinary_pass": 21,
+    "gate_invalid": 15,
+    "module_invalid": 9,
+    "file_only_invalid": 6
+  },
+  "historical": {
+    "observations": 6,
+    "configuration_replays": 1,
+    "publisher_artifact_replays": 0
+  },
+  "routes": {
+    "route_observations": 45,
+    "wheel_route_agreements": 18,
+    "cwc_commands": 36,
+    "check_manifest_legacy_commands": 9,
+    "route_requalifications": 10
+  },
+  "package": {
+    "installation_routes": 2,
+    "unit_tests_per_route": [
+      140,
+      140
+    ],
+    "software_wheel_sha256": "b3625c0fc2e0b90f397be47fc4571870dab377b2a2e21b4f8b0baadae8527119"
+  },
+  "paper": null,
+  "selected_record_sha256": {
+    "footprint": "8a1bf80dbfe7ea5ebfeae6eebe7ccd1be15340d97322588d6ba1c556c5656b46",
+    "historical": "8d020ef8ab904de5be3c0838df013ca1b11af8742740255a961d29bbcd2d7b74",
+    "routes": "1368eae7193da93b3593e8142ffdd16c199f6724a5f00eccdb7c1215c30dd793",
+    "route_requalification": "dc2daf7190a9edcfbd9e66e19ae9c03254bff32645606c27bc50d3907a1df714",
+    "package": "dfef518336ef2ab58291ddfcecd7644809e234586449883ffe9ab3a3538c4488"
+  }
+}

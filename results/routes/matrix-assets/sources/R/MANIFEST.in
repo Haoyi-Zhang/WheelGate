@@ -1,0 +1,2 @@
+prune docs
+include wg_matrix/template.json

@@ -1,0 +1,20 @@
+{
+  "schema": 2,
+  "contracts": [
+    {
+      "id": "render",
+      "kind": "call",
+      "distribution": "wg-footprint",
+      "version": "1.0",
+      "modules": [
+        "wg_footprint"
+      ],
+      "evidence": "Authored support contract for the runtime-footprint experiment",
+      "profiles": [
+        "render"
+      ],
+      "target": "wg_footprint:render",
+      "equals": "HELLO"
+    }
+  ]
+}

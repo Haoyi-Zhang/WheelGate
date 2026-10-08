@@ -1,0 +1,32 @@
+{
+  "macros": {
+    "RouteObservations": 45,
+    "HistoricalObservations": 6,
+    "FootprintObservations": 24,
+    "RouteRequalifications": 10,
+    "RegressionTests": 140,
+    "FootprintInvalid": 15,
+    "FootprintModuleInvalid": 9,
+    "FootprintFileInvalid": 6,
+    "FootprintOrdinaryPass": 21
+  },
+  "runtime_ms": {
+    "Declared helper 1.0": 701.5183999901637,
+    "Undeclared helper 1.0": 656.8281000072602,
+    "Declared helper 2.0": 70.59700001263991,
+    "CWD shadow module": 631.8069999979343,
+    "Generated site module": 621.6234000166878,
+    "Recorded package data": 618.976500001736,
+    "CWD data file": 611.7215999984182,
+    "Unrecorded site data": 647.477999998955,
+    "Historical replay": 646.3286499929382,
+    "Route bundle (3 ops)": 1951.8724499939708
+  },
+  "selected_records": {
+    "routes": "results/routes/matrix.json",
+    "route_requalification": "results/routes/requalification.json",
+    "footprint": "results/footprint/matrix.json",
+    "historical": "results/historical/django-xml-replay.json",
+    "package": "results/package/self-check.json"
+  }
+}

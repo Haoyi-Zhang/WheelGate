@@ -1,0 +1,6 @@
+# Actual host dependency versions for the upstream source-executed CWC comparison.
+# Normal transitive dependencies must also be installed before an offline replay.
+attrs==26.1.0
+click==8.1.8
+packaging==25.0
+pydantic==2.13.5

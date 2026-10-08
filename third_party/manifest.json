@@ -1,0 +1,26 @@
+[
+  {
+    "file": "setuptools-78.1.1-py3-none-any.whl",
+    "sha256": "c3a9c4211ff4c309edb8b8c4f1cbfa7ae324c4ba9f91ff254e3d305b9fd54561",
+    "bytes": 1256462,
+    "provenance": "Downloaded official PyPI wheel; SHA-256 matched PyPI JSON metadata before use"
+  },
+  {
+    "file": "pygments-2.19.1-py3-none-any.whl",
+    "sha256": "c9faf9fbd24c86e8f6cc5b77ac1efe4536c4eb7a556f41e7f6d032b25bb9ef8f",
+    "bytes": 1225293,
+    "provenance": "pre-existing runtime-distributed wheel; not downloaded in this study; registry-byte identity not independently confirmed"
+  },
+  {
+    "file": "pip-25.1.1-py3-none-any.whl",
+    "sha256": "20568e5d750393b2a331d6b261886cbe5d62aca3f54d49a39815b7474d34cd9c",
+    "bytes": 1468105,
+    "provenance": "pre-existing runtime-distributed wheel; not downloaded in this study; registry-byte identity not independently confirmed"
+  },
+  {
+    "file": "latex2pydata-0.5.0-py3-none-any.whl",
+    "sha256": "f0d357b1f6f335c984fb60333b954b219afc9e91c8cdb59fc7277b233636410d",
+    "bytes": 13507,
+    "provenance": "pre-existing runtime-distributed wheel; not downloaded in this study; registry-byte identity not independently confirmed"
+  }
+]

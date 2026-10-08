@@ -1,0 +1,1574 @@
+[
+  {
+    "key": "pep427",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0427/",
+    "relevance": "Wheel archive and installation paths.",
+    "fields": {
+      "author": "Daniel Holth",
+      "title": "{PEP 427: The Wheel Binary Package Format 1.0}",
+      "url": "https://peps.python.org/pep-0427/",
+      "year": "2012"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      40
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "nosnake",
+    "type": "misc",
+    "category": "research",
+    "source": "https://arxiv.org/abs/2607.21888",
+    "relevance": "Rebuilt-wheel equivalence differs from consumer-operation correctness.",
+    "fields": {
+      "author": "Jens Dietrich and Spencer Sun and Tim W. White and Behnaz Hassanshahi",
+      "title": "{No Snake Oil: Verifying Python Package Builds}",
+      "url": "https://arxiv.org/abs/2607.21888",
+      "year": "2026",
+      "howpublished": "arXiv:2607.21888"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      57,
+      410
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "tang",
+    "type": "article",
+    "category": "research",
+    "source": "https://link.springer.com/article/10.1007/s10664-024-10489-x",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Xunzhu Tang and Haoye Tian and Pingfan Kong and Saad Ezzini and Kui Liu and Xin Xia and Jacques Klein and Tegawend{\\'e} F. Bissyand{\\'e}",
+      "title": "{App review driven collaborative bug finding}",
+      "year": "2024",
+      "doi": "10.1007/s10664-024-10489-x",
+      "url": "https://doi.org/10.1007/s10664-024-10489-x",
+      "journal": "Empirical Software Engineering",
+      "volume": "29",
+      "note": "Art. 124"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      103,
+      194
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "correction_checked": {
+      "source": "https://link.springer.com/article/10.1007/s10664-024-10586-x",
+      "finding": "Correction concerns corresponding-author designation (Haoye Tian), not the cited original title, author list, publication year or DOI. No corresponding-author role inferred for the present manuscript."
+    },
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pypiemp",
+    "type": "misc",
+    "category": "research",
+    "source": "https://arxiv.org/abs/1907.11073",
+    "relevance": "Ecosystem metadata analysis, not operational defect prevalence.",
+    "fields": {
+      "author": "Ethan Bommarito and Michael Bommarito",
+      "title": "{An Empirical Analysis of the Python Package Index (PyPI)}",
+      "url": "https://arxiv.org/abs/1907.11073",
+      "year": "2019",
+      "howpublished": "arXiv:1907.11073"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      406
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "passkeyissue",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/dcwatson/django-passkey-auth/issues/1",
+    "relevance": "Documentary report; maintainer names 0.0.2 as repair; not replayed.",
+    "fields": {
+      "author": "{bluetech}",
+      "title": "{The wheel is missing templates/ and static/}",
+      "url": "https://github.com/dcwatson/django-passkey-auth/issues/1",
+      "year": "2024",
+      "howpublished": "django-passkey-auth, issue 1"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      414
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "passkeyfix",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/dcwatson/django-passkey-auth/commit/ff8b29f22b5328086e8475efc838f2dbb6eacee7",
+    "relevance": "Public packaging repair, not a locally executed affected/fixed pair.",
+    "fields": {
+      "author": "Dan Watson",
+      "title": "{Use src layout, hatchling}",
+      "url": "https://github.com/dcwatson/django-passkey-auth/commit/ff8b29f22b5328086e8475efc838f2dbb6eacee7",
+      "year": "2024",
+      "howpublished": "Commit ff8b29f"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "netbox",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/netbox-community/netbox/discussions/7414",
+    "relevance": "Mixed packaging/template-compatibility lead; unresolved benchmark eligibility.",
+    "fields": {
+      "author": "{NetBox community}",
+      "title": "{Template folder not installed with plugin}",
+      "url": "https://github.com/netbox-community/netbox/discussions/7414",
+      "year": "2021",
+      "howpublished": "Discussion 7414"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      414
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "cwc",
+    "type": "misc",
+    "category": "software",
+    "source": "https://github.com/jwodder/check-wheel-contents/tree/v0.6.1",
+    "relevance": "Version 0.6.1 upstream CLI and configured W101/W102, actually executed.",
+    "fields": {
+      "author": "Wodder, II, John Thorvald",
+      "title": "{check-wheel-contents}",
+      "url": "https://github.com/jwodder/check-wheel-contents/tree/v0.6.1",
+      "howpublished": "Version 0.6.1"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "cm",
+    "type": "misc",
+    "category": "software",
+    "source": "https://github.com/mgedmin/check-manifest/tree/0.50",
+    "relevance": "Actual unmodified 0.50 legacy manifest comparison; explicit exclusion policy and blocked modern frontend kept separate.",
+    "fields": {
+      "author": "Marius Gedminas",
+      "title": "{check-manifest}",
+      "url": "https://github.com/mgedmin/check-manifest/tree/0.50",
+      "howpublished": "Version 0.50"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "twine",
+    "type": "misc",
+    "category": "software",
+    "source": "https://github.com/pypa/twine/blob/main/twine/commands/check.py",
+    "relevance": "Description rendering and metadata checks; source inspected, not executed.",
+    "fields": {
+      "author": "{Python Packaging Authority}",
+      "title": "{twine/commands/check.py}",
+      "url": "https://github.com/pypa/twine/blob/main/twine/commands/check.py"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44,
+      90
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pip",
+    "type": "misc",
+    "category": "software",
+    "source": "https://pypi.org/project/pip/25.1.1/",
+    "relevance": "Local wheel 25.1.1 supplies installation and dependency checks. Publisher archive hash compared with the retained local input; archive mismatch explicitly reported.",
+    "fields": {
+      "author": "{The pip developers}",
+      "title": "{pip}",
+      "url": "https://pypi.org/project/pip/25.1.1/",
+      "howpublished": "Version 25.1.1"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      125
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pygments",
+    "type": "misc",
+    "category": "software",
+    "source": "https://pypi.org/project/Pygments/2.19.1/",
+    "relevance": "Version 2.19.1: API/CLI syntax-highlighting contracts justified by shipped metadata. Publisher archive hash compared with the retained local input; archive mismatch explicitly reported.",
+    "fields": {
+      "author": "Georg Brandl and {Pygments contributors}",
+      "title": "{Pygments}",
+      "url": "https://pypi.org/project/Pygments/2.19.1/",
+      "howpublished": "Version 2.19.1"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      231
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "latex",
+    "type": "misc",
+    "category": "software",
+    "source": "https://pypi.org/project/latex2pydata/0.5.0/",
+    "relevance": "Version 0.5.0: loader, schema, keypath examples from shipped metadata. Publisher archive hash compared with the retained local input; archive mismatch explicitly reported.",
+    "fields": {
+      "author": "Geoffrey M. Poore",
+      "title": "{latex2pydata}",
+      "url": "https://pypi.org/project/latex2pydata/0.5.0/",
+      "howpublished": "Version 0.5.0"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      231
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "setuptools",
+    "type": "misc",
+    "category": "software",
+    "source": "https://pypi.org/project/setuptools/78.1.1/",
+    "relevance": "Version 78.1.1 local backend used for authored fixture builds. Publisher archive hash compared with the retained local input; archive mismatch explicitly reported.",
+    "fields": {
+      "author": "{Python Packaging Authority}",
+      "title": "{setuptools}",
+      "url": "https://pypi.org/project/setuptools/78.1.1/",
+      "howpublished": "Version 78.1.1"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      90
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "python",
+    "type": "misc",
+    "category": "software",
+    "source": "https://docs.python.org/3.13/",
+    "relevance": "Actual runtime 3.13.5; online maintenance docs can be newer patch releases.",
+    "fields": {
+      "author": "{Python Software Foundation}",
+      "title": "{Python}",
+      "url": "https://docs.python.org/3.13/",
+      "howpublished": "Runtime version 3.13.5"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      95
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "oracle",
+    "type": "article",
+    "category": "research",
+    "source": "https://doi.org/10.1109/TSE.2014.2372785",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Earl T. Barr and Mark Harman and Phil McMinn and Muzammil Shahbaz and Shin Yoo",
+      "title": "{The Oracle Problem in Software Testing: A Survey}",
+      "year": "2015",
+      "doi": "10.1109/TSE.2014.2372785",
+      "url": "https://doi.org/10.1109/TSE.2014.2372785",
+      "journal": "IEEE Transactions on Software Engineering",
+      "volume": "41",
+      "number": "5",
+      "pages": "507--525"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      103,
+      412
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "metadata_note": "2015 journal issue; 2014 in DOI/online history is not an erroneous issue year.",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "defects4j",
+    "type": "inproceedings",
+    "category": "research",
+    "source": "https://github.com/rjust/defects4j",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Ren{\\'e} Just and Darioush Jalali and Michael D. Ernst",
+      "title": "{Defects4J: A Database of Existing Faults to Enable Controlled Testing Studies for Java Programs}",
+      "year": "2014",
+      "doi": "10.1145/2610384.2628055",
+      "url": "https://doi.org/10.1145/2610384.2628055",
+      "booktitle": "ISSTA",
+      "pages": "437--440"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      406,
+      412
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "bugsinpy",
+    "type": "inproceedings",
+    "category": "research",
+    "source": "https://arxiv.org/abs/2401.15481",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Ratnadira Widyasari and Sheng Qin Sim and Camellia Lok and Haodi Qi and Jack Phan and Qijin Tay and Constance Tan and Fiona Wee and Jodie Ethelda Tan and Yuheng Yieh and Brian Goh and Ferdian Thung and Hong Jin Kang and Thong Hoang and David Lo and Eng Lieh Ouh",
+      "title": "{BugsInPy: A Database of Existing Bugs in Python Programs to Enable Controlled Testing and Debugging Studies}",
+      "year": "2020",
+      "doi": "10.1145/3368089.3417943",
+      "url": "https://doi.org/10.1145/3368089.3417943",
+      "booktitle": "ESEC/FSE",
+      "pages": "1556--1560"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      406,
+      412
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "metadata_note": "2020 conference publication; later 2024 arXiv posting does not replace the conference year.",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "caseguide",
+    "type": "article",
+    "category": "research",
+    "source": "https://link.springer.com/article/10.1007/s10664-008-9102-8",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Per Runeson and Martin H{\\\"o}st",
+      "title": "{Guidelines for conducting and reporting case study research in software engineering}",
+      "year": "2009",
+      "doi": "10.1007/s10664-008-9102-8",
+      "url": "https://doi.org/10.1007/s10664-008-9102-8",
+      "journal": "Empirical Software Engineering",
+      "volume": "14",
+      "pages": "131--164"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      103,
+      194
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "ci",
+    "type": "inproceedings",
+    "category": "research",
+    "source": "https://dig.cs.illinois.edu/papers/OpenSourceCIUsage.pdf",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Michael Hilton and Timothy Tunnell and Kai Huang and Darko Marinov and Danny Dig",
+      "title": "{Usage, Costs, and Benefits of Continuous Integration in Open-Source Projects}",
+      "year": "2016",
+      "doi": "10.1145/2970276.2970358",
+      "url": "https://doi.org/10.1145/2970276.2970358",
+      "booktitle": "ASE",
+      "pages": "426--437"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      401
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "additional_metadata_source": "https://experts.illinois.edu/en/publications/usage-costs-and-benefits-of-continuous-integration-in-open-source/",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "buildeffort",
+    "type": "inproceedings",
+    "category": "research",
+    "source": "https://doi.org/10.1145/1985793.1985813",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Shane McIntosh and Bram Adams and Thanh H. D. Nguyen and Yasutaka Kamei and Ahmed E. Hassan",
+      "title": "{An empirical study of build maintenance effort}",
+      "year": "2011",
+      "doi": "10.1145/1985793.1985813",
+      "url": "https://doi.org/10.1145/1985793.1985813",
+      "booktitle": "ICSE",
+      "pages": "141--150"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      401,
+      410
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "dockerize",
+    "type": "inproceedings",
+    "category": "research",
+    "source": "https://arxiv.org/abs/1905.11127",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Eric Horton and Chris Parnin",
+      "title": "{DockerizeMe: Automatic Inference of Environment Dependencies for Python Code Snippets}",
+      "year": "2019",
+      "doi": "10.1109/ICSE.2019.00047",
+      "url": "https://doi.org/10.1109/ICSE.2019.00047",
+      "booktitle": "ICSE"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      406
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "dypy",
+    "type": "article",
+    "category": "research",
+    "source": "https://arxiv.org/abs/2403.00539",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Islem Bouzenia and {Bajaj Piyush Krishan} and Michael Pradel",
+      "title": "{DyPyBench: A Benchmark of Executable Python Software}",
+      "year": "2024",
+      "doi": "10.1145/3643742",
+      "url": "https://doi.org/10.1145/3643742",
+      "journal": "Proceedings of the ACM on Software Engineering",
+      "volume": "1",
+      "number": "FSE",
+      "note": "Art. 16"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      406
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "metadata_note": "Author PDF first page inspected: author printed Bajaj Piyush Krishan; PACMSE 1(FSE), Article 16, 2024, DOI 10.1145/3643742. Do not replace author order based only on secondary indexing.",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "mutants",
+    "type": "inproceedings",
+    "category": "research",
+    "source": "https://homes.cs.washington.edu/~rjust/publ/JustJIEHF2014b-abstract.html",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Ren{\\'e} Just and Darioush Jalali and Laura Inozemtseva and Michael D. Ernst and Reid Holmes and Gordon Fraser",
+      "title": "{Are mutants a valid substitute for real faults in software testing?}",
+      "year": "2014",
+      "doi": "10.1145/2635868.2635929",
+      "url": "https://doi.org/10.1145/2635868.2635929",
+      "booktitle": "FSE",
+      "pages": "654--665"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      408
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "builds",
+    "type": "article",
+    "category": "research",
+    "source": "https://doi.org/10.1145/3236774",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Andrey Mokhov and Neil Mitchell and Simon Peyton Jones",
+      "title": "{Build Systems {\\`a} la Carte}",
+      "year": "2018",
+      "doi": "10.1145/3236774",
+      "url": "https://doi.org/10.1145/3236774",
+      "journal": "Proceedings of the ACM on Programming Languages",
+      "volume": "2",
+      "number": "ICFP",
+      "note": "Art. 79"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      401,
+      410
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "buildissues",
+    "type": "inproceedings",
+    "category": "research",
+    "source": "https://chenzhenpeng18.github.io/papers/FSE20_2.pdf",
+    "relevance": "Related research; not evidence of WheelGate field performance.",
+    "fields": {
+      "author": "Yiling Lou and Zhenpeng Chen and Yanbin Cao and Dan Hao and Lu Zhang",
+      "title": "{Understanding Build Issue Resolution in Practice: Symptoms and Fix Patterns}",
+      "year": "2020",
+      "doi": "10.1145/3368089.3409760",
+      "url": "https://doi.org/10.1145/3368089.3409760",
+      "booktitle": "ESEC/FSE",
+      "pages": "617--628"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      401,
+      410
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "sniffer",
+    "type": "inproceedings",
+    "category": "research",
+    "source": "https://research.monash.edu/en/publications/restoring-execution-environments-of-jupyter-notebooks/",
+    "relevance": "Environment dependency reconstruction; not operational expectation inference.",
+    "fields": {
+      "author": "Jiawei Wang and Li Li and Andreas Zeller",
+      "title": "{Restoring Execution Environments of Jupyter Notebooks}",
+      "url": "https://doi.org/10.1109/ICSE43902.2021.00144",
+      "year": "2021",
+      "doi": "10.1109/ICSE43902.2021.00144",
+      "booktitle": "ICSE",
+      "pages": "1622--1633"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      406
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep517",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0517/",
+    "relevance": "Explicit backend hooks and sdist-to-wheel path; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Nathaniel J. Smith and Thomas Kluyver",
+      "title": "{PEP 517: A build-system independent format for source trees}",
+      "url": "https://peps.python.org/pep-0517/",
+      "year": "2015"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep518",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0518/",
+    "relevance": "Build dependencies distinct from runtime dependencies; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Brett Cannon and Nathaniel J. Smith and Donald Stufft",
+      "title": "{PEP 518: Specifying Minimum Build System Requirements for Python Projects}",
+      "url": "https://peps.python.org/pep-0518/",
+      "year": "2016"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep621",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0621/",
+    "relevance": "Distribution metadata declaration; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Brett Cannon and Dustin Ingram and Paul Ganssle and Pradyun Gedam and S{\\'e}bastien Eustace and Thomas Kluyver and Tzu-ping Chung",
+      "title": "{PEP 621: Storing project metadata in pyproject.toml}",
+      "url": "https://peps.python.org/pep-0621/",
+      "year": "2020"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep660",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0660/",
+    "relevance": "Editable installation does not qualify released wheel contents; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Daniel Holth and St{\\'e}phane Bidoul",
+      "title": "{PEP 660: Editable installs for pyproject.toml based builds (wheel based)}",
+      "url": "https://peps.python.org/pep-0660/",
+      "year": "2021"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep405",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0405/",
+    "relevance": "Isolated consumer environment; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Carl Meyer",
+      "title": "{PEP 405: Python Virtual Environments}",
+      "url": "https://peps.python.org/pep-0405/",
+      "year": "2011"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep376",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0376/",
+    "relevance": "Historical installed inventory model; current API from importlib.metadata; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Tarek Ziad{\\'e}",
+      "title": "{PEP 376: Database of Installed Python Distributions}",
+      "url": "https://peps.python.org/pep-0376/",
+      "year": "2009"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep420",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0420/",
+    "relevance": "Namespace packages can be legitimate, outside concrete-anchor profile; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Eric V. Smith",
+      "title": "{PEP 420: Implicit Namespace Packages}",
+      "url": "https://peps.python.org/pep-0420/",
+      "year": "2012"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      87
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep503",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0503/",
+    "relevance": "Distribution name normalization only, not authentication; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Donald Stufft",
+      "title": "{PEP 503: Simple Repository API}",
+      "url": "https://peps.python.org/pep-0503/",
+      "year": "2015"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep508",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0508/",
+    "relevance": "Environment markers and extras define support profiles; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Robert Collins",
+      "title": "{PEP 508: Dependency specification for Python Software Packages}",
+      "url": "https://peps.python.org/pep-0508/",
+      "year": "2015"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83,
+      383
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep440",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0440/",
+    "relevance": "Version constraints are not artifact identity; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Alyssa Coghlan and Donald Stufft",
+      "title": "{PEP 440: Version Identification and Dependency Specification}",
+      "url": "https://peps.python.org/pep-0440/",
+      "year": "2013"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep561",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0561/",
+    "relevance": "Non-runtime consumer obligations may include shipped type information; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Emma Harper Smith",
+      "title": "{PEP 561: Distributing and Packaging Type Information}",
+      "url": "https://peps.python.org/pep-0561/",
+      "year": "2017"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      92
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep643",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0643/",
+    "relevance": "Source distribution metadata distinct from consumer behavior; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Paul Moore",
+      "title": "{PEP 643: Metadata for Package Source Distributions}",
+      "url": "https://peps.python.org/pep-0643/",
+      "year": "2020"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep639",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0639/",
+    "relevance": "Document legal omissions and license boundaries, not completeness by repository size; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Philippe Ombredanne and C. A. M. Gerlach and Karolina Surma",
+      "title": "{PEP 639: Improving License Clarity with Better Package Metadata}",
+      "url": "https://peps.python.org/pep-0639/",
+      "year": "2019"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      92
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep302",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0302/",
+    "relevance": "Historical import-hook context; no assumption that all resources are filesystem files; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Just van Rossum and Paul Moore",
+      "title": "{PEP 302: New Import Hooks}",
+      "url": "https://peps.python.org/pep-0302/",
+      "year": "2002"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      87
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep451",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0451/",
+    "relevance": "Import origin is contextual, not complete transitive provenance; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Eric Snow",
+      "title": "{PEP 451: A ModuleSpec Type for the Import System}",
+      "url": "https://peps.python.org/pep-0451/",
+      "year": "2013"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      87
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pep425",
+    "type": "misc",
+    "category": "specification",
+    "source": "https://peps.python.org/pep-0425/",
+    "relevance": "Unsupported platform combinations are not package defect observations; bibliography year denotes proposal creation, not final acceptance.",
+    "fields": {
+      "author": "Daniel Holth",
+      "title": "{PEP 425: Compatibility Tags for Built Distributions}",
+      "url": "https://peps.python.org/pep-0425/",
+      "year": "2012"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      83,
+      383
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "resources",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://docs.python.org/3.13/library/importlib.resources.html",
+    "relevance": "Actual resource anchors and non-filesystem loader limits",
+    "fields": {
+      "author": "{Python Software Foundation}",
+      "title": "{importlib.resources: Package resource reading, opening and access}",
+      "url": "https://docs.python.org/3.13/library/importlib.resources.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      87
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "metadata",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://docs.python.org/3.13/library/importlib.metadata.html",
+    "relevance": "Installed distributions, inventories, and entry-point APIs",
+    "fields": {
+      "author": "{Python Software Foundation}",
+      "title": "{importlib.metadata: Accessing package metadata}",
+      "url": "https://docs.python.org/3.13/library/importlib.metadata.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      90
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "cmdline",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://docs.python.org/3.13/using/cmdline.html",
+    "relevance": "Isolated-mode semantics",
+    "fields": {
+      "author": "{Python Software Foundation}",
+      "title": "{Command line and environment}",
+      "url": "https://docs.python.org/3.13/using/cmdline.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      95
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "subprocess",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://docs.python.org/3.13/library/subprocess.html",
+    "relevance": "Exit codes and timeout handling",
+    "fields": {
+      "author": "{Python Software Foundation}",
+      "title": "{subprocess: Subprocess management}",
+      "url": "https://docs.python.org/3.13/library/subprocess.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      95
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "entryspec",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://packaging.python.org/en/latest/specifications/entry-points/",
+    "relevance": "Registration, loading, and console-script invocation are distinct",
+    "fields": {
+      "author": "{Python Packaging Authority}",
+      "title": "{Entry points specification}",
+      "url": "https://packaging.python.org/en/latest/specifications/entry-points/",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      87
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pytest",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://docs.pytest.org/en/stable/explanation/goodpractices.html",
+    "relevance": "Source-path contamination and installed test configuration",
+    "fields": {
+      "author": "{pytest developers}",
+      "title": "{Good Integration Practices}",
+      "url": "https://docs.pytest.org/en/stable/explanation/goodpractices.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44,
+      95
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "tox",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://tox.wiki/en/4.23.2/user_guide.html",
+    "relevance": "Existing installed-package orchestration; not executed here",
+    "fields": {
+      "author": "{tox developers}",
+      "title": "{User Guide}",
+      "url": "https://tox.wiki/en/4.23.2/user_guide.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44,
+      95
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "nox",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://nox.thea.codes/en/stable/tutorial.html",
+    "relevance": "Existing environment/session orchestration; not executed here",
+    "fields": {
+      "author": "{Nox contributors}",
+      "title": "{Tutorial}",
+      "url": "https://nox.thea.codes/en/stable/tutorial.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44,
+      95
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "cibw",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://cibuildwheel.pypa.io/en/stable/options/#test-command",
+    "relevance": "Existing wheel installation and outside-checkout test working directory",
+    "fields": {
+      "author": "{cibuildwheel developers}",
+      "title": "{Options: Testing}",
+      "url": "https://cibuildwheel.pypa.io/en/stable/options/#test-command",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44,
+      95,
+      396
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "build",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://build.pypa.io/en/stable/",
+    "relevance": "Default sdist then wheel build route; documented frontend, not executed",
+    "fields": {
+      "author": "{Python Packaging Authority}",
+      "title": "{build}",
+      "url": "https://build.pypa.io/en/stable/",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pipcheck",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://pip.pypa.io/en/stable/cli/pip_check/",
+    "relevance": "Declared dependency consistency, not operation correctness",
+    "fields": {
+      "author": "{The pip developers}",
+      "title": "{pip check}",
+      "url": "https://pip.pypa.io/en/stable/cli/pip_check/",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      44,
+      90
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "datafiles",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://setuptools.pypa.io/en/latest/userguide/datafiles.html",
+    "relevance": "Package-data and sdist inclusion logic",
+    "fields": {
+      "author": "{setuptools developers}",
+      "title": "{Data Files Support}",
+      "url": "https://setuptools.pypa.io/en/latest/userguide/datafiles.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      90
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "importsystem",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://docs.python.org/3.13/reference/import.html",
+    "relevance": "Import caches, module state, and limits of batch equivalence",
+    "fields": {
+      "author": "{Python Software Foundation}",
+      "title": "{The import system}",
+      "url": "https://docs.python.org/3.13/reference/import.html",
+      "howpublished": "Online documentation, accessed Sep. 30, 2026"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      95
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "reuse",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/fsfe/reuse-tool/issues/738",
+    "relevance": "Initial missing-file report narrowed by reporter to local-host rebuild; clean containers have correct contents. Closed stale, not verified repaired.",
+    "fields": {
+      "author": "{rpatterson}",
+      "title": "{Files missing from sdist and version-specific wheel}",
+      "url": "https://github.com/fsfe/reuse-tool/issues/738",
+      "year": "2023",
+      "howpublished": "REUSE, issue 738"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      414
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "validate",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/abravalheri/validate-pyproject/issues/49",
+    "relevance": "v0.9 git-archive rebuild; not evidence of an affected PyPI sdist.",
+    "fields": {
+      "author": "{mgorny}",
+      "title": "{Data files are missing from wheel when building from git archive}",
+      "url": "https://github.com/abravalheri/validate-pyproject/issues/49",
+      "year": "2022",
+      "howpublished": "validate-pyproject, issue 49"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      414
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "poetry",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/python-poetry/poetry/issues/6197",
+    "relevance": "Poetry 1.2.0b3 backend/reproducer report; not an independently replayed application release pair.",
+    "fields": {
+      "author": "{egorchakov}",
+      "title": "{Wheel missing files generated at build}",
+      "url": "https://github.com/python-poetry/poetry/issues/6197",
+      "year": "2022",
+      "howpublished": "Poetry, issue 6197"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      414
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "tomselect",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/OmenApps/django-tomselect/issues/8",
+    "relevance": "Title says wheel but linked object is tar.gz; maintainer names repair release 2024.12.2, no local replay.",
+    "fields": {
+      "author": "{chrisv2}",
+      "title": "{Missing files in 0.4.4 wheel on Pypi}",
+      "url": "https://github.com/OmenApps/django-tomselect/issues/8",
+      "year": "2024",
+      "howpublished": "django-tomselect, issue 8"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      414
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "dotbot",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/anishathalye/dotbot/issues/350",
+    "relevance": "Downstream test-support report; end-user obligation not established by report.",
+    "fields": {
+      "author": "{ludat}",
+      "title": "{Wheel distribution on pypi doesn't pass the tests since it's missing some files under the tests/ directory}",
+      "url": "https://github.com/anishathalye/dotbot/issues/350",
+      "year": "2023",
+      "howpublished": "Dotbot, issue 350"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      414
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "audtorch",
+    "type": "misc",
+    "category": "case",
+    "source": "https://audeering.github.io/audtorch/changelog.html",
+    "relevance": "Maintainer changelog names missing-wheel-files repair; preceding affected range not established.",
+    "fields": {
+      "author": "{audtorch contributors}",
+      "title": "{Changelog}",
+      "url": "https://audeering.github.io/audtorch/changelog.html",
+      "year": "2019",
+      "howpublished": "Version 0.4.2 entry"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "dxml",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/theatlantic/django-xml/issues/18",
+    "relevance": "Reporter links exact 4.0.0 wheel; maintainer says yanked 4.0.0 and released 4.0.1; no local replay.",
+    "fields": {
+      "author": "{peterfarrell}",
+      "title": "{4.0.0 release broken - wheel is missing modules}",
+      "url": "https://github.com/theatlantic/django-xml/issues/18",
+      "year": "2025",
+      "howpublished": "django-xml, issue 18"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      199
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "pyfiglet",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/pwaller/pyfiglet/blob/main/README.md",
+    "relevance": "Maintainer-documented licensing-related font exclusions; no font files included in this bundle.",
+    "fields": {
+      "author": "Christopher Jones and Peter Waller and Stefano Rivera and {contributors}",
+      "title": "{pyfiglet}",
+      "url": "https://github.com/pwaller/pyfiglet/blob/main/README.md",
+      "howpublished": "README, FAQ"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "testdependence",
+    "category": "research",
+    "source": "https://homes.cs.washington.edu/~mernst/pubs/test-independence-issta2014-abstract.html",
+    "relevance": "Established test dependence and fault masking; bounds novelty of the batch counterexample, without transferring its empirical frequencies.",
+    "verified_on": "2026-10-08",
+    "type": "inproceedings",
+    "fields": {
+      "author": "Sai Zhang and Darioush Jalali and Jochen Wuttke and K{\\i}van{\\c{c}} Mu{\\c{s}}lu and Wing Lam and Michael D. Ernst and David Notkin",
+      "title": "Empirically revisiting the test independence assumption",
+      "booktitle": "ISSTA",
+      "year": "2014",
+      "pages": "385--396",
+      "doi": "10.1145/2610384.2610404"
+    },
+    "cited_in_main_tex_lines": [
+      122,
+      403,
+      412
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "additional_metadata_source": "https://homes.cs.washington.edu/~mernst/pubs/test-independence-issta2014.pdf",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "dxmlfix",
+    "type": "misc",
+    "category": "case",
+    "source": "https://github.com/theatlantic/django-xml/commit/37f6ed3d6b246b129c35f8aba4dbf69b34a83b28",
+    "relevance": "Maintainer fix that replaces a single-package list with discovery of djxml*; configuration-replay anchor.",
+    "fields": {
+      "author": "Frankie Dintino",
+      "title": "{Fix packaging issue for issue 18}",
+      "year": "2025",
+      "howpublished": "django-xml commit 37f6ed3d6b246b129c35f8aba4dbf69b34a83b28",
+      "url": "https://github.com/theatlantic/django-xml/commit/37f6ed3d6b246b129c35f8aba4dbf69b34a83b28"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      199
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "dxml400",
+    "type": "misc",
+    "category": "case",
+    "source": "https://pypi.org/project/django-xml/4.0.0/",
+    "relevance": "Primary release metadata for the yanked affected version; bytes were not retrieved in the executed environment.",
+    "fields": {
+      "author": "{Python Package Index}",
+      "title": "{django-xml 4.0.0}",
+      "year": "2025",
+      "howpublished": "Release metadata; yanked for a packaging issue",
+      "url": "https://pypi.org/project/django-xml/4.0.0/"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      199
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "dxml401",
+    "type": "misc",
+    "category": "case",
+    "source": "https://pypi.org/project/django-xml/4.0.1/",
+    "relevance": "Primary release metadata for the repaired successor named by the maintainer.",
+    "fields": {
+      "author": "{Python Package Index}",
+      "title": "{django-xml 4.0.1}",
+      "year": "2025",
+      "howpublished": "Release metadata",
+      "url": "https://pypi.org/project/django-xml/4.0.1/"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      42,
+      199
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "seip",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://conf.researchr.org/track/icse-2027/icse-2027-seip",
+    "relevance": "Venue scope, manuscript format, and page-budget source.",
+    "fields": {
+      "author": "{ICSE 2027}",
+      "title": "{Software Engineering in Practice (SEIP): Call for Papers}",
+      "year": "2026",
+      "url": "https://conf.researchr.org/track/icse-2027/icse-2027-seip"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      437
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  },
+  {
+    "key": "openscience",
+    "type": "misc",
+    "category": "documentation",
+    "source": "https://conf.researchr.org/track/icse-2027/icse-2027-icse-2027-open-science-policies",
+    "relevance": "Venue open-science and Data Availability policy source.",
+    "fields": {
+      "author": "{ICSE 2027}",
+      "title": "{Open Science Policies}",
+      "year": "2026",
+      "url": "https://conf.researchr.org/track/icse-2027/icse-2027-icse-2027-open-science-policies"
+    },
+    "verified_on": "2026-10-08",
+    "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
+    "cited_in_main_tex_lines": [
+      437
+    ],
+    "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
+    "metadata_and_citation_review_on": "2026-10-08",
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+  }
+]

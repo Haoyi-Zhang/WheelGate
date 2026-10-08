@@ -1,0 +1,177 @@
+{
+  "scope": "Documentary case register with one maintainer-linked configuration replay; not a prevalence sample and not publisher-artifact replay.",
+  "selection": "Public primary reports and maintainer histories retained for route, oracle, and scope contrasts. Inclusion does not imply a validated defect until the relevant released artifact and operation are replayed.",
+  "recorded_on": "2026-10-08",
+  "records": [
+    {
+      "id": "D1",
+      "project": "django-passkey-auth",
+      "bibkey": "passkeyissue",
+      "route": "published wheel report",
+      "reported_affected": "0.0.1 is a retrieval lead, not established here as the uniquely affected range",
+      "reported_fixed": "0.0.2 named by maintainer",
+      "source_supported_observation": "Missing templates/static; maintainer reports switching to hatchling.",
+      "disposition": "Candidate repair; artifact replay unavailable",
+      "sources": [
+        "https://github.com/dcwatson/django-passkey-auth/issues/1",
+        "https://github.com/dcwatson/django-passkey-auth/commit/ff8b29f22b5328086e8475efc838f2dbb6eacee7"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D2",
+      "project": "django-tomselect",
+      "bibkey": "tomselect",
+      "route": "report says wheel; link identifies tar.gz",
+      "reported_affected": "0.4.4 named in report",
+      "reported_fixed": "2024.12.2 named by maintainer",
+      "source_supported_observation": "forms.py omission reported; linked artifact and title use different route names.",
+      "disposition": "Candidate repair with route ambiguity; no replay",
+      "sources": [
+        "https://github.com/OmenApps/django-tomselect/issues/8",
+        "https://github.com/OmenApps/django-tomselect/issues/8#issuecomment-2545926405"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D3",
+      "project": "django-xml",
+      "bibkey": "dxml",
+      "route": "exact published wheel linked",
+      "reported_affected": "4.0.0",
+      "reported_fixed": "4.0.1 named by maintainer",
+      "source_supported_observation": "The 4.0.0 wheel was reported to contain only djxml/__init__.py; the verified maintainer fix replaced packages=[\"djxml\"] with discovery of djxml*, then 4.0.0 was yanked and 4.0.1 released.",
+      "disposition": "Maintainer-linked package-selection configuration replay completed; original publisher wheel bytes were unavailable, so publisher-artifact replay remains unperformed.",
+      "sources": [
+        "https://github.com/theatlantic/django-xml/issues/18",
+        "https://github.com/theatlantic/django-xml/commit/37f6ed3d6b246b129c35f8aba4dbf69b34a83b28",
+        "https://github.com/theatlantic/django-xml/commit/a73655714f68093c2d22ea384585a5b26341c561",
+        "https://github.com/theatlantic/django-xml/issues/18#issuecomment-3096984541"
+      ],
+      "configuration_replay_completed": true,
+      "publisher_artifact_replayed": false,
+      "replay_result": "results/historical/django-xml-replay.json",
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D4",
+      "project": "audtorch",
+      "bibkey": "audtorch",
+      "route": "release changelog",
+      "reported_affected": "Preceding affected range not established",
+      "reported_fixed": "0.4.2, 2019-11-04",
+      "source_supported_observation": "Changelog identifies a repair for missing wheel files, PR 60.",
+      "disposition": "Fix lead; no inferred affected release range or replay",
+      "sources": [
+        "https://audeering.github.io/audtorch/changelog.html"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D5",
+      "project": "validate-pyproject",
+      "bibkey": "validate",
+      "route": "wheel built from git tag archive",
+      "reported_affected": "v0.9 git archive",
+      "reported_fixed": "Not established in this examination",
+      "source_supported_observation": "The report downloads a GitHub tag tarball and then builds it.",
+      "disposition": "Different input route; not a verified PyPI sdist defect",
+      "sources": [
+        "https://github.com/abravalheri/validate-pyproject/issues/49"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D6",
+      "project": "Poetry",
+      "bibkey": "poetry",
+      "route": "backend minimal reproducer",
+      "reported_affected": "Poetry 1.2.0b3 in reporter environment",
+      "reported_fixed": "Not established in this examination",
+      "source_supported_observation": "Build-generated Python files omitted according to reporter.",
+      "disposition": "Backend/reproducer evidence, not a published application pair",
+      "sources": [
+        "https://github.com/python-poetry/poetry/issues/6197"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D7",
+      "project": "REUSE",
+      "bibkey": "reuse",
+      "route": "sdist-derived wheel in reporter host",
+      "reported_affected": "Reports discuss 1.1.0 and 1.1.2",
+      "reported_fixed": "No verified repair; issue closed stale/unresolved",
+      "source_supported_observation": "Reporter later obtains correct file contents in Python and Ubuntu containers; platform tagging remains a separate concern.",
+      "disposition": "Environment-dependent unresolved report; exclude from validated defect counts",
+      "sources": [
+        "https://github.com/fsfe/reuse-tool/issues/738",
+        "https://github.com/fsfe/reuse-tool/issues/738#issuecomment-1556285731",
+        "https://github.com/fsfe/reuse-tool/issues/738#issuecomment-2978809618"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D8",
+      "project": "Dotbot",
+      "bibkey": "dotbot",
+      "route": "downstream distribution test support",
+      "reported_affected": "Not specified by report",
+      "reported_fixed": "Not established in this examination",
+      "source_supported_observation": "NixOS packaging report concerns missing tests/conftest.py.",
+      "disposition": "No supported end-user operation established; not automatically a legal omission either",
+      "sources": [
+        "https://github.com/anishathalye/dotbot/issues/350"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D9",
+      "project": "pyfiglet",
+      "bibkey": "pyfiglet",
+      "route": "documented distribution variation",
+      "reported_affected": "No specific version pair asserted",
+      "reported_fixed": "Not applicable",
+      "source_supported_observation": "README explains removal of some fonts for redistribution-rights reasons.",
+      "disposition": "Documentary legal-omission control, not a runtime result",
+      "sources": [
+        "https://github.com/pwaller/pyfiglet/blob/main/README.md"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    },
+    {
+      "id": "D10",
+      "project": "NetBox plugin discussion",
+      "bibkey": "netbox",
+      "route": "mixed packaging/template compatibility discussion",
+      "reported_affected": "No specific release pair established",
+      "reported_fixed": "Not established",
+      "source_supported_observation": "Discussion is a lead and includes template inheritance context.",
+      "disposition": "Ambiguous initial lead; no validated benchmark membership",
+      "sources": [
+        "https://github.com/netbox-community/netbox/discussions/7414"
+      ],
+      "configuration_replay_completed": false,
+      "publisher_artifact_replayed": false,
+      "researcher_coded_from_public_sources": true
+    }
+  ],
+  "maintainer_linked_configuration_replays": 1,
+  "publisher_artifact_replays": 0
+}

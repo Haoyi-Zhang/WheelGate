@@ -1,0 +1,2 @@
+prune docs
+exclude wg_matrix/template.json

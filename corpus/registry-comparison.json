@@ -1,0 +1,42 @@
+[
+  {
+    "file": "setuptools-78.1.1-py3-none-any.whl",
+    "local_sha256": "c3a9c4211ff4c309edb8b8c4f1cbfa7ae324c4ba9f91ff254e3d305b9fd54561",
+    "pypi_reported_sha256": "c3a9c4211ff4c309edb8b8c4f1cbfa7ae324c4ba9f91ff254e3d305b9fd54561",
+    "pypi_source": "https://pypi.org/project/setuptools/78.1.1/",
+    "observed_date": "2026-10-08",
+    "bytes": 1256462,
+    "archive_equal": true,
+    "interpretation": "Exact official registry wheel bytes"
+  },
+  {
+    "file": "pygments-2.19.1-py3-none-any.whl",
+    "local_sha256": "c9faf9fbd24c86e8f6cc5b77ac1efe4536c4eb7a556f41e7f6d032b25bb9ef8f",
+    "pypi_reported_sha256": "9ea1544ad55cecf4b8242fab6dd35a93bbce657034b0611ee383099054ab6d8c",
+    "pypi_source": "https://pypi.org/project/Pygments/2.19.1/",
+    "observed_date": "2026-10-07",
+    "bytes": 1225293,
+    "archive_equal": false,
+    "interpretation": "Archive bytes differ; neither cause nor uncompressed payload equivalence established."
+  },
+  {
+    "file": "latex2pydata-0.5.0-py3-none-any.whl",
+    "local_sha256": "f0d357b1f6f335c984fb60333b954b219afc9e91c8cdb59fc7277b233636410d",
+    "pypi_reported_sha256": "7c4092562082985453f47f52db31e1f8c2edcf5d7f855f4c614cfba12808675b",
+    "pypi_source": "https://pypi.org/project/latex2pydata/0.5.0/",
+    "observed_date": "2026-10-07",
+    "bytes": 13507,
+    "archive_equal": false,
+    "interpretation": "Archive bytes differ; neither cause nor uncompressed payload equivalence established."
+  },
+  {
+    "file": "pip-25.1.1-py3-none-any.whl",
+    "local_sha256": "20568e5d750393b2a331d6b261886cbe5d62aca3f54d49a39815b7474d34cd9c",
+    "pypi_reported_sha256": "2913a38a2abf4ea6b64ab507bd9e967f3b53dc1ede74b01b0931e1ce548751af",
+    "pypi_source": "https://pypi.org/project/pip/25.1.1/",
+    "observed_date": "2026-10-07",
+    "bytes": 1468105,
+    "archive_equal": false,
+    "interpretation": "Archive bytes differ; neither cause nor uncompressed payload equivalence established."
+  }
+]

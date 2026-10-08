@@ -1,0 +1,43 @@
+{
+  "schema": 2,
+  "contracts": [
+    {
+      "distribution": "wg-matrix",
+      "modules": [
+        "wg_matrix"
+      ],
+      "evidence": "Authored route-matrix README: API, static resource, and command",
+      "id": "api",
+      "kind": "call",
+      "target": "wg_matrix:consumer",
+      "equals": "hello"
+    },
+    {
+      "distribution": "wg-matrix",
+      "modules": [
+        "wg_matrix"
+      ],
+      "evidence": "Authored route-matrix README: API, static resource, and command",
+      "id": "resource",
+      "kind": "resource",
+      "package": "wg_matrix",
+      "resource": "template.json",
+      "format": "json",
+      "equals": {
+        "schema": 1,
+        "message": "hello"
+      }
+    },
+    {
+      "distribution": "wg-matrix",
+      "modules": [
+        "wg_matrix"
+      ],
+      "evidence": "Authored route-matrix README: API, static resource, and command",
+      "id": "cli",
+      "kind": "cli",
+      "command": "wg-matrix",
+      "equals": "hello\n"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-10-08T16:09:14.025748+00:00",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "machine": "AMD64",
+  "implementation": "CPython",
+  "cpu": "12th Gen Intel(R) Core(TM) i7-12700KF",
+  "tools": {
+    "pytest": "9.0.2",
+    "setuptools": "78.1.1",
+    "attrs": "26.1.0",
+    "click": "8.1.8",
+    "packaging": "25.0",
+    "pydantic": "2.13.5"
+  },
+  "scope": "Execution host for selected Windows studies; subject-environment inventories are retained in each observation."
+}
