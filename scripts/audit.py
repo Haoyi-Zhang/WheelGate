@@ -35,6 +35,25 @@ def require(condition: bool, message: str) -> None:
         raise AssertionError(message)
 
 
+def audit_pytest_log(log: str, expected_tests: int, expected_skips: int) -> dict[str, int]:
+    """Check the executed test total, allowing platform-specific and subtest counts."""
+    summaries = re.findall(r"(?m)^([^\n]+) in [0-9.]+s(?:[^\n]*)$", log)
+    require(len(summaries) == 1, "pytest terminal summary missing or ambiguous")
+    counts: dict[str, int] = {}
+    for item in summaries[0].split(", "):
+        match = re.fullmatch(r"(\d+) (passed|skipped|failed|errors?|subtests passed|subtests failed|subtests skipped)", item)
+        require(match is not None, "unrecognized pytest terminal summary")
+        count, label = int(match.group(1)), match.group(2)
+        require(label not in counts, "duplicate pytest terminal count")
+        counts[label] = count
+    require(not any(counts.get(label, 0) for label in ("failed", "error", "errors", "subtests failed")),
+            "pytest reports a failed test or subtest")
+    require(counts.get("skipped", 0) == expected_skips, "pytest/unittest platform skips differ")
+    require(counts.get("passed", 0) + counts.get("skipped", 0) == expected_tests,
+            "pytest/unittest executed test totals differ")
+    return counts
+
+
 def check_process(process: dict, expected: int | None) -> None:
     require(process.get("timeout") is False, f"unexpected timeout: {process.get('argv')}")
     require(process.get("returncode") == expected, f"unexpected exit: {process.get('argv')}")
@@ -289,7 +308,9 @@ def audit_package() -> dict[str, object]:
     source_match = re.search(r"Ran (\d+) tests", source_log)
     require(source_match and int(source_match.group(1)) == TEST_COUNT and "\nOK" in source_log, "source unit-test log missing or stale")
     pytest_log = (VALIDATION / "pytest.txt").read_text(encoding="utf-8")
-    require(f"{TEST_COUNT} passed, 6 subtests passed" in pytest_log, "pytest/subtest log missing or stale")
+    skipped_match = re.search(r"\nOK \(skipped=(\d+)\)", source_log)
+    source_skips = int(skipped_match.group(1)) if skipped_match else 0
+    audit_pytest_log(pytest_log, TEST_COUNT, source_skips)
     return {"installation_routes": 2, "unit_tests_per_route": unit_counts, "software_wheel_sha256": next(iter(wheel_hashes))}
 
 
