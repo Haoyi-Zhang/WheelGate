@@ -20,7 +20,7 @@ only the Python standard library.
 Decisions are:
 
 - `PASS`: the operation and oracle succeeded in the established context;
-- `FAIL`: the operation or oracle failed after setup;
+- `FAIL`: a delivery, operation, or oracle failure was observed after setup; attribution may still be unresolved and context warnings are retained;
 - `BLOCKED`: a declared prerequisite or installation precondition was absent;
 - `INVALID`: the observation could not establish the requested context.
 
@@ -33,6 +33,11 @@ not accept value assertions; entry-point arguments and value assertions require
 `invoke: true`. The retained schema-1 smoke contract remains accepted unchanged.
 Console-child timeouts are `INVALID`, with partial output retained in the
 receipt; completed command failures and oracle mismatches remain `FAIL`.
+Validation checks syntax, types, and operation applicability, not joint
+satisfiability of accepted value assertions or arbitrary consumer scripts.
+Controller `qualify` receipts include the canonical validated contract digest.
+The retained route/context studies call `probe` and link artifacts to declared
+fixture cases and execution records without that digest.
 
 ## Retained studies
 

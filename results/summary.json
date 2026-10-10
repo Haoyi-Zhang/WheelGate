@@ -13,7 +13,7 @@
   "runtime_ms": {
     "Declared helper 1.0": 701.5183999901637,
     "Undeclared helper 1.0": 656.8281000072602,
-    "Declared helper 2.0": 70.59700001263991,
+    "Helper: required 1.0 / installed 2.0": 70.59700001263991,
     "CWD shadow module": 631.8069999979343,
     "Generated site module": 621.6234000166878,
     "Recorded package data": 618.976500001736,

@@ -2,7 +2,7 @@
 
 ## Established by execution
 
-- 137 source tests plus six subtests pass.
+- The retained installation study records 140 source tests plus six subtests passing; this is distinct from the later 167-test source suite.
 - WheelGate installs and passes the same test suite from both its direct wheel
   and a wheel rebuilt from its sdist.
 - A 45-observation route matrix distinguishes checkout, default editable,

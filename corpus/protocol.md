@@ -35,7 +35,12 @@ scored as acceptance or rejection.
 
 ## Reporting
 
-Each result retains artifact and contract hashes, commands, exits, timeouts,
-installed origin evidence, status, and timing. Setup time is separated from
-operation time. FAIL, BLOCKED, and INVALID remain distinct. Raw records are not
-pooled with fresh validation replays.
+Controller `qualify` receipts retain the artifact hash and canonical validated
+contract digest, commands, exits, timeouts, installed origin evidence, status,
+and timing. Retained route and context studies call `probe`: their projections
+link artifact hashes, declared fixture cases, setup, and execution records but
+do not contain the canonical contract digest. Setup time is separated from
+operation time. FAIL records a delivery, operation, or oracle failure without
+by itself establishing valid attribution; context warnings remain attached.
+FAIL, BLOCKED, and INVALID remain distinct. Raw records are not pooled with
+fresh validation replays.

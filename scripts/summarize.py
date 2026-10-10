@@ -47,7 +47,7 @@ lines+=['\\bottomrule','\\end{tabular}']
 (GEN/'historical-table.tex').write_text('\n'.join(lines)+'\n')
 # Footprint table
 order=['declared-helper','undeclared-helper','wrong-helper-version','cwd-shadow','generated-site-file','declared-package-data','cwd-data-file','generated-site-data']
-names={'declared-helper':'Declared helper 1.0','undeclared-helper':'Undeclared helper 1.0','wrong-helper-version':'Declared helper 2.0','cwd-shadow':'CWD shadow module','generated-site-file':'Generated site module','declared-package-data':'Recorded package data','cwd-data-file':'CWD data file','generated-site-data':'Unrecorded site data'}
+names={'declared-helper':'Declared helper 1.0','undeclared-helper':'Undeclared helper 1.0','wrong-helper-version':'Helper: required 1.0 / installed 2.0','cwd-shadow':'CWD shadow module','generated-site-file':'Generated site module','declared-package-data':'Recorded package data','cwd-data-file':'CWD data file','generated-site-data':'Unrecorded site data'}
 lines=['\\begin{tabular}{p{0.42\\columnwidth}cc}','\\toprule','Context & Ordinary & WheelGate \\\\','\\midrule']
 for case in order:
  rows=[r for r in foot['runs'] if r['case']==case]
@@ -78,8 +78,9 @@ for case in order:
 series.append(('Historical replay',1000*statistics.median(r['gate']['seconds'] for r in hist['runs'])))
 series.append(('Route bundle (3 ops)',1000*statistics.median(r['gate']['seconds'] for r in req['runs'])))
 (GEN/'runtime.dat').write_text('label value\n'+'\n'.join(f'{{{name}}} {value:.3f}' for name,value in series)+'\n')
-single_values=[value for name,value in series if name not in {'Declared helper 2.0','Route bundle (3 ops)'}]
-summary_runtime=[('Prerequisite block',dict(series)['Declared helper 2.0']),('Single operation',statistics.median(single_values)),('Three operations',dict(series)['Route bundle (3 ops)'])]
+blocked_label=names['wrong-helper-version']
+single_values=[value for name,value in series if name not in {blocked_label,'Route bundle (3 ops)'}]
+summary_runtime=[('Prerequisite block',dict(series)[blocked_label]),('Single operation',statistics.median(single_values)),('Three operations',dict(series)['Route bundle (3 ops)'])]
 (GEN/'runtime-summary.dat').write_text('label value\n'+'\n'.join(f'{{{name}}} {value:.3f}' for name,value in summary_runtime)+'\n')
 implementation={
  'SourceLines':sum(len(p.read_text(encoding='utf-8').splitlines()) for p in (ROOT/'wheelgate').glob('*.py')),
