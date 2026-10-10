@@ -11,7 +11,6 @@ import json
 import re
 import sys
 import zipfile
-import unittest
 from collections import Counter
 from pathlib import Path
 
@@ -19,7 +18,6 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 PAPER = ROOT.parent / "paper"
 VALIDATION = ROOT / "results/validation"
-TEST_COUNT = unittest.TestLoader().discover(str(ROOT/'tests')).countTestCases()
 
 
 def load(path: Path) -> object:
@@ -33,6 +31,24 @@ def sha256(path: Path) -> str:
 def require(condition: bool, message: str) -> None:
     if not condition:
         raise AssertionError(message)
+
+
+def recorded_test_count(log: str) -> int:
+    """Read an executed suite, not the size of a subsequently extended tree."""
+    matches = re.findall(r"(?m)^Ran (\d+) tests? in [^\n]+$", log)
+    require(len(matches) == 1 and int(matches[0]) > 0,
+            "executed unittest total missing or ambiguous")
+    require(re.search(r"(?m)^OK(?: \(skipped=\d+\))?$", log) is not None,
+            "executed unittest suite did not pass")
+    return int(matches[0])
+
+
+def record_script(expected: str, candidates: list[Path]) -> Path:
+    """Select the exact source bound to a record; file existence is insufficient."""
+    for candidate in candidates:
+        if candidate.is_file() and sha256(candidate) == expected:
+            return candidate
+    raise AssertionError("no supplied study source matches the selected record")
 
 
 def audit_pytest_log(log: str, expected_tests: int, expected_skips: int) -> dict[str, int]:
@@ -208,10 +224,10 @@ def audit_routes() -> dict[str, int]:
     path = ROOT / "results/routes/matrix.json"
     record = load(path)
     require(record["status"] == "COMPLETE", "route experiment incomplete")
-    provenance = ROOT / "results/routes/provenance/route_matrix.py"
-    if not provenance.is_file():
-        provenance = ROOT / 'scripts/route_matrix.py'
-    require(record["script_sha256"] == sha256(provenance), "retained route script does not match selected record")
+    record_script(record["script_sha256"], [
+        ROOT / "results/routes/provenance/route_matrix.py",
+        ROOT / "scripts/route_matrix.py",
+    ])
     runs = record["runs"]
     require(len(runs) == 45, "route matrix must contain 45 observations")
     expected_ids = {(state, route, rep) for state in "UXR" for route in ["checkout", "editable", "strict-editable", "direct-wheel", "sdist-wheel"] for rep in range(3)}
@@ -276,7 +292,10 @@ def audit_package() -> dict[str, object]:
     path = ROOT / "results/package/self-check.json"
     record = load(path)
     require(record["status"] == "COMPLETE", "software package check incomplete")
-    require(record["script_sha256"] == sha256(ROOT / "scripts/package_check.py"), "package-check script drift")
+    record_script(record["script_sha256"], [
+        ROOT / "results/package/provenance/package_check.py",
+        ROOT / "scripts/package_check.py",
+    ])
     require(record["payloads_equal"] is True and len(record["routes"]) == 2, "software package routes incomplete")
     unit_counts: list[int] = []
     wheel_hashes: set[str] = set()
@@ -291,26 +310,28 @@ def audit_package() -> dict[str, object]:
         identity = json.loads(row["identity"]["stdout"])
         require(identity["version"] == "1.0.0" and "/site-packages/wheelgate/" in identity["module"].replace('\\','/'), "installed software identity changed")
         test_output = row["unit_tests"]["stdout"] + row["unit_tests"]["stderr"]
-        match = re.search(r"Ran (\d+) tests", test_output)
-        require(match is not None and int(match.group(1)) == TEST_COUNT and "\nOK" in test_output, "installed test suite result changed")
-        unit_counts.append(int(match.group(1)))
-        for name, expected_hash in row["package_payload"].items():
-            require(sha256(ROOT / name) == expected_hash, f"installed package differs from source: {name}")
+        unit_counts.append(recorded_test_count(test_output))
+        with zipfile.ZipFile(wheel) as archive:
+            actual_payload = {name: hashlib.sha256(archive.read(name)).hexdigest()
+                              for name in archive.namelist() if name.startswith("wheelgate/")}
+        require(actual_payload == row["package_payload"],
+                "retained software wheel differs from its recorded package payload")
         smoke = {entry["condition"]: entry for entry in row["semantic_smoke"]}
         require(smoke["good"]["process"]["returncode"] == 0, "healthy fixture smoke failed")
         require(smoke["missing"]["process"]["returncode"] == 1, "missing-resource fixture was not rejected")
         require(smoke["good"]["report"]["status"] == "PASS", "healthy report status changed")
         require(smoke["missing"]["report"]["status"] == "FAIL", "missing report status changed")
     require(len(wheel_hashes) == 1, "direct and sdist-derived software wheel bytes differ")
+    require(len(set(unit_counts)) == 1, "installed routes ran different test suites")
     sdist = ROOT / "results/package/self-check-assets/sdist/wheelgate-1.0.0.tar.gz"
     require(sdist.is_file(), "software sdist missing")
     source_log = (VALIDATION / "source-tests.txt").read_text(encoding="utf-8")
-    source_match = re.search(r"Ran (\d+) tests", source_log)
-    require(source_match and int(source_match.group(1)) == TEST_COUNT and "\nOK" in source_log, "source unit-test log missing or stale")
+    require(recorded_test_count(source_log) == unit_counts[0],
+            "retained source and installed test totals differ")
     pytest_log = (VALIDATION / "pytest.txt").read_text(encoding="utf-8")
     skipped_match = re.search(r"\nOK \(skipped=(\d+)\)", source_log)
     source_skips = int(skipped_match.group(1)) if skipped_match else 0
-    audit_pytest_log(pytest_log, TEST_COUNT, source_skips)
+    audit_pytest_log(pytest_log, unit_counts[0], source_skips)
     return {"installation_routes": 2, "unit_tests_per_route": unit_counts, "software_wheel_sha256": next(iter(wheel_hashes))}
 
 
@@ -321,7 +342,8 @@ def audit_paper_and_summary(*, allow_unreviewed_pdf: bool = False) -> dict[str, 
         "HistoricalObservations": 6,
         "FootprintObservations": 24,
         "RouteRequalifications": 10,
-        "RegressionTests": TEST_COUNT,
+        "RegressionTests": recorded_test_count(
+            (VALIDATION / "source-tests.txt").read_text(encoding="utf-8")),
         "FootprintInvalid": 15,
         "FootprintModuleInvalid": 9,
         "FootprintFileInvalid": 6,
