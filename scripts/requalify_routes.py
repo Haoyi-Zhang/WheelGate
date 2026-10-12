@@ -4,6 +4,7 @@ from __future__ import annotations
 import argparse, datetime, hashlib, json, pathlib, statistics, sys, tempfile
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from wheelgate.runner import prepare, probe
+from evidence_paths import resolve_result_path
 
 
 def spec():
@@ -27,10 +28,12 @@ def main():
     rows=[r for r in prior['runs'] if r['route'].endswith('wheel')]
     representatives={}
     for row in rows:
-        wheel=prior_path.parent/row['wheel']
+        wheel=resolve_result_path(ROOT,prior_path,row['wheel'])
         if digest(wheel)!=row['sha256']: raise ValueError('retained route wheel hash mismatch')
         representatives.setdefault(row['sha256'],wheel)
-    record={'schema':1,'experiment':'current-code-requalification-of-retained-route-wheels','status':'RUNNING','started_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'repetitions':a.repetitions,'source_route_record_sha256':digest(prior_path),'runs':[]}
+    record={'schema':1,'experiment':'current-code-requalification-of-retained-route-wheels','status':'RUNNING','started_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'repetitions':a.repetitions,'source_route_record_sha256':digest(prior_path),
+            'script_sha256':digest(pathlib.Path(__file__)),
+            'runtime_source_sha256':{p.name:digest(p) for p in sorted((ROOT/'wheelgate').glob('*.py'))},'runs':[]}
     def save(): out.write_text(json.dumps(record,indent=2)+'\n')
     with tempfile.TemporaryDirectory(prefix='wheelgate-routes-') as td:
         temp=pathlib.Path(td)
@@ -49,7 +52,7 @@ def main():
                 expected=next(iter(observed))
                 if expected not in {'PASS','FAIL'}: raise AssertionError(('unexpected retained status',expected))
                 if gate['status']!=expected: raise AssertionError((sha,gate))
-                record['runs'].append({'repetition':rep,'wheel':str(wheel.relative_to(ROOT)),'sha256':sha,'expected':expected,'gate':gate})
+                record['runs'].append({'repetition':rep,'wheel':wheel.relative_to(ROOT).as_posix(),'sha256':sha,'expected':expected,'gate':gate})
                 save();print(sha[:8],rep,gate['status'],flush=True)
     record['summary']={'unique_wheels':len(representatives),'observations':len(record['runs']),'pass':sum(r['gate']['status']=='PASS' for r in record['runs']),'fail':sum(r['gate']['status']=='FAIL' for r in record['runs']),'median_gate_seconds':statistics.median(r['gate']['seconds'] for r in record['runs'])}
     record['status']='COMPLETE';record['completed_at']=datetime.datetime.now(datetime.timezone.utc).isoformat();save();return 0

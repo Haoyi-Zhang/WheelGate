@@ -18,6 +18,7 @@ import tempfile
 
 try:  # package import in unit tests
     from .footprint import AccessRecorder, inspect_file_access, inspect_new_modules, snapshot
+    from .paths import command_basename, resource_parts
 except ImportError:  # copied standalone; -I intentionally omits the script directory
     import importlib.util
     _helper_path = pathlib.Path(__file__).with_name("footprint.py")
@@ -30,6 +31,15 @@ except ImportError:  # copied standalone; -I intentionally omits the script dire
     inspect_file_access = _helper.inspect_file_access
     inspect_new_modules = _helper.inspect_new_modules
     snapshot = _helper.snapshot
+    _paths_spec = importlib.util.spec_from_file_location(
+        "wheelgate_probe_paths", pathlib.Path(__file__).with_name("paths.py")
+    )
+    if _paths_spec is None or _paths_spec.loader is None:
+        raise
+    _paths = importlib.util.module_from_spec(_paths_spec)
+    _paths_spec.loader.exec_module(_paths)
+    command_basename = _paths.command_basename
+    resource_parts = _paths.resource_parts
 
 
 class InvalidRun(RuntimeError):
@@ -81,12 +91,10 @@ def _allowed(c: dict) -> list[str]:
 def _console_operation(c: dict, capture=None) -> dict:
     """Run an installed Python console launcher in this already isolated child."""
     d = c["distribution"]
-    name = c["command"]
-    if pathlib.Path(name).name != name:
-        raise ValueError("CLI must be an installed script basename")
+    name = command_basename(c["command"])
     executable = pathlib.Path(sys.executable).parent / name
     if os.name == 'nt':
-        executable = executable.with_suffix('.exe')
+        executable = executable.with_name(executable.name + '.exe')
     entries = [
         entry
         for entry in md.distribution(d).entry_points
@@ -252,6 +260,11 @@ def _invoke_console_child(c: dict) -> dict:
 
 
 def operation(c: dict) -> dict:
+    # Enforce the same path rules even for directly invoked standalone workers.
+    if c["kind"] == "resource":
+        resource_parts(c["resource"])
+    elif c["kind"] == "cli":
+        command_basename(c["command"])
     d = c["distribution"]
     origins = [owned(d, module) for module in c["modules"]]
     kind = c["kind"]
@@ -268,11 +281,9 @@ def operation(c: dict) -> dict:
         compare(value, c)
         detail["value"] = value
     elif kind == "resource":
-        name = pathlib.PurePosixPath(c["resource"])
-        if name.is_absolute() or ".." in name.parts:
-            raise ValueError("Resource must be a package-relative path")
+        parts = resource_parts(c["resource"])
         origins.append(owned(d, c["package"]))
-        resource = resources.files(c["package"]).joinpath(str(name))
+        resource = resources.files(c["package"]).joinpath(*parts)
         if not isinstance(resource, pathlib.Path):
             raise InvalidRun("Non-filesystem resource loader is unsupported")
         if not resource.is_file():

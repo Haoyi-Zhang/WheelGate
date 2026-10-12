@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Generate manuscript tables from selected complete result records."""
 from __future__ import annotations
-import json,pathlib,statistics,re
+import json,pathlib,statistics,re,zipfile
+from evidence_paths import resolve_result_path
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 PAPER=ROOT.parent/'paper' if ROOT.name == 'artifact' and (ROOT.parent/'paper').is_dir() else ROOT/'results/manuscript'
 GEN=PAPER/'generated';GEN.mkdir(parents=True,exist_ok=True)
@@ -82,10 +83,13 @@ blocked_label=names['wrong-helper-version']
 single_values=[value for name,value in series if name not in {blocked_label,'Route bundle (3 ops)'}]
 summary_runtime=[('Prerequisite block',dict(series)[blocked_label]),('Single operation',statistics.median(single_values)),('Three operations',dict(series)['Route bundle (3 ops)'])]
 (GEN/'runtime-summary.dat').write_text('label value\n'+'\n'.join(f'{{{name}}} {value:.3f}' for name,value in summary_runtime)+'\n')
+retained_wheel=resolve_result_path(ROOT,ROOT/'results/package/self-check.json',package['routes'][0]['wheel'])
+with zipfile.ZipFile(retained_wheel) as archive:
+ retained_source_lines=sum(len(archive.read(name).decode('utf-8').splitlines())
+                           for name in archive.namelist() if name.startswith('wheelgate/') and name.endswith('.py'))
 implementation={
- 'SourceLines':sum(len(p.read_text(encoding='utf-8').splitlines()) for p in (ROOT/'wheelgate').glob('*.py')),
- 'TestLines':sum(len(p.read_text(encoding='utf-8').splitlines()) for p in (ROOT/'tests').glob('test_*.py')),
- 'WheelBytes':(ROOT/'results/package'/package['routes'][0]['wheel']).stat().st_size,
+ 'SourceLines':retained_source_lines,
+ 'WheelBytes':retained_wheel.stat().st_size,
  'SingleOperationSeconds':f"{dict(summary_runtime)['Single operation']/1000:.2f}",
  'ThreeOperationSeconds':f"{dict(summary_runtime)['Three operations']/1000:.2f}",
  'PrerequisiteMs':f"{dict(summary_runtime)['Prerequisite block']:.0f}",

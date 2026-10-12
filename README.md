@@ -35,6 +35,11 @@ Console-child timeouts are `INVALID`, with partial output retained in the
 receipt; completed command failures and oracle mismatches remain `FAIL`.
 Validation checks syntax, types, and operation applicability, not joint
 satisfiability of accepted value assertions or arbitrary consumer scripts.
+Resource paths must use explicit POSIX-relative file components on all hosts.
+Drive/stream syntax, backslashes, empty components, and dot or parent components
+are rejected. Commands must be basenames without either separator style or drive
+syntax. The controller and standalone worker enforce the same admission rules;
+path normalization never replaces installed-file ownership checks.
 Controller `qualify` receipts include the canonical validated contract digest.
 The retained route/context studies call `probe` and link artifacts to declared
 fixture cases and execution records without that digest.
@@ -123,3 +128,34 @@ comparison. Subject environments do not inherit those packages.
 Absolute temporary paths inside raw receipts are observations of the executed
 host. Replays create new paths and timings; they do not overwrite the retained
 records.
+
+Retained file references (not process arguments or temporary origins) may use
+Windows or POSIX separators. `scripts/evidence_paths.py` resolves only relative
+references inside the artifact or record directory; it rejects absolute paths,
+drive syntax, traversal, and paths resolving outside that directory. New
+requalification and self-package records write POSIX separators. The original
+route generator is retained unchanged because its hash binds the selected study.
+
+## Current portability and self-package validation
+
+The current source suite contains 191 tests. The retained installation study
+still records 140 tests; these are different revisions, not additional projects.
+`results/packaging-flow/comparison.json` records a fresh direct/sdist-derived
+build of this supplied software package, 191 installed tests on each route,
+unchanged CWC default/reference checks, and ordinary/gate operations with the
+same import, canonical-name, and version-command expectations. All pass on both
+routes. This is positive self-package validation, not an external maintainer
+deployment or additional defect-recall result. `results/portability/` retains a
+fresh ten-run requalification of the same two route-wheel contents.
+
+To repeat the self-package comparison in a host with CWC dependencies installed:
+
+```sh
+python scripts/packaging_flow.py --output /tmp/wg-self-flow/comparison.json
+```
+
+The optional `--comparison-wheel-dir` instead reads pinned pure-Python dependency
+wheels through zipimport without installing them or running startup hooks. The
+record identifies the dependency versions and inputs actually used. Component
+and owned-file tests cover cross-host path syntax on Windows; native Linux
+execution remains unverified.

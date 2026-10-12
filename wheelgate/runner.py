@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse, email.parser, hashlib, json, os, pathlib, re, shutil, subprocess, sys, tempfile, time, venv, zipfile
 from . import __version__
 from .contractio import load as load_contracts, loads as load_json, validate_v2
+from .paths import command_basename, resource_parts
 KINDS = {'import','call','resource','entrypoint','cli','script'}
 
 def validate(spec: dict) -> None:
@@ -29,9 +30,8 @@ def validate(spec: dict) -> None:
         if 'args' in c and not isinstance(c['args'],list): raise ValueError('args must be a list')
         if 'kwargs' in c and not isinstance(c['kwargs'],dict): raise ValueError('kwargs must be an object')
         if c['kind']=='resource':
-            path=pathlib.PurePosixPath(c['resource'])
-            if path.is_absolute() or '..' in path.parts or '\\' in c['resource']: raise ValueError('Resource must be package-relative')
-        if c['kind']=='cli' and pathlib.PurePath(c['command']).name!=c['command']: raise ValueError('CLI must be a basename')
+            resource_parts(c['resource'])
+        if c['kind']=='cli': command_basename(c['command'])
         if c['kind'] in {'call','resource'} and not any(k in c for k in ('equals','contains')):
             raise ValueError('Semantic expectation required')
         timeout = c.get('timeout', 10)
@@ -113,7 +113,9 @@ def execute(argv, cwd, env, timeout=60, stdin=None):
 
 def clean_env(home, bindir):
     env = {'PATH':str(bindir)+os.pathsep+os.environ.get('PATH',os.defpath), 'HOME':str(home),'LANG':'C.UTF-8',
+            'TEMP':str(home),'TMP':str(home),'TMPDIR':str(home),
             'PIP_CONFIG_FILE':os.devnull,'PIP_NO_INDEX':'1','PIP_DISABLE_PIP_VERSION_CHECK':'1',
+            'PIP_NO_CACHE_DIR':'1',
             'PYTHONNOUSERSITE':'1'}
     if os.name == 'nt' and 'SystemRoot' in os.environ:
         env['SystemRoot'] = os.environ['SystemRoot']
@@ -185,6 +187,7 @@ def _copy_worker_bundle(folder):
     source = pathlib.Path(__file__).resolve().parent
     shutil.copyfile(source / 'worker.py', folder / 'worker.py')
     shutil.copyfile(source / 'footprint.py', folder / 'footprint.py')
+    shutil.copyfile(source / 'paths.py', folder / 'paths.py')
 
 
 def probe(spec, py, env, base, profile='base', mode='isolated', identity=None):

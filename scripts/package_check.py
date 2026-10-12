@@ -34,7 +34,8 @@ def main():
     if setup['status']!='READY':raise RuntimeError(str(setup))
     neutral=work/'neutral';neutral.mkdir();tests=neutral/'tests';shutil.copytree(ROOT/'tests',tests,ignore=shutil.ignore_patterns('__pycache__'));shutil.copytree(ROOT/'contracts',neutral/'contracts')
     # The source-entrypoint test parses this file; it is not installed or run.
-    (neutral/'scripts').mkdir();shutil.copyfile(ROOT/'scripts/reproduce.py',neutral/'scripts/reproduce.py')
+    (neutral/'scripts').mkdir()
+    for script in ['reproduce.py','evidence_paths.py']:shutil.copyfile(ROOT/'scripts'/script,neutral/'scripts'/script)
     (neutral/'inputs/fixture-direct').mkdir(parents=True);shutil.copyfile(ROOT/'inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl',neutral/'inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl')
     identity=run([subject,'-I','-c','import wheelgate,pathlib,sys,json;assert pathlib.Path(wheelgate.__file__).is_relative_to(pathlib.Path(sys.prefix));print(json.dumps({"module":wheelgate.__file__,"version":wheelgate.__version__,"prefix":sys.prefix}))'],neutral,subenv)
     check=run([subject,'-I','-m','unittest','discover','-s',tests,'-v'],neutral,subenv)
@@ -46,7 +47,7 @@ def main():
     with zipfile.ZipFile(wheel) as z:
      payload={p:hashlib.sha256(z.read(p)).hexdigest() for p in z.namelist() if p.startswith('wheelgate/')};names=z.namelist()
     if any(p.startswith(('tests/','results/','corpus/','paper/','third_party/')) for p in names):raise RuntimeError('research data leaked into software wheel')
-    result['routes'].append({'route':name,'wheel':str(wheel.relative_to(out.parent)),'sha256':hashlib.sha256(wheel.read_bytes()).hexdigest(),'setup':setup,'identity':identity,'unit_tests':check,'cli':cli,'semantic_smoke':semantic,'package_payload':payload});save()
+    result['routes'].append({'route':name,'wheel':wheel.relative_to(out.parent).as_posix(),'sha256':hashlib.sha256(wheel.read_bytes()).hexdigest(),'setup':setup,'identity':identity,'unit_tests':check,'cli':cli,'semantic_smoke':semantic,'package_payload':payload});save()
    result['payloads_equal']=result['routes'][0]['package_payload']==result['routes'][1]['package_payload']
    if not result['payloads_equal']:raise RuntimeError('WheelGate own package payload differs across routes')
   result['status']='COMPLETE'

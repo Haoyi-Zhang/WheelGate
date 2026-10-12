@@ -11,6 +11,7 @@ import subprocess
 import sys
 import time
 from pathlib import Path
+from evidence_paths import resolve_relative
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = ROOT / "third_party/source"
@@ -21,7 +22,7 @@ def verify_sources() -> None:
     """Verify every retained upstream source file against SHA-256 and Git blob ID."""
     rows = json.loads((SOURCES / "manifest.json").read_text(encoding="utf-8"))
     for row in rows:
-        path = SOURCES / row["path"]
+        path = resolve_relative(SOURCES, row["path"])
         data = path.read_bytes()
         if hashlib.sha256(data).hexdigest() != row["sha256"]:
             raise ValueError(f"Upstream source changed: {path}")

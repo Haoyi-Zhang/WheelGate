@@ -13,6 +13,7 @@ import sys
 import zipfile
 from collections import Counter
 from pathlib import Path
+from evidence_paths import resolve_relative, resolve_result_path as _resolve_result_path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -102,10 +103,7 @@ def audit_wheel(path: Path) -> None:
 
 
 def resolve_result_path(record_file: Path, value: str) -> Path:
-    relative = Path(value)
-    if relative.parts and relative.parts[0] == "results":
-        return (ROOT / relative).resolve()
-    return (record_file.parent / relative).resolve()
+    return _resolve_result_path(ROOT, record_file, value)
 
 
 def audit_third_party() -> dict[str, int]:
@@ -113,7 +111,7 @@ def audit_third_party() -> dict[str, int]:
     require(isinstance(manifest, list) and len(manifest) == 4, "four retained wheel inputs required")
     wheel_names = set()
     for row in manifest:
-        path = ROOT / "third_party" / row["file"]
+        path = resolve_relative(ROOT / "third_party", row["file"])
         require(path.stat().st_size == row["bytes"], f"third-party size mismatch: {path.name}")
         require(sha256(path) == row["sha256"], f"third-party hash mismatch: {path.name}")
         audit_wheel(path)
@@ -121,7 +119,7 @@ def audit_third_party() -> dict[str, int]:
     licences = load(ROOT / "third_party/license-index.json")
     require({row["wheel"] for row in licences} == wheel_names, "licence index does not cover retained wheels")
     for row in licences:
-        with zipfile.ZipFile(ROOT / "third_party" / row["wheel"]) as archive:
+        with zipfile.ZipFile(resolve_relative(ROOT / "third_party", row["wheel"])) as archive:
             for member in row["license_members"]:
                 require(member in archive.namelist(), f"missing retained licence member: {member}")
     comparison = load(ROOT / "corpus/registry-comparison.json")
@@ -134,7 +132,7 @@ def audit_third_party() -> dict[str, int]:
     sources = load(ROOT / "third_party/source/manifest.json")
     require(isinstance(sources, list) and len(sources) == 14, "fourteen retained upstream source files required")
     for row in sources:
-        path = ROOT / "third_party/source" / row["path"]
+        path = resolve_relative(ROOT / "third_party/source", row["path"])
         data = path.read_bytes()
         require(hashlib.sha256(data).hexdigest() == row["sha256"], f"source SHA-256 mismatch: {row['path']}")
         git_blob = hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
