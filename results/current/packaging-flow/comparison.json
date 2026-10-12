@@ -1,0 +1,1161 @@
+{
+  "schema": 1,
+  "experiment": "supplied-wheelgate-self-package-flow",
+  "scope": "One owned software package, two release routes, no external maintainer deployment",
+  "status": "COMPLETE",
+  "script_sha256": "f39a98a8c2f145b5753a30f236f56508888d45b08b735fdcc09efd5ed6666b71",
+  "started_at": "2026-10-12T22:09:17.630466+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "comparison_dependencies": [],
+  "source_manifest_sha256": "91dbe120a689a50d4ab0c27bd0261d2cee3d3849ffe26c3327916f33924597dd",
+  "runs": [
+    {
+      "route": "direct-wheel",
+      "wheel": "self-check-assets/direct/wheelgate-1.0.0-py3-none-any.whl",
+      "sha256": "7db1197ac4d2ee146fa82d744a5f32f2bba6589665f1e61598f746ead646c276",
+      "setup": {
+        "wheel_identity": {
+          "name": "wheelgate",
+          "version": "1.0.0"
+        },
+        "venv_seconds": 1.9007842999999411,
+        "install": {
+          "argv": [
+            "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\python.exe",
+            "-I",
+            "-m",
+            "pip",
+            "install",
+            "--no-index",
+            "--no-deps",
+            "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
+          ],
+          "returncode": 0,
+          "stdout": "Processing d:\\codexprojects\\wg-check\\p123-publish\\flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
+          "stderr": "",
+          "seconds": 0.3700250999972923,
+          "timeout": false
+        },
+        "dependency_check": {
+          "argv": [
+            "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\python.exe",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "returncode": 0,
+          "stdout": "No broken requirements found.\n",
+          "stderr": "",
+          "seconds": 0.21128930000122637,
+          "timeout": false
+        },
+        "environment": {
+          "status": "READY",
+          "receipt": {
+            "distributions": [
+              {
+                "name": "pip",
+                "version": "25.0.1"
+              },
+              {
+                "name": "wheelgate",
+                "version": "1.0.0"
+              }
+            ],
+            "implementation": "CPython",
+            "prefix": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv",
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+          },
+          "process": {
+            "argv": [
+              "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\python.exe",
+              "-I",
+              "-c",
+              "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+            ],
+            "returncode": 0,
+            "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"wheelgate\", \"version\": \"1.0.0\"}], \"implementation\": \"CPython\", \"prefix\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+            "stderr": "",
+            "seconds": 0.064997300010873,
+            "timeout": false
+          }
+        },
+        "seconds": 2.547319899997092,
+        "status": "READY"
+      },
+      "unit_tests": {
+        "argv": [
+          "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\venv\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\neutral\\tests",
+          "-v"
+        ],
+        "returncode": 0,
+        "stdout": "import\n",
+        "stderr": "test_base_third_party_is_not_stdlib (test_console_boundaries.ConsoleBoundaries.test_base_third_party_is_not_stdlib) ... ok\ntest_binary_output_and_file_descriptor (test_console_boundaries.ConsoleBoundaries.test_binary_output_and_file_descriptor) ... ok\ntest_import_output_is_in_contract (test_console_boundaries.ConsoleBoundaries.test_import_output_is_in_contract) ... ok\ntest_contains (test_core.Oracles.test_contains) ... ok\ntest_equal (test_core.Oracles.test_equal) ... ok\ntest_foreign_origin (test_core.Oracles.test_foreign_origin) ... ok\ntest_namespace_anchor (test_core.Oracles.test_namespace_anchor) ... ok\ntest_wrong_substring (test_core.Oracles.test_wrong_substring) ... ok\ntest_wrong_value (test_core.Oracles.test_wrong_value) ... ok\ntest_environment_allowlist (test_core.Process.test_environment_allowlist) ... ok\ntest_isolated_import_ignores_shadow (test_core.Process.test_isolated_import_ignores_shadow) ... ok\ntest_missing_executable (test_core.Process.test_missing_executable) ... ok\ntest_timeout (test_core.Process.test_timeout) ... ok\ntest_all_skipped_is_invalid (test_core.Schema.test_all_skipped_is_invalid) ... ok\ntest_duplicate (test_core.Schema.test_duplicate) ... ok\ntest_empty (test_core.Schema.test_empty) ... ok\ntest_missing_evidence (test_core.Schema.test_missing_evidence) ... ok\ntest_missing_expected_value (test_core.Schema.test_missing_expected_value) ... ok\ntest_missing_origin_anchor (test_core.Schema.test_missing_origin_anchor) ... ok\ntest_missing_target (test_core.Schema.test_missing_target) ... ok\ntest_timeout_bounds (test_core.Schema.test_timeout_bounds) ... ok\ntest_unknown_kind (test_core.Schema.test_unknown_kind) ... ok\ntest_valid (test_core.Schema.test_valid) ... ok\ntest_access_recorder_ignores_writes_and_code (test_footprint.FileAccessClassification.test_access_recorder_ignores_writes_and_code) ... ok\ntest_declared_data_file (test_footprint.FileAccessClassification.test_declared_data_file) ... ok\ntest_external_data_file (test_footprint.FileAccessClassification.test_external_data_file) ... ok\ntest_undeclared_distribution_data_file (test_footprint.FileAccessClassification.test_undeclared_distribution_data_file) ... ok\ntest_unowned_site_data_file (test_footprint.FileAccessClassification.test_unowned_site_data_file) ... ok\ntest_declared_distribution (test_footprint.FootprintClassification.test_declared_distribution) ... ok\ntest_external_file (test_footprint.FootprintClassification.test_external_file) ... ok\ntest_name_normalization (test_footprint.FootprintClassification.test_name_normalization) ... ok\ntest_stdlib (test_footprint.FootprintClassification.test_stdlib) ... ok\ntest_undeclared_distribution (test_footprint.FootprintClassification.test_undeclared_distribution) ... ok\ntest_context_violation_invalidates_success (test_footprint.FootprintOutcome.test_context_violation_invalidates_success) ... ok\ntest_declared_footprint_keeps_success (test_footprint.FootprintOutcome.test_declared_footprint_keeps_success) ... ok\ntest_canonical_contract_digest_stable (test_footprint.ReceiptBinding.test_canonical_contract_digest_stable) ... ok\ntest_target_and_profile_prerequisites_are_allowed (test_footprint.RunnerEnrichment.test_target_and_profile_prerequisites_are_allowed) ... ok\ntest_child_temporary_files_stay_in_owned_home (test_portable_paths.ContractPathAdmission.test_child_temporary_files_stay_in_owned_home) ... ok\ntest_command_portable_basename (test_portable_paths.ContractPathAdmission.test_command_portable_basename) ... ok\ntest_command_posix_separator (test_portable_paths.ContractPathAdmission.test_command_posix_separator) ... ok\ntest_command_special_components (test_portable_paths.ContractPathAdmission.test_command_special_components) ... ok\ntest_command_windows_drive (test_portable_paths.ContractPathAdmission.test_command_windows_drive) ... ok\ntest_command_windows_separator (test_portable_paths.ContractPathAdmission.test_command_windows_separator) ... ok\ntest_console_child_rejects_before_metadata (test_portable_paths.ContractPathAdmission.test_console_child_rejects_before_metadata) ... ok\ntest_direct_worker_cli_rejects_before_import (test_portable_paths.ContractPathAdmission.test_direct_worker_cli_rejects_before_import) ... ok\ntest_direct_worker_resource_rejects_before_import (test_portable_paths.ContractPathAdmission.test_direct_worker_resource_rejects_before_import) ... ok\ntest_nested_resource_join_uses_components (test_portable_paths.ContractPathAdmission.test_nested_resource_join_uses_components) ... ok\ntest_posix_exe_named_launcher_uses_recorded_python_script (test_portable_paths.ContractPathAdmission.test_posix_exe_named_launcher_uses_recorded_python_script) ... ok\ntest_resource_absolute_or_traversing (test_portable_paths.ContractPathAdmission.test_resource_absolute_or_traversing) ... ok\ntest_resource_colon_or_nul (test_portable_paths.ContractPathAdmission.test_resource_colon_or_nul) ... ok\ntest_resource_nested_posix_path (test_portable_paths.ContractPathAdmission.test_resource_nested_posix_path) ... ok\ntest_resource_no_silent_dot_or_empty_normalization (test_portable_paths.ContractPathAdmission.test_resource_no_silent_dot_or_empty_normalization) ... ok\ntest_resource_windows_absolute (test_portable_paths.ContractPathAdmission.test_resource_windows_absolute) ... ok\ntest_resource_windows_drive_relative (test_portable_paths.ContractPathAdmission.test_resource_windows_drive_relative) ... ok\ntest_resource_windows_separator (test_portable_paths.ContractPathAdmission.test_resource_windows_separator) ... ok\ntest_windows_launcher_preserves_dotted_basename (test_portable_paths.ContractPathAdmission.test_windows_launcher_preserves_dotted_basename) ... ok\ntest_windows_launcher_uses_registered_entrypoint_adapter (test_portable_paths.ContractPathAdmission.test_windows_launcher_uses_registered_entrypoint_adapter) ... ok\ntest_absolute_and_drive_references_rejected (test_portable_paths.PortableEvidenceReferences.test_absolute_and_drive_references_rejected) ... ok\ntest_both_record_conventions_find_same_owned_file (test_portable_paths.PortableEvidenceReferences.test_both_record_conventions_find_same_owned_file) ... ok\ntest_record_outside_bundle_rejected (test_portable_paths.PortableEvidenceReferences.test_record_outside_bundle_rejected) ... ok\ntest_symlink_escape_rejected_with_owned_target (test_portable_paths.PortableEvidenceReferences.test_symlink_escape_rejected_with_owned_target) ... ok\ntest_traversal_and_ambiguous_components_rejected (test_portable_paths.PortableEvidenceReferences.test_traversal_and_ambiguous_components_rejected) ... ok\ntest_windows_parts_map_to_posix_components (test_portable_paths.PortableEvidenceReferences.test_windows_parts_map_to_posix_components) ... ok\ntest_non_utf8_child_output_roundtrips (test_repair_boundaries.CapturedByteStreams.test_non_utf8_child_output_roundtrips) ... ok\ntest_timeout_preserves_partial_bytes (test_repair_boundaries.CapturedByteStreams.test_timeout_preserves_partial_bytes) ... ok\ntest_utf8_child_output_is_not_replaced (test_repair_boundaries.CapturedByteStreams.test_utf8_child_output_is_not_replaced) ... ok\ntest_completed_console_assertion_failure_stays_fail (test_repair_boundaries.ConsoleTimeoutReceipt.test_completed_console_assertion_failure_stays_fail) ... ok\ntest_completed_nonzero_command_stays_fail (test_repair_boundaries.ConsoleTimeoutReceipt.test_completed_nonzero_command_stays_fail) ... ok\ntest_completed_stdout_oracle_failure_stays_fail (test_repair_boundaries.ConsoleTimeoutReceipt.test_completed_stdout_oracle_failure_stays_fail) ... ok\ntest_console_timeout_keeps_partial_byte_streams (test_repair_boundaries.ConsoleTimeoutReceipt.test_console_timeout_keeps_partial_byte_streams) ... ok\ntest_console_timeout_keeps_text_streams (test_repair_boundaries.ConsoleTimeoutReceipt.test_console_timeout_keeps_text_streams) ... ok\ntest_console_timeout_without_streams (test_repair_boundaries.ConsoleTimeoutReceipt.test_console_timeout_without_streams) ... ok\ntest_paper_build_uses_current_python_entrypoint_without_executing_it (test_repair_boundaries.ReproductionEntrypoint.test_paper_build_uses_current_python_entrypoint_without_executing_it) ... ok\ntest_cli_assertion_types_before_setup (test_repair_boundaries.SchemaOneApplicability.test_cli_assertion_types_before_setup) ... ok\ntest_delivered_schema1_stays_valid (test_repair_boundaries.SchemaOneApplicability.test_delivered_schema1_stays_valid) ... ok\ntest_duplicate_schema1_json_key_rejected (test_repair_boundaries.SchemaOneApplicability.test_duplicate_schema1_json_key_rejected) ... ok\ntest_entrypoint_invoke_must_be_boolean (test_repair_boundaries.SchemaOneApplicability.test_entrypoint_invoke_must_be_boolean) ... ok\ntest_import_contains_before_setup (test_repair_boundaries.SchemaOneApplicability.test_import_contains_before_setup) ... ok\ntest_import_equals_before_setup (test_repair_boundaries.SchemaOneApplicability.test_import_equals_before_setup) ... ok\ntest_script_assertion_field_before_setup (test_repair_boundaries.SchemaOneApplicability.test_script_assertion_field_before_setup) ... ok\ntest_uninvoked_entrypoint_fields_before_setup (test_repair_boundaries.SchemaOneApplicability.test_uninvoked_entrypoint_fields_before_setup) ... ok\ntest_unknown_document_field_before_setup (test_repair_boundaries.SchemaOneApplicability.test_unknown_document_field_before_setup) ... ok\ntest_unknown_operation_field_before_setup (test_repair_boundaries.SchemaOneApplicability.test_unknown_operation_field_before_setup) ... ok\ntest_base_dlls_extension_is_stdlib (test_repair_boundaries.WindowsStdlibRoots.test_base_dlls_extension_is_stdlib) ... ok\ntest_base_prefix_is_not_allowed (test_repair_boundaries.WindowsStdlibRoots.test_base_prefix_is_not_allowed) ... ok\ntest_base_site_packages_stays_invalid (test_repair_boundaries.WindowsStdlibRoots.test_base_site_packages_stays_invalid) ... ok\ntest_dlls_site_packages_stays_invalid (test_repair_boundaries.WindowsStdlibRoots.test_dlls_site_packages_stays_invalid) ... ok\ntest_fresh_decimal_import (test_repair_boundaries.WindowsStdlibRoots.test_fresh_decimal_import) ... ok\ntest_fresh_sqlite3_import (test_repair_boundaries.WindowsStdlibRoots.test_fresh_sqlite3_import) ... ok\ntest_venv_dlls_is_not_base_stdlib (test_repair_boundaries.WindowsStdlibRoots.test_venv_dlls_is_not_base_stdlib) ... ok\ntest_blank_evidence (test_schema2.DependencySchema.test_blank_evidence) ... ok\ntest_duplicate_normalized_name (test_schema2.DependencySchema.test_duplicate_normalized_name) ... ok\ntest_empty_base (test_schema2.DependencySchema.test_empty_base) ... ok\ntest_missing_evidence (test_schema2.DependencySchema.test_missing_evidence) ... ok\ntest_no_list (test_schema2.DependencySchema.test_no_list) ... ok\ntest_no_range (test_schema2.DependencySchema.test_no_range) ... ok\ntest_nontext_name (test_schema2.DependencySchema.test_nontext_name) ... ok\ntest_not_object (test_schema2.DependencySchema.test_not_object) ... ok\ntest_unknown_profile (test_schema2.DependencySchema.test_unknown_profile) ... ok\ntest_valid (test_schema2.DependencySchema.test_valid) ... ok\ntest_bad_exit (test_schema2.DependencyWorker.test_bad_exit) ... ok\ntest_bad_json (test_schema2.DependencyWorker.test_bad_json) ... ok\ntest_consistent_blocked_receipt (test_schema2.DependencyWorker.test_consistent_blocked_receipt) ... ok\ntest_consistent_ready_receipt (test_schema2.DependencyWorker.test_consistent_ready_receipt) ... ok\ntest_contradictory_ready (test_schema2.DependencyWorker.test_contradictory_ready) ... ok\ntest_duplicate_receipts (test_schema2.DependencyWorker.test_duplicate_receipts) ... ok\ntest_empty (test_schema2.DependencyWorker.test_empty) ... ok\ntest_matching (test_schema2.DependencyWorker.test_matching) ... ok\ntest_missing (test_schema2.DependencyWorker.test_missing) ... ok\ntest_missing_rows (test_schema2.DependencyWorker.test_missing_rows) ... ok\ntest_timeout (test_schema2.DependencyWorker.test_timeout) ... ok\ntest_wrong_version (test_schema2.DependencyWorker.test_wrong_version) ... ok\ntest_blank_id (test_schema2.SchemaTwo.test_blank_id) ... ok\ntest_bool_returncode (test_schema2.SchemaTwo.test_bool_returncode) ... ok\ntest_boolean_schema (test_schema2.SchemaTwo.test_boolean_schema) ... ok\ntest_distribution_path (test_schema2.SchemaTwo.test_distribution_path) ... ok\ntest_duplicate_module (test_schema2.SchemaTwo.test_duplicate_module) ... ok\ntest_float_schema (test_schema2.SchemaTwo.test_float_schema) ... ok\ntest_format_array (test_schema2.SchemaTwo.test_format_array) ... ok\ntest_ignored_import_expectation (test_schema2.SchemaTwo.test_ignored_import_expectation) ... ok\ntest_incomplete_target (test_schema2.SchemaTwo.test_incomplete_target) ... ok\ntest_invalid_module (test_schema2.SchemaTwo.test_invalid_module) ... ok\ntest_invalid_resource_package (test_schema2.SchemaTwo.test_invalid_resource_package) ... ok\ntest_invalid_target_attribute (test_schema2.SchemaTwo.test_invalid_target_attribute) ... ok\ntest_keyword_module (test_schema2.SchemaTwo.test_keyword_module) ... ok\ntest_kind_array (test_schema2.SchemaTwo.test_kind_array) ... ok\ntest_literal_version (test_schema2.SchemaTwo.test_literal_version) ... ok\ntest_matching_version_binding (test_schema2.SchemaTwo.test_matching_version_binding) ... ok\ntest_nonbool_invoke (test_schema2.SchemaTwo.test_nonbool_invoke) ... ok\ntest_nonfinite_expectation (test_schema2.SchemaTwo.test_nonfinite_expectation) ... ok\ntest_nonjson_expectation (test_schema2.SchemaTwo.test_nonjson_expectation) ... ok\ntest_nonstring_kwargs_key (test_schema2.SchemaTwo.test_nonstring_kwargs_key) ... ok\ntest_nontext_cli_contains (test_schema2.SchemaTwo.test_nontext_cli_contains) ... ok\ntest_nontext_cli_equals (test_schema2.SchemaTwo.test_nontext_cli_equals) ... ok\ntest_nontext_cli_stdin (test_schema2.SchemaTwo.test_nontext_cli_stdin) ... ok\ntest_numeric_cli_arg (test_schema2.SchemaTwo.test_numeric_cli_arg) ... ok\ntest_resource_directory (test_schema2.SchemaTwo.test_resource_directory) ... ok\ntest_script_syntax (test_schema2.SchemaTwo.test_script_syntax) ... ok\ntest_uninvoked_entry_expectation (test_schema2.SchemaTwo.test_uninvoked_entry_expectation) ... ok\ntest_unknown_contract_field (test_schema2.SchemaTwo.test_unknown_contract_field) ... ok\ntest_unknown_document_field (test_schema2.SchemaTwo.test_unknown_document_field) ... ok\ntest_unknown_resource_format (test_schema2.SchemaTwo.test_unknown_resource_format) ... ok\ntest_unused_script_expectation (test_schema2.SchemaTwo.test_unused_script_expectation) ... ok\ntest_valid (test_schema2.SchemaTwo.test_valid) ... ok\ntest_version_range (test_schema2.SchemaTwo.test_version_range) ... ok\ntest_wrong_version_binding (test_schema2.SchemaTwo.test_wrong_version_binding) ... ok\ntest_duplicate_nested_key (test_schema2.StrictLoading.test_duplicate_nested_key) ... ok\ntest_duplicate_root_key (test_schema2.StrictLoading.test_duplicate_root_key) ... ok\ntest_nonfinite (test_schema2.StrictLoading.test_nonfinite) ... ok\ntest_object (test_schema2.StrictLoading.test_object) ... ok\ntest_root_array (test_schema2.StrictLoading.test_root_array) ... ok\ntest_utf8 (test_schema2.StrictLoading.test_utf8) ... ok\ntest_canonical_names (test_validity.IdentityTests.test_canonical_names) ... ok\ntest_duplicate_metadata (test_validity.IdentityTests.test_duplicate_metadata) ... ok\ntest_empty_profile (test_validity.IdentityTests.test_empty_profile) ... ok\ntest_exact_root (test_validity.IdentityTests.test_exact_root) ... ok\ntest_inactive_foreign_contract (test_validity.IdentityTests.test_inactive_foreign_contract) ... ok\ntest_inactive_profile (test_validity.IdentityTests.test_inactive_profile) ... ok\ntest_incomplete_identity (test_validity.IdentityTests.test_incomplete_identity) ... ok\ntest_missing_metadata (test_validity.IdentityTests.test_missing_metadata) ... ok\ntest_wheel_metadata (test_validity.IdentityTests.test_wheel_metadata) ... ok\ntest_wrong_root (test_validity.IdentityTests.test_wrong_root) ... ok\ntest_batch_all_pass (test_validity.ReceiptTests.test_batch_all_pass) ... ok\ntest_batch_incomplete (test_validity.ReceiptTests.test_batch_incomplete) ... ok\ntest_batch_partial_fail (test_validity.ReceiptTests.test_batch_partial_fail) ... ok\ntest_batch_reordered (test_validity.ReceiptTests.test_batch_reordered) ... ok\ntest_broken_json (test_validity.ReceiptTests.test_broken_json) ... ok\ntest_duplicate_receipts (test_validity.ReceiptTests.test_duplicate_receipts) ... ok\ntest_fail_receipt (test_validity.ReceiptTests.test_fail_receipt) ... ok\ntest_invalid_receipt (test_validity.ReceiptTests.test_invalid_receipt) ... ok\ntest_nonzero_pass (test_validity.ReceiptTests.test_nonzero_pass) ... ok\ntest_pass_receipt (test_validity.ReceiptTests.test_pass_receipt) ... ok\ntest_timeout_receipt (test_validity.ReceiptTests.test_timeout_receipt) ... ok\ntest_unknown_status (test_validity.ReceiptTests.test_unknown_status) ... ok\ntest_wrong_id (test_validity.ReceiptTests.test_wrong_id) ... ok\ntest_zero_fail (test_validity.ReceiptTests.test_zero_fail) ... ok\ntest_outside_prefix_even_if_recorded (test_validity.StaticOwnershipTests.test_outside_prefix_even_if_recorded) ... ok\ntest_recorded_file (test_validity.StaticOwnershipTests.test_recorded_file) ... ok\ntest_resource_package_is_checked (test_validity.StaticOwnershipTests.test_resource_package_is_checked) ... ok\ntest_unrecorded_file (test_validity.StaticOwnershipTests.test_unrecorded_file) ... ok\ntest_args_mapping (test_validity.StrictSchemaTests.test_args_mapping) ... ok\ntest_bad_resource_paths (test_validity.StrictSchemaTests.test_bad_resource_paths) ... ok\ntest_blank_evidence (test_validity.StrictSchemaTests.test_blank_evidence) ... ok\ntest_infinite_timeout (test_validity.StrictSchemaTests.test_infinite_timeout) ... ok\ntest_kwargs_list (test_validity.StrictSchemaTests.test_kwargs_list) ... ok\ntest_nan_timeout (test_validity.StrictSchemaTests.test_nan_timeout) ... ok\ntest_nonstring_distribution (test_validity.StrictSchemaTests.test_nonstring_distribution) ... ok\ntest_nonstring_evidence (test_validity.StrictSchemaTests.test_nonstring_evidence) ... ok\ntest_profiles_blank (test_validity.StrictSchemaTests.test_profiles_blank) ... ok\ntest_profiles_duplicates (test_validity.StrictSchemaTests.test_profiles_duplicates) ... ok\ntest_profiles_member_type (test_validity.StrictSchemaTests.test_profiles_member_type) ... ok\ntest_profiles_wrong_type (test_validity.StrictSchemaTests.test_profiles_wrong_type) ... ok\ntest_whitespace_distribution (test_validity.StrictSchemaTests.test_whitespace_distribution) ... ok\n\n----------------------------------------------------------------------\nRan 193 tests in 0.496s\n\nOK\n",
+        "seconds": 0.6143306000012672,
+        "timeout": false
+      },
+      "ordinary": {
+        "status": "PASS",
+        "process": {
+          "argv": [
+            "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\python.exe",
+            "-I",
+            "-c",
+            "EXPECTED_VERSION='1.0.0'\nimport importlib.metadata as md,json,pathlib,subprocess,sys\nimport wheelgate\nfrom wheelgate.runner import normalized_name\ndist=md.distribution(\"wheelgate\")\ninventory={pathlib.Path(dist.locate_file(p)).resolve() for p in dist.files or ()}\norigin=pathlib.Path(wheelgate.__file__).resolve()\nassert origin in inventory and origin.is_relative_to(pathlib.Path(sys.prefix).resolve())\nassert dist.version == wheelgate.__version__ == EXPECTED_VERSION\nassert normalized_name(\"Wheel_Gate\") == \"wheel-gate\"\ncommand=pathlib.Path(sys.executable).parent / (\"wheelgate.exe\" if sys.platform==\"win32\" else \"wheelgate\")\nassert command.resolve() in inventory\ncp=subprocess.run([str(command),\"--version\"],capture_output=True,text=True,timeout=10)\nassert cp.returncode==0, cp.stderr\nassert cp.stdout == \"WheelGate \" + EXPECTED_VERSION + \"\\n\", repr(cp.stdout)\nprint(json.dumps({\"origin\":str(origin),\"value\":\"wheel-gate\",\"version_stdout\":cp.stdout}))\n"
+          ],
+          "returncode": 0,
+          "stdout": "{\"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"value\": \"wheel-gate\", \"version_stdout\": \"WheelGate 1.0.0\\n\"}\n",
+          "stderr": "",
+          "seconds": 0.14312989999598358,
+          "timeout": false
+        }
+      },
+      "gate": {
+        "status": "PASS",
+        "profile": "base",
+        "mode": "isolated",
+        "seconds": 0.855540500007919,
+        "profile_preflight": {
+          "status": "READY",
+          "requirements": [],
+          "seconds": 0
+        },
+        "contracts": [
+          {
+            "file_footprint": {
+              "access_count": 3,
+              "accesses": [
+                {
+                  "classification": "stdlib-archive",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "version": "1.0.0"
+                }
+              ],
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "violations": []
+            },
+            "footprint": {
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "module_count": 3,
+              "modules": [
+                {
+                  "classification": "stdlib",
+                  "module": "email.feedparser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.parser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "version": "1.0.0"
+                }
+              ],
+              "violations": []
+            },
+            "id": "import",
+            "origins": [
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              }
+            ],
+            "seconds": 0.1798228000116069,
+            "status": "PASS",
+            "process": {
+              "argv": [
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\python.exe",
+                "-I",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-0\\0\\worker.py",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-0\\0\\contract.json"
+              ],
+              "returncode": 0,
+              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 3, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"import\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.1798228000116069, \"status\": \"PASS\"}\n",
+              "stderr": "",
+              "seconds": 0.24751489999471232,
+              "timeout": false
+            }
+          },
+          {
+            "file_footprint": {
+              "access_count": 3,
+              "accesses": [
+                {
+                  "classification": "stdlib-archive",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "version": "1.0.0"
+                }
+              ],
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "violations": []
+            },
+            "footprint": {
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "module_count": 13,
+              "modules": [
+                {
+                  "classification": "stdlib",
+                  "module": "_hashlib",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\\_hashlib.pyd"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "argparse",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\argparse.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.feedparser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.parser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "gettext",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\gettext.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "hashlib",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\hashlib.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "logging",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\logging\\__init__.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "shlex",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shlex.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "venv",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\venv\\__init__.py"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.contractio",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.paths",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.runner",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                  "version": "1.0.0"
+                }
+              ],
+              "violations": []
+            },
+            "id": "canonical-name",
+            "origins": [
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate.runner",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              }
+            ],
+            "seconds": 0.19283610000275075,
+            "status": "PASS",
+            "value": "wheel-gate",
+            "process": {
+              "argv": [
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\python.exe",
+                "-I",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-0\\1\\worker.py",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-0\\1\\contract.json"
+              ],
+              "returncode": 0,
+              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"canonical-name\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.19283610000275075, \"status\": \"PASS\", \"value\": \"wheel-gate\"}\n",
+              "stderr": "",
+              "seconds": 0.26267949999601115,
+              "timeout": false
+            }
+          },
+          {
+            "argv": [
+              "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\wheelgate.exe",
+              "--version"
+            ],
+            "console_process": {
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "WHEELGATE_CONSOLE={\"argv\": [\"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.2011105999990832, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n"
+            },
+            "file_footprint": {
+              "access_count": 4,
+              "accesses": [
+                {
+                  "classification": "stdlib-archive",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\entry_points.txt",
+                  "version": "1.0.0"
+                }
+              ],
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "violations": []
+            },
+            "footprint": {
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "module_count": 13,
+              "modules": [
+                {
+                  "classification": "stdlib",
+                  "module": "_hashlib",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\\_hashlib.pyd"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "argparse",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\argparse.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.feedparser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.parser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "gettext",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\gettext.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "hashlib",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\hashlib.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "logging",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\logging\\__init__.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "shlex",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shlex.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "venv",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\venv\\__init__.py"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.contractio",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.paths",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.runner",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                  "version": "1.0.0"
+                }
+              ],
+              "violations": []
+            },
+            "id": "version-command",
+            "launcher_origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\wheelgate.exe",
+            "origins": [
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate.runner",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              }
+            ],
+            "returncode": 0,
+            "seconds": 0.27296580000256654,
+            "status": "PASS",
+            "stderr": "",
+            "stdout": "WheelGate 1.0.0\n",
+            "process": {
+              "argv": [
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\0\\venv\\Scripts\\python.exe",
+                "-I",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-0\\2\\worker.py",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-0\\2\\contract.json"
+              ],
+              "returncode": 0,
+              "stdout": "WHEELGATE_JSON={\"argv\": [\"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"console_process\": {\"returncode\": 0, \"stderr\": \"\", \"stdout\": \"WHEELGATE_CONSOLE={\\\"argv\\\": [\\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"--version\\\"], \\\"file_footprint\\\": {\\\"access_count\\\": 4, \\\"accesses\\\": [{\\\"classification\\\": \\\"stdlib-archive\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\python312.zip\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\METADATA\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\RECORD\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\entry_points.txt\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"violations\\\": []}, \\\"footprint\\\": {\\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"module_count\\\": 13, \\\"modules\\\": [{\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"_hashlib\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\DLLs\\\\\\\\_hashlib.pyd\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"argparse\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\argparse.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.feedparser\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\email\\\\\\\\feedparser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.parser\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\email\\\\\\\\parser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"gettext\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\gettext.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"hashlib\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\hashlib.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"logging\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\logging\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"shlex\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\shlex.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"venv\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\venv\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.contractio\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\contractio.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.paths\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\paths.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"violations\\\": []}, \\\"id\\\": \\\"version-command\\\", \\\"launcher_origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"origins\\\": [{\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"returncode\\\": 0, \\\"seconds\\\": 0.2011105999990832, \\\"status\\\": \\\"PASS\\\", \\\"stderr\\\": \\\"\\\", \\\"stdout\\\": \\\"WheelGate 1.0.0\\\\n\\\"}\\n\"}, \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.27296580000256654, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n",
+              "stderr": "",
+              "seconds": 0.3419648999988567,
+              "timeout": false
+            }
+          }
+        ]
+      },
+      "cwc": {
+        "default": {
+          "status": "PASS",
+          "process": {
+            "argv": [
+              "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+              "-I",
+              "-B",
+              "-c",
+              "import runpy,sys;sys.path[:0]=['D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', 'D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "--no-config",
+              "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
+            ],
+            "returncode": 0,
+            "stdout": "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
+            "stderr": "",
+            "seconds": 0.16479690000414848,
+            "timeout": false
+          }
+        },
+        "reference": {
+          "status": "PASS",
+          "process": {
+            "argv": [
+              "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+              "-I",
+              "-B",
+              "-c",
+              "import runpy,sys;sys.path[:0]=['D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', 'D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "--no-config",
+              "--toplevel",
+              "wheelgate",
+              "--package",
+              "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\wheelgate",
+              "--package-omit",
+              ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
+              "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
+            ],
+            "returncode": 0,
+            "stdout": "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
+            "stderr": "",
+            "seconds": 0.16649819999292959,
+            "timeout": false
+          }
+        }
+      }
+    },
+    {
+      "route": "sdist-wheel",
+      "wheel": "self-check-assets/rebuilt/wheelgate-1.0.0-py3-none-any.whl",
+      "sha256": "7db1197ac4d2ee146fa82d744a5f32f2bba6589665f1e61598f746ead646c276",
+      "setup": {
+        "wheel_identity": {
+          "name": "wheelgate",
+          "version": "1.0.0"
+        },
+        "venv_seconds": 1.9232611999905203,
+        "install": {
+          "argv": [
+            "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\python.exe",
+            "-I",
+            "-m",
+            "pip",
+            "install",
+            "--no-index",
+            "--no-deps",
+            "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
+          ],
+          "returncode": 0,
+          "stdout": "Processing d:\\codexprojects\\wg-check\\p123-publish\\flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
+          "stderr": "",
+          "seconds": 0.36741089999850374,
+          "timeout": false
+        },
+        "dependency_check": {
+          "argv": [
+            "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\python.exe",
+            "-I",
+            "-m",
+            "pip",
+            "check"
+          ],
+          "returncode": 0,
+          "stdout": "No broken requirements found.\n",
+          "stderr": "",
+          "seconds": 0.2108942000049865,
+          "timeout": false
+        },
+        "environment": {
+          "status": "READY",
+          "receipt": {
+            "distributions": [
+              {
+                "name": "pip",
+                "version": "25.0.1"
+              },
+              {
+                "name": "wheelgate",
+                "version": "1.0.0"
+              }
+            ],
+            "implementation": "CPython",
+            "prefix": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv",
+            "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+          },
+          "process": {
+            "argv": [
+              "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\python.exe",
+              "-I",
+              "-c",
+              "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+            ],
+            "returncode": 0,
+            "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"wheelgate\", \"version\": \"1.0.0\"}], \"implementation\": \"CPython\", \"prefix\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+            "stderr": "",
+            "seconds": 0.06319700001040474,
+            "timeout": false
+          }
+        },
+        "seconds": 2.564971300002071,
+        "status": "READY"
+      },
+      "unit_tests": {
+        "argv": [
+          "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\venv\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\neutral\\tests",
+          "-v"
+        ],
+        "returncode": 0,
+        "stdout": "import\n",
+        "stderr": "test_base_third_party_is_not_stdlib (test_console_boundaries.ConsoleBoundaries.test_base_third_party_is_not_stdlib) ... ok\ntest_binary_output_and_file_descriptor (test_console_boundaries.ConsoleBoundaries.test_binary_output_and_file_descriptor) ... ok\ntest_import_output_is_in_contract (test_console_boundaries.ConsoleBoundaries.test_import_output_is_in_contract) ... ok\ntest_contains (test_core.Oracles.test_contains) ... ok\ntest_equal (test_core.Oracles.test_equal) ... ok\ntest_foreign_origin (test_core.Oracles.test_foreign_origin) ... ok\ntest_namespace_anchor (test_core.Oracles.test_namespace_anchor) ... ok\ntest_wrong_substring (test_core.Oracles.test_wrong_substring) ... ok\ntest_wrong_value (test_core.Oracles.test_wrong_value) ... ok\ntest_environment_allowlist (test_core.Process.test_environment_allowlist) ... ok\ntest_isolated_import_ignores_shadow (test_core.Process.test_isolated_import_ignores_shadow) ... ok\ntest_missing_executable (test_core.Process.test_missing_executable) ... ok\ntest_timeout (test_core.Process.test_timeout) ... ok\ntest_all_skipped_is_invalid (test_core.Schema.test_all_skipped_is_invalid) ... ok\ntest_duplicate (test_core.Schema.test_duplicate) ... ok\ntest_empty (test_core.Schema.test_empty) ... ok\ntest_missing_evidence (test_core.Schema.test_missing_evidence) ... ok\ntest_missing_expected_value (test_core.Schema.test_missing_expected_value) ... ok\ntest_missing_origin_anchor (test_core.Schema.test_missing_origin_anchor) ... ok\ntest_missing_target (test_core.Schema.test_missing_target) ... ok\ntest_timeout_bounds (test_core.Schema.test_timeout_bounds) ... ok\ntest_unknown_kind (test_core.Schema.test_unknown_kind) ... ok\ntest_valid (test_core.Schema.test_valid) ... ok\ntest_access_recorder_ignores_writes_and_code (test_footprint.FileAccessClassification.test_access_recorder_ignores_writes_and_code) ... ok\ntest_declared_data_file (test_footprint.FileAccessClassification.test_declared_data_file) ... ok\ntest_external_data_file (test_footprint.FileAccessClassification.test_external_data_file) ... ok\ntest_undeclared_distribution_data_file (test_footprint.FileAccessClassification.test_undeclared_distribution_data_file) ... ok\ntest_unowned_site_data_file (test_footprint.FileAccessClassification.test_unowned_site_data_file) ... ok\ntest_declared_distribution (test_footprint.FootprintClassification.test_declared_distribution) ... ok\ntest_external_file (test_footprint.FootprintClassification.test_external_file) ... ok\ntest_name_normalization (test_footprint.FootprintClassification.test_name_normalization) ... ok\ntest_stdlib (test_footprint.FootprintClassification.test_stdlib) ... ok\ntest_undeclared_distribution (test_footprint.FootprintClassification.test_undeclared_distribution) ... ok\ntest_context_violation_invalidates_success (test_footprint.FootprintOutcome.test_context_violation_invalidates_success) ... ok\ntest_declared_footprint_keeps_success (test_footprint.FootprintOutcome.test_declared_footprint_keeps_success) ... ok\ntest_canonical_contract_digest_stable (test_footprint.ReceiptBinding.test_canonical_contract_digest_stable) ... ok\ntest_target_and_profile_prerequisites_are_allowed (test_footprint.RunnerEnrichment.test_target_and_profile_prerequisites_are_allowed) ... ok\ntest_child_temporary_files_stay_in_owned_home (test_portable_paths.ContractPathAdmission.test_child_temporary_files_stay_in_owned_home) ... ok\ntest_command_portable_basename (test_portable_paths.ContractPathAdmission.test_command_portable_basename) ... ok\ntest_command_posix_separator (test_portable_paths.ContractPathAdmission.test_command_posix_separator) ... ok\ntest_command_special_components (test_portable_paths.ContractPathAdmission.test_command_special_components) ... ok\ntest_command_windows_drive (test_portable_paths.ContractPathAdmission.test_command_windows_drive) ... ok\ntest_command_windows_separator (test_portable_paths.ContractPathAdmission.test_command_windows_separator) ... ok\ntest_console_child_rejects_before_metadata (test_portable_paths.ContractPathAdmission.test_console_child_rejects_before_metadata) ... ok\ntest_direct_worker_cli_rejects_before_import (test_portable_paths.ContractPathAdmission.test_direct_worker_cli_rejects_before_import) ... ok\ntest_direct_worker_resource_rejects_before_import (test_portable_paths.ContractPathAdmission.test_direct_worker_resource_rejects_before_import) ... ok\ntest_nested_resource_join_uses_components (test_portable_paths.ContractPathAdmission.test_nested_resource_join_uses_components) ... ok\ntest_posix_exe_named_launcher_uses_recorded_python_script (test_portable_paths.ContractPathAdmission.test_posix_exe_named_launcher_uses_recorded_python_script) ... ok\ntest_resource_absolute_or_traversing (test_portable_paths.ContractPathAdmission.test_resource_absolute_or_traversing) ... ok\ntest_resource_colon_or_nul (test_portable_paths.ContractPathAdmission.test_resource_colon_or_nul) ... ok\ntest_resource_nested_posix_path (test_portable_paths.ContractPathAdmission.test_resource_nested_posix_path) ... ok\ntest_resource_no_silent_dot_or_empty_normalization (test_portable_paths.ContractPathAdmission.test_resource_no_silent_dot_or_empty_normalization) ... ok\ntest_resource_windows_absolute (test_portable_paths.ContractPathAdmission.test_resource_windows_absolute) ... ok\ntest_resource_windows_drive_relative (test_portable_paths.ContractPathAdmission.test_resource_windows_drive_relative) ... ok\ntest_resource_windows_separator (test_portable_paths.ContractPathAdmission.test_resource_windows_separator) ... ok\ntest_windows_launcher_preserves_dotted_basename (test_portable_paths.ContractPathAdmission.test_windows_launcher_preserves_dotted_basename) ... ok\ntest_windows_launcher_uses_registered_entrypoint_adapter (test_portable_paths.ContractPathAdmission.test_windows_launcher_uses_registered_entrypoint_adapter) ... ok\ntest_absolute_and_drive_references_rejected (test_portable_paths.PortableEvidenceReferences.test_absolute_and_drive_references_rejected) ... ok\ntest_both_record_conventions_find_same_owned_file (test_portable_paths.PortableEvidenceReferences.test_both_record_conventions_find_same_owned_file) ... ok\ntest_record_outside_bundle_rejected (test_portable_paths.PortableEvidenceReferences.test_record_outside_bundle_rejected) ... ok\ntest_symlink_escape_rejected_with_owned_target (test_portable_paths.PortableEvidenceReferences.test_symlink_escape_rejected_with_owned_target) ... ok\ntest_traversal_and_ambiguous_components_rejected (test_portable_paths.PortableEvidenceReferences.test_traversal_and_ambiguous_components_rejected) ... ok\ntest_windows_parts_map_to_posix_components (test_portable_paths.PortableEvidenceReferences.test_windows_parts_map_to_posix_components) ... ok\ntest_non_utf8_child_output_roundtrips (test_repair_boundaries.CapturedByteStreams.test_non_utf8_child_output_roundtrips) ... ok\ntest_timeout_preserves_partial_bytes (test_repair_boundaries.CapturedByteStreams.test_timeout_preserves_partial_bytes) ... ok\ntest_utf8_child_output_is_not_replaced (test_repair_boundaries.CapturedByteStreams.test_utf8_child_output_is_not_replaced) ... ok\ntest_completed_console_assertion_failure_stays_fail (test_repair_boundaries.ConsoleTimeoutReceipt.test_completed_console_assertion_failure_stays_fail) ... ok\ntest_completed_nonzero_command_stays_fail (test_repair_boundaries.ConsoleTimeoutReceipt.test_completed_nonzero_command_stays_fail) ... ok\ntest_completed_stdout_oracle_failure_stays_fail (test_repair_boundaries.ConsoleTimeoutReceipt.test_completed_stdout_oracle_failure_stays_fail) ... ok\ntest_console_timeout_keeps_partial_byte_streams (test_repair_boundaries.ConsoleTimeoutReceipt.test_console_timeout_keeps_partial_byte_streams) ... ok\ntest_console_timeout_keeps_text_streams (test_repair_boundaries.ConsoleTimeoutReceipt.test_console_timeout_keeps_text_streams) ... ok\ntest_console_timeout_without_streams (test_repair_boundaries.ConsoleTimeoutReceipt.test_console_timeout_without_streams) ... ok\ntest_paper_build_uses_current_python_entrypoint_without_executing_it (test_repair_boundaries.ReproductionEntrypoint.test_paper_build_uses_current_python_entrypoint_without_executing_it) ... ok\ntest_cli_assertion_types_before_setup (test_repair_boundaries.SchemaOneApplicability.test_cli_assertion_types_before_setup) ... ok\ntest_delivered_schema1_stays_valid (test_repair_boundaries.SchemaOneApplicability.test_delivered_schema1_stays_valid) ... ok\ntest_duplicate_schema1_json_key_rejected (test_repair_boundaries.SchemaOneApplicability.test_duplicate_schema1_json_key_rejected) ... ok\ntest_entrypoint_invoke_must_be_boolean (test_repair_boundaries.SchemaOneApplicability.test_entrypoint_invoke_must_be_boolean) ... ok\ntest_import_contains_before_setup (test_repair_boundaries.SchemaOneApplicability.test_import_contains_before_setup) ... ok\ntest_import_equals_before_setup (test_repair_boundaries.SchemaOneApplicability.test_import_equals_before_setup) ... ok\ntest_script_assertion_field_before_setup (test_repair_boundaries.SchemaOneApplicability.test_script_assertion_field_before_setup) ... ok\ntest_uninvoked_entrypoint_fields_before_setup (test_repair_boundaries.SchemaOneApplicability.test_uninvoked_entrypoint_fields_before_setup) ... ok\ntest_unknown_document_field_before_setup (test_repair_boundaries.SchemaOneApplicability.test_unknown_document_field_before_setup) ... ok\ntest_unknown_operation_field_before_setup (test_repair_boundaries.SchemaOneApplicability.test_unknown_operation_field_before_setup) ... ok\ntest_base_dlls_extension_is_stdlib (test_repair_boundaries.WindowsStdlibRoots.test_base_dlls_extension_is_stdlib) ... ok\ntest_base_prefix_is_not_allowed (test_repair_boundaries.WindowsStdlibRoots.test_base_prefix_is_not_allowed) ... ok\ntest_base_site_packages_stays_invalid (test_repair_boundaries.WindowsStdlibRoots.test_base_site_packages_stays_invalid) ... ok\ntest_dlls_site_packages_stays_invalid (test_repair_boundaries.WindowsStdlibRoots.test_dlls_site_packages_stays_invalid) ... ok\ntest_fresh_decimal_import (test_repair_boundaries.WindowsStdlibRoots.test_fresh_decimal_import) ... ok\ntest_fresh_sqlite3_import (test_repair_boundaries.WindowsStdlibRoots.test_fresh_sqlite3_import) ... ok\ntest_venv_dlls_is_not_base_stdlib (test_repair_boundaries.WindowsStdlibRoots.test_venv_dlls_is_not_base_stdlib) ... ok\ntest_blank_evidence (test_schema2.DependencySchema.test_blank_evidence) ... ok\ntest_duplicate_normalized_name (test_schema2.DependencySchema.test_duplicate_normalized_name) ... ok\ntest_empty_base (test_schema2.DependencySchema.test_empty_base) ... ok\ntest_missing_evidence (test_schema2.DependencySchema.test_missing_evidence) ... ok\ntest_no_list (test_schema2.DependencySchema.test_no_list) ... ok\ntest_no_range (test_schema2.DependencySchema.test_no_range) ... ok\ntest_nontext_name (test_schema2.DependencySchema.test_nontext_name) ... ok\ntest_not_object (test_schema2.DependencySchema.test_not_object) ... ok\ntest_unknown_profile (test_schema2.DependencySchema.test_unknown_profile) ... ok\ntest_valid (test_schema2.DependencySchema.test_valid) ... ok\ntest_bad_exit (test_schema2.DependencyWorker.test_bad_exit) ... ok\ntest_bad_json (test_schema2.DependencyWorker.test_bad_json) ... ok\ntest_consistent_blocked_receipt (test_schema2.DependencyWorker.test_consistent_blocked_receipt) ... ok\ntest_consistent_ready_receipt (test_schema2.DependencyWorker.test_consistent_ready_receipt) ... ok\ntest_contradictory_ready (test_schema2.DependencyWorker.test_contradictory_ready) ... ok\ntest_duplicate_receipts (test_schema2.DependencyWorker.test_duplicate_receipts) ... ok\ntest_empty (test_schema2.DependencyWorker.test_empty) ... ok\ntest_matching (test_schema2.DependencyWorker.test_matching) ... ok\ntest_missing (test_schema2.DependencyWorker.test_missing) ... ok\ntest_missing_rows (test_schema2.DependencyWorker.test_missing_rows) ... ok\ntest_timeout (test_schema2.DependencyWorker.test_timeout) ... ok\ntest_wrong_version (test_schema2.DependencyWorker.test_wrong_version) ... ok\ntest_blank_id (test_schema2.SchemaTwo.test_blank_id) ... ok\ntest_bool_returncode (test_schema2.SchemaTwo.test_bool_returncode) ... ok\ntest_boolean_schema (test_schema2.SchemaTwo.test_boolean_schema) ... ok\ntest_distribution_path (test_schema2.SchemaTwo.test_distribution_path) ... ok\ntest_duplicate_module (test_schema2.SchemaTwo.test_duplicate_module) ... ok\ntest_float_schema (test_schema2.SchemaTwo.test_float_schema) ... ok\ntest_format_array (test_schema2.SchemaTwo.test_format_array) ... ok\ntest_ignored_import_expectation (test_schema2.SchemaTwo.test_ignored_import_expectation) ... ok\ntest_incomplete_target (test_schema2.SchemaTwo.test_incomplete_target) ... ok\ntest_invalid_module (test_schema2.SchemaTwo.test_invalid_module) ... ok\ntest_invalid_resource_package (test_schema2.SchemaTwo.test_invalid_resource_package) ... ok\ntest_invalid_target_attribute (test_schema2.SchemaTwo.test_invalid_target_attribute) ... ok\ntest_keyword_module (test_schema2.SchemaTwo.test_keyword_module) ... ok\ntest_kind_array (test_schema2.SchemaTwo.test_kind_array) ... ok\ntest_literal_version (test_schema2.SchemaTwo.test_literal_version) ... ok\ntest_matching_version_binding (test_schema2.SchemaTwo.test_matching_version_binding) ... ok\ntest_nonbool_invoke (test_schema2.SchemaTwo.test_nonbool_invoke) ... ok\ntest_nonfinite_expectation (test_schema2.SchemaTwo.test_nonfinite_expectation) ... ok\ntest_nonjson_expectation (test_schema2.SchemaTwo.test_nonjson_expectation) ... ok\ntest_nonstring_kwargs_key (test_schema2.SchemaTwo.test_nonstring_kwargs_key) ... ok\ntest_nontext_cli_contains (test_schema2.SchemaTwo.test_nontext_cli_contains) ... ok\ntest_nontext_cli_equals (test_schema2.SchemaTwo.test_nontext_cli_equals) ... ok\ntest_nontext_cli_stdin (test_schema2.SchemaTwo.test_nontext_cli_stdin) ... ok\ntest_numeric_cli_arg (test_schema2.SchemaTwo.test_numeric_cli_arg) ... ok\ntest_resource_directory (test_schema2.SchemaTwo.test_resource_directory) ... ok\ntest_script_syntax (test_schema2.SchemaTwo.test_script_syntax) ... ok\ntest_uninvoked_entry_expectation (test_schema2.SchemaTwo.test_uninvoked_entry_expectation) ... ok\ntest_unknown_contract_field (test_schema2.SchemaTwo.test_unknown_contract_field) ... ok\ntest_unknown_document_field (test_schema2.SchemaTwo.test_unknown_document_field) ... ok\ntest_unknown_resource_format (test_schema2.SchemaTwo.test_unknown_resource_format) ... ok\ntest_unused_script_expectation (test_schema2.SchemaTwo.test_unused_script_expectation) ... ok\ntest_valid (test_schema2.SchemaTwo.test_valid) ... ok\ntest_version_range (test_schema2.SchemaTwo.test_version_range) ... ok\ntest_wrong_version_binding (test_schema2.SchemaTwo.test_wrong_version_binding) ... ok\ntest_duplicate_nested_key (test_schema2.StrictLoading.test_duplicate_nested_key) ... ok\ntest_duplicate_root_key (test_schema2.StrictLoading.test_duplicate_root_key) ... ok\ntest_nonfinite (test_schema2.StrictLoading.test_nonfinite) ... ok\ntest_object (test_schema2.StrictLoading.test_object) ... ok\ntest_root_array (test_schema2.StrictLoading.test_root_array) ... ok\ntest_utf8 (test_schema2.StrictLoading.test_utf8) ... ok\ntest_canonical_names (test_validity.IdentityTests.test_canonical_names) ... ok\ntest_duplicate_metadata (test_validity.IdentityTests.test_duplicate_metadata) ... ok\ntest_empty_profile (test_validity.IdentityTests.test_empty_profile) ... ok\ntest_exact_root (test_validity.IdentityTests.test_exact_root) ... ok\ntest_inactive_foreign_contract (test_validity.IdentityTests.test_inactive_foreign_contract) ... ok\ntest_inactive_profile (test_validity.IdentityTests.test_inactive_profile) ... ok\ntest_incomplete_identity (test_validity.IdentityTests.test_incomplete_identity) ... ok\ntest_missing_metadata (test_validity.IdentityTests.test_missing_metadata) ... ok\ntest_wheel_metadata (test_validity.IdentityTests.test_wheel_metadata) ... ok\ntest_wrong_root (test_validity.IdentityTests.test_wrong_root) ... ok\ntest_batch_all_pass (test_validity.ReceiptTests.test_batch_all_pass) ... ok\ntest_batch_incomplete (test_validity.ReceiptTests.test_batch_incomplete) ... ok\ntest_batch_partial_fail (test_validity.ReceiptTests.test_batch_partial_fail) ... ok\ntest_batch_reordered (test_validity.ReceiptTests.test_batch_reordered) ... ok\ntest_broken_json (test_validity.ReceiptTests.test_broken_json) ... ok\ntest_duplicate_receipts (test_validity.ReceiptTests.test_duplicate_receipts) ... ok\ntest_fail_receipt (test_validity.ReceiptTests.test_fail_receipt) ... ok\ntest_invalid_receipt (test_validity.ReceiptTests.test_invalid_receipt) ... ok\ntest_nonzero_pass (test_validity.ReceiptTests.test_nonzero_pass) ... ok\ntest_pass_receipt (test_validity.ReceiptTests.test_pass_receipt) ... ok\ntest_timeout_receipt (test_validity.ReceiptTests.test_timeout_receipt) ... ok\ntest_unknown_status (test_validity.ReceiptTests.test_unknown_status) ... ok\ntest_wrong_id (test_validity.ReceiptTests.test_wrong_id) ... ok\ntest_zero_fail (test_validity.ReceiptTests.test_zero_fail) ... ok\ntest_outside_prefix_even_if_recorded (test_validity.StaticOwnershipTests.test_outside_prefix_even_if_recorded) ... ok\ntest_recorded_file (test_validity.StaticOwnershipTests.test_recorded_file) ... ok\ntest_resource_package_is_checked (test_validity.StaticOwnershipTests.test_resource_package_is_checked) ... ok\ntest_unrecorded_file (test_validity.StaticOwnershipTests.test_unrecorded_file) ... ok\ntest_args_mapping (test_validity.StrictSchemaTests.test_args_mapping) ... ok\ntest_bad_resource_paths (test_validity.StrictSchemaTests.test_bad_resource_paths) ... ok\ntest_blank_evidence (test_validity.StrictSchemaTests.test_blank_evidence) ... ok\ntest_infinite_timeout (test_validity.StrictSchemaTests.test_infinite_timeout) ... ok\ntest_kwargs_list (test_validity.StrictSchemaTests.test_kwargs_list) ... ok\ntest_nan_timeout (test_validity.StrictSchemaTests.test_nan_timeout) ... ok\ntest_nonstring_distribution (test_validity.StrictSchemaTests.test_nonstring_distribution) ... ok\ntest_nonstring_evidence (test_validity.StrictSchemaTests.test_nonstring_evidence) ... ok\ntest_profiles_blank (test_validity.StrictSchemaTests.test_profiles_blank) ... ok\ntest_profiles_duplicates (test_validity.StrictSchemaTests.test_profiles_duplicates) ... ok\ntest_profiles_member_type (test_validity.StrictSchemaTests.test_profiles_member_type) ... ok\ntest_profiles_wrong_type (test_validity.StrictSchemaTests.test_profiles_wrong_type) ... ok\ntest_whitespace_distribution (test_validity.StrictSchemaTests.test_whitespace_distribution) ... ok\n\n----------------------------------------------------------------------\nRan 193 tests in 0.486s\n\nOK\n",
+        "seconds": 0.6004713000002084,
+        "timeout": false
+      },
+      "ordinary": {
+        "status": "PASS",
+        "process": {
+          "argv": [
+            "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\python.exe",
+            "-I",
+            "-c",
+            "EXPECTED_VERSION='1.0.0'\nimport importlib.metadata as md,json,pathlib,subprocess,sys\nimport wheelgate\nfrom wheelgate.runner import normalized_name\ndist=md.distribution(\"wheelgate\")\ninventory={pathlib.Path(dist.locate_file(p)).resolve() for p in dist.files or ()}\norigin=pathlib.Path(wheelgate.__file__).resolve()\nassert origin in inventory and origin.is_relative_to(pathlib.Path(sys.prefix).resolve())\nassert dist.version == wheelgate.__version__ == EXPECTED_VERSION\nassert normalized_name(\"Wheel_Gate\") == \"wheel-gate\"\ncommand=pathlib.Path(sys.executable).parent / (\"wheelgate.exe\" if sys.platform==\"win32\" else \"wheelgate\")\nassert command.resolve() in inventory\ncp=subprocess.run([str(command),\"--version\"],capture_output=True,text=True,timeout=10)\nassert cp.returncode==0, cp.stderr\nassert cp.stdout == \"WheelGate \" + EXPECTED_VERSION + \"\\n\", repr(cp.stdout)\nprint(json.dumps({\"origin\":str(origin),\"value\":\"wheel-gate\",\"version_stdout\":cp.stdout}))\n"
+          ],
+          "returncode": 0,
+          "stdout": "{\"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"value\": \"wheel-gate\", \"version_stdout\": \"WheelGate 1.0.0\\n\"}\n",
+          "stderr": "",
+          "seconds": 0.14465539999946486,
+          "timeout": false
+        }
+      },
+      "gate": {
+        "status": "PASS",
+        "profile": "base",
+        "mode": "isolated",
+        "seconds": 0.867052200002945,
+        "profile_preflight": {
+          "status": "READY",
+          "requirements": [],
+          "seconds": 0
+        },
+        "contracts": [
+          {
+            "file_footprint": {
+              "access_count": 3,
+              "accesses": [
+                {
+                  "classification": "stdlib-archive",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "version": "1.0.0"
+                }
+              ],
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "violations": []
+            },
+            "footprint": {
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "module_count": 3,
+              "modules": [
+                {
+                  "classification": "stdlib",
+                  "module": "email.feedparser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.parser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "version": "1.0.0"
+                }
+              ],
+              "violations": []
+            },
+            "id": "import",
+            "origins": [
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              }
+            ],
+            "seconds": 0.18732210001326166,
+            "status": "PASS",
+            "process": {
+              "argv": [
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\python.exe",
+                "-I",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-1\\0\\worker.py",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-1\\0\\contract.json"
+              ],
+              "returncode": 0,
+              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 3, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"import\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.18732210001326166, \"status\": \"PASS\"}\n",
+              "stderr": "",
+              "seconds": 0.2548650999960955,
+              "timeout": false
+            }
+          },
+          {
+            "file_footprint": {
+              "access_count": 3,
+              "accesses": [
+                {
+                  "classification": "stdlib-archive",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "version": "1.0.0"
+                }
+              ],
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "violations": []
+            },
+            "footprint": {
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "module_count": 13,
+              "modules": [
+                {
+                  "classification": "stdlib",
+                  "module": "_hashlib",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\\_hashlib.pyd"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "argparse",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\argparse.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.feedparser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.parser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "gettext",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\gettext.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "hashlib",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\hashlib.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "logging",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\logging\\__init__.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "shlex",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shlex.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "venv",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\venv\\__init__.py"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.contractio",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.paths",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.runner",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                  "version": "1.0.0"
+                }
+              ],
+              "violations": []
+            },
+            "id": "canonical-name",
+            "origins": [
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate.runner",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              }
+            ],
+            "seconds": 0.19724850000056904,
+            "status": "PASS",
+            "value": "wheel-gate",
+            "process": {
+              "argv": [
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\python.exe",
+                "-I",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-1\\1\\worker.py",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-1\\1\\contract.json"
+              ],
+              "returncode": 0,
+              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"canonical-name\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.19724850000056904, \"status\": \"PASS\", \"value\": \"wheel-gate\"}\n",
+              "stderr": "",
+              "seconds": 0.26702579999982845,
+              "timeout": false
+            }
+          },
+          {
+            "argv": [
+              "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\wheelgate.exe",
+              "--version"
+            ],
+            "console_process": {
+              "returncode": 0,
+              "stderr": "",
+              "stdout": "WHEELGATE_CONSOLE={\"argv\": [\"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.20036160000017844, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n"
+            },
+            "file_footprint": {
+              "access_count": 4,
+              "accesses": [
+                {
+                  "classification": "stdlib-archive",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\entry_points.txt",
+                  "version": "1.0.0"
+                }
+              ],
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "violations": []
+            },
+            "footprint": {
+              "allowed_distributions": [
+                "wheelgate"
+              ],
+              "module_count": 13,
+              "modules": [
+                {
+                  "classification": "stdlib",
+                  "module": "_hashlib",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\\_hashlib.pyd"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "argparse",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\argparse.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.feedparser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "email.parser",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "gettext",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\gettext.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "hashlib",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\hashlib.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "logging",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\logging\\__init__.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "shlex",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shlex.py"
+                },
+                {
+                  "classification": "stdlib",
+                  "module": "venv",
+                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\venv\\__init__.py"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.contractio",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.paths",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
+                  "version": "1.0.0"
+                },
+                {
+                  "classification": "declared-distribution",
+                  "distribution": "wheelgate",
+                  "module": "wheelgate.runner",
+                  "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                  "version": "1.0.0"
+                }
+              ],
+              "violations": []
+            },
+            "id": "version-command",
+            "launcher_origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\wheelgate.exe",
+            "origins": [
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate.runner",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                "version": "1.0.0"
+              },
+              {
+                "distribution": "wheelgate",
+                "module": "wheelgate",
+                "origin": "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "version": "1.0.0"
+              }
+            ],
+            "returncode": 0,
+            "seconds": 0.2724323000002187,
+            "status": "PASS",
+            "stderr": "",
+            "stdout": "WheelGate 1.0.0\n",
+            "process": {
+              "argv": [
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\1\\venv\\Scripts\\python.exe",
+                "-I",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-1\\2\\worker.py",
+                "D:\\CodexProjects\\wg-check\\p123-publish\\tmp\\wheelgate-self-flow-31wr3lnk\\gate-1\\2\\contract.json"
+              ],
+              "returncode": 0,
+              "stdout": "WHEELGATE_JSON={\"argv\": [\"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"console_process\": {\"returncode\": 0, \"stderr\": \"\", \"stdout\": \"WHEELGATE_CONSOLE={\\\"argv\\\": [\\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"--version\\\"], \\\"file_footprint\\\": {\\\"access_count\\\": 4, \\\"accesses\\\": [{\\\"classification\\\": \\\"stdlib-archive\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\python312.zip\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\METADATA\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\RECORD\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\entry_points.txt\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"violations\\\": []}, \\\"footprint\\\": {\\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"module_count\\\": 13, \\\"modules\\\": [{\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"_hashlib\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\DLLs\\\\\\\\_hashlib.pyd\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"argparse\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\argparse.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.feedparser\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\email\\\\\\\\feedparser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.parser\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\email\\\\\\\\parser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"gettext\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\gettext.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"hashlib\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\hashlib.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"logging\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\logging\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"shlex\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\shlex.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"venv\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\venv\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.contractio\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\contractio.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.paths\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\paths.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"violations\\\": []}, \\\"id\\\": \\\"version-command\\\", \\\"launcher_origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"origins\\\": [{\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\wg-check\\\\\\\\p123-publish\\\\\\\\tmp\\\\\\\\wheelgate-self-flow-31wr3lnk\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"returncode\\\": 0, \\\"seconds\\\": 0.20036160000017844, \\\"status\\\": \\\"PASS\\\", \\\"stderr\\\": \\\"\\\", \\\"stdout\\\": \\\"WheelGate 1.0.0\\\\n\\\"}\\n\"}, \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\wg-check\\\\p123-publish\\\\tmp\\\\wheelgate-self-flow-31wr3lnk\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.2724323000002187, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n",
+              "stderr": "",
+              "seconds": 0.3406896999949822,
+              "timeout": false
+            }
+          }
+        ]
+      },
+      "cwc": {
+        "default": {
+          "status": "PASS",
+          "process": {
+            "argv": [
+              "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+              "-I",
+              "-B",
+              "-c",
+              "import runpy,sys;sys.path[:0]=['D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', 'D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "--no-config",
+              "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
+            ],
+            "returncode": 0,
+            "stdout": "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
+            "stderr": "",
+            "seconds": 0.16435520000231918,
+            "timeout": false
+          }
+        },
+        "reference": {
+          "status": "PASS",
+          "process": {
+            "argv": [
+              "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+              "-I",
+              "-B",
+              "-c",
+              "import runpy,sys;sys.path[:0]=['D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', 'D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "--no-config",
+              "--toplevel",
+              "wheelgate",
+              "--package",
+              "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\wheelgate",
+              "--package-omit",
+              ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
+              "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
+            ],
+            "returncode": 0,
+            "stdout": "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
+            "stderr": "",
+            "seconds": 0.17108069999085274,
+            "timeout": false
+          }
+        }
+      }
+    }
+  ],
+  "package_process": {
+    "argv": [
+      "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+      "-B",
+      "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\scripts\\package_check.py",
+      "--output",
+      "D:\\CodexProjects\\wg-check\\p123-publish\\flow\\self-check.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "seconds": 26.54995549999876,
+    "timeout": false
+  },
+  "package_record": {
+    "file": "self-check.json",
+    "sha256": "54cbaf36a646b8d129a6abcaf507a4f951cb3ffe59c063ec027eaed672a25014"
+  },
+  "dependency_versions": {
+    "attrs": "26.1.0",
+    "click": "8.1.8",
+    "packaging": "25.0",
+    "pydantic": "2.13.5"
+  },
+  "completed_at": "2026-10-12T22:09:52.187879+00:00"
+}

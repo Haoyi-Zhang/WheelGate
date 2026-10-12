@@ -124,6 +124,48 @@ class ContractPathAdmission(unittest.TestCase):
             self.assertEqual(result["launcher_origin"], str(launcher))
             self.assertEqual(result["argv"], [str(launcher)])
 
+    def test_posix_exe_named_launcher_uses_recorded_python_script(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = pathlib.Path(td)
+            launcher = root / "owned.exe"
+            launcher.write_bytes(b"")
+            entry = types.SimpleNamespace(group="console_scripts", name="owned.exe",
+                                          module="owned", load=mock.Mock())
+            with mock.patch.object(worker, "os", types.SimpleNamespace(name="posix")), \
+                 mock.patch.object(worker.sys, "executable", str(root / "python")), \
+                 mock.patch("wheelgate.worker.md.distribution",
+                            return_value=types.SimpleNamespace(entry_points=[entry])), \
+                 mock.patch("wheelgate.worker.owned", return_value={"module": "owned"}), \
+                 mock.patch("wheelgate.worker.owned_file", side_effect=lambda d, p: str(p)), \
+                 mock.patch("wheelgate.worker.runpy.run_path",
+                            side_effect=lambda *a, **k: print("ok", end="")) as run_path:
+                result = _console_operation(self.contract("cli", "owned.exe"))
+            run_path.assert_called_once_with(str(launcher), run_name="__main__")
+            entry.load.assert_not_called()
+            self.assertEqual(result["launcher_origin"], str(launcher))
+            self.assertEqual(result["stdout"], "ok")
+
+    def test_windows_launcher_uses_registered_entrypoint_adapter(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = pathlib.Path(td)
+            launcher = root / "owned.exe"
+            launcher.write_bytes(b"")
+            entry = types.SimpleNamespace(group="console_scripts", name="owned",
+                                          module="owned",
+                                          load=mock.Mock(return_value=lambda: print("ok", end="")))
+            with mock.patch.object(worker, "os", types.SimpleNamespace(name="nt")), \
+                 mock.patch.object(worker.sys, "executable", str(root / "python.exe")), \
+                 mock.patch("wheelgate.worker.md.distribution",
+                            return_value=types.SimpleNamespace(entry_points=[entry])), \
+                 mock.patch("wheelgate.worker.owned", return_value={"module": "owned"}), \
+                 mock.patch("wheelgate.worker.owned_file", side_effect=lambda d, p: str(p)), \
+                 mock.patch("wheelgate.worker.runpy.run_path") as run_path:
+                result = _console_operation(self.contract("cli", "owned"))
+            entry.load.assert_called_once_with()
+            run_path.assert_not_called()
+            self.assertEqual(result["launcher_origin"], str(launcher))
+            self.assertEqual(result["stdout"], "ok")
+
     def test_nested_resource_join_uses_components(self):
         with tempfile.TemporaryDirectory() as td:
             root = pathlib.Path(td)

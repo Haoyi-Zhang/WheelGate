@@ -118,7 +118,7 @@ def _console_operation(c: dict, capture=None) -> dict:
             origins = [owned(d, module) for module in c["modules"]]
             origins.append(owned(d, entries[0].module))
             try:
-                if executable.suffix.lower() == '.exe':
+                if os.name == 'nt':
                     value = entries[0].load()()
                     if value is not None:
                         raise SystemExit(value)

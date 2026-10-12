@@ -1,13 +1,15 @@
 # Third-party inputs and notices
 
-Four wheel archives were retained from the execution runtime: pip 25.1.1,
-setuptools 78.1.1, Pygments 2.19.1, and latex2pydata 0.5.0. They were not
-retrieved from PyPI during this study. `third_party/manifest.json` records their
-local SHA-256 values and sizes, and `corpus/registry-comparison.json` records
-that their whole-archive hashes differ from the hashes published for the same
-filenames. Neither the cause of those differences nor uncompressed-payload
-equivalence was established. The manuscript therefore calls them retained local
-inputs, not verified publisher downloads.
+Four wheel archives are included as local inputs. The provenance recorded in
+`third_party/manifest.json` identifies setuptools 78.1.1 as an official PyPI
+download whose whole-archive SHA-256 matches the published wheel hash.
+pip 25.1.1, Pygments 2.19.1, and latex2pydata 0.5.0 were retained from the
+execution runtime, not retrieved from PyPI during this study. The manifest
+records each archive's local SHA-256 and size; `corpus/registry-comparison.json`
+records the setuptools match and the other three whole-archive hash mismatches.
+Neither the cause of those three differences nor uncompressed-payload
+equivalence was established. Those three archives remain retained local inputs,
+not verified publisher downloads.
 
 The archives retain their upstream licence files. `third_party/license-index.json`
 identifies the licence members found inside each archive. Preserve those notices

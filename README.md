@@ -136,17 +136,29 @@ drive syntax, traversal, and paths resolving outside that directory. New
 requalification and self-package records write POSIX separators. The original
 route generator is retained unchanged because its hash binds the selected study.
 
+`scripts/reproduce.py` reruns the context and historical studies, route
+requalification, and software installation study in a fresh copy. Its
+`--full-route` option also regenerates the route matrix. It does not rerun the
+additional current self-package comparison or write a separate
+portability record. Run `scripts/packaging_flow.py` and
+`scripts/requalify_routes.py --output <fresh-path>` explicitly for those current
+validations. `scripts/audit.py` checks the retained study set, not these separate
+additional outputs.
+
 ## Current portability and self-package validation
 
-The current source suite contains 191 tests. The retained installation study
+The current source suite contains 193 tests. The retained installation study
 still records 140 tests; these are different revisions, not additional projects.
-`results/packaging-flow/comparison.json` records a fresh direct/sdist-derived
-build of this supplied software package, 191 installed tests on each route,
+`results/current/packaging-flow/comparison.json` records the current
+direct/sdist-derived build, 193 installed tests on each route,
 unchanged CWC default/reference checks, and ordinary/gate operations with the
 same import, canonical-name, and version-command expectations. All pass on both
 routes. This is positive self-package validation, not an external maintainer
-deployment or additional defect-recall result. `results/portability/` retains a
-fresh ten-run requalification of the same two route-wheel contents.
+deployment or additional defect-recall result.
+`results/current/portability/route-requalification.json` records ten
+source-bound Windows runs over the same two route-wheel contents: five pass
+and five produce the expected missing-resource failure. The original study
+records retain their own input and test-suite bindings.
 
 To repeat the self-package comparison in a host with CWC dependencies installed:
 
