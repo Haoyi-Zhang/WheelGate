@@ -2,7 +2,7 @@
 
 ## Established by execution
 
-- The retained installation study records 140 source tests plus six subtests passing; the current source suite contains 199 tests.
+- The retained installation study records 140 source tests plus six subtests passing; the current source suite contains 200 tests.
 - WheelGate installs and passes the same test suite from both its direct wheel
   and a wheel rebuilt from its sdist.
 - A 45-observation route matrix distinguishes checkout, default editable,
@@ -32,7 +32,7 @@ silently converted into an upstream defect count.
 ## Additional current validation (not pooled with retained studies)
 
 - Host-independent contract-path admission and bundle-reference normalization
-  are tested using harmless owned fixtures; the current Windows suite has 199
+  are tested using harmless owned fixtures; the current Windows suite has 200
   tests. This is not a native Linux test run.
 - `results/current/packaging-flow/comparison.json` and its `self-check.json` record
   direct and sdist-derived builds of the supplied WheelGate package, 193 tests
@@ -50,5 +50,5 @@ The original publisher inputs and categorical receipts in
 CPython 3.12/Windows profile uses seven exact prerequisite downloads, whose
 binaries are obtained from the recorded publishers. Completed django gate
 observations use short paths and existing controller stages; convenience
-wrapper setup blocks are preserved separately. Six offline tests check the
+wrapper setup blocks are preserved separately. Seven offline tests check the
 subject archives, notices, source/contract bindings and receipt consistency.

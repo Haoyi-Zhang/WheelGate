@@ -162,7 +162,7 @@ additional outputs.
 
 ## Current portability and self-package validation
 
-The current source suite contains 199 tests, including six offline original-input
+The current source suite contains 200 tests, including seven offline original-input
 binding tests. The retained installation study records 140 tests, and the
 separate self-package comparison executed 193 tests per route.
 `results/current/packaging-flow/comparison.json` records the current
@@ -232,3 +232,7 @@ contract bindings, prerequisite observations and recorded outcomes. They do
 not install a package or recollect the native runs. The seven dependency
 versions describe the selected study profile rather than a deployment update
 recommendation.
+
+Installed-software testing stages these study fixtures beside the neutral test
+suite, not inside either software wheel. Runtime-byte checks read the installed
+module files, so the package test also validates their supplied source bindings.

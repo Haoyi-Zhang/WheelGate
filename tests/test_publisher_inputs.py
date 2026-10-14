@@ -3,14 +3,19 @@
 No package installation, third-party imports, native execution, or benchmarks.
 """
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import sys
+import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT))
+if (ROOT/'wheelgate').is_dir():
+    sys.path.insert(0, str(ROOT))
+import wheelgate
 from wheelgate.runner import canonical_contract_digest, validate
 
 EVIDENCE = ROOT / 'evidence/publisher-wheels'
@@ -66,8 +71,28 @@ class PublisherInputs(unittest.TestCase):
         self.assertEqual(len(bindings), 7)
         for binding in bindings:
             rel = binding['file']
-            self.assertTrue(rel.startswith('artifact/'))
-            self.assertEqual(digest(relative(ROOT, rel[len('artifact/'):])), binding['sha256'])
+            self.assertTrue(rel.startswith('artifact/wheelgate/'))
+            package = Path(wheelgate.__file__).resolve().parent
+            self.assertEqual(digest(relative(package, rel[len('artifact/wheelgate/'):])), binding['sha256'])
+
+    def test_installed_suite_stages_evidence_without_copying_runtime(self):
+        path = ROOT/'scripts/package_check.py'
+        spec = importlib.util.spec_from_file_location('_publisher_package_inputs', path)
+        package_check = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(package_check)
+        with tempfile.TemporaryDirectory() as temp:
+            source, neutral = Path(temp)/'source', Path(temp)/'neutral'
+            for rel in ('evidence/publisher-wheels','results/publisher-wheel-replay'):
+                folder = source/rel
+                folder.mkdir(parents=True)
+                (folder/'test-input.json').write_text('{"owned_fixture": true}',encoding='utf-8')
+            neutral.mkdir()
+            with patch.object(package_check,'ROOT',source):
+                package_check.stage_publisher_test_inputs(neutral)
+            for rel in ('evidence/publisher-wheels','results/publisher-wheel-replay'):
+                self.assertEqual((neutral/rel/'test-input.json').read_bytes(),
+                                 (source/rel/'test-input.json').read_bytes())
+            self.assertFalse((neutral/'wheelgate').exists())
 
     def test_selected_contracts_and_same_ordinary_gate_decisions(self):
         protocol = load(RESULTS/'protocol.json')

@@ -5,6 +5,11 @@ import argparse,datetime,hashlib,json,pathlib,shutil,sys,tarfile,tempfile,traceb
 ROOT=pathlib.Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from wheelgate.runner import execute,clean_env,prepare,venv_python
 
+def stage_publisher_test_inputs(neutral):
+ """Stage read-only study fixtures beside tests, never inside the software wheel."""
+ for relative in ('evidence/publisher-wheels','results/publisher-wheel-replay'):
+  shutil.copytree(ROOT/relative,neutral/relative)
+
 def main():
  ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--output',type=pathlib.Path,default=ROOT/'results/package/self-check.json');a=ap.parse_args();out=a.output.resolve()
  if out.exists():ap.error('use a new output path')
@@ -35,7 +40,8 @@ def main():
     neutral=work/'neutral';neutral.mkdir();tests=neutral/'tests';shutil.copytree(ROOT/'tests',tests,ignore=shutil.ignore_patterns('__pycache__'));shutil.copytree(ROOT/'contracts',neutral/'contracts')
     # The source-entrypoint test parses this file; it is not installed or run.
     (neutral/'scripts').mkdir()
-    for script in ['reproduce.py','evidence_paths.py']:shutil.copyfile(ROOT/'scripts'/script,neutral/'scripts'/script)
+    for script in ['reproduce.py','evidence_paths.py','package_check.py']:shutil.copyfile(ROOT/'scripts'/script,neutral/'scripts'/script)
+    stage_publisher_test_inputs(neutral)
     (neutral/'inputs/fixture-direct').mkdir(parents=True);shutil.copyfile(ROOT/'inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl',neutral/'inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl')
     identity=run([subject,'-I','-c','import wheelgate,pathlib,sys,json;assert pathlib.Path(wheelgate.__file__).is_relative_to(pathlib.Path(sys.prefix));print(json.dumps({"module":wheelgate.__file__,"version":wheelgate.__version__,"prefix":sys.prefix}))'],neutral,subenv)
     check=run([subject,'-I','-m','unittest','discover','-s',tests,'-v'],neutral,subenv)
