@@ -236,3 +236,13 @@ recommendation.
 Installed-software testing stages these study fixtures beside the neutral test
 suite, not inside either software wheel. Runtime-byte checks read the installed
 module files, so the package test also validates their supplied source bindings.
+
+## Render retained qualification times
+
+Install `requirements-figures.txt`, then run
+`python scripts/render_runtime.py --source plot_inputs/runtime-summary.dat --output-dir figures --font-root /path/to/texmf-dist/fonts`.
+The three vector bars preserve the retained class aggregation: prerequisite
+median, median of eight operation-class medians, and the three-operation
+bundle median. They exclude environment creation and installation and remain
+separate from the original-publisher-wheel study. The renderer executes no
+package or timing study; five route checks run in the ordinary test suite.
