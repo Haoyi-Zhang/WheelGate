@@ -86,7 +86,8 @@ def main() -> int:
 
     stages: list[tuple[str, list[str], Path]] = []
     stages.append(("source-unittest", [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"], artifact))
-    stages.append(("source-pytest", [sys.executable, "-m", "pytest", "tests", "plot_tests", "-q"], artifact))
+    stages.append(("source-pytest", [sys.executable, "-m", "pytest", "tests", "-q"], artifact))
+    stages.append(("source-figure-pytest", [sys.executable, "-m", "pytest", "plot_tests", "-q"], artifact))
 
     remove(artifact / "results/footprint/matrix.json")
     remove(artifact / "results/footprint/assets")
@@ -140,6 +141,8 @@ def main() -> int:
         if name == "source-pytest":
             (artifact / "results/validation").mkdir(parents=True, exist_ok=True)
             (artifact / "results/validation/pytest.txt").write_text(log, encoding="utf-8")
+        if name == "source-figure-pytest":
+            (artifact / "results/validation/figure-pytest.txt").write_text(log, encoding="utf-8")
         outcomes.append({"stage": name, "argv": argv, "returncode": process.returncode, "seconds": duration})
         (logs / "stages.json").write_text(json.dumps(outcomes, indent=2) + "\n", encoding="utf-8")
         if process.returncode != 0:
