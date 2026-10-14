@@ -15,7 +15,7 @@ from pathlib import Path
 ARTIFACT = Path(__file__).resolve().parents[1]
 HAS_PAPER = ARTIFACT.name == 'artifact' and (ARTIFACT.parent / 'paper').is_dir()
 PACKAGE = ARTIFACT.parent if HAS_PAPER else ARTIFACT
-HOST_REQUIREMENTS = ("attrs", "click", "packaging", "pydantic")
+HOST_REQUIREMENTS = ("attrs", "click", "packaging", "pydantic", "reportlab")
 
 
 def remove(path: Path) -> None:
@@ -86,7 +86,7 @@ def main() -> int:
 
     stages: list[tuple[str, list[str], Path]] = []
     stages.append(("source-unittest", [sys.executable, "-m", "unittest", "discover", "-s", "tests", "-v"], artifact))
-    stages.append(("source-pytest", [sys.executable, "-m", "pytest", "-q"], artifact))
+    stages.append(("source-pytest", [sys.executable, "-m", "pytest", "tests", "plot_tests", "-q"], artifact))
 
     remove(artifact / "results/footprint/matrix.json")
     remove(artifact / "results/footprint/assets")

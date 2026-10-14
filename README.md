@@ -245,4 +245,9 @@ The three vector bars preserve the retained class aggregation: prerequisite
 median, median of eight operation-class medians, and the three-operation
 bundle median. They exclude environment creation and installation and remain
 separate from the original-publisher-wheel study. The renderer executes no
-package or timing study; five route checks run in the ordinary test suite.
+package or timing study; five route checks run in the source artifact suite.
+The five artifact-only checks are in `plot_tests/`, separate from the installed
+software's API suite. CI and the fresh-copy replay run both source suites;
+installed-wheel tests retain every software check without introducing an
+artifact rendering dependency into the wheel. The replay host requires both
+`requirements-comparison.txt` and `requirements-figures.txt`.

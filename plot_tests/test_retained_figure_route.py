@@ -1,4 +1,4 @@
-"""Bounded plotting-route tests; no subject, timing, resampling, or font install."""
+"""Artifact plotting tests, separate from the installed-software test suite."""
 import importlib.util
 import io
 from pathlib import Path
