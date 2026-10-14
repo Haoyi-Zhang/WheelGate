@@ -62,8 +62,23 @@ The direct and sdist-derived software wheels have equal package-payload hashes.
 The django-xml record replays the exact public configuration change from
 `packages=['djxml']` to discovery of `djxml*`. Both source trees expose the nested
 module; the affected wheel omits it and fails, while the repaired wheel passes.
-This establishes the documented mechanism, not byte-for-byte execution of the
-unavailable publisher wheels.
+This isolates the package-selection mechanism. A separate original-wheel
+extension retains django-xml 4.0.0/4.0.1 and latex2pydata 0.5.0 in
+`evidence/publisher-wheels/inputs/`. Ordinary installed checks and the existing
+controller stages both reject the affected django wheel, accept the repaired
+wheel, and accept the documented latex2pydata parser operation.
+
+The django runs use CPython 3.12.14 on Windows AMD64 with seven explicitly pinned
+prerequisites. The receipts in `results/publisher-wheel-replay/` distinguish
+completed short-work-path controller observations from the convenience
+wrapper's path-length setup blocks. Native-library internals remain outside
+the Python-level footprint. These three inputs are separate from the retained
+6/45/24-observation studies.
+
+The source inventory records exact publisher locators, sizes and identities.
+The three subject archives retain their BSD notices. Prerequisite binaries are
+download inputs, not vendored files; their license and resource notices are
+recorded alongside the selected profile.
 
 The selected results were run on Windows 11, CPython 3.12.14, and an Intel Core i7-12700KF. The gate adapts Windows console launchers by invoking their registered Python entry point; the route baseline runs the actual installed executable. File observations include failed read-capable opens, not only consumed bytes.
 
@@ -147,8 +162,9 @@ additional outputs.
 
 ## Current portability and self-package validation
 
-The current source suite contains 193 tests. The retained installation study
-still records 140 tests; these are different revisions, not additional projects.
+The current source suite contains 199 tests, including six offline original-input
+binding tests. The retained installation study records 140 tests, and the
+separate self-package comparison executed 193 tests per route.
 `results/current/packaging-flow/comparison.json` records the current
 direct/sdist-derived build, 193 installed tests on each route,
 unchanged CWC default/reference checks, and ordinary/gate operations with the
@@ -171,3 +187,48 @@ wheels through zipimport without installing them or running startup hooks. The
 record identifies the dependency versions and inputs actually used. Component
 and owned-file tests cover cross-host path syntax on Windows; native Linux
 execution remains unverified.
+
+## Original publisher inputs
+
+The selected django profile uses CPython 3.12 on Windows AMD64. From `artifact/`,
+the following PowerShell commands download its seven pinned prerequisites
+without installation, dependency resolution or source builds. Existing files
+are preserved. A mismatch stops acquisition before qualification:
+
+```powershell
+$root = (Resolve-Path -LiteralPath 'evidence/publisher-wheels').Path
+$pins = (Get-Content -LiteralPath (Join-Path $root 'source-inventory.json') -Raw |
+  ConvertFrom-Json).inputs | Where-Object { $_.input_kind -eq 'publisher-download' }
+if (@($pins).Count -ne 7) { throw 'Expected seven prerequisite inputs' }
+foreach ($pin in $pins) {
+  $path = [IO.Path]::GetFullPath((Join-Path $root $pin.download_destination))
+  $url = [Uri]$pin.publisher_url
+  if ([IO.Path]::GetDirectoryName($path) -ne (Join-Path $root 'inputs') -or
+      $url.Scheme -ne 'https' -or $url.Host -ne 'files.pythonhosted.org' -or
+      $url.UserInfo) { throw 'Invalid publisher destination' }
+  if (Test-Path -LiteralPath $path) { throw "Already exists: $path" }
+  Invoke-WebRequest -Uri $url.AbsoluteUri -OutFile $path
+  if ((Get-FileHash -LiteralPath $path -Algorithm SHA256).Hash.ToLowerInvariant() -ne
+      $pin.sha256 -or (Get-Item -LiteralPath $path).Length -ne $pin.bytes) {
+    throw 'Publisher input mismatch'
+  }
+}
+```
+
+Pass each verified prerequisite using the existing `--dependency` option and
+select `--profile replay-cp312-win-amd64` for the django contracts. Run from a
+short working and temporary path on Windows. The documented latex2pydata call
+has no prerequisite and uses the base profile:
+
+```sh
+python -m wheelgate \
+  evidence/publisher-wheels/inputs/latex2pydata-0.5.0-py3-none-any.whl \
+  contracts/publisher-latex2pydata-0.5.0.json --output /tmp/latex-receipt.json
+python -B -m unittest discover -s tests -p test_publisher_inputs.py -v
+```
+
+The offline tests inspect retained archive members, notices, runtime and
+contract bindings, prerequisite observations and recorded outcomes. They do
+not install a package or recollect the native runs. The seven dependency
+versions describe the selected study profile rather than a deployment update
+recommendation.

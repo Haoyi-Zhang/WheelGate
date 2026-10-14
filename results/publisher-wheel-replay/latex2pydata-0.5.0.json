@@ -1,0 +1,366 @@
+{
+  "schema": 1,
+  "case": "latex2pydata-0.5.0",
+  "scope": "New actual publisher-wheel observation; not pooled with retained studies",
+  "projection": {
+    "absolute_paths": "Symbolic <venv>, <case-work>, <base-python>, <private-work>, <candidate> tokens replace local prefixes; original raw receipts retained outside the artifact",
+    "timing_fields": "Removed, including nested prefixed JSON streams; no performance measurement or benchmark is reported",
+    "status_exit_identity_and_ownership": "Preserved"
+  },
+  "summary": {
+    "case": "latex2pydata-0.5.0",
+    "contract": "artifact/contracts/publisher-latex2pydata-0.5.0.json",
+    "contract_sha256": "087b59e61f30dd914b69e327e9e0731f082b61c0facc47a32142fa452174144c",
+    "ordinary_setup": "READY",
+    "ordinary_status": "PASS",
+    "gate_setup": "READY",
+    "gate_status": "PASS",
+    "convenience_wrapper_status": "PASS",
+    "profile": "base",
+    "gate_entry_route": "existing qualify convenience wrapper"
+  },
+  "ordinary": {
+    "setup": {
+      "wheel_identity": {
+        "name": "latex2pydata",
+        "version": "0.5.0"
+      },
+      "install": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "<private-work>\\publisher-bytes\\latex2pydata-0.5.0-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "Processing <private-work>\\publisher-bytes\\latex2pydata-0.5.0-py3-none-any.whl\nInstalling collected packages: latex2pydata\nSuccessfully installed latex2pydata-0.5.0\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "dependency_check": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "returncode": 0,
+        "stdout": "No broken requirements found.\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "environment": {
+        "status": "READY",
+        "receipt": {
+          "distributions": [
+            {
+              "name": "latex2pydata",
+              "version": "0.5.0"
+            },
+            {
+              "name": "pip",
+              "version": "25.0.1"
+            }
+          ],
+          "implementation": "CPython",
+          "prefix": "<venv>",
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "-c",
+            "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+          ],
+          "returncode": 0,
+          "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"latex2pydata\", \"version\": \"0.5.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}], \"implementation\": \"CPython\", \"prefix\": \"<venv>\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      },
+      "status": "READY"
+    },
+    "status": "PASS",
+    "operation_ran": true,
+    "receipt": {
+      "id": "publisher-latex2pydata-documented-schema-keypath-loads",
+      "origins": [
+        {
+          "distribution": "latex2pydata",
+          "module": "latex2pydata",
+          "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\__init__.py",
+          "version": "0.5.0"
+        },
+        {
+          "distribution": "latex2pydata",
+          "module": "latex2pydata.loading",
+          "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\loading.py",
+          "version": "0.5.0"
+        }
+      ],
+      "prerequisites": [],
+      "status": "PASS",
+      "value": {
+        "label": "HELLO",
+        "main": {
+          "count": 7
+        }
+      }
+    },
+    "process": {
+      "argv": [
+        "<venv>\\Scripts\\python.exe",
+        "-I",
+        "-B",
+        "<private-extension>\\ordinary_consumer.py",
+        "<private-extension>\\contracts\\publisher-latex2pydata-0.5.0.json",
+        "base"
+      ],
+      "returncode": 0,
+      "stdout": "PUBLISHER_ORDINARY={\"id\": \"publisher-latex2pydata-documented-schema-keypath-loads\", \"origins\": [{\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}], \"prerequisites\": [], \"status\": \"PASS\", \"value\": {\"label\": \"HELLO\", \"main\": {\"count\": 7}}}\n",
+      "stderr": "",
+      "timeout": false
+    },
+    "exit_consistent": true
+  },
+  "gate": {
+    "identity": {
+      "name": "latex2pydata",
+      "version": "0.5.0"
+    },
+    "wheelgate": "1.0.0",
+    "artifact_kind": "wheel",
+    "wheel": "latex2pydata-0.5.0-py3-none-any.whl",
+    "sha256": "7c4092562082985453f47f52db31e1f8c2edcf5d7f855f4c614cfba12808675b",
+    "contract_sha256": "087b59e61f30dd914b69e327e9e0731f082b61c0facc47a32142fa452174144c",
+    "profile": "base",
+    "execution_mode": "isolated",
+    "setup": {
+      "wheel_identity": {
+        "name": "latex2pydata",
+        "version": "0.5.0"
+      },
+      "install": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "<private-work>\\publisher-bytes\\latex2pydata-0.5.0-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "Processing <private-work>\\publisher-bytes\\latex2pydata-0.5.0-py3-none-any.whl\nInstalling collected packages: latex2pydata\nSuccessfully installed latex2pydata-0.5.0\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "dependency_check": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "returncode": 0,
+        "stdout": "No broken requirements found.\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "environment": {
+        "status": "READY",
+        "receipt": {
+          "distributions": [
+            {
+              "name": "latex2pydata",
+              "version": "0.5.0"
+            },
+            {
+              "name": "pip",
+              "version": "25.0.1"
+            }
+          ],
+          "implementation": "CPython",
+          "prefix": "<venv>",
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "-c",
+            "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+          ],
+          "returncode": 0,
+          "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"latex2pydata\", \"version\": \"0.5.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}], \"implementation\": \"CPython\", \"prefix\": \"<venv>\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      },
+      "status": "READY"
+    },
+    "status": "PASS",
+    "mode": "isolated",
+    "profile_preflight": {
+      "status": "READY",
+      "requirements": []
+    },
+    "contracts": [
+      {
+        "file_footprint": {
+          "access_count": 3,
+          "accesses": [
+            {
+              "classification": "stdlib-archive",
+              "origin": "<base-python>\\python312.zip"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata-0.5.0.dist-info\\METADATA",
+              "version": "0.5.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata-0.5.0.dist-info\\RECORD",
+              "version": "0.5.0"
+            }
+          ],
+          "allowed_distributions": [
+            "latex2pydata"
+          ],
+          "violations": []
+        },
+        "footprint": {
+          "allowed_distributions": [
+            "latex2pydata"
+          ],
+          "module_count": 9,
+          "modules": [
+            {
+              "classification": "stdlib",
+              "module": "email.feedparser",
+              "origin": "<base-python>\\Lib\\email\\feedparser.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "email.parser",
+              "origin": "<base-python>\\Lib\\email\\parser.py"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "module": "latex2pydata",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\__init__.py",
+              "version": "0.5.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "module": "latex2pydata.err",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\err.py",
+              "version": "0.5.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "module": "latex2pydata.fmtversion",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\fmtversion.py",
+              "version": "0.5.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "module": "latex2pydata.loading",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\loading.py",
+              "version": "0.5.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "module": "latex2pydata.schema",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\schema.py",
+              "version": "0.5.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "module": "latex2pydata.util",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\util.py",
+              "version": "0.5.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "latex2pydata",
+              "module": "latex2pydata.version",
+              "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\version.py",
+              "version": "0.5.0"
+            }
+          ],
+          "violations": []
+        },
+        "id": "publisher-latex2pydata-documented-schema-keypath-loads",
+        "origins": [
+          {
+            "distribution": "latex2pydata",
+            "module": "latex2pydata",
+            "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\__init__.py",
+            "version": "0.5.0"
+          },
+          {
+            "distribution": "latex2pydata",
+            "module": "latex2pydata.loading",
+            "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\loading.py",
+            "version": "0.5.0"
+          },
+          {
+            "distribution": "latex2pydata",
+            "module": "latex2pydata",
+            "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\__init__.py",
+            "version": "0.5.0"
+          },
+          {
+            "distribution": "latex2pydata",
+            "module": "latex2pydata",
+            "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\__init__.py",
+            "version": "0.5.0"
+          },
+          {
+            "distribution": "latex2pydata",
+            "module": "latex2pydata.loading",
+            "origin": "<venv>\\Lib\\site-packages\\latex2pydata\\loading.py",
+            "version": "0.5.0"
+          }
+        ],
+        "status": "PASS",
+        "value": {
+          "label": "HELLO",
+          "main": {
+            "count": 7
+          }
+        },
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "<case-work>\\probes\\0\\worker.py",
+            "<case-work>\\probes\\0\\contract.json"
+          ],
+          "returncode": 0,
+          "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<base-python>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata-0.5.0.dist-info\\\\METADATA\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata-0.5.0.dist-info\\\\RECORD\", \"version\": \"0.5.0\"}], \"allowed_distributions\": [\"latex2pydata\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"latex2pydata\"], \"module_count\": 9, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<base-python>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<base-python>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.err\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\err.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.fmtversion\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\fmtversion.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.schema\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\schema.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.util\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\util.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.version\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\version.py\", \"version\": \"0.5.0\"}], \"violations\": []}, \"id\": \"publisher-latex2pydata-documented-schema-keypath-loads\", \"origins\": [{\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}], \"status\": \"PASS\", \"value\": {\"label\": \"HELLO\", \"main\": {\"count\": 7}}}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "scope": "Three selected original publisher inputs with same ordinary/gate operations; categorical decisions only; no repetitions or benchmark",
+  "selected_profile_not_historical": {
+    "python": "CPython 3.12.14",
+    "platform": "Windows AMD64",
+    "django_prerequisites": [
+      {
+        "distribution": "Django",
+        "version": "4.2.23"
+      },
+      {
+        "distribution": "lxml",
+        "version": "6.0.0"
+      },
+      {
+        "distribution": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "distribution": "asgiref",
+        "version": "3.8.1"
+      },
+      {
+        "distribution": "sqlparse",
+        "version": "0.5.3"
+      },
+      {
+        "distribution": "six",
+        "version": "1.17.0"
+      },
+      {
+        "distribution": "tzdata",
+        "version": "2025.2"
+      }
+    ],
+    "latex_prerequisites": []
+  },
+  "existing_runtime_source_bindings": [
+    {
+      "file": "artifact/wheelgate/__init__.py",
+      "sha256": "55e6a3715cd3976feb7e161a1009eb02ca0a045d15ae833f1dae3c280192673c"
+    },
+    {
+      "file": "artifact/wheelgate/runner.py",
+      "sha256": "2cc386b3f52621c3af6968a0814b9b138d4373dbe487c1bc77acb2f4a5eb1f36"
+    },
+    {
+      "file": "artifact/wheelgate/worker.py",
+      "sha256": "02a072f0be812866ac8702ed0cd03afe58305621dc024d3f872d8fcc04f5b37b"
+    },
+    {
+      "file": "artifact/wheelgate/contractio.py",
+      "sha256": "951b98322f6923d1928477a584561307326d2a183d86448e5ca1bb92a1548cce"
+    },
+    {
+      "file": "artifact/wheelgate/paths.py",
+      "sha256": "d20ce0a2fe67ab21ac31e87270349ca3cf472eb30a7bda97069d39f5912f7a94"
+    },
+    {
+      "file": "artifact/wheelgate/footprint.py",
+      "sha256": "77c11be5b6bc6f4bd6ac8dcaccf01cdeb781470912b6d58cc11c6139f4a2552f"
+    },
+    {
+      "file": "artifact/wheelgate/profile_worker.py",
+      "sha256": "0e6e374d95c6b21c1d8bc1af1079ea60d0ceb0929d4d20f4d963f2f7bf70989f"
+    }
+  ],
+  "ordinary_operation_source": "\"\"\"Reviewed benign installed operation, matching the corresponding gate contract.\"\"\"\nfrom __future__ import annotations\n\nimport importlib\nimport importlib.metadata as md\nimport json\nimport pathlib\nimport re\nimport sys\nimport traceback\n\n\nclass InvalidObservation(Exception):\n    pass\n\n\ndef normalized(value):\n    return re.sub(r\"[-_.]+\", \"-\", value).lower()\n\n\ndef main():\n    spec = json.loads(pathlib.Path(sys.argv[1]).read_text(encoding=\"utf-8\"))\n    profile = sys.argv[2]\n    c = spec[\"contracts\"][0]\n    report = {\"id\": c[\"id\"], \"status\": \"PASS\", \"origins\": [], \"prerequisites\": []}\n    try:\n        requirements = spec.get(\"profile_dependencies\", {}).get(profile, [])\n        for req in requirements:\n            try:\n                observed = md.version(req[\"distribution\"])\n            except md.PackageNotFoundError:\n                observed = None\n            report[\"prerequisites\"].append({\"distribution\": req[\"distribution\"], \"expected_version\": req[\"version\"], \"observed_version\": observed, \"satisfied\": observed == req[\"version\"]})\n        if not all(r[\"satisfied\"] for r in report[\"prerequisites\"]):\n            report.update(status=\"BLOCKED\", reason=\"Exact prerequisite profile not established; operation not run\")\n        else:\n            dist = md.distribution(c[\"distribution\"])\n            if normalized(dist.metadata[\"Name\"]) != normalized(c[\"distribution\"]) or dist.version != c[\"version\"]:\n                raise InvalidObservation(\"Selected installed distribution identity mismatch\")\n            owned = {pathlib.Path(dist.locate_file(f)).resolve() for f in dist.files or []}\n            for module in c[\"modules\"]:\n                obj = importlib.import_module(module)\n                path = pathlib.Path(obj.__file__).resolve()\n                if path not in owned or not path.is_relative_to(pathlib.Path(sys.prefix).resolve()):\n                    raise InvalidObservation(f\"Unowned target module: {module}: {path}\")\n                report[\"origins\"].append({\"module\": module, \"origin\": str(path), \"distribution\": dist.metadata[\"Name\"], \"version\": dist.version})\n            if c[\"kind\"] == \"call\":\n                module, name = c[\"target\"].split(\":\", 1)\n                fn = getattr(importlib.import_module(module), name)\n                result = fn(*c.get(\"args\", []), **c.get(\"kwargs\", {}))\n                assert result == c[\"equals\"], (result, c[\"equals\"])\n                report[\"value\"] = result\n            else:\n                assert c[\"kind\"] == \"import\"\n    except InvalidObservation as e:\n        report.update(status=\"INVALID\", exception=type(e).__name__, message=str(e), traceback=traceback.format_exc())\n    except Exception as e:\n        report.update(status=\"FAIL\", exception=type(e).__name__, message=str(e), traceback=traceback.format_exc())\n    print(\"PUBLISHER_ORDINARY=\" + json.dumps(report, sort_keys=True))\n    return {\"PASS\": 0, \"FAIL\": 1, \"BLOCKED\": 2, \"INVALID\": 2}[report[\"status\"]]\n\n\nif __name__ == \"__main__\":\n    raise SystemExit(main())\n",
+  "ordinary_operation_source_sha256": "72d02f9b701f671a74fd949ca71600fca375c1bb6bef9f6c0fee6f21cea98d12",
+  "controller_routing": "Use validate, wheel_identity, bind_contracts, canonical_contract_digest, prepare and probe unchanged with a fresh short environment basename where the qualify() wrapper's longer basename exceeds Windows path limits. Preserve blocked wrapper attempts separately. No runtime code was patched.",
+  "installation": "Recorded execution used fresh venvs and explicit privately retained original wheels; pip --no-index --no-deps then pip check; no source build or ambient fallback; no third-party network/cloud consumer operation invoked. The current candidate bundles only the three subject wheels, not the seven prerequisites, and is not an offline-ready prerequisite bundle.",
+  "prerequisite_acquisition": {
+    "delivery": "Seven publisher-download inputs; not currently bundled. Original reviewed bytes remain private. Third-party notices are retained, without claiming full redistribution rights for the prerequisite binary bundles.",
+    "pin_manifest": "artifact/evidence/publisher-wheels/source-inventory.json",
+    "selection": "Use precisely the seven inputs with input_kind=publisher-download. Fetch each exact publisher_url and verify its sha256 and bytes before use. download_destination is relative to artifact/evidence/publisher-wheels, not evidence that a file is currently bundled.",
+    "python_version": "3.12",
+    "implementation": "cp",
+    "abi": "cp312",
+    "platform": "win_amd64",
+    "lxml_wheel_tag": "cp312-cp312-win_amd64",
+    "other_prerequisite_tags": "py3-none-any or py2.py3-none-any, as pinned in the inventory",
+    "exact_versions": ["Django==4.2.23", "lxml==6.0.0", "python-dateutil==2.9.0.post0", "asgiref==3.8.1", "sqlparse==0.5.3", "six==1.17.0", "tzdata==2025.2"],
+    "binary_wheels_only": true,
+    "implicit_dependency_resolution": false,
+    "source_builds": false,
+    "acquisition_or_execution_repeated_for_externalization": false,
+    "license_note": "lxml LICENSES.txt describes some resource extraction transforms as unlicensed. Its full binary prerequisite bundle is therefore not redistributed here; exact publisher locator and byte identity remain available for controlled acquisition."
+  },
+  "operation_isolation": "Fresh processes, -I, neutral directory, target identity and RECORD ownership checks; same module anchors/call input/schema/expected value in ordinary and gate",
+  "native_limit": "lxml Python module origins are inventoried; native library internals, all native resource reads and native child behavior are not traced",
+  "historical_limit": "Selected compatible replay profile, not an attributed historical environment; old configuration replay/route/context records, tables, metrics and denominators unchanged",
+  "independent_positive_limit": "latex2pydata is independently maintained; its shared reviewed oracle is not independent validation or comparative defect recall",
+  "earliest_setup_attempt": {
+    "stage": "first ordinary environment creation; before subject wheel installation or consumer execution",
+    "status": "BLOCKED",
+    "exception": "subprocess.CalledProcessError",
+    "failed_command": [
+      "\\\\?\\<private-work>\\t-approved\\ordinary-django-xml-4.0.0\\venv\\Scripts\\python.exe",
+      "-m",
+      "ensurepip",
+      "--upgrade",
+      "--default-pip"
+    ],
+    "returncode": 1,
+    "consumer_operation_ran": false,
+    "raw_process_output_available": false,
+    "diagnostic": "The venv's Python launched normally when addressed without the extended prefix; sys.prefix was an unprefixed normal Windows path. Next controlled attempt uses shorter ordinary child names and a short TEMP child under the same authorized private root. Existing qualifier runtime code is unchanged."
+  },
+  "results": [
+    {
+      "case": "django-xml-4.0.0",
+      "contract": "artifact/contracts/publisher-django-xml-4.0.0.json",
+      "contract_sha256": "e94720e54db41139452f2fa3072c5d0e38a958eb5674c9a32f9db5bd7e8daae1",
+      "ordinary_setup": "READY",
+      "ordinary_status": "FAIL",
+      "gate_setup": "READY",
+      "gate_status": "FAIL",
+      "convenience_wrapper_status": "BLOCKED",
+      "profile": "replay-cp312-win-amd64",
+      "gate_entry_route": "existing controller stages with short environment basename"
+    },
+    {
+      "case": "django-xml-4.0.1",
+      "contract": "artifact/contracts/publisher-django-xml-4.0.1.json",
+      "contract_sha256": "cc628995bfc0c3d9f147fee901042ec77f91dd21f0e2a9cfe2c0e7d0985a3db3",
+      "ordinary_setup": "READY",
+      "ordinary_status": "PASS",
+      "gate_setup": "READY",
+      "gate_status": "PASS",
+      "convenience_wrapper_status": "BLOCKED",
+      "profile": "replay-cp312-win-amd64",
+      "gate_entry_route": "existing controller stages with short environment basename"
+    },
+    {
+      "case": "latex2pydata-0.5.0",
+      "contract": "artifact/contracts/publisher-latex2pydata-0.5.0.json",
+      "contract_sha256": "087b59e61f30dd914b69e327e9e0731f082b61c0facc47a32142fa452174144c",
+      "ordinary_setup": "READY",
+      "ordinary_status": "PASS",
+      "gate_setup": "READY",
+      "gate_status": "PASS",
+      "convenience_wrapper_status": "PASS",
+      "profile": "base",
+      "gate_entry_route": "existing qualify convenience wrapper"
+    }
+  ]
+}

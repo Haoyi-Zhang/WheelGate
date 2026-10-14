@@ -1,0 +1,512 @@
+{
+  "schema": 1,
+  "case": "django-xml-4.0.0",
+  "scope": "New actual publisher-wheel observation; not pooled with retained studies",
+  "projection": {
+    "absolute_paths": "Symbolic <venv>, <case-work>, <base-python>, <private-work>, <candidate> tokens replace local prefixes; original raw receipts retained outside the artifact",
+    "timing_fields": "Removed, including nested prefixed JSON streams; no performance measurement or benchmark is reported",
+    "status_exit_identity_and_ownership": "Preserved"
+  },
+  "summary": {
+    "case": "django-xml-4.0.0",
+    "contract": "artifact/contracts/publisher-django-xml-4.0.0.json",
+    "contract_sha256": "e94720e54db41139452f2fa3072c5d0e38a958eb5674c9a32f9db5bd7e8daae1",
+    "ordinary_setup": "READY",
+    "ordinary_status": "FAIL",
+    "gate_setup": "READY",
+    "gate_status": "FAIL",
+    "convenience_wrapper_status": "BLOCKED",
+    "profile": "replay-cp312-win-amd64",
+    "gate_entry_route": "existing controller stages with short environment basename"
+  },
+  "ordinary": {
+    "setup": {
+      "wheel_identity": {
+        "name": "django-xml",
+        "version": "4.0.0"
+      },
+      "install": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "<private-extension>\\wheels\\django-4.2.23-py3-none-any.whl",
+          "<private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl",
+          "<private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl",
+          "<private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl",
+          "<private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl",
+          "<private-work>\\publisher-bytes\\django_xml-4.0.0-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "Processing <private-extension>\\wheels\\django-4.2.23-py3-none-any.whl\nProcessing <private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl\nProcessing <private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl\nProcessing <private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl\nProcessing <private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl\nProcessing <private-work>\\publisher-bytes\\django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: tzdata, sqlparse, six, python-dateutil, lxml, django-xml, django, asgiref\nSuccessfully installed asgiref-3.8.1 django-4.2.23 django-xml-4.0.0 lxml-6.0.0 python-dateutil-2.9.0.post0 six-1.17.0 sqlparse-0.5.3 tzdata-2025.2\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "dependency_check": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "returncode": 0,
+        "stdout": "No broken requirements found.\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "environment": {
+        "status": "READY",
+        "receipt": {
+          "distributions": [
+            {
+              "name": "asgiref",
+              "version": "3.8.1"
+            },
+            {
+              "name": "Django",
+              "version": "4.2.23"
+            },
+            {
+              "name": "django-xml",
+              "version": "4.0.0"
+            },
+            {
+              "name": "lxml",
+              "version": "6.0.0"
+            },
+            {
+              "name": "pip",
+              "version": "25.0.1"
+            },
+            {
+              "name": "python-dateutil",
+              "version": "2.9.0.post0"
+            },
+            {
+              "name": "six",
+              "version": "1.17.0"
+            },
+            {
+              "name": "sqlparse",
+              "version": "0.5.3"
+            },
+            {
+              "name": "tzdata",
+              "version": "2025.2"
+            }
+          ],
+          "implementation": "CPython",
+          "prefix": "<venv>",
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "-c",
+            "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+          ],
+          "returncode": 0,
+          "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"asgiref\", \"version\": \"3.8.1\"}, {\"name\": \"Django\", \"version\": \"4.2.23\"}, {\"name\": \"django-xml\", \"version\": \"4.0.0\"}, {\"name\": \"lxml\", \"version\": \"6.0.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"python-dateutil\", \"version\": \"2.9.0.post0\"}, {\"name\": \"six\", \"version\": \"1.17.0\"}, {\"name\": \"sqlparse\", \"version\": \"0.5.3\"}, {\"name\": \"tzdata\", \"version\": \"2025.2\"}], \"implementation\": \"CPython\", \"prefix\": \"<venv>\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      },
+      "status": "READY"
+    },
+    "status": "FAIL",
+    "operation_ran": true,
+    "receipt": {
+      "exception": "ModuleNotFoundError",
+      "id": "publisher-django-xml-documented-package-import",
+      "message": "No module named 'djxml.xmlmodels'",
+      "origins": [
+        {
+          "distribution": "django-xml",
+          "module": "djxml",
+          "origin": "<venv>\\Lib\\site-packages\\djxml\\__init__.py",
+          "version": "4.0.0"
+        }
+      ],
+      "prerequisites": [
+        {
+          "distribution": "Django",
+          "expected_version": "4.2.23",
+          "observed_version": "4.2.23",
+          "satisfied": true
+        },
+        {
+          "distribution": "python-dateutil",
+          "expected_version": "2.9.0.post0",
+          "observed_version": "2.9.0.post0",
+          "satisfied": true
+        },
+        {
+          "distribution": "lxml",
+          "expected_version": "6.0.0",
+          "observed_version": "6.0.0",
+          "satisfied": true
+        },
+        {
+          "distribution": "asgiref",
+          "expected_version": "3.8.1",
+          "observed_version": "3.8.1",
+          "satisfied": true
+        },
+        {
+          "distribution": "sqlparse",
+          "expected_version": "0.5.3",
+          "observed_version": "0.5.3",
+          "satisfied": true
+        },
+        {
+          "distribution": "six",
+          "expected_version": "1.17.0",
+          "observed_version": "1.17.0",
+          "satisfied": true
+        },
+        {
+          "distribution": "tzdata",
+          "expected_version": "2025.2",
+          "observed_version": "2025.2",
+          "satisfied": true
+        }
+      ],
+      "status": "FAIL",
+      "traceback": "Traceback (most recent call last):\n  File \"<private-extension>\\ordinary_consumer.py\", line 42, in main\n    obj = importlib.import_module(module)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<base-python>\\Lib\\importlib\\__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'djxml.xmlmodels'\n"
+    },
+    "process": {
+      "argv": [
+        "<venv>\\Scripts\\python.exe",
+        "-I",
+        "-B",
+        "<private-extension>\\ordinary_consumer.py",
+        "<private-extension>\\contracts\\publisher-django-xml-4.0.0.json",
+        "replay-cp312-win-amd64"
+      ],
+      "returncode": 1,
+      "stdout": "PUBLISHER_ORDINARY={\"exception\": \"ModuleNotFoundError\", \"id\": \"publisher-django-xml-documented-package-import\", \"message\": \"No module named 'djxml.xmlmodels'\", \"origins\": [{\"distribution\": \"django-xml\", \"module\": \"djxml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\__init__.py\", \"version\": \"4.0.0\"}], \"prerequisites\": [{\"distribution\": \"Django\", \"expected_version\": \"4.2.23\", \"observed_version\": \"4.2.23\", \"satisfied\": true}, {\"distribution\": \"python-dateutil\", \"expected_version\": \"2.9.0.post0\", \"observed_version\": \"2.9.0.post0\", \"satisfied\": true}, {\"distribution\": \"lxml\", \"expected_version\": \"6.0.0\", \"observed_version\": \"6.0.0\", \"satisfied\": true}, {\"distribution\": \"asgiref\", \"expected_version\": \"3.8.1\", \"observed_version\": \"3.8.1\", \"satisfied\": true}, {\"distribution\": \"sqlparse\", \"expected_version\": \"0.5.3\", \"observed_version\": \"0.5.3\", \"satisfied\": true}, {\"distribution\": \"six\", \"expected_version\": \"1.17.0\", \"observed_version\": \"1.17.0\", \"satisfied\": true}, {\"distribution\": \"tzdata\", \"expected_version\": \"2025.2\", \"observed_version\": \"2025.2\", \"satisfied\": true}], \"status\": \"FAIL\", \"traceback\": \"Traceback (most recent call last):\\n  File \\\"<private-extension>\\\\ordinary_consumer.py\\\", line 42, in main\\n    obj = importlib.import_module(module)\\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"<base-python>\\\\Lib\\\\importlib\\\\__init__.py\\\", line 90, in import_module\\n    return _bootstrap._gcd_import(name[level:], package, level)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"<frozen importlib._bootstrap>\\\", line 1387, in _gcd_import\\n  File \\\"<frozen importlib._bootstrap>\\\", line 1360, in _find_and_load\\n  File \\\"<frozen importlib._bootstrap>\\\", line 1324, in _find_and_load_unlocked\\nModuleNotFoundError: No module named 'djxml.xmlmodels'\\n\"}\n",
+      "stderr": "",
+      "timeout": false
+    },
+    "exit_consistent": true
+  },
+  "gate": {
+    "identity": {
+      "name": "django-xml",
+      "version": "4.0.0"
+    },
+    "wheelgate": "1.0.0",
+    "artifact_kind": "wheel",
+    "wheel": "django_xml-4.0.0-py3-none-any.whl",
+    "sha256": "3fa132b819725f21427e05efaf799100f34f5003a9ad26906824985127dfc48e",
+    "contract_sha256": "e94720e54db41139452f2fa3072c5d0e38a958eb5674c9a32f9db5bd7e8daae1",
+    "profile": "replay-cp312-win-amd64",
+    "execution_mode": "isolated",
+    "controller_entry_route": "unchanged validate/wheel_identity/bind_contracts/canonical_contract_digest/prepare/probe stages with short private environment basename",
+    "convenience_wrapper_attempt": "django-xml-4.0.0-gate.json",
+    "setup": {
+      "wheel_identity": {
+        "name": "django-xml",
+        "version": "4.0.0"
+      },
+      "install": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "<private-extension>\\wheels\\django-4.2.23-py3-none-any.whl",
+          "<private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl",
+          "<private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl",
+          "<private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl",
+          "<private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl",
+          "<private-work>\\publisher-bytes\\django_xml-4.0.0-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "Processing <private-extension>\\wheels\\django-4.2.23-py3-none-any.whl\nProcessing <private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl\nProcessing <private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl\nProcessing <private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl\nProcessing <private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl\nProcessing <private-work>\\publisher-bytes\\django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: tzdata, sqlparse, six, python-dateutil, lxml, django-xml, django, asgiref\nSuccessfully installed asgiref-3.8.1 django-4.2.23 django-xml-4.0.0 lxml-6.0.0 python-dateutil-2.9.0.post0 six-1.17.0 sqlparse-0.5.3 tzdata-2025.2\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "dependency_check": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "returncode": 0,
+        "stdout": "No broken requirements found.\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "environment": {
+        "status": "READY",
+        "receipt": {
+          "distributions": [
+            {
+              "name": "asgiref",
+              "version": "3.8.1"
+            },
+            {
+              "name": "Django",
+              "version": "4.2.23"
+            },
+            {
+              "name": "django-xml",
+              "version": "4.0.0"
+            },
+            {
+              "name": "lxml",
+              "version": "6.0.0"
+            },
+            {
+              "name": "pip",
+              "version": "25.0.1"
+            },
+            {
+              "name": "python-dateutil",
+              "version": "2.9.0.post0"
+            },
+            {
+              "name": "six",
+              "version": "1.17.0"
+            },
+            {
+              "name": "sqlparse",
+              "version": "0.5.3"
+            },
+            {
+              "name": "tzdata",
+              "version": "2025.2"
+            }
+          ],
+          "implementation": "CPython",
+          "prefix": "<venv>",
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "-c",
+            "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+          ],
+          "returncode": 0,
+          "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"asgiref\", \"version\": \"3.8.1\"}, {\"name\": \"Django\", \"version\": \"4.2.23\"}, {\"name\": \"django-xml\", \"version\": \"4.0.0\"}, {\"name\": \"lxml\", \"version\": \"6.0.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"python-dateutil\", \"version\": \"2.9.0.post0\"}, {\"name\": \"six\", \"version\": \"1.17.0\"}, {\"name\": \"sqlparse\", \"version\": \"0.5.3\"}, {\"name\": \"tzdata\", \"version\": \"2025.2\"}], \"implementation\": \"CPython\", \"prefix\": \"<venv>\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      },
+      "status": "READY"
+    },
+    "status": "FAIL",
+    "mode": "isolated",
+    "profile_preflight": {
+      "requirements": [
+        {
+          "distribution": "Django",
+          "expected_version": "4.2.23",
+          "observed_version": "4.2.23",
+          "satisfied": true
+        },
+        {
+          "distribution": "python-dateutil",
+          "expected_version": "2.9.0.post0",
+          "observed_version": "2.9.0.post0",
+          "satisfied": true
+        },
+        {
+          "distribution": "lxml",
+          "expected_version": "6.0.0",
+          "observed_version": "6.0.0",
+          "satisfied": true
+        },
+        {
+          "distribution": "asgiref",
+          "expected_version": "3.8.1",
+          "observed_version": "3.8.1",
+          "satisfied": true
+        },
+        {
+          "distribution": "sqlparse",
+          "expected_version": "0.5.3",
+          "observed_version": "0.5.3",
+          "satisfied": true
+        },
+        {
+          "distribution": "six",
+          "expected_version": "1.17.0",
+          "observed_version": "1.17.0",
+          "satisfied": true
+        },
+        {
+          "distribution": "tzdata",
+          "expected_version": "2025.2",
+          "observed_version": "2025.2",
+          "satisfied": true
+        }
+      ],
+      "status": "READY",
+      "process": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "<case-work>\\probes\\profile-preflight\\worker.py",
+          "<case-work>\\probes\\profile-preflight\\requirements.json"
+        ],
+        "returncode": 0,
+        "stdout": "WHEELGATE_PROFILE={\"requirements\": [{\"distribution\": \"Django\", \"expected_version\": \"4.2.23\", \"observed_version\": \"4.2.23\", \"satisfied\": true}, {\"distribution\": \"python-dateutil\", \"expected_version\": \"2.9.0.post0\", \"observed_version\": \"2.9.0.post0\", \"satisfied\": true}, {\"distribution\": \"lxml\", \"expected_version\": \"6.0.0\", \"observed_version\": \"6.0.0\", \"satisfied\": true}, {\"distribution\": \"asgiref\", \"expected_version\": \"3.8.1\", \"observed_version\": \"3.8.1\", \"satisfied\": true}, {\"distribution\": \"sqlparse\", \"expected_version\": \"0.5.3\", \"observed_version\": \"0.5.3\", \"satisfied\": true}, {\"distribution\": \"six\", \"expected_version\": \"1.17.0\", \"observed_version\": \"1.17.0\", \"satisfied\": true}, {\"distribution\": \"tzdata\", \"expected_version\": \"2025.2\", \"observed_version\": \"2025.2\", \"satisfied\": true}], \"status\": \"READY\"}\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    "contracts": [
+      {
+        "exception": "ModuleNotFoundError",
+        "file_footprint": {
+          "access_count": 3,
+          "accesses": [
+            {
+              "classification": "stdlib-archive",
+              "origin": "<base-python>\\python312.zip"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "origin": "<venv>\\Lib\\site-packages\\django_xml-4.0.0.dist-info\\METADATA",
+              "version": "4.0.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "origin": "<venv>\\Lib\\site-packages\\django_xml-4.0.0.dist-info\\RECORD",
+              "version": "4.0.0"
+            }
+          ],
+          "allowed_distributions": [
+            "asgiref",
+            "django",
+            "django-xml",
+            "lxml",
+            "python-dateutil",
+            "six",
+            "sqlparse",
+            "tzdata"
+          ],
+          "violations": []
+        },
+        "footprint": {
+          "allowed_distributions": [
+            "asgiref",
+            "django",
+            "django-xml",
+            "lxml",
+            "python-dateutil",
+            "six",
+            "sqlparse",
+            "tzdata"
+          ],
+          "module_count": 3,
+          "modules": [
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\__init__.py",
+              "version": "4.0.0"
+            },
+            {
+              "classification": "stdlib",
+              "module": "email.feedparser",
+              "origin": "<base-python>\\Lib\\email\\feedparser.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "email.parser",
+              "origin": "<base-python>\\Lib\\email\\parser.py"
+            }
+          ],
+          "violations": []
+        },
+        "id": "publisher-django-xml-documented-package-import",
+        "message": "No module named 'djxml.xmlmodels'",
+        "status": "FAIL",
+        "traceback": "Traceback (most recent call last):\n  File \"<case-work>\\probes\\0\\worker.py\", line 332, in evaluate\n    detail = operation(c)\n             ^^^^^^^^^^^^\n  File \"<case-work>\\probes\\0\\worker.py\", line 269, in operation\n    origins = [owned(d, module) for module in c[\"modules\"]]\n               ^^^^^^^^^^^^^^^^\n  File \"<case-work>\\probes\\0\\worker.py\", line 50, in owned\n    obj = importlib.import_module(module)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<base-python>\\Lib\\importlib\\__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'djxml.xmlmodels'\n",
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "<case-work>\\probes\\0\\worker.py",
+            "<case-work>\\probes\\0\\contract.json"
+          ],
+          "returncode": 1,
+          "stdout": "WHEELGATE_JSON={\"exception\": \"ModuleNotFoundError\", \"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<base-python>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django_xml-4.0.0.dist-info\\\\METADATA\", \"version\": \"4.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django_xml-4.0.0.dist-info\\\\RECORD\", \"version\": \"4.0.0\"}], \"allowed_distributions\": [\"asgiref\", \"django\", \"django-xml\", \"lxml\", \"python-dateutil\", \"six\", \"sqlparse\", \"tzdata\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"asgiref\", \"django\", \"django-xml\", \"lxml\", \"python-dateutil\", \"six\", \"sqlparse\", \"tzdata\"], \"module_count\": 3, \"modules\": [{\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\__init__.py\", \"version\": \"4.0.0\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<base-python>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<base-python>\\\\Lib\\\\email\\\\parser.py\"}], \"violations\": []}, \"id\": \"publisher-django-xml-documented-package-import\", \"message\": \"No module named 'djxml.xmlmodels'\", \"status\": \"FAIL\", \"traceback\": \"Traceback (most recent call last):\\n  File \\\"<case-work>\\\\probes\\\\0\\\\worker.py\\\", line 332, in evaluate\\n    detail = operation(c)\\n             ^^^^^^^^^^^^\\n  File \\\"<case-work>\\\\probes\\\\0\\\\worker.py\\\", line 269, in operation\\n    origins = [owned(d, module) for module in c[\\\"modules\\\"]]\\n               ^^^^^^^^^^^^^^^^\\n  File \\\"<case-work>\\\\probes\\\\0\\\\worker.py\\\", line 50, in owned\\n    obj = importlib.import_module(module)\\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"<base-python>\\\\Lib\\\\importlib\\\\__init__.py\\\", line 90, in import_module\\n    return _bootstrap._gcd_import(name[level:], package, level)\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \\\"<frozen importlib._bootstrap>\\\", line 1387, in _gcd_import\\n  File \\\"<frozen importlib._bootstrap>\\\", line 1360, in _find_and_load\\n  File \\\"<frozen importlib._bootstrap>\\\", line 1324, in _find_and_load_unlocked\\nModuleNotFoundError: No module named 'djxml.xmlmodels'\\n\"}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      }
+    ]
+  },
+  "qualify_convenience_wrapper_attempt": {
+    "identity": {
+      "name": "django-xml",
+      "version": "4.0.0"
+    },
+    "wheelgate": "1.0.0",
+    "artifact_kind": "wheel",
+    "wheel": "django_xml-4.0.0-py3-none-any.whl",
+    "sha256": "3fa132b819725f21427e05efaf799100f34f5003a9ad26906824985127dfc48e",
+    "contract_sha256": "e94720e54db41139452f2fa3072c5d0e38a958eb5674c9a32f9db5bd7e8daae1",
+    "profile": "replay-cp312-win-amd64",
+    "execution_mode": "isolated",
+    "setup": {
+      "wheel_identity": {
+        "name": "django-xml",
+        "version": "4.0.0"
+      },
+      "install": {
+        "argv": [
+          "<private-work>\\t2\\wheelgate-g2aj8abt\\venv\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "<private-extension>\\wheels\\django-4.2.23-py3-none-any.whl",
+          "<private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl",
+          "<private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl",
+          "<private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl",
+          "<private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl",
+          "<private-work>\\publisher-bytes\\django_xml-4.0.0-py3-none-any.whl"
+        ],
+        "returncode": 1,
+        "stdout": "Processing <private-extension>\\wheels\\django-4.2.23-py3-none-any.whl\nProcessing <private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl\nProcessing <private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl\nProcessing <private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl\nProcessing <private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl\nProcessing <private-work>\\publisher-bytes\\django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: tzdata, sqlparse, six, python-dateutil, lxml, django-xml, django, asgiref\n",
+        "stderr": "ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: '<private-work>\\\\t2\\\\wheelgate-g2aj8abt\\\\venv\\\\Lib\\\\site-packages\\\\lxml\\\\isoschematron\\\\resources\\\\xsl\\\\iso-schematron-xslt1\\\\iso_schematron_skeleton_for_xslt1.xsl'\nHINT: This error might have occurred since this system does not have Windows Long Path support enabled. You can find information on how to enable this at https://pip.pypa.io/warnings/enable-long-paths\n\n",
+        "timeout": false
+      },
+      "dependency_check": null,
+      "environment": null,
+      "status": "BLOCKED"
+    },
+    "status": "BLOCKED",
+    "contracts": []
+  },
+  "setup_limit": "The first qualify() attempt was BLOCKED during local lxml installation by Windows path length; its consumer operation did not run. A fresh shorter private environment used unchanged controller stages to establish the selected observation."
+}

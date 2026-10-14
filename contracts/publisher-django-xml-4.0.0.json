@@ -1,0 +1,23 @@
+{
+  "schema": 2,
+  "contracts": [{
+    "id": "publisher-django-xml-documented-package-import",
+    "kind": "import",
+    "distribution": "django-xml",
+    "version": "4.0.0",
+    "modules": ["djxml", "djxml.xmlmodels", "djxml.xmlmodels.fields"],
+    "profiles": ["replay-cp312-win-amd64"],
+    "evidence": "https://pypi.org/project/django-xml/4.0.0/ documents from djxml import xmlmodels; https://github.com/theatlantic/django-xml/issues/18 and fix 37f6ed3d6b246b129c35f8aba4dbf69b34a83b28 justify nested package availability. The exact prerequisite versions define a selected compatible replay profile, not the historical environment."
+  }],
+  "profile_dependencies": {
+    "replay-cp312-win-amd64": [
+      {"distribution": "Django", "version": "4.2.23", "evidence": "django-xml METADATA requires Django>=2.2; selected exact replay release https://pypi.org/project/Django/4.2.23/."},
+      {"distribution": "python-dateutil", "version": "2.9.0.post0", "evidence": "django-xml METADATA requires python-dateutil; selected exact replay release https://pypi.org/project/python-dateutil/2.9.0.post0/."},
+      {"distribution": "lxml", "version": "6.0.0", "evidence": "django-xml METADATA requires lxml; selected cp312 Windows AMD64 replay wheel https://pypi.org/project/lxml/6.0.0/. Native internals are not traced."},
+      {"distribution": "asgiref", "version": "3.8.1", "evidence": "Django 4.2.23 METADATA requires asgiref<4,>=3.6.0; selected exact release https://pypi.org/project/asgiref/3.8.1/."},
+      {"distribution": "sqlparse", "version": "0.5.3", "evidence": "Django 4.2.23 METADATA requires sqlparse>=0.3.1; selected exact release https://pypi.org/project/sqlparse/0.5.3/."},
+      {"distribution": "six", "version": "1.17.0", "evidence": "python-dateutil 2.9.0.post0 METADATA requires six>=1.5; selected exact release https://pypi.org/project/six/1.17.0/."},
+      {"distribution": "tzdata", "version": "2025.2", "evidence": "Django 4.2.23 METADATA requires tzdata on Windows; selected exact release https://pypi.org/project/tzdata/2025.2/."}
+    ]
+  }
+}

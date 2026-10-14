@@ -1,0 +1,15 @@
+{
+  "schema": 2,
+  "contracts": [{
+    "id": "publisher-latex2pydata-documented-schema-keypath-loads",
+    "kind": "call",
+    "distribution": "latex2pydata",
+    "version": "0.5.0",
+    "modules": ["latex2pydata", "latex2pydata.loading"],
+    "target": "latex2pydata:loads",
+    "args": ["{'main.count': '7', 'label': 'HELLO'}"],
+    "kwargs": {"schema": {"main.count": "int", "label": "verbatim"}},
+    "equals": {"main": {"count": 7}, "label": "HELLO"},
+    "evidence": "https://pypi.org/project/latex2pydata/0.5.0/ documents loads(string), schema application and dotted-key unpacking. The exact original wheel's reviewed loading.py and schema.py support this benign literal. This is an independently maintained positive release input, not an independent oracle or defect-recall study."
+  }]
+}

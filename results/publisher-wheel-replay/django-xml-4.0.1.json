@@ -1,0 +1,2179 @@
+{
+  "schema": 1,
+  "case": "django-xml-4.0.1",
+  "scope": "New actual publisher-wheel observation; not pooled with retained studies",
+  "projection": {
+    "absolute_paths": "Symbolic <venv>, <case-work>, <base-python>, <private-work>, <candidate> tokens replace local prefixes; original raw receipts retained outside the artifact",
+    "timing_fields": "Removed, including nested prefixed JSON streams; no performance measurement or benchmark is reported",
+    "status_exit_identity_and_ownership": "Preserved"
+  },
+  "summary": {
+    "case": "django-xml-4.0.1",
+    "contract": "artifact/contracts/publisher-django-xml-4.0.1.json",
+    "contract_sha256": "cc628995bfc0c3d9f147fee901042ec77f91dd21f0e2a9cfe2c0e7d0985a3db3",
+    "ordinary_setup": "READY",
+    "ordinary_status": "PASS",
+    "gate_setup": "READY",
+    "gate_status": "PASS",
+    "convenience_wrapper_status": "BLOCKED",
+    "profile": "replay-cp312-win-amd64",
+    "gate_entry_route": "existing controller stages with short environment basename"
+  },
+  "ordinary": {
+    "setup": {
+      "wheel_identity": {
+        "name": "django-xml",
+        "version": "4.0.1"
+      },
+      "install": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "<private-extension>\\wheels\\django-4.2.23-py3-none-any.whl",
+          "<private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl",
+          "<private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl",
+          "<private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl",
+          "<private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl",
+          "<private-work>\\publisher-bytes\\django_xml-4.0.1-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "Processing <private-extension>\\wheels\\django-4.2.23-py3-none-any.whl\nProcessing <private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl\nProcessing <private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl\nProcessing <private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl\nProcessing <private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl\nProcessing <private-work>\\publisher-bytes\\django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: tzdata, sqlparse, six, python-dateutil, lxml, django-xml, django, asgiref\nSuccessfully installed asgiref-3.8.1 django-4.2.23 django-xml-4.0.1 lxml-6.0.0 python-dateutil-2.9.0.post0 six-1.17.0 sqlparse-0.5.3 tzdata-2025.2\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "dependency_check": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "returncode": 0,
+        "stdout": "No broken requirements found.\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "environment": {
+        "status": "READY",
+        "receipt": {
+          "distributions": [
+            {
+              "name": "asgiref",
+              "version": "3.8.1"
+            },
+            {
+              "name": "Django",
+              "version": "4.2.23"
+            },
+            {
+              "name": "django-xml",
+              "version": "4.0.1"
+            },
+            {
+              "name": "lxml",
+              "version": "6.0.0"
+            },
+            {
+              "name": "pip",
+              "version": "25.0.1"
+            },
+            {
+              "name": "python-dateutil",
+              "version": "2.9.0.post0"
+            },
+            {
+              "name": "six",
+              "version": "1.17.0"
+            },
+            {
+              "name": "sqlparse",
+              "version": "0.5.3"
+            },
+            {
+              "name": "tzdata",
+              "version": "2025.2"
+            }
+          ],
+          "implementation": "CPython",
+          "prefix": "<venv>",
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "-c",
+            "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+          ],
+          "returncode": 0,
+          "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"asgiref\", \"version\": \"3.8.1\"}, {\"name\": \"Django\", \"version\": \"4.2.23\"}, {\"name\": \"django-xml\", \"version\": \"4.0.1\"}, {\"name\": \"lxml\", \"version\": \"6.0.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"python-dateutil\", \"version\": \"2.9.0.post0\"}, {\"name\": \"six\", \"version\": \"1.17.0\"}, {\"name\": \"sqlparse\", \"version\": \"0.5.3\"}, {\"name\": \"tzdata\", \"version\": \"2025.2\"}], \"implementation\": \"CPython\", \"prefix\": \"<venv>\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      },
+      "status": "READY"
+    },
+    "status": "PASS",
+    "operation_ran": true,
+    "receipt": {
+      "id": "publisher-django-xml-documented-package-import",
+      "origins": [
+        {
+          "distribution": "django-xml",
+          "module": "djxml",
+          "origin": "<venv>\\Lib\\site-packages\\djxml\\__init__.py",
+          "version": "4.0.1"
+        },
+        {
+          "distribution": "django-xml",
+          "module": "djxml.xmlmodels",
+          "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\__init__.py",
+          "version": "4.0.1"
+        },
+        {
+          "distribution": "django-xml",
+          "module": "djxml.xmlmodels.fields",
+          "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\__init__.py",
+          "version": "4.0.1"
+        }
+      ],
+      "prerequisites": [
+        {
+          "distribution": "Django",
+          "expected_version": "4.2.23",
+          "observed_version": "4.2.23",
+          "satisfied": true
+        },
+        {
+          "distribution": "python-dateutil",
+          "expected_version": "2.9.0.post0",
+          "observed_version": "2.9.0.post0",
+          "satisfied": true
+        },
+        {
+          "distribution": "lxml",
+          "expected_version": "6.0.0",
+          "observed_version": "6.0.0",
+          "satisfied": true
+        },
+        {
+          "distribution": "asgiref",
+          "expected_version": "3.8.1",
+          "observed_version": "3.8.1",
+          "satisfied": true
+        },
+        {
+          "distribution": "sqlparse",
+          "expected_version": "0.5.3",
+          "observed_version": "0.5.3",
+          "satisfied": true
+        },
+        {
+          "distribution": "six",
+          "expected_version": "1.17.0",
+          "observed_version": "1.17.0",
+          "satisfied": true
+        },
+        {
+          "distribution": "tzdata",
+          "expected_version": "2025.2",
+          "observed_version": "2025.2",
+          "satisfied": true
+        }
+      ],
+      "status": "PASS"
+    },
+    "process": {
+      "argv": [
+        "<venv>\\Scripts\\python.exe",
+        "-I",
+        "-B",
+        "<private-extension>\\ordinary_consumer.py",
+        "<private-extension>\\contracts\\publisher-django-xml-4.0.1.json",
+        "replay-cp312-win-amd64"
+      ],
+      "returncode": 0,
+      "stdout": "PUBLISHER_ORDINARY={\"id\": \"publisher-django-xml-documented-package-import\", \"origins\": [{\"distribution\": \"django-xml\", \"module\": \"djxml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\__init__.py\", \"version\": \"4.0.1\"}], \"prerequisites\": [{\"distribution\": \"Django\", \"expected_version\": \"4.2.23\", \"observed_version\": \"4.2.23\", \"satisfied\": true}, {\"distribution\": \"python-dateutil\", \"expected_version\": \"2.9.0.post0\", \"observed_version\": \"2.9.0.post0\", \"satisfied\": true}, {\"distribution\": \"lxml\", \"expected_version\": \"6.0.0\", \"observed_version\": \"6.0.0\", \"satisfied\": true}, {\"distribution\": \"asgiref\", \"expected_version\": \"3.8.1\", \"observed_version\": \"3.8.1\", \"satisfied\": true}, {\"distribution\": \"sqlparse\", \"expected_version\": \"0.5.3\", \"observed_version\": \"0.5.3\", \"satisfied\": true}, {\"distribution\": \"six\", \"expected_version\": \"1.17.0\", \"observed_version\": \"1.17.0\", \"satisfied\": true}, {\"distribution\": \"tzdata\", \"expected_version\": \"2025.2\", \"observed_version\": \"2025.2\", \"satisfied\": true}], \"status\": \"PASS\"}\n",
+      "stderr": "",
+      "timeout": false
+    },
+    "exit_consistent": true
+  },
+  "gate": {
+    "identity": {
+      "name": "django-xml",
+      "version": "4.0.1"
+    },
+    "wheelgate": "1.0.0",
+    "artifact_kind": "wheel",
+    "wheel": "django_xml-4.0.1-py3-none-any.whl",
+    "sha256": "e44ef3466d2c516163b57f31c1838cb622315cdfc95e4665064809814c3a6114",
+    "contract_sha256": "cc628995bfc0c3d9f147fee901042ec77f91dd21f0e2a9cfe2c0e7d0985a3db3",
+    "profile": "replay-cp312-win-amd64",
+    "execution_mode": "isolated",
+    "controller_entry_route": "unchanged validate/wheel_identity/bind_contracts/canonical_contract_digest/prepare/probe stages with short private environment basename",
+    "convenience_wrapper_attempt": "django-xml-4.0.1-gate.json",
+    "setup": {
+      "wheel_identity": {
+        "name": "django-xml",
+        "version": "4.0.1"
+      },
+      "install": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "<private-extension>\\wheels\\django-4.2.23-py3-none-any.whl",
+          "<private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl",
+          "<private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl",
+          "<private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl",
+          "<private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl",
+          "<private-work>\\publisher-bytes\\django_xml-4.0.1-py3-none-any.whl"
+        ],
+        "returncode": 0,
+        "stdout": "Processing <private-extension>\\wheels\\django-4.2.23-py3-none-any.whl\nProcessing <private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl\nProcessing <private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl\nProcessing <private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl\nProcessing <private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl\nProcessing <private-work>\\publisher-bytes\\django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: tzdata, sqlparse, six, python-dateutil, lxml, django-xml, django, asgiref\nSuccessfully installed asgiref-3.8.1 django-4.2.23 django-xml-4.0.1 lxml-6.0.0 python-dateutil-2.9.0.post0 six-1.17.0 sqlparse-0.5.3 tzdata-2025.2\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "dependency_check": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "returncode": 0,
+        "stdout": "No broken requirements found.\n",
+        "stderr": "",
+        "timeout": false
+      },
+      "environment": {
+        "status": "READY",
+        "receipt": {
+          "distributions": [
+            {
+              "name": "asgiref",
+              "version": "3.8.1"
+            },
+            {
+              "name": "Django",
+              "version": "4.2.23"
+            },
+            {
+              "name": "django-xml",
+              "version": "4.0.1"
+            },
+            {
+              "name": "lxml",
+              "version": "6.0.0"
+            },
+            {
+              "name": "pip",
+              "version": "25.0.1"
+            },
+            {
+              "name": "python-dateutil",
+              "version": "2.9.0.post0"
+            },
+            {
+              "name": "six",
+              "version": "1.17.0"
+            },
+            {
+              "name": "sqlparse",
+              "version": "0.5.3"
+            },
+            {
+              "name": "tzdata",
+              "version": "2025.2"
+            }
+          ],
+          "implementation": "CPython",
+          "prefix": "<venv>",
+          "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+        },
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "-c",
+            "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+          ],
+          "returncode": 0,
+          "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"asgiref\", \"version\": \"3.8.1\"}, {\"name\": \"Django\", \"version\": \"4.2.23\"}, {\"name\": \"django-xml\", \"version\": \"4.0.1\"}, {\"name\": \"lxml\", \"version\": \"6.0.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"python-dateutil\", \"version\": \"2.9.0.post0\"}, {\"name\": \"six\", \"version\": \"1.17.0\"}, {\"name\": \"sqlparse\", \"version\": \"0.5.3\"}, {\"name\": \"tzdata\", \"version\": \"2025.2\"}], \"implementation\": \"CPython\", \"prefix\": \"<venv>\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      },
+      "status": "READY"
+    },
+    "status": "PASS",
+    "mode": "isolated",
+    "profile_preflight": {
+      "requirements": [
+        {
+          "distribution": "Django",
+          "expected_version": "4.2.23",
+          "observed_version": "4.2.23",
+          "satisfied": true
+        },
+        {
+          "distribution": "python-dateutil",
+          "expected_version": "2.9.0.post0",
+          "observed_version": "2.9.0.post0",
+          "satisfied": true
+        },
+        {
+          "distribution": "lxml",
+          "expected_version": "6.0.0",
+          "observed_version": "6.0.0",
+          "satisfied": true
+        },
+        {
+          "distribution": "asgiref",
+          "expected_version": "3.8.1",
+          "observed_version": "3.8.1",
+          "satisfied": true
+        },
+        {
+          "distribution": "sqlparse",
+          "expected_version": "0.5.3",
+          "observed_version": "0.5.3",
+          "satisfied": true
+        },
+        {
+          "distribution": "six",
+          "expected_version": "1.17.0",
+          "observed_version": "1.17.0",
+          "satisfied": true
+        },
+        {
+          "distribution": "tzdata",
+          "expected_version": "2025.2",
+          "observed_version": "2025.2",
+          "satisfied": true
+        }
+      ],
+      "status": "READY",
+      "process": {
+        "argv": [
+          "<venv>\\Scripts\\python.exe",
+          "-I",
+          "<case-work>\\probes\\profile-preflight\\worker.py",
+          "<case-work>\\probes\\profile-preflight\\requirements.json"
+        ],
+        "returncode": 0,
+        "stdout": "WHEELGATE_PROFILE={\"requirements\": [{\"distribution\": \"Django\", \"expected_version\": \"4.2.23\", \"observed_version\": \"4.2.23\", \"satisfied\": true}, {\"distribution\": \"python-dateutil\", \"expected_version\": \"2.9.0.post0\", \"observed_version\": \"2.9.0.post0\", \"satisfied\": true}, {\"distribution\": \"lxml\", \"expected_version\": \"6.0.0\", \"observed_version\": \"6.0.0\", \"satisfied\": true}, {\"distribution\": \"asgiref\", \"expected_version\": \"3.8.1\", \"observed_version\": \"3.8.1\", \"satisfied\": true}, {\"distribution\": \"sqlparse\", \"expected_version\": \"0.5.3\", \"observed_version\": \"0.5.3\", \"satisfied\": true}, {\"distribution\": \"six\", \"expected_version\": \"1.17.0\", \"observed_version\": \"1.17.0\", \"satisfied\": true}, {\"distribution\": \"tzdata\", \"expected_version\": \"2025.2\", \"observed_version\": \"2025.2\", \"satisfied\": true}], \"status\": \"READY\"}\n",
+        "stderr": "",
+        "timeout": false
+      }
+    },
+    "contracts": [
+      {
+        "file_footprint": {
+          "access_count": 3,
+          "accesses": [
+            {
+              "classification": "stdlib-archive",
+              "origin": "<base-python>\\python312.zip"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "origin": "<venv>\\Lib\\site-packages\\django_xml-4.0.1.dist-info\\METADATA",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "origin": "<venv>\\Lib\\site-packages\\django_xml-4.0.1.dist-info\\RECORD",
+              "version": "4.0.1"
+            }
+          ],
+          "allowed_distributions": [
+            "asgiref",
+            "django",
+            "django-xml",
+            "lxml",
+            "python-dateutil",
+            "six",
+            "sqlparse",
+            "tzdata"
+          ],
+          "violations": []
+        },
+        "footprint": {
+          "allowed_distributions": [
+            "asgiref",
+            "django",
+            "django-xml",
+            "lxml",
+            "python-dateutil",
+            "six",
+            "sqlparse",
+            "tzdata"
+          ],
+          "module_count": 256,
+          "modules": [
+            {
+              "classification": "stdlib",
+              "module": "_asyncio",
+              "origin": "<base-python>\\DLLs\\_asyncio.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_compat_pickle",
+              "origin": "<base-python>\\Lib\\_compat_pickle.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_ctypes",
+              "origin": "<base-python>\\DLLs\\_ctypes.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_decimal",
+              "origin": "<base-python>\\DLLs\\_decimal.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_hashlib",
+              "origin": "<base-python>\\DLLs\\_hashlib.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_markupbase",
+              "origin": "<base-python>\\Lib\\_markupbase.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_overlapped",
+              "origin": "<base-python>\\DLLs\\_overlapped.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_queue",
+              "origin": "<base-python>\\DLLs\\_queue.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_ssl",
+              "origin": "<base-python>\\DLLs\\_ssl.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_uuid",
+              "origin": "<base-python>\\DLLs\\_uuid.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "_zoneinfo",
+              "origin": "<base-python>\\DLLs\\_zoneinfo.pyd"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "asgiref",
+              "module": "asgiref",
+              "origin": "<venv>\\Lib\\site-packages\\asgiref\\__init__.py",
+              "version": "3.8.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "asgiref",
+              "module": "asgiref.current_thread_executor",
+              "origin": "<venv>\\Lib\\site-packages\\asgiref\\current_thread_executor.py",
+              "version": "3.8.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "asgiref",
+              "module": "asgiref.local",
+              "origin": "<venv>\\Lib\\site-packages\\asgiref\\local.py",
+              "version": "3.8.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "asgiref",
+              "module": "asgiref.sync",
+              "origin": "<venv>\\Lib\\site-packages\\asgiref\\sync.py",
+              "version": "3.8.1"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio",
+              "origin": "<base-python>\\Lib\\asyncio\\__init__.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.base_events",
+              "origin": "<base-python>\\Lib\\asyncio\\base_events.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.base_futures",
+              "origin": "<base-python>\\Lib\\asyncio\\base_futures.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.base_subprocess",
+              "origin": "<base-python>\\Lib\\asyncio\\base_subprocess.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.base_tasks",
+              "origin": "<base-python>\\Lib\\asyncio\\base_tasks.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.constants",
+              "origin": "<base-python>\\Lib\\asyncio\\constants.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.coroutines",
+              "origin": "<base-python>\\Lib\\asyncio\\coroutines.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.events",
+              "origin": "<base-python>\\Lib\\asyncio\\events.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.exceptions",
+              "origin": "<base-python>\\Lib\\asyncio\\exceptions.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.format_helpers",
+              "origin": "<base-python>\\Lib\\asyncio\\format_helpers.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.futures",
+              "origin": "<base-python>\\Lib\\asyncio\\futures.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.locks",
+              "origin": "<base-python>\\Lib\\asyncio\\locks.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.log",
+              "origin": "<base-python>\\Lib\\asyncio\\log.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.mixins",
+              "origin": "<base-python>\\Lib\\asyncio\\mixins.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.proactor_events",
+              "origin": "<base-python>\\Lib\\asyncio\\proactor_events.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.protocols",
+              "origin": "<base-python>\\Lib\\asyncio\\protocols.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.queues",
+              "origin": "<base-python>\\Lib\\asyncio\\queues.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.runners",
+              "origin": "<base-python>\\Lib\\asyncio\\runners.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.selector_events",
+              "origin": "<base-python>\\Lib\\asyncio\\selector_events.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.sslproto",
+              "origin": "<base-python>\\Lib\\asyncio\\sslproto.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.staggered",
+              "origin": "<base-python>\\Lib\\asyncio\\staggered.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.streams",
+              "origin": "<base-python>\\Lib\\asyncio\\streams.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.subprocess",
+              "origin": "<base-python>\\Lib\\asyncio\\subprocess.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.taskgroups",
+              "origin": "<base-python>\\Lib\\asyncio\\taskgroups.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.tasks",
+              "origin": "<base-python>\\Lib\\asyncio\\tasks.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.threads",
+              "origin": "<base-python>\\Lib\\asyncio\\threads.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.timeouts",
+              "origin": "<base-python>\\Lib\\asyncio\\timeouts.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.transports",
+              "origin": "<base-python>\\Lib\\asyncio\\transports.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.trsock",
+              "origin": "<base-python>\\Lib\\asyncio\\trsock.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.windows_events",
+              "origin": "<base-python>\\Lib\\asyncio\\windows_events.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "asyncio.windows_utils",
+              "origin": "<base-python>\\Lib\\asyncio\\windows_utils.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "concurrent",
+              "origin": "<base-python>\\Lib\\concurrent\\__init__.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "concurrent.futures",
+              "origin": "<base-python>\\Lib\\concurrent\\futures\\__init__.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "concurrent.futures._base",
+              "origin": "<base-python>\\Lib\\concurrent\\futures\\_base.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "concurrent.futures.thread",
+              "origin": "<base-python>\\Lib\\concurrent\\futures\\thread.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "contextvars",
+              "origin": "<base-python>\\Lib\\contextvars.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "copy",
+              "origin": "<base-python>\\Lib\\copy.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "ctypes",
+              "origin": "<base-python>\\Lib\\ctypes\\__init__.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "ctypes._endian",
+              "origin": "<base-python>\\Lib\\ctypes\\_endian.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "ctypes.wintypes",
+              "origin": "<base-python>\\Lib\\ctypes\\wintypes.py"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\__init__.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil._common",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\_common.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil._version",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\_version.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.parser",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\parser\\__init__.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.parser._parser",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\parser\\_parser.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.parser.isoparser",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\parser\\isoparser.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.relativedelta",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\relativedelta.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.tz",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\tz\\__init__.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.tz._common",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\tz\\_common.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.tz._factories",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\tz\\_factories.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.tz.tz",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\tz\\tz.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "python-dateutil",
+              "module": "dateutil.tz.win",
+              "origin": "<venv>\\Lib\\site-packages\\dateutil\\tz\\win.py",
+              "version": "2.9.0.post0"
+            },
+            {
+              "classification": "stdlib",
+              "module": "decimal",
+              "origin": "<base-python>\\Lib\\decimal.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "difflib",
+              "origin": "<base-python>\\Lib\\difflib.py"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django",
+              "origin": "<venv>\\Lib\\site-packages\\django\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.apps",
+              "origin": "<venv>\\Lib\\site-packages\\django\\apps\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.apps.config",
+              "origin": "<venv>\\Lib\\site-packages\\django\\apps\\config.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.apps.registry",
+              "origin": "<venv>\\Lib\\site-packages\\django\\apps\\registry.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.conf",
+              "origin": "<venv>\\Lib\\site-packages\\django\\conf\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.conf.global_settings",
+              "origin": "<venv>\\Lib\\site-packages\\django\\conf\\global_settings.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.conf.locale",
+              "origin": "<venv>\\Lib\\site-packages\\django\\conf\\locale\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.cache",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\cache\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.cache.backends",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\cache\\backends\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.cache.backends.base",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\cache\\backends\\base.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.cache.backends.filebased",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\cache\\backends\\filebased.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.async_checks",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\async_checks.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.caches",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\caches.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.compatibility",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\compatibility\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.compatibility.django_4_0",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\compatibility\\django_4_0.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.database",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\database.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.files",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\files.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.messages",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\messages.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.model_checks",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\model_checks.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.registry",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\registry.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.security",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\security\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.security.base",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\security\\base.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.security.csrf",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\security\\csrf.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.security.sessions",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\security\\sessions.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.templates",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\templates.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.translation",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\translation.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.checks.urls",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\checks\\urls.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.exceptions",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\exceptions.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.base",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\base.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.images",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\images.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.locks",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\locks.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.move",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\move.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.storage",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\storage\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.storage.base",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\storage\\base.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.storage.filesystem",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\storage\\filesystem.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.storage.handler",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\storage\\handler.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.storage.memory",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\storage\\memory.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.storage.mixins",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\storage\\mixins.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.files.utils",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\files\\utils.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.signals",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\signals.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.core.validators",
+              "origin": "<venv>\\Lib\\site-packages\\django\\core\\validators.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.backends",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\backends\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.backends.utils",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\backends\\utils.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.aggregates",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\aggregates.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.base",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\base.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.constants",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\constants.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.constraints",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\constraints.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.deletion",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\deletion.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.enums",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\enums.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.expressions",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\expressions.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields.files",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\files.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields.json",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\json.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields.mixins",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\mixins.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields.proxy",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\proxy.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields.related",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\related.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields.related_descriptors",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\related_descriptors.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields.related_lookups",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\related_lookups.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.fields.reverse_related",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\fields\\reverse_related.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.functions",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\functions\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.functions.comparison",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\functions\\comparison.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.functions.datetime",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\functions\\datetime.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.functions.math",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\functions\\math.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.functions.mixins",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\functions\\mixins.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.functions.text",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\functions\\text.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.functions.window",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\functions\\window.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.indexes",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\indexes.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.lookups",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\lookups.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.manager",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\manager.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.options",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\options.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.query",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\query.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.query_utils",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\query_utils.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.signals",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\signals.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.sql",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\sql\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.sql.constants",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\sql\\constants.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.sql.datastructures",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\sql\\datastructures.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.sql.query",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\sql\\query.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.sql.subqueries",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\sql\\subqueries.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.sql.where",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\sql\\where.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.models.utils",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\models\\utils.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.transaction",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\transaction.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.db.utils",
+              "origin": "<venv>\\Lib\\site-packages\\django\\db\\utils.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.dispatch",
+              "origin": "<venv>\\Lib\\site-packages\\django\\dispatch\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.dispatch.dispatcher",
+              "origin": "<venv>\\Lib\\site-packages\\django\\dispatch\\dispatcher.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms.boundfield",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\boundfield.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms.fields",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\fields.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms.forms",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\forms.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms.formsets",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\formsets.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms.models",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\models.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms.renderers",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\renderers.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms.utils",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\utils.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.forms.widgets",
+              "origin": "<venv>\\Lib\\site-packages\\django\\forms\\widgets.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.autoreload",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\autoreload.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.backends",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\backends\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.backends.base",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\backends\\base.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.backends.django",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\backends\\django.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.base",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\base.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.context",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\context.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.engine",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\engine.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.exceptions",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\exceptions.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.library",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\library.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.loader",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\loader.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.template.utils",
+              "origin": "<venv>\\Lib\\site-packages\\django\\template\\utils.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.templatetags",
+              "origin": "<venv>\\Lib\\site-packages\\django\\templatetags\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.templatetags.static",
+              "origin": "<venv>\\Lib\\site-packages\\django\\templatetags\\static.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils._os",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\_os.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.autoreload",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\autoreload.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.connection",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\connection.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.crypto",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\crypto.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.datastructures",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\datastructures.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.dateformat",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\dateformat.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.dateparse",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\dateparse.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.dates",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\dates.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.deconstruct",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\deconstruct.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.deprecation",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\deprecation.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.duration",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\duration.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.encoding",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\encoding.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.formats",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\formats.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.functional",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\functional.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.hashable",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\hashable.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.html",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\html.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.http",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\http.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.inspect",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\inspect.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.ipv6",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\ipv6.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.itercompat",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\itercompat.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.module_loading",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\module_loading.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.numberformat",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\numberformat.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.regex_helper",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\regex_helper.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.safestring",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\safestring.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.text",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\text.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.timezone",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\timezone.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.topological_sort",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\topological_sort.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.translation",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\translation\\__init__.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.translation.trans_real",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\translation\\trans_real.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.tree",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\tree.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "Django",
+              "module": "django.utils.version",
+              "origin": "<venv>\\Lib\\site-packages\\django\\utils\\version.py",
+              "version": "4.2.23"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\__init__.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\__init__.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.base",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\base.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.decorators",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\decorators.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.descriptors",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\descriptors.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.exceptions",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\exceptions.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.fields",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\__init__.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.fields.base",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\base.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.fields.related",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\related.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.fields.utils",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\utils.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.fields.xpath",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\xpath.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.fields.xslt",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\xslt.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.loading",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\loading.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.options",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\options.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "django-xml",
+              "module": "djxml.xmlmodels.signals",
+              "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\signals.py",
+              "version": "4.0.1"
+            },
+            {
+              "classification": "stdlib",
+              "module": "email.feedparser",
+              "origin": "<base-python>\\Lib\\email\\feedparser.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "email.parser",
+              "origin": "<base-python>\\Lib\\email\\parser.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "gettext",
+              "origin": "<base-python>\\Lib\\gettext.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "glob",
+              "origin": "<base-python>\\Lib\\glob.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "gzip",
+              "origin": "<base-python>\\Lib\\gzip.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "hashlib",
+              "origin": "<base-python>\\Lib\\hashlib.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "heapq",
+              "origin": "<base-python>\\Lib\\heapq.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "hmac",
+              "origin": "<base-python>\\Lib\\hmac.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "html",
+              "origin": "<base-python>\\Lib\\html\\__init__.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "html.entities",
+              "origin": "<base-python>\\Lib\\html\\entities.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "html.parser",
+              "origin": "<base-python>\\Lib\\html\\parser.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "logging",
+              "origin": "<base-python>\\Lib\\logging\\__init__.py"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "lxml",
+              "module": "lxml",
+              "origin": "<venv>\\Lib\\site-packages\\lxml\\__init__.py",
+              "version": "6.0.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "lxml",
+              "module": "lxml._elementpath",
+              "origin": "<venv>\\Lib\\site-packages\\lxml\\_elementpath.cp312-win_amd64.pyd",
+              "version": "6.0.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "lxml",
+              "module": "lxml.etree",
+              "origin": "<venv>\\Lib\\site-packages\\lxml\\etree.cp312-win_amd64.pyd",
+              "version": "6.0.0"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "lxml",
+              "module": "lxml.isoschematron",
+              "origin": "<venv>\\Lib\\site-packages\\lxml\\isoschematron\\__init__.py",
+              "version": "6.0.0"
+            },
+            {
+              "classification": "stdlib",
+              "module": "numbers",
+              "origin": "<base-python>\\Lib\\numbers.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "pickle",
+              "origin": "<base-python>\\Lib\\pickle.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "pkgutil",
+              "origin": "<base-python>\\Lib\\pkgutil.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "queue",
+              "origin": "<base-python>\\Lib\\queue.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "secrets",
+              "origin": "<base-python>\\Lib\\secrets.py"
+            },
+            {
+              "classification": "declared-distribution",
+              "distribution": "six",
+              "module": "six",
+              "origin": "<venv>\\Lib\\site-packages\\six.py",
+              "version": "1.17.0"
+            },
+            {
+              "classification": "stdlib",
+              "module": "ssl",
+              "origin": "<base-python>\\Lib\\ssl.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "unicodedata",
+              "origin": "<base-python>\\DLLs\\unicodedata.pyd"
+            },
+            {
+              "classification": "stdlib",
+              "module": "uuid",
+              "origin": "<base-python>\\Lib\\uuid.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "zoneinfo",
+              "origin": "<base-python>\\Lib\\zoneinfo\\__init__.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "zoneinfo._common",
+              "origin": "<base-python>\\Lib\\zoneinfo\\_common.py"
+            },
+            {
+              "classification": "stdlib",
+              "module": "zoneinfo._tzpath",
+              "origin": "<base-python>\\Lib\\zoneinfo\\_tzpath.py"
+            }
+          ],
+          "violations": []
+        },
+        "id": "publisher-django-xml-documented-package-import",
+        "origins": [
+          {
+            "distribution": "django-xml",
+            "module": "djxml",
+            "origin": "<venv>\\Lib\\site-packages\\djxml\\__init__.py",
+            "version": "4.0.1"
+          },
+          {
+            "distribution": "django-xml",
+            "module": "djxml.xmlmodels",
+            "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\__init__.py",
+            "version": "4.0.1"
+          },
+          {
+            "distribution": "django-xml",
+            "module": "djxml.xmlmodels.fields",
+            "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\__init__.py",
+            "version": "4.0.1"
+          },
+          {
+            "distribution": "django-xml",
+            "module": "djxml",
+            "origin": "<venv>\\Lib\\site-packages\\djxml\\__init__.py",
+            "version": "4.0.1"
+          },
+          {
+            "distribution": "django-xml",
+            "module": "djxml.xmlmodels",
+            "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\__init__.py",
+            "version": "4.0.1"
+          },
+          {
+            "distribution": "django-xml",
+            "module": "djxml.xmlmodels.fields",
+            "origin": "<venv>\\Lib\\site-packages\\djxml\\xmlmodels\\fields\\__init__.py",
+            "version": "4.0.1"
+          }
+        ],
+        "status": "PASS",
+        "process": {
+          "argv": [
+            "<venv>\\Scripts\\python.exe",
+            "-I",
+            "<case-work>\\probes\\0\\worker.py",
+            "<case-work>\\probes\\0\\contract.json"
+          ],
+          "returncode": 0,
+          "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<base-python>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django_xml-4.0.1.dist-info\\\\METADATA\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django_xml-4.0.1.dist-info\\\\RECORD\", \"version\": \"4.0.1\"}], \"allowed_distributions\": [\"asgiref\", \"django\", \"django-xml\", \"lxml\", \"python-dateutil\", \"six\", \"sqlparse\", \"tzdata\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"asgiref\", \"django\", \"django-xml\", \"lxml\", \"python-dateutil\", \"six\", \"sqlparse\", \"tzdata\"], \"module_count\": 256, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_asyncio\", \"origin\": \"<base-python>\\\\DLLs\\\\_asyncio.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"_compat_pickle\", \"origin\": \"<base-python>\\\\Lib\\\\_compat_pickle.py\"}, {\"classification\": \"stdlib\", \"module\": \"_ctypes\", \"origin\": \"<base-python>\\\\DLLs\\\\_ctypes.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"_decimal\", \"origin\": \"<base-python>\\\\DLLs\\\\_decimal.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"<base-python>\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"_markupbase\", \"origin\": \"<base-python>\\\\Lib\\\\_markupbase.py\"}, {\"classification\": \"stdlib\", \"module\": \"_overlapped\", \"origin\": \"<base-python>\\\\DLLs\\\\_overlapped.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"_queue\", \"origin\": \"<base-python>\\\\DLLs\\\\_queue.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"_ssl\", \"origin\": \"<base-python>\\\\DLLs\\\\_ssl.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"_uuid\", \"origin\": \"<base-python>\\\\DLLs\\\\_uuid.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"_zoneinfo\", \"origin\": \"<base-python>\\\\DLLs\\\\_zoneinfo.pyd\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"asgiref\", \"module\": \"asgiref\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\asgiref\\\\__init__.py\", \"version\": \"3.8.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"asgiref\", \"module\": \"asgiref.current_thread_executor\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\asgiref\\\\current_thread_executor.py\", \"version\": \"3.8.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"asgiref\", \"module\": \"asgiref.local\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\asgiref\\\\local.py\", \"version\": \"3.8.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"asgiref\", \"module\": \"asgiref.sync\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\asgiref\\\\sync.py\", \"version\": \"3.8.1\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.base_events\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\base_events.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.base_futures\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\base_futures.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.base_subprocess\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\base_subprocess.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.base_tasks\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\base_tasks.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.constants\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\constants.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.coroutines\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\coroutines.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.events\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\events.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.exceptions\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\exceptions.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.format_helpers\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\format_helpers.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.futures\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\futures.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.locks\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\locks.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.log\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\log.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.mixins\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\mixins.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.proactor_events\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\proactor_events.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.protocols\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\protocols.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.queues\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\queues.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.runners\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\runners.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.selector_events\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\selector_events.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.sslproto\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\sslproto.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.staggered\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\staggered.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.streams\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\streams.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.subprocess\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\subprocess.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.taskgroups\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\taskgroups.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.tasks\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\tasks.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.threads\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\threads.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.timeouts\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\timeouts.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.transports\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\transports.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.trsock\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\trsock.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.windows_events\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\windows_events.py\"}, {\"classification\": \"stdlib\", \"module\": \"asyncio.windows_utils\", \"origin\": \"<base-python>\\\\Lib\\\\asyncio\\\\windows_utils.py\"}, {\"classification\": \"stdlib\", \"module\": \"concurrent\", \"origin\": \"<base-python>\\\\Lib\\\\concurrent\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"concurrent.futures\", \"origin\": \"<base-python>\\\\Lib\\\\concurrent\\\\futures\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"concurrent.futures._base\", \"origin\": \"<base-python>\\\\Lib\\\\concurrent\\\\futures\\\\_base.py\"}, {\"classification\": \"stdlib\", \"module\": \"concurrent.futures.thread\", \"origin\": \"<base-python>\\\\Lib\\\\concurrent\\\\futures\\\\thread.py\"}, {\"classification\": \"stdlib\", \"module\": \"contextvars\", \"origin\": \"<base-python>\\\\Lib\\\\contextvars.py\"}, {\"classification\": \"stdlib\", \"module\": \"copy\", \"origin\": \"<base-python>\\\\Lib\\\\copy.py\"}, {\"classification\": \"stdlib\", \"module\": \"ctypes\", \"origin\": \"<base-python>\\\\Lib\\\\ctypes\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"ctypes._endian\", \"origin\": \"<base-python>\\\\Lib\\\\ctypes\\\\_endian.py\"}, {\"classification\": \"stdlib\", \"module\": \"ctypes.wintypes\", \"origin\": \"<base-python>\\\\Lib\\\\ctypes\\\\wintypes.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\__init__.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil._common\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\_common.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil._version\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\_version.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.parser\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\parser\\\\__init__.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.parser._parser\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\parser\\\\_parser.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.parser.isoparser\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\parser\\\\isoparser.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.relativedelta\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\relativedelta.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.tz\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\tz\\\\__init__.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.tz._common\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\tz\\\\_common.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.tz._factories\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\tz\\\\_factories.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.tz.tz\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\tz\\\\tz.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"python-dateutil\", \"module\": \"dateutil.tz.win\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\dateutil\\\\tz\\\\win.py\", \"version\": \"2.9.0.post0\"}, {\"classification\": \"stdlib\", \"module\": \"decimal\", \"origin\": \"<base-python>\\\\Lib\\\\decimal.py\"}, {\"classification\": \"stdlib\", \"module\": \"difflib\", \"origin\": \"<base-python>\\\\Lib\\\\difflib.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.apps\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\apps\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.apps.config\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\apps\\\\config.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.apps.registry\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\apps\\\\registry.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.conf\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\conf\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.conf.global_settings\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\conf\\\\global_settings.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.conf.locale\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\conf\\\\locale\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.cache\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\cache\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.cache.backends\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\cache\\\\backends\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.cache.backends.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\cache\\\\backends\\\\base.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.cache.backends.filebased\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\cache\\\\backends\\\\filebased.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.async_checks\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\async_checks.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.caches\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\caches.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.compatibility\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\compatibility\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.compatibility.django_4_0\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\compatibility\\\\django_4_0.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.database\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\database.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.files\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\files.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.messages\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\messages.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.model_checks\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\model_checks.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.registry\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\registry.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.security\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\security\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.security.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\security\\\\base.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.security.csrf\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\security\\\\csrf.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.security.sessions\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\security\\\\sessions.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.templates\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\templates.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.translation\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\translation.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.checks.urls\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\checks\\\\urls.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.exceptions\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\exceptions.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\base.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.images\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\images.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.locks\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\locks.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.move\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\move.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.storage\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\storage\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.storage.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\storage\\\\base.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.storage.filesystem\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\storage\\\\filesystem.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.storage.handler\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\storage\\\\handler.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.storage.memory\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\storage\\\\memory.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.storage.mixins\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\storage\\\\mixins.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.files.utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\files\\\\utils.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.signals\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\signals.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.core.validators\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\core\\\\validators.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.backends\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\backends\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.backends.utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\backends\\\\utils.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.aggregates\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\aggregates.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\base.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.constants\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\constants.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.constraints\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\constraints.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.deletion\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\deletion.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.enums\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\enums.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.expressions\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\expressions.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields.files\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\files.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields.json\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\json.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields.mixins\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\mixins.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields.proxy\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\proxy.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields.related\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\related.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields.related_descriptors\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\related_descriptors.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields.related_lookups\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\related_lookups.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.fields.reverse_related\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\fields\\\\reverse_related.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.functions\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\functions\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.functions.comparison\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\functions\\\\comparison.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.functions.datetime\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\functions\\\\datetime.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.functions.math\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\functions\\\\math.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.functions.mixins\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\functions\\\\mixins.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.functions.text\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\functions\\\\text.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.functions.window\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\functions\\\\window.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.indexes\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\indexes.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.lookups\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\lookups.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.manager\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\manager.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.options\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\options.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.query\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\query.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.query_utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\query_utils.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.signals\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\signals.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.sql\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\sql\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.sql.constants\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\sql\\\\constants.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.sql.datastructures\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\sql\\\\datastructures.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.sql.query\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\sql\\\\query.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.sql.subqueries\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\sql\\\\subqueries.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.sql.where\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\sql\\\\where.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.models.utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\models\\\\utils.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.transaction\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\transaction.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.db.utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\db\\\\utils.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.dispatch\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\dispatch\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.dispatch.dispatcher\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\dispatch\\\\dispatcher.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms.boundfield\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\boundfield.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms.fields\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\fields.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms.forms\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\forms.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms.formsets\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\formsets.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms.models\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\models.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms.renderers\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\renderers.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms.utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\utils.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.forms.widgets\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\forms\\\\widgets.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.autoreload\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\autoreload.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.backends\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\backends\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.backends.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\backends\\\\base.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.backends.django\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\backends\\\\django.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\base.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.context\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\context.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.engine\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\engine.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.exceptions\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\exceptions.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.library\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\library.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.loader\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\loader.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.template.utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\template\\\\utils.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.templatetags\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\templatetags\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.templatetags.static\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\templatetags\\\\static.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils._os\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\_os.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.autoreload\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\autoreload.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.connection\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\connection.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.crypto\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\crypto.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.datastructures\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\datastructures.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.dateformat\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\dateformat.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.dateparse\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\dateparse.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.dates\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\dates.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.deconstruct\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\deconstruct.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.deprecation\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\deprecation.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.duration\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\duration.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.encoding\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\encoding.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.formats\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\formats.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.functional\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\functional.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.hashable\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\hashable.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.html\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\html.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.http\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\http.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.inspect\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\inspect.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.ipv6\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\ipv6.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.itercompat\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\itercompat.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.module_loading\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\module_loading.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.numberformat\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\numberformat.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.regex_helper\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\regex_helper.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.safestring\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\safestring.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.text\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\text.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.timezone\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\timezone.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.topological_sort\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\topological_sort.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.translation\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\translation\\\\__init__.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.translation.trans_real\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\translation\\\\trans_real.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.tree\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\tree.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"Django\", \"module\": \"django.utils.version\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\django\\\\utils\\\\version.py\", \"version\": \"4.2.23\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\base.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.decorators\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\decorators.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.descriptors\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\descriptors.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.exceptions\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\exceptions.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields.base\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\base.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields.related\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\related.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields.utils\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\utils.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields.xpath\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\xpath.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields.xslt\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\xslt.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.loading\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\loading.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.options\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\options.py\", \"version\": \"4.0.1\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.signals\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\signals.py\", \"version\": \"4.0.1\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<base-python>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<base-python>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"<base-python>\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"glob\", \"origin\": \"<base-python>\\\\Lib\\\\glob.py\"}, {\"classification\": \"stdlib\", \"module\": \"gzip\", \"origin\": \"<base-python>\\\\Lib\\\\gzip.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"<base-python>\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"heapq\", \"origin\": \"<base-python>\\\\Lib\\\\heapq.py\"}, {\"classification\": \"stdlib\", \"module\": \"hmac\", \"origin\": \"<base-python>\\\\Lib\\\\hmac.py\"}, {\"classification\": \"stdlib\", \"module\": \"html\", \"origin\": \"<base-python>\\\\Lib\\\\html\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"html.entities\", \"origin\": \"<base-python>\\\\Lib\\\\html\\\\entities.py\"}, {\"classification\": \"stdlib\", \"module\": \"html.parser\", \"origin\": \"<base-python>\\\\Lib\\\\html\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"<base-python>\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"lxml\", \"module\": \"lxml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\lxml\\\\__init__.py\", \"version\": \"6.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"lxml\", \"module\": \"lxml._elementpath\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\lxml\\\\_elementpath.cp312-win_amd64.pyd\", \"version\": \"6.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"lxml\", \"module\": \"lxml.etree\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\lxml\\\\etree.cp312-win_amd64.pyd\", \"version\": \"6.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"lxml\", \"module\": \"lxml.isoschematron\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\lxml\\\\isoschematron\\\\__init__.py\", \"version\": \"6.0.0\"}, {\"classification\": \"stdlib\", \"module\": \"numbers\", \"origin\": \"<base-python>\\\\Lib\\\\numbers.py\"}, {\"classification\": \"stdlib\", \"module\": \"pickle\", \"origin\": \"<base-python>\\\\Lib\\\\pickle.py\"}, {\"classification\": \"stdlib\", \"module\": \"pkgutil\", \"origin\": \"<base-python>\\\\Lib\\\\pkgutil.py\"}, {\"classification\": \"stdlib\", \"module\": \"queue\", \"origin\": \"<base-python>\\\\Lib\\\\queue.py\"}, {\"classification\": \"stdlib\", \"module\": \"secrets\", \"origin\": \"<base-python>\\\\Lib\\\\secrets.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"six\", \"module\": \"six\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\six.py\", \"version\": \"1.17.0\"}, {\"classification\": \"stdlib\", \"module\": \"ssl\", \"origin\": \"<base-python>\\\\Lib\\\\ssl.py\"}, {\"classification\": \"stdlib\", \"module\": \"unicodedata\", \"origin\": \"<base-python>\\\\DLLs\\\\unicodedata.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"uuid\", \"origin\": \"<base-python>\\\\Lib\\\\uuid.py\"}, {\"classification\": \"stdlib\", \"module\": \"zoneinfo\", \"origin\": \"<base-python>\\\\Lib\\\\zoneinfo\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"zoneinfo._common\", \"origin\": \"<base-python>\\\\Lib\\\\zoneinfo\\\\_common.py\"}, {\"classification\": \"stdlib\", \"module\": \"zoneinfo._tzpath\", \"origin\": \"<base-python>\\\\Lib\\\\zoneinfo\\\\_tzpath.py\"}], \"violations\": []}, \"id\": \"publisher-django-xml-documented-package-import\", \"origins\": [{\"distribution\": \"django-xml\", \"module\": \"djxml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"distribution\": \"django-xml\", \"module\": \"djxml\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\__init__.py\", \"version\": \"4.0.1\"}, {\"distribution\": \"django-xml\", \"module\": \"djxml.xmlmodels.fields\", \"origin\": \"<venv>\\\\Lib\\\\site-packages\\\\djxml\\\\xmlmodels\\\\fields\\\\__init__.py\", \"version\": \"4.0.1\"}], \"status\": \"PASS\"}\n",
+          "stderr": "",
+          "timeout": false
+        }
+      }
+    ]
+  },
+  "qualify_convenience_wrapper_attempt": {
+    "identity": {
+      "name": "django-xml",
+      "version": "4.0.1"
+    },
+    "wheelgate": "1.0.0",
+    "artifact_kind": "wheel",
+    "wheel": "django_xml-4.0.1-py3-none-any.whl",
+    "sha256": "e44ef3466d2c516163b57f31c1838cb622315cdfc95e4665064809814c3a6114",
+    "contract_sha256": "cc628995bfc0c3d9f147fee901042ec77f91dd21f0e2a9cfe2c0e7d0985a3db3",
+    "profile": "replay-cp312-win-amd64",
+    "execution_mode": "isolated",
+    "setup": {
+      "wheel_identity": {
+        "name": "django-xml",
+        "version": "4.0.1"
+      },
+      "install": {
+        "argv": [
+          "<private-work>\\t2\\wheelgate-7ps8oa1d\\venv\\Scripts\\python.exe",
+          "-I",
+          "-m",
+          "pip",
+          "install",
+          "--no-index",
+          "--no-deps",
+          "<private-extension>\\wheels\\django-4.2.23-py3-none-any.whl",
+          "<private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl",
+          "<private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl",
+          "<private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl",
+          "<private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl",
+          "<private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl",
+          "<private-work>\\publisher-bytes\\django_xml-4.0.1-py3-none-any.whl"
+        ],
+        "returncode": 1,
+        "stdout": "Processing <private-extension>\\wheels\\django-4.2.23-py3-none-any.whl\nProcessing <private-extension>\\wheels\\lxml-6.0.0-cp312-cp312-win_amd64.whl\nProcessing <private-extension>\\wheels\\python_dateutil-2.9.0.post0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\asgiref-3.8.1-py3-none-any.whl\nProcessing <private-extension>\\wheels\\sqlparse-0.5.3-py3-none-any.whl\nProcessing <private-extension>\\wheels\\six-1.17.0-py2.py3-none-any.whl\nProcessing <private-extension>\\wheels\\tzdata-2025.2-py2.py3-none-any.whl\nProcessing <private-work>\\publisher-bytes\\django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: tzdata, sqlparse, six, python-dateutil, lxml, django-xml, django, asgiref\n",
+        "stderr": "ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: '<private-work>\\\\t2\\\\wheelgate-7ps8oa1d\\\\venv\\\\Lib\\\\site-packages\\\\lxml\\\\isoschematron\\\\resources\\\\xsl\\\\iso-schematron-xslt1\\\\iso_schematron_skeleton_for_xslt1.xsl'\nHINT: This error might have occurred since this system does not have Windows Long Path support enabled. You can find information on how to enable this at https://pip.pypa.io/warnings/enable-long-paths\n\n",
+        "timeout": false
+      },
+      "dependency_check": null,
+      "environment": null,
+      "status": "BLOCKED"
+    },
+    "status": "BLOCKED",
+    "contracts": []
+  },
+  "setup_limit": "The first qualify() attempt was BLOCKED during local lxml installation by Windows path length; its consumer operation did not run. A fresh shorter private environment used unchanged controller stages to establish the selected observation."
+}
