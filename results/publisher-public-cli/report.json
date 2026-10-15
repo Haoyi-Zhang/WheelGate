@@ -1,0 +1,337 @@
+{
+  "schema": 1,
+  "status": "executed",
+  "record_kind": "compact-source-bound-public-CLI-result",
+  "all_expected": true,
+  "scope": "3 public CLI observations, kept separate from retained6/45/24studies and previous manual-stage results. Child receipts contain their ordinary elapsed fields; no new performance claim.",
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.28000-SP0",
+    "temp_root": "D:\\wg123-nf-20261015-c1",
+    "entry_route": "public python -B -m wheelgate",
+    "source_checkout_route": true
+  },
+  "execution_helper": {
+    "file": "scripts/publisher_cli_replay.py",
+    "sha256": "fd2bbc52ae4a123176a385eda0d8036bedeb2bb0f5f02574ba3417b6284eb131"
+  },
+  "runtime_source_bindings": [
+    {
+      "file": "artifact/wheelgate/__init__.py",
+      "sha256": "55e6a3715cd3976feb7e161a1009eb02ca0a045d15ae833f1dae3c280192673c"
+    },
+    {
+      "file": "artifact/wheelgate/runner.py",
+      "sha256": "2cc386b3f52621c3af6968a0814b9b138d4373dbe487c1bc77acb2f4a5eb1f36"
+    },
+    {
+      "file": "artifact/wheelgate/worker.py",
+      "sha256": "02a072f0be812866ac8702ed0cd03afe58305621dc024d3f872d8fcc04f5b37b"
+    },
+    {
+      "file": "artifact/wheelgate/contractio.py",
+      "sha256": "951b98322f6923d1928477a584561307326d2a183d86448e5ca1bb92a1548cce"
+    },
+    {
+      "file": "artifact/wheelgate/paths.py",
+      "sha256": "d20ce0a2fe67ab21ac31e87270349ca3cf472eb30a7bda97069d39f5912f7a94"
+    },
+    {
+      "file": "artifact/wheelgate/footprint.py",
+      "sha256": "77c11be5b6bc6f4bd6ac8dcaccf01cdeb781470912b6d58cc11c6139f4a2552f"
+    },
+    {
+      "file": "artifact/wheelgate/profile_worker.py",
+      "sha256": "0e6e374d95c6b21c1d8bc1af1079ea60d0ceb0929d4d20f4d963f2f7bf70989f"
+    }
+  ],
+  "dependency_inputs": [
+    {
+      "file": "django-4.2.23-py3-none-any.whl",
+      "sha256": "dafbfaf52c2f289bd65f4ab935791cb4fb9a198f2a5ba9faf35d7338a77e9803",
+      "bytes": 7993904
+    },
+    {
+      "file": "lxml-6.0.0-cp312-cp312-win_amd64.whl",
+      "sha256": "310b719b695b3dd442cdfbbe64936b2f2e231bb91d998e99e6f0daf991a3eba3",
+      "bytes": 4014711
+    },
+    {
+      "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+      "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427",
+      "bytes": 229892
+    },
+    {
+      "file": "asgiref-3.8.1-py3-none-any.whl",
+      "sha256": "3e1e3ecc849832fe52ccf2cb6686b7a55f82bb1d6aee72a58826471390335e47",
+      "bytes": 23828
+    },
+    {
+      "file": "sqlparse-0.5.3-py3-none-any.whl",
+      "sha256": "cf2196ed3418f3ba5de6af7e82c694a9fbdbfecccdfc72e281548517081f16ca",
+      "bytes": 44415
+    },
+    {
+      "file": "six-1.17.0-py2.py3-none-any.whl",
+      "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274",
+      "bytes": 11050
+    },
+    {
+      "file": "tzdata-2025.2-py2.py3-none-any.whl",
+      "sha256": "1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8",
+      "bytes": 347839
+    }
+  ],
+  "dependency_delivery": "Seven publisher-download prerequisites are verified external local inputs, not bundled prerequisite binaries. Exact publisher locators, profile and notices remain in evidence/publisher-wheels/source-inventory.json.",
+  "summary": {
+    "observations": 3,
+    "matches_expected": 3,
+    "PASS": 2,
+    "FAIL": 1,
+    "BLOCKED": 0,
+    "INVALID": 0,
+    "ready_setups": 3,
+    "ready_profiles": 3,
+    "pip_check_zero": 3,
+    "module_violations": 0,
+    "file_violations": 0
+  },
+  "results": [
+    {
+      "case": "django-xml-4.0.0",
+      "expected_status": "FAIL",
+      "status": "FAIL",
+      "returncode": 1,
+      "matches_expected": true,
+      "entry_route": "public python -m wheelgate",
+      "profile": "replay-cp312-win-amd64",
+      "identity": {
+        "name": "django-xml",
+        "version": "4.0.0"
+      },
+      "inputs": {
+        "wheel": "evidence/publisher-wheels/inputs/django_xml-4.0.0-py3-none-any.whl",
+        "sha256": "3fa132b819725f21427e05efaf799100f34f5003a9ad26906824985127dfc48e",
+        "contract": "contracts/publisher-django-xml-4.0.0.json",
+        "contract_sha256": "e94720e54db41139452f2fa3072c5d0e38a958eb5674c9a32f9db5bd7e8daae1"
+      },
+      "setup": {
+        "status": "READY",
+        "install_returncode": 0,
+        "pip_check_returncode": 0
+      },
+      "profile_preflight": {
+        "status": "READY",
+        "requirements": [
+          {
+            "distribution": "Django",
+            "expected_version": "4.2.23",
+            "observed_version": "4.2.23",
+            "satisfied": true
+          },
+          {
+            "distribution": "python-dateutil",
+            "expected_version": "2.9.0.post0",
+            "observed_version": "2.9.0.post0",
+            "satisfied": true
+          },
+          {
+            "distribution": "lxml",
+            "expected_version": "6.0.0",
+            "observed_version": "6.0.0",
+            "satisfied": true
+          },
+          {
+            "distribution": "asgiref",
+            "expected_version": "3.8.1",
+            "observed_version": "3.8.1",
+            "satisfied": true
+          },
+          {
+            "distribution": "sqlparse",
+            "expected_version": "0.5.3",
+            "observed_version": "0.5.3",
+            "satisfied": true
+          },
+          {
+            "distribution": "six",
+            "expected_version": "1.17.0",
+            "observed_version": "1.17.0",
+            "satisfied": true
+          },
+          {
+            "distribution": "tzdata",
+            "expected_version": "2025.2",
+            "observed_version": "2025.2",
+            "satisfied": true
+          }
+        ]
+      },
+      "operation": {
+        "id": "publisher-django-xml-documented-package-import",
+        "status": "FAIL",
+        "exception": "ModuleNotFoundError",
+        "message": "No module named 'djxml.xmlmodels'"
+      },
+      "ownership": {
+        "module_count": 3,
+        "file_access_count": 3,
+        "module_violations": [],
+        "file_violations": []
+      },
+      "raw_receipt": {
+        "file": "django-xml-4.0.0-public-cli.json",
+        "bytes": 17744,
+        "sha256": "080f83ab4b9cbc171687e85851847c46f65a318eb5db3ef9cea41a5ba08f362f"
+      }
+    },
+    {
+      "case": "django-xml-4.0.1",
+      "expected_status": "PASS",
+      "status": "PASS",
+      "returncode": 0,
+      "matches_expected": true,
+      "entry_route": "public python -m wheelgate",
+      "profile": "replay-cp312-win-amd64",
+      "identity": {
+        "name": "django-xml",
+        "version": "4.0.1"
+      },
+      "inputs": {
+        "wheel": "evidence/publisher-wheels/inputs/django_xml-4.0.1-py3-none-any.whl",
+        "sha256": "e44ef3466d2c516163b57f31c1838cb622315cdfc95e4665064809814c3a6114",
+        "contract": "contracts/publisher-django-xml-4.0.1.json",
+        "contract_sha256": "cc628995bfc0c3d9f147fee901042ec77f91dd21f0e2a9cfe2c0e7d0985a3db3"
+      },
+      "setup": {
+        "status": "READY",
+        "install_returncode": 0,
+        "pip_check_returncode": 0
+      },
+      "profile_preflight": {
+        "status": "READY",
+        "requirements": [
+          {
+            "distribution": "Django",
+            "expected_version": "4.2.23",
+            "observed_version": "4.2.23",
+            "satisfied": true
+          },
+          {
+            "distribution": "python-dateutil",
+            "expected_version": "2.9.0.post0",
+            "observed_version": "2.9.0.post0",
+            "satisfied": true
+          },
+          {
+            "distribution": "lxml",
+            "expected_version": "6.0.0",
+            "observed_version": "6.0.0",
+            "satisfied": true
+          },
+          {
+            "distribution": "asgiref",
+            "expected_version": "3.8.1",
+            "observed_version": "3.8.1",
+            "satisfied": true
+          },
+          {
+            "distribution": "sqlparse",
+            "expected_version": "0.5.3",
+            "observed_version": "0.5.3",
+            "satisfied": true
+          },
+          {
+            "distribution": "six",
+            "expected_version": "1.17.0",
+            "observed_version": "1.17.0",
+            "satisfied": true
+          },
+          {
+            "distribution": "tzdata",
+            "expected_version": "2025.2",
+            "observed_version": "2025.2",
+            "satisfied": true
+          }
+        ]
+      },
+      "operation": {
+        "id": "publisher-django-xml-documented-package-import",
+        "status": "PASS"
+      },
+      "ownership": {
+        "module_count": 256,
+        "file_access_count": 3,
+        "module_violations": [],
+        "file_violations": []
+      },
+      "raw_receipt": {
+        "file": "django-xml-4.0.1-public-cli.json",
+        "bytes": 163832,
+        "sha256": "f8756c5c801370abbcc6804b4e900bc8840431979cff98dfdc6b4de61b1f3ceb"
+      }
+    },
+    {
+      "case": "latex2pydata-0.5.0",
+      "expected_status": "PASS",
+      "status": "PASS",
+      "returncode": 0,
+      "matches_expected": true,
+      "entry_route": "public python -m wheelgate",
+      "profile": "base",
+      "identity": {
+        "name": "latex2pydata",
+        "version": "0.5.0"
+      },
+      "inputs": {
+        "wheel": "evidence/publisher-wheels/inputs/latex2pydata-0.5.0-py3-none-any.whl",
+        "sha256": "7c4092562082985453f47f52db31e1f8c2edcf5d7f855f4c614cfba12808675b",
+        "contract": "contracts/publisher-latex2pydata-0.5.0.json",
+        "contract_sha256": "087b59e61f30dd914b69e327e9e0731f082b61c0facc47a32142fa452174144c"
+      },
+      "setup": {
+        "status": "READY",
+        "install_returncode": 0,
+        "pip_check_returncode": 0
+      },
+      "profile_preflight": {
+        "status": "READY",
+        "requirements": []
+      },
+      "operation": {
+        "id": "publisher-latex2pydata-documented-schema-keypath-loads",
+        "status": "PASS",
+        "value": {
+          "label": "HELLO",
+          "main": {
+            "count": 7
+          }
+        }
+      },
+      "ownership": {
+        "module_count": 9,
+        "file_access_count": 3,
+        "module_violations": [],
+        "file_violations": []
+      },
+      "raw_receipt": {
+        "file": "latex2pydata-0.5.0-public-cli.json",
+        "bytes": 14151,
+        "sha256": "5c87c8c7a621719236542528d8d7b5c098b2b3269932877fb7577e0f73915c86"
+      }
+    }
+  ],
+  "source_execution_report": {
+    "original_basename": "report.json",
+    "storage": "private-unabridged-wrapper-report-not-this-projected-file",
+    "bytes": 16679,
+    "sha256": "50498848b8bd48f4a159020e2d94b60fcd91f6cb7c7f567e1d4538839657947b",
+    "location": "Unabridged execution wrapper report retained separately; all three raw operation receipts are included here."
+  },
+  "transformations": [
+    "The three *-public-cli.json operation receipts are byte-preserved from the actual run, including paths, ordinary elapsed fields, failures, setup processes, origins and footprints.",
+    "This report is a compact projection of the unabridged execution-wrapper report, not a replacement native run. Repeated host-absolute input/dependency paths are represented by artifact-relative paths or basenames; repeated argv/stdout/stderr are omitted. Original wrapper bytes are bound above.",
+    "Readiness, pip return codes, operation result, identities and ownership counts are selected directly from the included raw receipts. No raw operation receipt fields were removed or rewritten."
+  ],
+  "interpretation": "Three new public-entry observations are separate from the earlier stage-level observations and retained6/45/24studies. Expected FAIL is a subject operation failure after ready setup, not an invalid experiment. No timing campaign, installed console-launcher, native-library-internal trace, offline prerequisite bundle or new defect-recall measurement is claimed."
+}

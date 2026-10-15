@@ -71,7 +71,11 @@ wheel, and accept the documented latex2pydata parser operation.
 The django runs use CPython 3.12.14 on Windows AMD64 with seven explicitly pinned
 prerequisites. The receipts in `results/publisher-wheel-replay/` distinguish
 completed short-work-path controller observations from the convenience
-wrapper's path-length setup blocks. Native-library internals remain outside
+wrapper's earlier path-length setup blocks. Three further observations in
+`results/publisher-public-cli/` execute the unchanged public command with a
+short temporary root and verified local prerequisites: django-xml 4.0.0 fails,
+4.0.1 passes, and latex2pydata 0.5.0 passes. All three have ready setup/profile
+checks and no observed module/file ownership violations. Native-library internals remain outside
 the Python-level footprint. These three inputs are separate from the retained
 6/45/24-observation studies.
 
@@ -162,8 +166,9 @@ additional outputs.
 
 ## Current portability and self-package validation
 
-The current source suite contains 200 tests, including seven offline original-input
-binding tests. The retained installation study records 140 tests, and the
+The source suite includes seven offline original-input binding tests and three
+artifact-only public-entry helper tests; the test runner reports its executed
+and skipped counts. The retained installation study records 140 tests, and the
 separate self-package comparison executed 193 tests per route.
 `results/current/packaging-flow/comparison.json` records the current
 direct/sdist-derived build, 193 installed tests on each route,
@@ -226,6 +231,19 @@ python -m wheelgate \
   contracts/publisher-latex2pydata-0.5.0.json --output /tmp/latex-receipt.json
 python -B -m unittest discover -s tests -p test_publisher_inputs.py -v
 ```
+
+After obtaining the seven prerequisites at their recorded destinations, the
+three-input public-entry replay can be repeated on the selected Windows/Python
+profile without modifying the controller:
+
+```powershell
+python -B scripts/publisher_cli_replay.py --dependency-dir D:/wheel-inputs --execute --output-dir D:/wheel-cli-replay --temp-root D:/wheel-tmp
+```
+
+Both output paths must be fresh. The helper verifies the original inputs and
+runtime bindings before installation and uses explicit local, no-index inputs.
+The three observations are not pooled with the retained 6/45/24-study counts
+and supply no new timing estimate.
 
 The offline tests inspect retained archive members, notices, runtime and
 contract bindings, prerequisite observations and recorded outcomes. They do
