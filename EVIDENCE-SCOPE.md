@@ -2,7 +2,7 @@
 
 ## Established by execution
 
-- The retained installation study records 140 source tests plus six subtests passing; the current source suite contains 200 tests.
+- The retained installation study records 140 source tests plus six subtests passing. Fresh source and artifact-only test runs report their own executed and skipped counts rather than inheriting this retained total.
 - WheelGate installs and passes the same test suite from both its direct wheel
   and a wheel rebuilt from its sdist.
 - A 45-observation route matrix distinguishes checkout, default editable,
@@ -32,8 +32,9 @@ silently converted into an upstream defect count.
 ## Additional current validation (not pooled with retained studies)
 
 - Host-independent contract-path admission and bundle-reference normalization
-  are tested using harmless owned fixtures; the current Windows suite has 200
-  tests. This is not a native Linux test run.
+  are tested using harmless owned fixtures. The earlier Windows source-suite
+  record contains 200 tests; later artifact-only helper tests do not retroactively
+  extend that execution. This is not a native Linux test run.
 - `results/current/packaging-flow/comparison.json` and its `self-check.json` record
   direct and sdist-derived builds of the supplied WheelGate package, 193 tests
   after each installation, and unchanged CWC default/reference checks. Ordinary

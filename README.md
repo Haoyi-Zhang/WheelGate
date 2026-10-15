@@ -88,6 +88,18 @@ The selected results were run on Windows 11, CPython 3.12.14, and an Intel Core 
 
 ## Commands
 
+Run source commands from this artifact directory with Python 3.11 or newer.
+Qualification also requires that interpreter's `venv` and `pip`; the runtime
+has no third-party Python dependency. Comparison and rendering commands have
+the separate host requirements documented below.
+
+The `/tmp/...` virtual-environment example uses POSIX paths. On Windows choose
+a fresh short root such as `D:/wg-env`, use its `Scripts/python.exe` and
+`Scripts/wheelgate.exe`, and use PowerShell continuation syntax rather than
+the shell backslashes. For the selected publisher profile, use the short-TEMP
+helper under **Original publisher inputs**, which supplies TEMP/TMP/TMPDIR to
+the child without changing the controller.
+
 Run the source suite:
 
 ```sh
