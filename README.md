@@ -10,6 +10,11 @@ library.
 
 ## Implementation
 
+The workflow figure is generated directly with Matplotlib and embedded fonts:
+`python plots/draw_workflow.py --output-dir ../paper/figures`.
+Install `requirements-figures.txt` for figure regeneration. In the full bundle,
+`paper/build.py` regenerates the workflow before compiling.
+
 `wheelgate/runner.py` validates artifact identity, creates the isolated
 installation, checks profile prerequisites, and coordinates operation workers.
 `wheelgate/worker.py` implements import, call, resource, entry-point, console,

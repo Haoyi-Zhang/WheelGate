@@ -93,9 +93,10 @@ def main() -> int:
         is None,
         "page dimensions overridden",
     )
+    availability = re.search(r"\\(?:sub)?section\*?\{Data Availability\}", tex)
+    require(availability is not None, "Data Availability heading missing")
     require(
-        tex.index("\\section{Conclusion}")
-        < tex.index("\\section{Data Availability}")
+        tex.index("\\section{Conclusion}") < availability.start()
         < tex.index("\\bibliography{references}"),
         "Conclusion/Data Availability/reference order changed",
     )

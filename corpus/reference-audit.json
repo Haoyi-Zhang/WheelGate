@@ -173,7 +173,8 @@
       "author": "Wodder, II, John Thorvald",
       "title": "{check-wheel-contents}",
       "url": "https://github.com/jwodder/check-wheel-contents/tree/v0.6.1",
-      "howpublished": "Version 0.6.1"
+      "howpublished": "Version 0.6.1",
+      "year": "2024"
     },
     "verified_on": "2026-10-08",
     "verification": "Title, creator/author, year or version, identifier, source role, and manuscript use checked against the listed primary source. Issue and documentation records are not counted as research papers or executed artifact replays.",
@@ -182,7 +183,8 @@
     ],
     "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
     "metadata_and_citation_review_on": "2026-10-08",
-    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab",
+    "current_metadata_review_on": "2026-10-16"
   },
   {
     "key": "cm",
@@ -1468,7 +1470,7 @@
     "relevance": "Maintainer fix that replaces a single-package list with discovery of djxml*; configuration-replay anchor.",
     "fields": {
       "author": "Frankie Dintino",
-      "title": "{Fix packaging issue for issue 18}",
+      "title": "{fix: packaging issue. fixes \\#18}",
       "year": "2025",
       "howpublished": "django-xml commit 37f6ed3d6b246b129c35f8aba4dbf69b34a83b28",
       "url": "https://github.com/theatlantic/django-xml/commit/37f6ed3d6b246b129c35f8aba4dbf69b34a83b28"
@@ -1481,7 +1483,8 @@
     ],
     "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
     "metadata_and_citation_review_on": "2026-10-08",
-    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab",
+    "current_metadata_review_on": "2026-10-16"
   },
   {
     "key": "dxml400",
@@ -1490,10 +1493,10 @@
     "source": "https://pypi.org/project/django-xml/4.0.0/",
     "relevance": "Primary release metadata for the yanked affected version; bytes were not retrieved in the executed environment.",
     "fields": {
-      "author": "{Python Package Index}",
+      "author": "{The Atlantic}",
       "title": "{django-xml 4.0.0}",
       "year": "2025",
-      "howpublished": "Release metadata; yanked for a packaging issue",
+      "howpublished": "PyPI release metadata; yanked for a packaging issue",
       "url": "https://pypi.org/project/django-xml/4.0.0/"
     },
     "verified_on": "2026-10-08",
@@ -1504,7 +1507,8 @@
     ],
     "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
     "metadata_and_citation_review_on": "2026-10-08",
-    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab",
+    "current_metadata_review_on": "2026-10-16"
   },
   {
     "key": "dxml401",
@@ -1513,10 +1517,10 @@
     "source": "https://pypi.org/project/django-xml/4.0.1/",
     "relevance": "Primary release metadata for the repaired successor named by the maintainer.",
     "fields": {
-      "author": "{Python Package Index}",
+      "author": "{The Atlantic}",
       "title": "{django-xml 4.0.1}",
       "year": "2025",
-      "howpublished": "Release metadata",
+      "howpublished": "PyPI release metadata",
       "url": "https://pypi.org/project/django-xml/4.0.1/"
     },
     "verified_on": "2026-10-08",
@@ -1527,7 +1531,8 @@
     ],
     "manuscript_sha256": "4a99e7d7826aaf976ce10d6d1ff9b69f90c097315416bfce719a5aed60daea8d",
     "metadata_and_citation_review_on": "2026-10-08",
-    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab"
+    "bibliography_sha256": "4e2c52c35984bdb46c100fb07b5d6c95f72517b89ec8929158f8399638880dab",
+    "current_metadata_review_on": "2026-10-16"
   },
   {
     "key": "seip",
