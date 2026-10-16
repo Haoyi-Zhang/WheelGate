@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import locale
 import re
 import shutil
 import subprocess
@@ -28,7 +29,7 @@ AUTHORS = [
         "name": "Huaijin Ran",
         "orcid": "0009-0009-2482-2344",
         "institution": "Nanyang Technological University",
-        "city_country": "Singapore, Singapore",
+        "city_country": "Singapore",
         "emails": ["huaijin003@e.ntu.edu.sg"],
         "corresponding": False,
     },
@@ -53,7 +54,8 @@ def require(condition: bool, message: str) -> None:
 
 
 def command(argv: list[str]) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(argv, cwd=PAPER, capture_output=True, text=True, check=False)
+    return subprocess.run(argv, cwd=PAPER, capture_output=True, text=True,
+                          encoding=locale.getencoding(), check=False)
 
 
 def bib_keys(text: str) -> set[str]:
@@ -130,20 +132,22 @@ def main() -> int:
     require("letter" in fields.get("Page size", "").lower() or "612 x 792" in fields.get("Page size", ""), "PDF is not US Letter")
 
     with subprocess.Popen(
-        ["pdftotext", "-f", "10", "-l", "10", str(pdf_path), "-"],
+        ["pdftotext", "-enc", "UTF-8", "-f", "10", "-l", "10", str(pdf_path), "-"],
         cwd=PAPER,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
+        encoding="utf-8",
     ) as proc:
         page10, err10 = proc.communicate()
         require(proc.returncode == 0, f"pdftotext page 10 failed: {err10}")
     with subprocess.Popen(
-        ["pdftotext", "-f", "11", "-l", "11", str(pdf_path), "-"],
+        ["pdftotext", "-enc", "UTF-8", "-f", "11", "-l", "11", str(pdf_path), "-"],
         cwd=PAPER,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         text=True,
+        encoding="utf-8",
     ) as proc:
         page11, err11 = proc.communicate()
         require(proc.returncode == 0, f"pdftotext page 11 failed: {err11}")
