@@ -1,4 +1,4 @@
-"""The PDF metadata helper follows the native process locale, including UTF-8 mode."""
+"""Paper-tool metadata regressions run in the dedicated plotting/tool test stage."""
 import importlib.util
 from pathlib import Path
 from types import SimpleNamespace
@@ -26,4 +26,3 @@ def test_metadata_command_uses_native_locale(monkeypatch, native_encoding):
     assert calls[0][1]["encoding"] == native_encoding
     assert calls[0][1]["capture_output"] is True
     assert calls[0][1]["text"] is True
-
