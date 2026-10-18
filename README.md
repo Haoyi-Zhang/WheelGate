@@ -286,3 +286,7 @@ software's API suite. CI and the fresh-copy replay run both source suites;
 installed-wheel tests retain every software check without introducing an
 artifact rendering dependency into the wheel. The replay host requires both
 `requirements-comparison.txt` and `requirements-figures.txt`.
+
+## Portable path notation
+
+Published execution records use `<PYTHON_ROOT>`, `<NODE_ROOT>`, `<RUNTIME_ROOT>` and `<PROJECTS_ROOT>` for machine-local installation and workspace prefixes. These are path aliases, not literal directories; substitute the corresponding local roots when replaying a command. Recorded interpreter and dependency versions, inputs, measurements and outcomes are unchanged. File inventories bind the published portable serializations; any `recorded_` identity denotes the pre-normalization bytes.

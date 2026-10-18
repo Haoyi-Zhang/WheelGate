@@ -39,24 +39,24 @@
         "venv_seconds": 2.45011789991986,
         "install": {
           "argv": [
-            "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
+            "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
             "-I",
             "-m",
             "pip",
             "install",
             "--no-index",
             "--no-deps",
-            "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
+            "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing d:\\codexprojects\\reviewer-repair-industry-20261011\\p123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
+          "stdout": "Processing <PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\p123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
           "stderr": "",
           "seconds": 0.4462701000738889,
           "timeout": false
         },
         "dependency_check": {
           "argv": [
-            "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
+            "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
             "-I",
             "-m",
             "pip",
@@ -82,18 +82,18 @@
               }
             ],
             "implementation": "CPython",
-            "prefix": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv",
+            "prefix": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv",
             "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
           },
           "process": {
             "argv": [
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
               "-I",
               "-c",
               "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
             ],
             "returncode": 0,
-            "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"wheelgate\", \"version\": \"1.0.0\"}], \"implementation\": \"CPython\", \"prefix\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+            "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"wheelgate\", \"version\": \"1.0.0\"}], \"implementation\": \"CPython\", \"prefix\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
             "stderr": "",
             "seconds": 0.07044060004409403,
             "timeout": false
@@ -104,13 +104,13 @@
       },
       "unit_tests": {
         "argv": [
-          "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-packaging-m_sx32s_\\direct-wheel\\venv\\Scripts\\python.exe",
+          "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-packaging-m_sx32s_\\direct-wheel\\venv\\Scripts\\python.exe",
           "-I",
           "-m",
           "unittest",
           "discover",
           "-s",
-          "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-packaging-m_sx32s_\\direct-wheel\\neutral\\tests",
+          "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-packaging-m_sx32s_\\direct-wheel\\neutral\\tests",
           "-v"
         ],
         "returncode": 0,
@@ -123,13 +123,13 @@
         "status": "PASS",
         "process": {
           "argv": [
-            "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
+            "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
             "-I",
             "-c",
             "EXPECTED_VERSION='1.0.0'\nimport importlib.metadata as md,json,pathlib,subprocess,sys\nimport wheelgate\nfrom wheelgate.runner import normalized_name\ndist=md.distribution(\"wheelgate\")\ninventory={pathlib.Path(dist.locate_file(p)).resolve() for p in dist.files or ()}\norigin=pathlib.Path(wheelgate.__file__).resolve()\nassert origin in inventory and origin.is_relative_to(pathlib.Path(sys.prefix).resolve())\nassert dist.version == wheelgate.__version__ == EXPECTED_VERSION\nassert normalized_name(\"Wheel_Gate\") == \"wheel-gate\"\ncommand=pathlib.Path(sys.executable).parent / (\"wheelgate.exe\" if sys.platform==\"win32\" else \"wheelgate\")\nassert command.resolve() in inventory\ncp=subprocess.run([str(command),\"--version\"],capture_output=True,text=True,timeout=10)\nassert cp.returncode==0, cp.stderr\nassert cp.stdout == \"WheelGate \" + EXPECTED_VERSION + \"\\n\", repr(cp.stdout)\nprint(json.dumps({\"origin\":str(origin),\"value\":\"wheel-gate\",\"version_stdout\":cp.stdout}))\n"
           ],
           "returncode": 0,
-          "stdout": "{\"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"value\": \"wheel-gate\", \"version_stdout\": \"WheelGate 1.0.0\\n\"}\n",
+          "stdout": "{\"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"value\": \"wheel-gate\", \"version_stdout\": \"WheelGate 1.0.0\\n\"}\n",
           "stderr": "",
           "seconds": 0.17927939991932362,
           "timeout": false
@@ -152,18 +152,18 @@
               "accesses": [
                 {
                   "classification": "stdlib-archive",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                  "origin": "<PYTHON_ROOT>\\python312.zip"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
                   "version": "1.0.0"
                 }
               ],
@@ -181,18 +181,18 @@
                 {
                   "classification": "stdlib",
                   "module": "email.feedparser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\feedparser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.parser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\parser.py"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                   "version": "1.0.0"
                 }
               ],
@@ -203,13 +203,13 @@
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               }
             ],
@@ -217,13 +217,13 @@
             "status": "PASS",
             "process": {
               "argv": [
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
                 "-I",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\0\\worker.py",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\0\\contract.json"
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\0\\worker.py",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\0\\contract.json"
               ],
               "returncode": 0,
-              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 3, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"import\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.21604530001059175, \"status\": \"PASS\"}\n",
+              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_ROOT>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 3, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"import\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.21604530001059175, \"status\": \"PASS\"}\n",
               "stderr": "",
               "seconds": 0.31052850000560284,
               "timeout": false
@@ -235,18 +235,18 @@
               "accesses": [
                 {
                   "classification": "stdlib-archive",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                  "origin": "<PYTHON_ROOT>\\python312.zip"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
                   "version": "1.0.0"
                 }
               ],
@@ -264,74 +264,74 @@
                 {
                   "classification": "stdlib",
                   "module": "_hashlib",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\\_hashlib.pyd"
+                  "origin": "<PYTHON_ROOT>\\DLLs\\_hashlib.pyd"
                 },
                 {
                   "classification": "stdlib",
                   "module": "argparse",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\argparse.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\argparse.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.feedparser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\feedparser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.parser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\parser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "gettext",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\gettext.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\gettext.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "hashlib",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\hashlib.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\hashlib.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "logging",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\logging\\__init__.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\logging\\__init__.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "shlex",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shlex.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\shlex.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "venv",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\venv\\__init__.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\venv\\__init__.py"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.contractio",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.paths",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.runner",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
                   "version": "1.0.0"
                 }
               ],
@@ -342,19 +342,19 @@
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate.runner",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               }
             ],
@@ -363,13 +363,13 @@
             "value": "wheel-gate",
             "process": {
               "argv": [
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
                 "-I",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\1\\worker.py",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\1\\contract.json"
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\1\\worker.py",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\1\\contract.json"
               ],
               "returncode": 0,
-              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"canonical-name\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.21797259990125895, \"status\": \"PASS\", \"value\": \"wheel-gate\"}\n",
+              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_ROOT>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"canonical-name\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.21797259990125895, \"status\": \"PASS\", \"value\": \"wheel-gate\"}\n",
               "stderr": "",
               "seconds": 0.2969736000522971,
               "timeout": false
@@ -377,37 +377,37 @@
           },
           {
             "argv": [
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\wheelgate.exe",
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\wheelgate.exe",
               "--version"
             ],
             "console_process": {
               "returncode": 0,
               "stderr": "",
-              "stdout": "WHEELGATE_CONSOLE={\"argv\": [\"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.22848009993322194, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n"
+              "stdout": "WHEELGATE_CONSOLE={\"argv\": [\"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_ROOT>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.22848009993322194, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n"
             },
             "file_footprint": {
               "access_count": 4,
               "accesses": [
                 {
                   "classification": "stdlib-archive",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                  "origin": "<PYTHON_ROOT>\\python312.zip"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\entry_points.txt",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\entry_points.txt",
                   "version": "1.0.0"
                 }
               ],
@@ -425,98 +425,98 @@
                 {
                   "classification": "stdlib",
                   "module": "_hashlib",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\\_hashlib.pyd"
+                  "origin": "<PYTHON_ROOT>\\DLLs\\_hashlib.pyd"
                 },
                 {
                   "classification": "stdlib",
                   "module": "argparse",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\argparse.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\argparse.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.feedparser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\feedparser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.parser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\parser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "gettext",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\gettext.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\gettext.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "hashlib",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\hashlib.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\hashlib.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "logging",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\logging\\__init__.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\logging\\__init__.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "shlex",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shlex.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\shlex.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "venv",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\venv\\__init__.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\venv\\__init__.py"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.contractio",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.paths",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.runner",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
                   "version": "1.0.0"
                 }
               ],
               "violations": []
             },
             "id": "version-command",
-            "launcher_origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\wheelgate.exe",
+            "launcher_origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\wheelgate.exe",
             "origins": [
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate.runner",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               }
             ],
@@ -527,13 +527,13 @@
             "stdout": "WheelGate 1.0.0\n",
             "process": {
               "argv": [
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\0\\venv\\Scripts\\python.exe",
                 "-I",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\2\\worker.py",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\2\\contract.json"
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\2\\worker.py",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-0\\2\\contract.json"
               ],
               "returncode": 0,
-              "stdout": "WHEELGATE_JSON={\"argv\": [\"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"console_process\": {\"returncode\": 0, \"stderr\": \"\", \"stdout\": \"WHEELGATE_CONSOLE={\\\"argv\\\": [\\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"--version\\\"], \\\"file_footprint\\\": {\\\"access_count\\\": 4, \\\"accesses\\\": [{\\\"classification\\\": \\\"stdlib-archive\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\python312.zip\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\METADATA\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\RECORD\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\entry_points.txt\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"violations\\\": []}, \\\"footprint\\\": {\\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"module_count\\\": 13, \\\"modules\\\": [{\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"_hashlib\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\DLLs\\\\\\\\_hashlib.pyd\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"argparse\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\argparse.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.feedparser\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\email\\\\\\\\feedparser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.parser\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\email\\\\\\\\parser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"gettext\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\gettext.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"hashlib\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\hashlib.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"logging\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\logging\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"shlex\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\shlex.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"venv\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\venv\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.contractio\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\contractio.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.paths\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\paths.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"violations\\\": []}, \\\"id\\\": \\\"version-command\\\", \\\"launcher_origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"origins\\\": [{\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"returncode\\\": 0, \\\"seconds\\\": 0.22848009993322194, \\\"status\\\": \\\"PASS\\\", \\\"stderr\\\": \\\"\\\", \\\"stdout\\\": \\\"WheelGate 1.0.0\\\\n\\\"}\\n\"}, \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.30761479993816465, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n",
+              "stdout": "WHEELGATE_JSON={\"argv\": [\"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"console_process\": {\"returncode\": 0, \"stderr\": \"\", \"stdout\": \"WHEELGATE_CONSOLE={\\\"argv\\\": [\\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"--version\\\"], \\\"file_footprint\\\": {\\\"access_count\\\": 4, \\\"accesses\\\": [{\\\"classification\\\": \\\"stdlib-archive\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\python312.zip\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\METADATA\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\RECORD\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\entry_points.txt\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"violations\\\": []}, \\\"footprint\\\": {\\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"module_count\\\": 13, \\\"modules\\\": [{\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"_hashlib\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\DLLs\\\\\\\\_hashlib.pyd\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"argparse\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\argparse.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.feedparser\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\email\\\\\\\\feedparser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.parser\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\email\\\\\\\\parser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"gettext\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\gettext.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"hashlib\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\hashlib.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"logging\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\logging\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"shlex\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\shlex.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"venv\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\venv\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.contractio\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\contractio.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.paths\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\paths.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"violations\\\": []}, \\\"id\\\": \\\"version-command\\\", \\\"launcher_origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"origins\\\": [{\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\0\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"returncode\\\": 0, \\\"seconds\\\": 0.22848009993322194, \\\"status\\\": \\\"PASS\\\", \\\"stderr\\\": \\\"\\\", \\\"stdout\\\": \\\"WheelGate 1.0.0\\\\n\\\"}\\n\"}, \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_ROOT>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\0\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.30761479993816465, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n",
               "stderr": "",
               "seconds": 0.3836257999064401,
               "timeout": false
@@ -546,16 +546,16 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+              "<PYTHON_ROOT>\\python.exe",
               "-I",
               "-B",
               "-c",
-              "import runpy,sys;sys.path[:0]=['D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\attrs-26.1.0-py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\click-8.1.8-py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\colorama-0.4.6-py2.py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\packaging-25.0-py3-none-any.whl'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import runpy,sys;sys.path[:0]=['<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\attrs-26.1.0-py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\click-8.1.8-py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\colorama-0.4.6-py2.py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\packaging-25.0-py3-none-any.whl'];runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
+            "stdout": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.31375370000023395,
             "timeout": false
@@ -565,22 +565,22 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+              "<PYTHON_ROOT>\\python.exe",
               "-I",
               "-B",
               "-c",
-              "import runpy,sys;sys.path[:0]=['D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\attrs-26.1.0-py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\click-8.1.8-py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\colorama-0.4.6-py2.py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\packaging-25.0-py3-none-any.whl'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import runpy,sys;sys.path[:0]=['<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\attrs-26.1.0-py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\click-8.1.8-py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\colorama-0.4.6-py2.py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\packaging-25.0-py3-none-any.whl'];runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "wheelgate",
               "--package",
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\wheelgate",
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\wheelgate",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
+            "stdout": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.3190038000466302,
             "timeout": false
@@ -600,24 +600,24 @@
         "venv_seconds": 2.1132983000716195,
         "install": {
           "argv": [
-            "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
+            "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
             "-I",
             "-m",
             "pip",
             "install",
             "--no-index",
             "--no-deps",
-            "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
+            "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing d:\\codexprojects\\reviewer-repair-industry-20261011\\p123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
+          "stdout": "Processing <PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\p123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
           "stderr": "",
           "seconds": 0.4088728000642732,
           "timeout": false
         },
         "dependency_check": {
           "argv": [
-            "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
+            "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
             "-I",
             "-m",
             "pip",
@@ -643,18 +643,18 @@
               }
             ],
             "implementation": "CPython",
-            "prefix": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv",
+            "prefix": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv",
             "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
           },
           "process": {
             "argv": [
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
               "-I",
               "-c",
               "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
             ],
             "returncode": 0,
-            "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"wheelgate\", \"version\": \"1.0.0\"}], \"implementation\": \"CPython\", \"prefix\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+            "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"pip\", \"version\": \"25.0.1\"}, {\"name\": \"wheelgate\", \"version\": \"1.0.0\"}], \"implementation\": \"CPython\", \"prefix\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
             "stderr": "",
             "seconds": 0.0686226999387145,
             "timeout": false
@@ -665,13 +665,13 @@
       },
       "unit_tests": {
         "argv": [
-          "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-packaging-m_sx32s_\\sdist-wheel\\venv\\Scripts\\python.exe",
+          "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-packaging-m_sx32s_\\sdist-wheel\\venv\\Scripts\\python.exe",
           "-I",
           "-m",
           "unittest",
           "discover",
           "-s",
-          "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-packaging-m_sx32s_\\sdist-wheel\\neutral\\tests",
+          "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-packaging-m_sx32s_\\sdist-wheel\\neutral\\tests",
           "-v"
         ],
         "returncode": 0,
@@ -684,13 +684,13 @@
         "status": "PASS",
         "process": {
           "argv": [
-            "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
+            "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
             "-I",
             "-c",
             "EXPECTED_VERSION='1.0.0'\nimport importlib.metadata as md,json,pathlib,subprocess,sys\nimport wheelgate\nfrom wheelgate.runner import normalized_name\ndist=md.distribution(\"wheelgate\")\ninventory={pathlib.Path(dist.locate_file(p)).resolve() for p in dist.files or ()}\norigin=pathlib.Path(wheelgate.__file__).resolve()\nassert origin in inventory and origin.is_relative_to(pathlib.Path(sys.prefix).resolve())\nassert dist.version == wheelgate.__version__ == EXPECTED_VERSION\nassert normalized_name(\"Wheel_Gate\") == \"wheel-gate\"\ncommand=pathlib.Path(sys.executable).parent / (\"wheelgate.exe\" if sys.platform==\"win32\" else \"wheelgate\")\nassert command.resolve() in inventory\ncp=subprocess.run([str(command),\"--version\"],capture_output=True,text=True,timeout=10)\nassert cp.returncode==0, cp.stderr\nassert cp.stdout == \"WheelGate \" + EXPECTED_VERSION + \"\\n\", repr(cp.stdout)\nprint(json.dumps({\"origin\":str(origin),\"value\":\"wheel-gate\",\"version_stdout\":cp.stdout}))\n"
           ],
           "returncode": 0,
-          "stdout": "{\"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"value\": \"wheel-gate\", \"version_stdout\": \"WheelGate 1.0.0\\n\"}\n",
+          "stdout": "{\"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"value\": \"wheel-gate\", \"version_stdout\": \"WheelGate 1.0.0\\n\"}\n",
           "stderr": "",
           "seconds": 0.1552307999227196,
           "timeout": false
@@ -713,18 +713,18 @@
               "accesses": [
                 {
                   "classification": "stdlib-archive",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                  "origin": "<PYTHON_ROOT>\\python312.zip"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
                   "version": "1.0.0"
                 }
               ],
@@ -742,18 +742,18 @@
                 {
                   "classification": "stdlib",
                   "module": "email.feedparser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\feedparser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.parser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\parser.py"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                   "version": "1.0.0"
                 }
               ],
@@ -764,13 +764,13 @@
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               }
             ],
@@ -778,13 +778,13 @@
             "status": "PASS",
             "process": {
               "argv": [
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
                 "-I",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\0\\worker.py",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\0\\contract.json"
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\0\\worker.py",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\0\\contract.json"
               ],
               "returncode": 0,
-              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 3, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"import\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.19737339997664094, \"status\": \"PASS\"}\n",
+              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_ROOT>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 3, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"import\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.19737339997664094, \"status\": \"PASS\"}\n",
               "stderr": "",
               "seconds": 0.2714604999637231,
               "timeout": false
@@ -796,18 +796,18 @@
               "accesses": [
                 {
                   "classification": "stdlib-archive",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                  "origin": "<PYTHON_ROOT>\\python312.zip"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
                   "version": "1.0.0"
                 }
               ],
@@ -825,74 +825,74 @@
                 {
                   "classification": "stdlib",
                   "module": "_hashlib",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\\_hashlib.pyd"
+                  "origin": "<PYTHON_ROOT>\\DLLs\\_hashlib.pyd"
                 },
                 {
                   "classification": "stdlib",
                   "module": "argparse",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\argparse.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\argparse.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.feedparser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\feedparser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.parser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\parser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "gettext",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\gettext.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\gettext.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "hashlib",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\hashlib.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\hashlib.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "logging",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\logging\\__init__.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\logging\\__init__.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "shlex",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shlex.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\shlex.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "venv",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\venv\\__init__.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\venv\\__init__.py"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.contractio",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.paths",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.runner",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
                   "version": "1.0.0"
                 }
               ],
@@ -903,19 +903,19 @@
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate.runner",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               }
             ],
@@ -924,13 +924,13 @@
             "value": "wheel-gate",
             "process": {
               "argv": [
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
                 "-I",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\1\\worker.py",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\1\\contract.json"
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\1\\worker.py",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\1\\contract.json"
               ],
               "returncode": 0,
-              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"canonical-name\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.2102920999750495, \"status\": \"PASS\", \"value\": \"wheel-gate\"}\n",
+              "stdout": "WHEELGATE_JSON={\"file_footprint\": {\"access_count\": 3, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_ROOT>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"canonical-name\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"seconds\": 0.2102920999750495, \"status\": \"PASS\", \"value\": \"wheel-gate\"}\n",
               "stderr": "",
               "seconds": 0.28522520000115037,
               "timeout": false
@@ -938,37 +938,37 @@
           },
           {
             "argv": [
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\wheelgate.exe",
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\wheelgate.exe",
               "--version"
             ],
             "console_process": {
               "returncode": 0,
               "stderr": "",
-              "stdout": "WHEELGATE_CONSOLE={\"argv\": [\"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.2179958000779152, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n"
+              "stdout": "WHEELGATE_CONSOLE={\"argv\": [\"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_ROOT>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.2179958000779152, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n"
             },
             "file_footprint": {
               "access_count": 4,
               "accesses": [
                 {
                   "classification": "stdlib-archive",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip"
+                  "origin": "<PYTHON_ROOT>\\python312.zip"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\METADATA",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\RECORD",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\entry_points.txt",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate-1.0.0.dist-info\\entry_points.txt",
                   "version": "1.0.0"
                 }
               ],
@@ -986,98 +986,98 @@
                 {
                   "classification": "stdlib",
                   "module": "_hashlib",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\DLLs\\_hashlib.pyd"
+                  "origin": "<PYTHON_ROOT>\\DLLs\\_hashlib.pyd"
                 },
                 {
                   "classification": "stdlib",
                   "module": "argparse",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\argparse.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\argparse.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.feedparser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\feedparser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\feedparser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "email.parser",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\email\\parser.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\email\\parser.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "gettext",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\gettext.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\gettext.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "hashlib",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\hashlib.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\hashlib.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "logging",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\logging\\__init__.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\logging\\__init__.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "shlex",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\shlex.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\shlex.py"
                 },
                 {
                   "classification": "stdlib",
                   "module": "venv",
-                  "origin": "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\venv\\__init__.py"
+                  "origin": "<PYTHON_ROOT>\\Lib\\venv\\__init__.py"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.contractio",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\contractio.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.paths",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\paths.py",
                   "version": "1.0.0"
                 },
                 {
                   "classification": "declared-distribution",
                   "distribution": "wheelgate",
                   "module": "wheelgate.runner",
-                  "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                  "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
                   "version": "1.0.0"
                 }
               ],
               "violations": []
             },
             "id": "version-command",
-            "launcher_origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\wheelgate.exe",
+            "launcher_origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\wheelgate.exe",
             "origins": [
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate.runner",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\runner.py",
                 "version": "1.0.0"
               },
               {
                 "distribution": "wheelgate",
                 "module": "wheelgate",
-                "origin": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
+                "origin": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Lib\\site-packages\\wheelgate\\__init__.py",
                 "version": "1.0.0"
               }
             ],
@@ -1088,13 +1088,13 @@
             "stdout": "WheelGate 1.0.0\n",
             "process": {
               "argv": [
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\1\\venv\\Scripts\\python.exe",
                 "-I",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\2\\worker.py",
-                "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\2\\contract.json"
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\2\\worker.py",
+                "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\t\\wheelgate-self-flow-_91ke682\\gate-1\\2\\contract.json"
               ],
               "returncode": 0,
-              "stdout": "WHEELGATE_JSON={\"argv\": [\"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"console_process\": {\"returncode\": 0, \"stderr\": \"\", \"stdout\": \"WHEELGATE_CONSOLE={\\\"argv\\\": [\\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"--version\\\"], \\\"file_footprint\\\": {\\\"access_count\\\": 4, \\\"accesses\\\": [{\\\"classification\\\": \\\"stdlib-archive\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\python312.zip\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\METADATA\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\RECORD\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\entry_points.txt\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"violations\\\": []}, \\\"footprint\\\": {\\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"module_count\\\": 13, \\\"modules\\\": [{\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"_hashlib\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\DLLs\\\\\\\\_hashlib.pyd\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"argparse\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\argparse.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.feedparser\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\email\\\\\\\\feedparser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.parser\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\email\\\\\\\\parser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"gettext\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\gettext.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"hashlib\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\hashlib.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"logging\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\logging\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"shlex\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\shlex.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"venv\\\", \\\"origin\\\": \\\"C:\\\\\\\\Users\\\\\\\\Administrator\\\\\\\\.cache\\\\\\\\codex-runtimes\\\\\\\\codex-primary-runtime\\\\\\\\dependencies\\\\\\\\python\\\\\\\\Lib\\\\\\\\venv\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.contractio\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\contractio.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.paths\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\paths.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"violations\\\": []}, \\\"id\\\": \\\"version-command\\\", \\\"launcher_origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"origins\\\": [{\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"D:\\\\\\\\CodexProjects\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"returncode\\\": 0, \\\"seconds\\\": 0.2179958000779152, \\\"status\\\": \\\"PASS\\\", \\\"stderr\\\": \\\"\\\", \\\"stdout\\\": \\\"WheelGate 1.0.0\\\\n\\\"}\\n\"}, \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\python\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.29887739999685436, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n",
+              "stdout": "WHEELGATE_JSON={\"argv\": [\"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"--version\"], \"console_process\": {\"returncode\": 0, \"stderr\": \"\", \"stdout\": \"WHEELGATE_CONSOLE={\\\"argv\\\": [\\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"--version\\\"], \\\"file_footprint\\\": {\\\"access_count\\\": 4, \\\"accesses\\\": [{\\\"classification\\\": \\\"stdlib-archive\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\python312.zip\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\METADATA\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\RECORD\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate-1.0.0.dist-info\\\\\\\\entry_points.txt\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"violations\\\": []}, \\\"footprint\\\": {\\\"allowed_distributions\\\": [\\\"wheelgate\\\"], \\\"module_count\\\": 13, \\\"modules\\\": [{\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"_hashlib\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\DLLs\\\\\\\\_hashlib.pyd\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"argparse\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\argparse.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.feedparser\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\email\\\\\\\\feedparser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"email.parser\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\email\\\\\\\\parser.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"gettext\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\gettext.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"hashlib\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\hashlib.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"logging\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\logging\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"shlex\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\shlex.py\\\"}, {\\\"classification\\\": \\\"stdlib\\\", \\\"module\\\": \\\"venv\\\", \\\"origin\\\": \\\"<PYTHON_ROOT>\\\\\\\\Lib\\\\\\\\venv\\\\\\\\__init__.py\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.contractio\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\contractio.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.paths\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\paths.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"classification\\\": \\\"declared-distribution\\\", \\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"violations\\\": []}, \\\"id\\\": \\\"version-command\\\", \\\"launcher_origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Scripts\\\\\\\\wheelgate.exe\\\", \\\"origins\\\": [{\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate.runner\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\runner.py\\\", \\\"version\\\": \\\"1.0.0\\\"}, {\\\"distribution\\\": \\\"wheelgate\\\", \\\"module\\\": \\\"wheelgate\\\", \\\"origin\\\": \\\"<PROJECTS_ROOT>\\\\\\\\reviewer-repair-industry-20261011\\\\\\\\P123\\\\\\\\t\\\\\\\\wheelgate-self-flow-_91ke682\\\\\\\\1\\\\\\\\venv\\\\\\\\Lib\\\\\\\\site-packages\\\\\\\\wheelgate\\\\\\\\__init__.py\\\", \\\"version\\\": \\\"1.0.0\\\"}], \\\"returncode\\\": 0, \\\"seconds\\\": 0.2179958000779152, \\\"status\\\": \\\"PASS\\\", \\\"stderr\\\": \\\"\\\", \\\"stdout\\\": \\\"WheelGate 1.0.0\\\\n\\\"}\\n\"}, \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_ROOT>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\METADATA\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\RECORD\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate-1.0.0.dist-info\\\\entry_points.txt\", \"version\": \"1.0.0\"}], \"allowed_distributions\": [\"wheelgate\"], \"violations\": []}, \"footprint\": {\"allowed_distributions\": [\"wheelgate\"], \"module_count\": 13, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"_hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\DLLs\\\\_hashlib.pyd\"}, {\"classification\": \"stdlib\", \"module\": \"argparse\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\argparse.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"gettext\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\gettext.py\"}, {\"classification\": \"stdlib\", \"module\": \"hashlib\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\hashlib.py\"}, {\"classification\": \"stdlib\", \"module\": \"logging\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\logging\\\\__init__.py\"}, {\"classification\": \"stdlib\", \"module\": \"shlex\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\shlex.py\"}, {\"classification\": \"stdlib\", \"module\": \"venv\", \"origin\": \"<PYTHON_ROOT>\\\\Lib\\\\venv\\\\__init__.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.contractio\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\contractio.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.paths\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\paths.py\", \"version\": \"1.0.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}], \"violations\": []}, \"id\": \"version-command\", \"launcher_origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Scripts\\\\wheelgate.exe\", \"origins\": [{\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate.runner\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\runner.py\", \"version\": \"1.0.0\"}, {\"distribution\": \"wheelgate\", \"module\": \"wheelgate\", \"origin\": \"<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\t\\\\wheelgate-self-flow-_91ke682\\\\1\\\\venv\\\\Lib\\\\site-packages\\\\wheelgate\\\\__init__.py\", \"version\": \"1.0.0\"}], \"returncode\": 0, \"seconds\": 0.29887739999685436, \"status\": \"PASS\", \"stderr\": \"\", \"stdout\": \"WheelGate 1.0.0\\n\"}\n",
               "stderr": "",
               "seconds": 0.3712232999969274,
               "timeout": false
@@ -1107,16 +1107,16 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+              "<PYTHON_ROOT>\\python.exe",
               "-I",
               "-B",
               "-c",
-              "import runpy,sys;sys.path[:0]=['D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\attrs-26.1.0-py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\click-8.1.8-py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\colorama-0.4.6-py2.py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\packaging-25.0-py3-none-any.whl'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import runpy,sys;sys.path[:0]=['<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\attrs-26.1.0-py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\click-8.1.8-py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\colorama-0.4.6-py2.py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\packaging-25.0-py3-none-any.whl'];runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
+            "stdout": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.2918766000075266,
             "timeout": false
@@ -1126,22 +1126,22 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+              "<PYTHON_ROOT>\\python.exe",
               "-I",
               "-B",
               "-c",
-              "import runpy,sys;sys.path[:0]=['D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\attrs-26.1.0-py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\click-8.1.8-py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\colorama-0.4.6-py2.py3-none-any.whl', 'D:\\\\CodexProjects\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\packaging-25.0-py3-none-any.whl'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import runpy,sys;sys.path[:0]=['<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\attrs-26.1.0-py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\click-8.1.8-py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\colorama-0.4.6-py2.py3-none-any.whl', '<PROJECTS_ROOT>\\\\reviewer-repair-industry-20261011\\\\P123\\\\verification\\\\comparison-wheels\\\\packaging-25.0-py3-none-any.whl'];runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "wheelgate",
               "--package",
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\wheelgate",
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\wheelgate",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
-              "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
+              "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
+            "stdout": "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.29141529998742044,
             "timeout": false
@@ -1152,11 +1152,11 @@
   ],
   "package_process": {
     "argv": [
-      "C:\\Users\\Administrator\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "<PYTHON_ROOT>\\python.exe",
       "-B",
-      "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\scripts\\package_check.py",
+      "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\scripts\\package_check.py",
       "--output",
-      "D:\\CodexProjects\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check.json"
+      "<PROJECTS_ROOT>\\reviewer-repair-industry-20261011\\P123\\artifact\\results\\packaging-flow\\self-check.json"
     ],
     "returncode": 0,
     "stdout": "",
@@ -1166,7 +1166,8 @@
   },
   "package_record": {
     "file": "self-check.json",
-    "sha256": "83c076dfdca0d66b98d240cf08e907016af7d8b7df21686d54f422a0d1a18e4c"
+    "sha256": "d8cf0f0e85a8772810daf553bdb5b4f558d53f0734f93c268e84903d3f3cff70",
+    "recorded_sha256": "83c076dfdca0d66b98d240cf08e907016af7d8b7df21686d54f422a0d1a18e4c"
   },
   "dependency_versions": {
     "attrs": "26.1.0",

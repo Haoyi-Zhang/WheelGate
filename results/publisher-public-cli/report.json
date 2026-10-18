@@ -181,8 +181,10 @@
       },
       "raw_receipt": {
         "file": "django-xml-4.0.0-public-cli.json",
-        "bytes": 17744,
-        "sha256": "080f83ab4b9cbc171687e85851847c46f65a318eb5db3ef9cea41a5ba08f362f"
+        "bytes": 17016,
+        "sha256": "b49bb41aee7c476636d79e03c706d3bcc4c0c8e92902e50a2f3d90f0a0aba12b",
+        "recorded_sha256": "080f83ab4b9cbc171687e85851847c46f65a318eb5db3ef9cea41a5ba08f362f",
+        "recorded_bytes": 17744
       }
     },
     {
@@ -267,8 +269,10 @@
       },
       "raw_receipt": {
         "file": "django-xml-4.0.1-public-cli.json",
-        "bytes": 163832,
-        "sha256": "f8756c5c801370abbcc6804b4e900bc8840431979cff98dfdc6b4de61b1f3ceb"
+        "bytes": 150402,
+        "sha256": "6943bd5fe1338c9ab795932d2a9ea5b86f25331f1d16f970432921ee22961eb1",
+        "recorded_sha256": "f8756c5c801370abbcc6804b4e900bc8840431979cff98dfdc6b4de61b1f3ceb",
+        "recorded_bytes": 163832
       }
     },
     {
@@ -316,8 +320,10 @@
       },
       "raw_receipt": {
         "file": "latex2pydata-0.5.0-public-cli.json",
-        "bytes": 14151,
-        "sha256": "5c87c8c7a621719236542528d8d7b5c098b2b3269932877fb7577e0f73915c86"
+        "bytes": 13625,
+        "sha256": "3adc15c473651b98458b164628520301c81d784f2520c260802a5a60dc664398",
+        "recorded_sha256": "5c87c8c7a621719236542528d8d7b5c098b2b3269932877fb7577e0f73915c86",
+        "recorded_bytes": 14151
       }
     }
   ],

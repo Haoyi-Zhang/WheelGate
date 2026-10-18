@@ -34,10 +34,10 @@
   },
   "paper": null,
   "selected_record_sha256": {
-    "footprint": "8a1bf80dbfe7ea5ebfeae6eebe7ccd1be15340d97322588d6ba1c556c5656b46",
-    "historical": "8d020ef8ab904de5be3c0838df013ca1b11af8742740255a961d29bbcd2d7b74",
-    "routes": "1368eae7193da93b3593e8142ffdd16c199f6724a5f00eccdb7c1215c30dd793",
-    "route_requalification": "dc2daf7190a9edcfbd9e66e19ae9c03254bff32645606c27bc50d3907a1df714",
-    "package": "dfef518336ef2ab58291ddfcecd7644809e234586449883ffe9ab3a3538c4488"
+    "footprint": "1f578efa0e6813ae6fa69fcd0bc352d33582d72ffe63c4c566a319120104136a",
+    "historical": "4fa0a52f41b1b3f52c16afb28b3a9a78dcca857e5899df708bd9a534f5e279ea",
+    "routes": "12a67ed0a9f76cff4b065f41b2e5940c2d9afcdd4a3ea11057574d4bb2c2fc89",
+    "route_requalification": "ee38be559c208df05a704404ecb29b68ae17e318a84250c4d380791e0466bd05",
+    "package": "8109ee6d9544dbb7c1625ada1a3980231fc1f29ad3be5294c8e333ebadabef43"
   }
 }
