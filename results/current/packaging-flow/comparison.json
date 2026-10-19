@@ -529,11 +529,11 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-B",
               "-c",
-              "import runpy,sys;sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import runpy,sys;sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
             ],
@@ -548,16 +548,16 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-B",
               "-c",
-              "import runpy,sys;sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import runpy,sys;sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "wheelgate",
               "--package",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\wheelgate",
+              "<ARTIFACT_ROOT>/wheelgate",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\flow\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
@@ -1090,11 +1090,11 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-B",
               "-c",
-              "import runpy,sys;sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import runpy,sys;sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
             ],
@@ -1109,16 +1109,16 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-B",
               "-c",
-              "import runpy,sys;sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\substantive_followup_20261013_round2\\\\candidate_library\\\\P123\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import runpy,sys;sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src'];runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "wheelgate",
               "--package",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\wheelgate",
+              "<ARTIFACT_ROOT>/wheelgate",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\flow\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
@@ -1135,9 +1135,9 @@
   ],
   "package_process": {
     "argv": [
-      "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\pdf-env\\Scripts\\python.exe",
+      "<PYTHON_ROOT>/Scripts/python.exe",
       "-B",
-      "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\scripts\\package_check.py",
+      "<ARTIFACT_ROOT>/scripts/package_check.py",
       "--output",
       "<PROJECTS_ROOT>\\wg-check\\p123-publish\\flow\\self-check.json"
     ],
@@ -1149,7 +1149,7 @@
   },
   "package_record": {
     "file": "self-check.json",
-    "sha256": "b8f40bbd9b340e24c9bc9f95b902875ca32b6a92f35e1d4de1906d851f93a6a0",
+    "sha256": "710f587d82181b5ffb374de451f627afcc7b112c7471216836622ef55bb522f2",
     "recorded_sha256": "54cbaf36a646b8d129a6abcaf507a4f951cb3ffe59c063ec027eaed672a25014"
   },
   "dependency_versions": {

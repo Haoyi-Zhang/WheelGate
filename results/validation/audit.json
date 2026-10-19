@@ -34,10 +34,10 @@
   },
   "paper": null,
   "selected_record_sha256": {
-    "footprint": "1f578efa0e6813ae6fa69fcd0bc352d33582d72ffe63c4c566a319120104136a",
-    "historical": "4fa0a52f41b1b3f52c16afb28b3a9a78dcca857e5899df708bd9a534f5e279ea",
-    "routes": "12a67ed0a9f76cff4b065f41b2e5940c2d9afcdd4a3ea11057574d4bb2c2fc89",
-    "route_requalification": "ee38be559c208df05a704404ecb29b68ae17e318a84250c4d380791e0466bd05",
-    "package": "8109ee6d9544dbb7c1625ada1a3980231fc1f29ad3be5294c8e333ebadabef43"
+    "footprint": "13527b9ecb4c73429868ae257069ac63a2f4eb2090f0ad2365d1fdda4f5139a5",
+    "historical": "ed00f0bcf37b78050018ca2be54c2f69714b6c2a603d6dfecc3af79a16d31c6d",
+    "routes": "467c63a6b43b3e31d6c8ae92909ec6a0ecf8aabb6c714757672602b1d16eae9f",
+    "route_requalification": "fc1677f66dbd1a11caceff1174937fb02af16e1186ef1d3fdff147364f365565",
+    "package": "5063d7a2acae571fd34e28243b2c7de006b5e200af7ef8e5a774ab5fbf489566"
   }
 }

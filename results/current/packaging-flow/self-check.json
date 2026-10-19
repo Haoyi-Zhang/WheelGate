@@ -14,10 +14,10 @@
         "install",
         "--no-index",
         "--no-deps",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\third_party\\setuptools-78.1.1-py3-none-any.whl"
+        "<ARTIFACT_ROOT>/third_party/setuptools-78.1.1-py3-none-any.whl"
       ],
       "returncode": 0,
-      "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\p123\\artifact\\third_party\\setuptools-78.1.1-py3-none-any.whl\nInstalling collected packages: setuptools\nSuccessfully installed setuptools-78.1.1\n",
+      "stdout": "Processing <ARTIFACT_ROOT>/third_party/setuptools-78.1.1-py3-none-any.whl\nInstalling collected packages: setuptools\nSuccessfully installed setuptools-78.1.1\n",
       "stderr": "",
       "seconds": 1.1229828000068665,
       "timeout": false
@@ -105,8 +105,8 @@
     {
       "argv": [
         "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\venv\\Scripts\\wheelgate.exe",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\contracts\\fixture.json",
+        "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl",
+        "<ARTIFACT_ROOT>/contracts/fixture.json",
         "--output",
         "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\good.json"
       ],
@@ -119,8 +119,8 @@
     {
       "argv": [
         "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\venv\\Scripts\\wheelgate.exe",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\contracts\\fixture.json",
+        "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl",
+        "<ARTIFACT_ROOT>/contracts/fixture.json",
         "--output",
         "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\missing.json"
       ],
@@ -174,8 +174,8 @@
     {
       "argv": [
         "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\venv\\Scripts\\wheelgate.exe",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\contracts\\fixture.json",
+        "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl",
+        "<ARTIFACT_ROOT>/contracts/fixture.json",
         "--output",
         "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\good.json"
       ],
@@ -188,8 +188,8 @@
     {
       "argv": [
         "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\venv\\Scripts\\wheelgate.exe",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\contracts\\fixture.json",
+        "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl",
+        "<ARTIFACT_ROOT>/contracts/fixture.json",
         "--output",
         "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\missing.json"
       ],
@@ -323,8 +323,8 @@
           "process": {
             "argv": [
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\venv\\Scripts\\wheelgate.exe",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\contracts\\fixture.json",
+              "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl",
+              "<ARTIFACT_ROOT>/contracts/fixture.json",
               "--output",
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\good.json"
             ],
@@ -361,10 +361,10 @@
                   "install",
                   "--no-index",
                   "--no-deps",
-                  "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl"
+                  "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl"
                 ],
                 "returncode": 0,
-                "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\p123\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
+                "stdout": "Processing <ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
                 "stderr": "",
                 "seconds": 0.3529718999925535,
                 "timeout": false
@@ -989,8 +989,8 @@
           "process": {
             "argv": [
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\venv\\Scripts\\wheelgate.exe",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\contracts\\fixture.json",
+              "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl",
+              "<ARTIFACT_ROOT>/contracts/fixture.json",
               "--output",
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\direct-wheel\\missing.json"
             ],
@@ -1027,10 +1027,10 @@
                   "install",
                   "--no-index",
                   "--no-deps",
-                  "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl"
+                  "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl"
                 ],
                 "returncode": 0,
-                "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\p123\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
+                "stdout": "Processing <ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
                 "stderr": "",
                 "seconds": 0.3542396000120789,
                 "timeout": false
@@ -1715,8 +1715,8 @@
           "process": {
             "argv": [
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\venv\\Scripts\\wheelgate.exe",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\contracts\\fixture.json",
+              "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl",
+              "<ARTIFACT_ROOT>/contracts/fixture.json",
               "--output",
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\good.json"
             ],
@@ -1753,10 +1753,10 @@
                   "install",
                   "--no-index",
                   "--no-deps",
-                  "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl"
+                  "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl"
                 ],
                 "returncode": 0,
-                "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\p123\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
+                "stdout": "Processing <ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
                 "stderr": "",
                 "seconds": 0.3545603999955347,
                 "timeout": false
@@ -2381,8 +2381,8 @@
           "process": {
             "argv": [
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\venv\\Scripts\\wheelgate.exe",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\contracts\\fixture.json",
+              "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl",
+              "<ARTIFACT_ROOT>/contracts/fixture.json",
               "--output",
               "<PROJECTS_ROOT>\\wg-check\\p123-publish\\tmp\\wheelgate-packaging-5eqco6x1\\sdist-wheel\\missing.json"
             ],
@@ -2419,10 +2419,10 @@
                   "install",
                   "--no-index",
                   "--no-deps",
-                  "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\P123\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl"
+                  "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl"
                 ],
                 "returncode": 0,
-                "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\substantive_followup_20261013_round2\\candidate_library\\p123\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
+                "stdout": "Processing <ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
                 "stderr": "",
                 "seconds": 0.3609207000117749,
                 "timeout": false

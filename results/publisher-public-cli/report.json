@@ -181,8 +181,8 @@
       },
       "raw_receipt": {
         "file": "django-xml-4.0.0-public-cli.json",
-        "bytes": 17016,
-        "sha256": "b49bb41aee7c476636d79e03c706d3bcc4c0c8e92902e50a2f3d90f0a0aba12b",
+        "bytes": 14925,
+        "sha256": "e3d9e2414027fbd55d3e65556b3f71be6328374686da6dbca65ae412cea87639",
         "recorded_sha256": "080f83ab4b9cbc171687e85851847c46f65a318eb5db3ef9cea41a5ba08f362f",
         "recorded_bytes": 17744
       }
@@ -269,8 +269,8 @@
       },
       "raw_receipt": {
         "file": "django-xml-4.0.1-public-cli.json",
-        "bytes": 150402,
-        "sha256": "6943bd5fe1338c9ab795932d2a9ea5b86f25331f1d16f970432921ee22961eb1",
+        "bytes": 146653,
+        "sha256": "094cb42ac95eca8bc8b4ec81c1e16de2935df803cd97c5efb023ad505b7f98d5",
         "recorded_sha256": "f8756c5c801370abbcc6804b4e900bc8840431979cff98dfdc6b4de61b1f3ceb",
         "recorded_bytes": 163832
       }

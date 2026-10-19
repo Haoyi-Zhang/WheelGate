@@ -35,10 +35,10 @@
         "install",
         "--no-index",
         "--no-deps",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\setuptools-78.1.1-py3-none-any.whl"
+        "<ARTIFACT_ROOT>/third_party/setuptools-78.1.1-py3-none-any.whl"
       ],
       "returncode": 0,
-      "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\setuptools-78.1.1-py3-none-any.whl\nInstalling collected packages: setuptools\nSuccessfully installed setuptools-78.1.1\n",
+      "stdout": "Processing <ARTIFACT_ROOT>/third_party/setuptools-78.1.1-py3-none-any.whl\nInstalling collected packages: setuptools\nSuccessfully installed setuptools-78.1.1\n",
       "stderr": "",
       "seconds": 1.4867962999851443,
       "timeout": false
@@ -48,10 +48,10 @@
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\builder\\Scripts\\python.exe",
         "-I",
         "-c",
-        "from setuptools.build_meta import build_wheel; build_wheel('<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\results\\\\historical\\\\assets\\\\wheels\\\\affected')"
+        "from setuptools.build_meta import build_wheel; build_wheel('<ARTIFACT_ROOT>/results/historical/assets/wheels/affected')"
       ],
       "returncode": 0,
-      "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\djxml\ncopying djxml\\__init__.py -> build\\lib\\djxml\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\djxml\ncopying build\\lib\\djxml\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\djxml\nrunning install_egg_info\nrunning egg_info\ncreating django_xml.egg-info\nwriting django_xml.egg-info\\PKG-INFO\nwriting dependency_links to django_xml.egg-info\\dependency_links.txt\nwriting top-level names to django_xml.egg-info\\top_level.txt\nwriting manifest file 'django_xml.egg-info\\SOURCES.txt'\nreading manifest file 'django_xml.egg-info\\SOURCES.txt'\nwriting manifest file 'django_xml.egg-info\\SOURCES.txt'\nCopying django_xml.egg-info to build\\bdist.win-amd64\\wheel\\.\\django_xml-4.0.0-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\django_xml-4.0.0.dist-info\\WHEEL\ncreating '<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\.tmp-i57l6ui0\\django_xml-4.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it\nadding 'djxml/__init__.py'\nadding 'django_xml-4.0.0.dist-info/METADATA'\nadding 'django_xml-4.0.0.dist-info/WHEEL'\nadding 'django_xml-4.0.0.dist-info/top_level.txt'\nadding 'django_xml-4.0.0.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\n",
+      "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\djxml\ncopying djxml\\__init__.py -> build\\lib\\djxml\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\djxml\ncopying build\\lib\\djxml\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\djxml\nrunning install_egg_info\nrunning egg_info\ncreating django_xml.egg-info\nwriting django_xml.egg-info\\PKG-INFO\nwriting dependency_links to django_xml.egg-info\\dependency_links.txt\nwriting top-level names to django_xml.egg-info\\top_level.txt\nwriting manifest file 'django_xml.egg-info\\SOURCES.txt'\nreading manifest file 'django_xml.egg-info\\SOURCES.txt'\nwriting manifest file 'django_xml.egg-info\\SOURCES.txt'\nCopying django_xml.egg-info to build\\bdist.win-amd64\\wheel\\.\\django_xml-4.0.0-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\django_xml-4.0.0.dist-info\\WHEEL\ncreating '<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/.tmp-i57l6ui0/django_xml-4.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it\nadding 'djxml/__init__.py'\nadding 'django_xml-4.0.0.dist-info/METADATA'\nadding 'django_xml-4.0.0.dist-info/WHEEL'\nadding 'django_xml-4.0.0.dist-info/top_level.txt'\nadding 'django_xml-4.0.0.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\n",
       "stderr": "",
       "seconds": 0.22451010000077076,
       "timeout": false
@@ -61,10 +61,10 @@
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\builder\\Scripts\\python.exe",
         "-I",
         "-c",
-        "from setuptools.build_meta import build_wheel; build_wheel('<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\results\\\\historical\\\\assets\\\\wheels\\\\fixed')"
+        "from setuptools.build_meta import build_wheel; build_wheel('<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed')"
       ],
       "returncode": 0,
-      "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\djxml\ncopying djxml\\__init__.py -> build\\lib\\djxml\ncreating build\\lib\\djxml\\xmlmodels\ncopying djxml\\xmlmodels\\__init__.py -> build\\lib\\djxml\\xmlmodels\ncreating build\\lib\\djxml\\xmlmodels\\fields\ncopying djxml\\xmlmodels\\fields\\__init__.py -> build\\lib\\djxml\\xmlmodels\\fields\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\djxml\ncreating build\\bdist.win-amd64\\wheel\\djxml\\xmlmodels\ncreating build\\bdist.win-amd64\\wheel\\djxml\\xmlmodels\\fields\ncopying build\\lib\\djxml\\xmlmodels\\fields\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\djxml\\xmlmodels\\fields\ncopying build\\lib\\djxml\\xmlmodels\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\djxml\\xmlmodels\ncopying build\\lib\\djxml\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\djxml\nrunning install_egg_info\nrunning egg_info\ncreating django_xml.egg-info\nwriting django_xml.egg-info\\PKG-INFO\nwriting dependency_links to django_xml.egg-info\\dependency_links.txt\nwriting top-level names to django_xml.egg-info\\top_level.txt\nwriting manifest file 'django_xml.egg-info\\SOURCES.txt'\nreading manifest file 'django_xml.egg-info\\SOURCES.txt'\nwriting manifest file 'django_xml.egg-info\\SOURCES.txt'\nCopying django_xml.egg-info to build\\bdist.win-amd64\\wheel\\.\\django_xml-4.0.1-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\django_xml-4.0.1.dist-info\\WHEEL\ncreating '<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\.tmp-grzwnc45\\django_xml-4.0.1-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it\nadding 'djxml/__init__.py'\nadding 'djxml/xmlmodels/__init__.py'\nadding 'djxml/xmlmodels/fields/__init__.py'\nadding 'django_xml-4.0.1.dist-info/METADATA'\nadding 'django_xml-4.0.1.dist-info/WHEEL'\nadding 'django_xml-4.0.1.dist-info/top_level.txt'\nadding 'django_xml-4.0.1.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\n",
+      "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\djxml\ncopying djxml\\__init__.py -> build\\lib\\djxml\ncreating build\\lib\\djxml\\xmlmodels\ncopying djxml\\xmlmodels\\__init__.py -> build\\lib\\djxml\\xmlmodels\ncreating build\\lib\\djxml\\xmlmodels\\fields\ncopying djxml\\xmlmodels\\fields\\__init__.py -> build\\lib\\djxml\\xmlmodels\\fields\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\djxml\ncreating build\\bdist.win-amd64\\wheel\\djxml\\xmlmodels\ncreating build\\bdist.win-amd64\\wheel\\djxml\\xmlmodels\\fields\ncopying build\\lib\\djxml\\xmlmodels\\fields\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\djxml\\xmlmodels\\fields\ncopying build\\lib\\djxml\\xmlmodels\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\djxml\\xmlmodels\ncopying build\\lib\\djxml\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\djxml\nrunning install_egg_info\nrunning egg_info\ncreating django_xml.egg-info\nwriting django_xml.egg-info\\PKG-INFO\nwriting dependency_links to django_xml.egg-info\\dependency_links.txt\nwriting top-level names to django_xml.egg-info\\top_level.txt\nwriting manifest file 'django_xml.egg-info\\SOURCES.txt'\nreading manifest file 'django_xml.egg-info\\SOURCES.txt'\nwriting manifest file 'django_xml.egg-info\\SOURCES.txt'\nCopying django_xml.egg-info to build\\bdist.win-amd64\\wheel\\.\\django_xml-4.0.1-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\django_xml-4.0.1.dist-info\\WHEEL\ncreating '<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/.tmp-grzwnc45/django_xml-4.0.1-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it\nadding 'djxml/__init__.py'\nadding 'djxml/xmlmodels/__init__.py'\nadding 'djxml/xmlmodels/fields/__init__.py'\nadding 'django_xml-4.0.1.dist-info/METADATA'\nadding 'django_xml-4.0.1.dist-info/WHEEL'\nadding 'django_xml-4.0.1.dist-info/top_level.txt'\nadding 'django_xml-4.0.1.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\n",
       "stderr": "",
       "seconds": 0.2533716000034474,
       "timeout": false
@@ -78,12 +78,12 @@
       "replay_wheel_sha256": "a25a84f4f355b9ba37e975c0c2a90b52c7b30e96d5f95d601cb1d7ac00ac981e",
       "checkout": {
         "argv": [
-          "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+          "<PYTHON_ROOT>/Scripts/python.exe",
           "-c",
           "import djxml.xmlmodels; assert djxml.xmlmodels.consumer() == 'available'; print(djxml.xmlmodels.__file__)"
         ],
         "returncode": 0,
-        "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\affected\\djxml\\xmlmodels\\__init__.py\n",
+        "stdout": "<ARTIFACT_ROOT>/results/historical/assets/sources/affected/djxml/xmlmodels/__init__.py\n",
         "stderr": "",
         "seconds": 0.021895599988056347,
         "timeout": false
@@ -103,10 +103,10 @@
             "install",
             "--no-index",
             "--no-deps",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+            "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.0\n",
+          "stdout": "Processing <ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.0\n",
           "stderr": "",
           "seconds": 0.4665151000081096,
           "timeout": false
@@ -165,11 +165,11 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\prepared-affected\\venv\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py"
+            "<ARTIFACT_ROOT>/results/historical/assets/ordinary.py"
           ],
           "returncode": 1,
           "stdout": "",
-          "stderr": "Traceback (most recent call last):\n  File \"<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py\", line 4, in <module>\n    import djxml.xmlmodels\nModuleNotFoundError: No module named 'djxml.xmlmodels'\n",
+          "stderr": "Traceback (most recent call last):\n  File \"<ARTIFACT_ROOT>/results/historical/assets/ordinary.py\", line 4, in <module>\n    import djxml.xmlmodels\nModuleNotFoundError: No module named 'djxml.xmlmodels'\n",
           "seconds": 0.0644107999978587,
           "timeout": false
         }
@@ -247,15 +247,15 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.17910370000754483,
             "timeout": false
@@ -265,21 +265,21 @@
           "status": "REJECT",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "djxml",
               "--package",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\affected\\djxml",
+              "<ARTIFACT_ROOT>/results/historical/assets/sources/affected/djxml",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
             ],
             "returncode": 1,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl: W101: Wheel library is missing files in package tree:\n  djxml/xmlmodels/__init__.py\n  djxml/xmlmodels/fields/__init__.py\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl: W101: Wheel library is missing files in package tree:\n  djxml/xmlmodels/__init__.py\n  djxml/xmlmodels/fields/__init__.py\n",
             "stderr": "",
             "seconds": 0.17863099998794496,
             "timeout": false
@@ -292,7 +292,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\builder\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\source\\check-manifest-0.50\\check_manifest.py",
+            "<ARTIFACT_ROOT>/third_party/source/check-manifest-0.50/check_manifest.py",
             "--no-build-isolation",
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\manifest-affected"
           ],
@@ -311,12 +311,12 @@
       "replay_wheel_sha256": "a25a84f4f355b9ba37e975c0c2a90b52c7b30e96d5f95d601cb1d7ac00ac981e",
       "checkout": {
         "argv": [
-          "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+          "<PYTHON_ROOT>/Scripts/python.exe",
           "-c",
           "import djxml.xmlmodels; assert djxml.xmlmodels.consumer() == 'available'; print(djxml.xmlmodels.__file__)"
         ],
         "returncode": 0,
-        "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\affected\\djxml\\xmlmodels\\__init__.py\n",
+        "stdout": "<ARTIFACT_ROOT>/results/historical/assets/sources/affected/djxml/xmlmodels/__init__.py\n",
         "stderr": "",
         "seconds": 0.021895599988056347,
         "timeout": false
@@ -336,10 +336,10 @@
             "install",
             "--no-index",
             "--no-deps",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+            "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.0\n",
+          "stdout": "Processing <ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.0\n",
           "stderr": "",
           "seconds": 0.4665151000081096,
           "timeout": false
@@ -398,11 +398,11 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\prepared-affected\\venv\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py"
+            "<ARTIFACT_ROOT>/results/historical/assets/ordinary.py"
           ],
           "returncode": 1,
           "stdout": "",
-          "stderr": "Traceback (most recent call last):\n  File \"<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py\", line 4, in <module>\n    import djxml.xmlmodels\nModuleNotFoundError: No module named 'djxml.xmlmodels'\n",
+          "stderr": "Traceback (most recent call last):\n  File \"<ARTIFACT_ROOT>/results/historical/assets/ordinary.py\", line 4, in <module>\n    import djxml.xmlmodels\nModuleNotFoundError: No module named 'djxml.xmlmodels'\n",
           "seconds": 0.06400909999501891,
           "timeout": false
         }
@@ -480,15 +480,15 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.17910370000754483,
             "timeout": false
@@ -498,21 +498,21 @@
           "status": "REJECT",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "djxml",
               "--package",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\affected\\djxml",
+              "<ARTIFACT_ROOT>/results/historical/assets/sources/affected/djxml",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
             ],
             "returncode": 1,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl: W101: Wheel library is missing files in package tree:\n  djxml/xmlmodels/__init__.py\n  djxml/xmlmodels/fields/__init__.py\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl: W101: Wheel library is missing files in package tree:\n  djxml/xmlmodels/__init__.py\n  djxml/xmlmodels/fields/__init__.py\n",
             "stderr": "",
             "seconds": 0.17863099998794496,
             "timeout": false
@@ -525,7 +525,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\builder\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\source\\check-manifest-0.50\\check_manifest.py",
+            "<ARTIFACT_ROOT>/third_party/source/check-manifest-0.50/check_manifest.py",
             "--no-build-isolation",
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\manifest-affected"
           ],
@@ -544,12 +544,12 @@
       "replay_wheel_sha256": "a25a84f4f355b9ba37e975c0c2a90b52c7b30e96d5f95d601cb1d7ac00ac981e",
       "checkout": {
         "argv": [
-          "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+          "<PYTHON_ROOT>/Scripts/python.exe",
           "-c",
           "import djxml.xmlmodels; assert djxml.xmlmodels.consumer() == 'available'; print(djxml.xmlmodels.__file__)"
         ],
         "returncode": 0,
-        "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\affected\\djxml\\xmlmodels\\__init__.py\n",
+        "stdout": "<ARTIFACT_ROOT>/results/historical/assets/sources/affected/djxml/xmlmodels/__init__.py\n",
         "stderr": "",
         "seconds": 0.021895599988056347,
         "timeout": false
@@ -569,10 +569,10 @@
             "install",
             "--no-index",
             "--no-deps",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+            "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.0\n",
+          "stdout": "Processing <ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.0\n",
           "stderr": "",
           "seconds": 0.4665151000081096,
           "timeout": false
@@ -631,11 +631,11 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\prepared-affected\\venv\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py"
+            "<ARTIFACT_ROOT>/results/historical/assets/ordinary.py"
           ],
           "returncode": 1,
           "stdout": "",
-          "stderr": "Traceback (most recent call last):\n  File \"<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py\", line 4, in <module>\n    import djxml.xmlmodels\nModuleNotFoundError: No module named 'djxml.xmlmodels'\n",
+          "stderr": "Traceback (most recent call last):\n  File \"<ARTIFACT_ROOT>/results/historical/assets/ordinary.py\", line 4, in <module>\n    import djxml.xmlmodels\nModuleNotFoundError: No module named 'djxml.xmlmodels'\n",
           "seconds": 0.06170120000024326,
           "timeout": false
         }
@@ -713,15 +713,15 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.17910370000754483,
             "timeout": false
@@ -731,21 +731,21 @@
           "status": "REJECT",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "djxml",
               "--package",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\affected\\djxml",
+              "<ARTIFACT_ROOT>/results/historical/assets/sources/affected/djxml",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl"
             ],
             "returncode": 1,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\affected\\django_xml-4.0.0-py3-none-any.whl: W101: Wheel library is missing files in package tree:\n  djxml/xmlmodels/__init__.py\n  djxml/xmlmodels/fields/__init__.py\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/affected/django_xml-4.0.0-py3-none-any.whl: W101: Wheel library is missing files in package tree:\n  djxml/xmlmodels/__init__.py\n  djxml/xmlmodels/fields/__init__.py\n",
             "stderr": "",
             "seconds": 0.17863099998794496,
             "timeout": false
@@ -758,7 +758,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\builder\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\source\\check-manifest-0.50\\check_manifest.py",
+            "<ARTIFACT_ROOT>/third_party/source/check-manifest-0.50/check_manifest.py",
             "--no-build-isolation",
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\manifest-affected"
           ],
@@ -777,12 +777,12 @@
       "replay_wheel_sha256": "73e3eddac6ec674911b3cbd08729f74563ae718bfb57cda148d10b1889066073",
       "checkout": {
         "argv": [
-          "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+          "<PYTHON_ROOT>/Scripts/python.exe",
           "-c",
           "import djxml.xmlmodels; assert djxml.xmlmodels.consumer() == 'available'; print(djxml.xmlmodels.__file__)"
         ],
         "returncode": 0,
-        "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\fixed\\djxml\\xmlmodels\\__init__.py\n",
+        "stdout": "<ARTIFACT_ROOT>/results/historical/assets/sources/fixed/djxml/xmlmodels/__init__.py\n",
         "stderr": "",
         "seconds": 0.02101659998879768,
         "timeout": false
@@ -802,10 +802,10 @@
             "install",
             "--no-index",
             "--no-deps",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+            "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.1\n",
+          "stdout": "Processing <ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.1\n",
           "stderr": "",
           "seconds": 0.5174661999917589,
           "timeout": false
@@ -864,7 +864,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\prepared-fixed\\venv\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py"
+            "<ARTIFACT_ROOT>/results/historical/assets/ordinary.py"
           ],
           "returncode": 0,
           "stdout": "DJANGO_XML_OPERATION=available\n",
@@ -988,15 +988,15 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.16644880000967532,
             "timeout": false
@@ -1006,21 +1006,21 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "djxml",
               "--package",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\fixed\\djxml",
+              "<ARTIFACT_ROOT>/results/historical/assets/sources/fixed/djxml",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.16231350001180544,
             "timeout": false
@@ -1033,7 +1033,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\builder\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\source\\check-manifest-0.50\\check_manifest.py",
+            "<ARTIFACT_ROOT>/third_party/source/check-manifest-0.50/check_manifest.py",
             "--no-build-isolation",
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\manifest-fixed"
           ],
@@ -1052,12 +1052,12 @@
       "replay_wheel_sha256": "73e3eddac6ec674911b3cbd08729f74563ae718bfb57cda148d10b1889066073",
       "checkout": {
         "argv": [
-          "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+          "<PYTHON_ROOT>/Scripts/python.exe",
           "-c",
           "import djxml.xmlmodels; assert djxml.xmlmodels.consumer() == 'available'; print(djxml.xmlmodels.__file__)"
         ],
         "returncode": 0,
-        "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\fixed\\djxml\\xmlmodels\\__init__.py\n",
+        "stdout": "<ARTIFACT_ROOT>/results/historical/assets/sources/fixed/djxml/xmlmodels/__init__.py\n",
         "stderr": "",
         "seconds": 0.02101659998879768,
         "timeout": false
@@ -1077,10 +1077,10 @@
             "install",
             "--no-index",
             "--no-deps",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+            "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.1\n",
+          "stdout": "Processing <ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.1\n",
           "stderr": "",
           "seconds": 0.5174661999917589,
           "timeout": false
@@ -1139,7 +1139,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\prepared-fixed\\venv\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py"
+            "<ARTIFACT_ROOT>/results/historical/assets/ordinary.py"
           ],
           "returncode": 0,
           "stdout": "DJANGO_XML_OPERATION=available\n",
@@ -1263,15 +1263,15 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.16644880000967532,
             "timeout": false
@@ -1281,21 +1281,21 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "djxml",
               "--package",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\fixed\\djxml",
+              "<ARTIFACT_ROOT>/results/historical/assets/sources/fixed/djxml",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.16231350001180544,
             "timeout": false
@@ -1308,7 +1308,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\builder\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\source\\check-manifest-0.50\\check_manifest.py",
+            "<ARTIFACT_ROOT>/third_party/source/check-manifest-0.50/check_manifest.py",
             "--no-build-isolation",
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\manifest-fixed"
           ],
@@ -1327,12 +1327,12 @@
       "replay_wheel_sha256": "73e3eddac6ec674911b3cbd08729f74563ae718bfb57cda148d10b1889066073",
       "checkout": {
         "argv": [
-          "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+          "<PYTHON_ROOT>/Scripts/python.exe",
           "-c",
           "import djxml.xmlmodels; assert djxml.xmlmodels.consumer() == 'available'; print(djxml.xmlmodels.__file__)"
         ],
         "returncode": 0,
-        "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\fixed\\djxml\\xmlmodels\\__init__.py\n",
+        "stdout": "<ARTIFACT_ROOT>/results/historical/assets/sources/fixed/djxml/xmlmodels/__init__.py\n",
         "stderr": "",
         "seconds": 0.02101659998879768,
         "timeout": false
@@ -1352,10 +1352,10 @@
             "install",
             "--no-index",
             "--no-deps",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+            "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.1\n",
+          "stdout": "Processing <ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl\nInstalling collected packages: django-xml\nSuccessfully installed django-xml-4.0.1\n",
           "stderr": "",
           "seconds": 0.5174661999917589,
           "timeout": false
@@ -1414,7 +1414,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\prepared-fixed\\venv\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\ordinary.py"
+            "<ARTIFACT_ROOT>/results/historical/assets/ordinary.py"
           ],
           "returncode": 0,
           "stdout": "DJANGO_XML_OPERATION=available\n",
@@ -1538,15 +1538,15 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.16644880000967532,
             "timeout": false
@@ -1556,21 +1556,21 @@
           "status": "PASS",
           "process": {
             "argv": [
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\runtime\\Scripts\\python.exe",
+              "<PYTHON_ROOT>/Scripts/python.exe",
               "-I",
               "-c",
-              "import sys,runpy; sys.path[:0]=['<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\check-wheel-contents-0.6.1\\\\src', '<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\third_party\\\\source\\\\wheel-filename-1.4.2\\\\src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
+              "import sys,runpy; sys.path[:0]=['<ARTIFACT_ROOT>/third_party/source/check-wheel-contents-0.6.1/src', '<ARTIFACT_ROOT>/third_party/source/wheel-filename-1.4.2/src']; runpy.run_module('check_wheel_contents',run_name='__main__')",
               "--no-config",
               "--toplevel",
               "djxml",
               "--package",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\sources\\fixed\\djxml",
+              "<ARTIFACT_ROOT>/results/historical/assets/sources/fixed/djxml",
               "--package-omit",
               ".*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl"
+              "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl"
             ],
             "returncode": 0,
-            "stdout": "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\historical\\assets\\wheels\\fixed\\django_xml-4.0.1-py3-none-any.whl: OK\n",
+            "stdout": "<ARTIFACT_ROOT>/results/historical/assets/wheels/fixed/django_xml-4.0.1-py3-none-any.whl: OK\n",
             "stderr": "",
             "seconds": 0.16231350001180544,
             "timeout": false
@@ -1583,7 +1583,7 @@
           "argv": [
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\builder\\Scripts\\python.exe",
             "-I",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\source\\check-manifest-0.50\\check_manifest.py",
+            "<ARTIFACT_ROOT>/third_party/source/check-manifest-0.50/check_manifest.py",
             "--no-build-isolation",
             "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-django-xml-8qvfhhfb\\manifest-fixed"
           ],

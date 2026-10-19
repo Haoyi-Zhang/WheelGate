@@ -14,10 +14,10 @@
         "install",
         "--no-index",
         "--no-deps",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\setuptools-78.1.1-py3-none-any.whl"
+        "<ARTIFACT_ROOT>/third_party/setuptools-78.1.1-py3-none-any.whl"
       ],
       "returncode": 0,
-      "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\third_party\\setuptools-78.1.1-py3-none-any.whl\nInstalling collected packages: setuptools\nSuccessfully installed setuptools-78.1.1\n",
+      "stdout": "Processing <ARTIFACT_ROOT>/third_party/setuptools-78.1.1-py3-none-any.whl\nInstalling collected packages: setuptools\nSuccessfully installed setuptools-78.1.1\n",
       "stderr": "",
       "seconds": 1.4223124000127427,
       "timeout": false
@@ -27,10 +27,10 @@
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\builder\\Scripts\\python.exe",
         "-I",
         "-c",
-        "from setuptools.build_meta import build_wheel;build_wheel('<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\results\\\\package\\\\self-check-assets\\\\direct')"
+        "from setuptools.build_meta import build_wheel;build_wheel('<ARTIFACT_ROOT>/results/package/self-check-assets/direct')"
       ],
       "returncode": 0,
-      "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\wheelgate\ncopying wheelgate\\contractio.py -> build\\lib\\wheelgate\ncopying wheelgate\\footprint.py -> build\\lib\\wheelgate\ncopying wheelgate\\profile_worker.py -> build\\lib\\wheelgate\ncopying wheelgate\\runner.py -> build\\lib\\wheelgate\ncopying wheelgate\\worker.py -> build\\lib\\wheelgate\ncopying wheelgate\\__init__.py -> build\\lib\\wheelgate\ncopying wheelgate\\__main__.py -> build\\lib\\wheelgate\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\wheelgate\ncopying build\\lib\\wheelgate\\contractio.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\footprint.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\profile_worker.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\runner.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\worker.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\__main__.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\nrunning install_egg_info\nrunning egg_info\ncreating wheelgate.egg-info\nwriting wheelgate.egg-info\\PKG-INFO\nwriting dependency_links to wheelgate.egg-info\\dependency_links.txt\nwriting entry points to wheelgate.egg-info\\entry_points.txt\nwriting top-level names to wheelgate.egg-info\\top_level.txt\nwriting manifest file 'wheelgate.egg-info\\SOURCES.txt'\nreading manifest file 'wheelgate.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'wheelgate.egg-info\\SOURCES.txt'\nCopying wheelgate.egg-info to build\\bdist.win-amd64\\wheel\\.\\wheelgate-1.0.0-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\wheelgate-1.0.0.dist-info\\WHEEL\ncreating '<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\package\\self-check-assets\\direct\\.tmp-6gjx8cxv\\wheelgate-1.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it\nadding 'wheelgate/__init__.py'\nadding 'wheelgate/__main__.py'\nadding 'wheelgate/contractio.py'\nadding 'wheelgate/footprint.py'\nadding 'wheelgate/profile_worker.py'\nadding 'wheelgate/runner.py'\nadding 'wheelgate/worker.py'\nadding 'wheelgate-1.0.0.dist-info/licenses/LICENSE'\nadding 'wheelgate-1.0.0.dist-info/METADATA'\nadding 'wheelgate-1.0.0.dist-info/WHEEL'\nadding 'wheelgate-1.0.0.dist-info/entry_points.txt'\nadding 'wheelgate-1.0.0.dist-info/top_level.txt'\nadding 'wheelgate-1.0.0.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\n",
+      "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\wheelgate\ncopying wheelgate\\contractio.py -> build\\lib\\wheelgate\ncopying wheelgate\\footprint.py -> build\\lib\\wheelgate\ncopying wheelgate\\profile_worker.py -> build\\lib\\wheelgate\ncopying wheelgate\\runner.py -> build\\lib\\wheelgate\ncopying wheelgate\\worker.py -> build\\lib\\wheelgate\ncopying wheelgate\\__init__.py -> build\\lib\\wheelgate\ncopying wheelgate\\__main__.py -> build\\lib\\wheelgate\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\wheelgate\ncopying build\\lib\\wheelgate\\contractio.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\footprint.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\profile_worker.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\runner.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\worker.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\__main__.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\nrunning install_egg_info\nrunning egg_info\ncreating wheelgate.egg-info\nwriting wheelgate.egg-info\\PKG-INFO\nwriting dependency_links to wheelgate.egg-info\\dependency_links.txt\nwriting entry points to wheelgate.egg-info\\entry_points.txt\nwriting top-level names to wheelgate.egg-info\\top_level.txt\nwriting manifest file 'wheelgate.egg-info\\SOURCES.txt'\nreading manifest file 'wheelgate.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'wheelgate.egg-info\\SOURCES.txt'\nCopying wheelgate.egg-info to build\\bdist.win-amd64\\wheel\\.\\wheelgate-1.0.0-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\wheelgate-1.0.0.dist-info\\WHEEL\ncreating '<ARTIFACT_ROOT>/results/package/self-check-assets/direct/.tmp-6gjx8cxv/wheelgate-1.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it\nadding 'wheelgate/__init__.py'\nadding 'wheelgate/__main__.py'\nadding 'wheelgate/contractio.py'\nadding 'wheelgate/footprint.py'\nadding 'wheelgate/profile_worker.py'\nadding 'wheelgate/runner.py'\nadding 'wheelgate/worker.py'\nadding 'wheelgate-1.0.0.dist-info/licenses/LICENSE'\nadding 'wheelgate-1.0.0.dist-info/METADATA'\nadding 'wheelgate-1.0.0.dist-info/WHEEL'\nadding 'wheelgate-1.0.0.dist-info/entry_points.txt'\nadding 'wheelgate-1.0.0.dist-info/top_level.txt'\nadding 'wheelgate-1.0.0.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\n",
       "stderr": "",
       "seconds": 0.24039650001213886,
       "timeout": false
@@ -40,7 +40,7 @@
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\builder\\Scripts\\python.exe",
         "-I",
         "-c",
-        "from setuptools.build_meta import build_sdist;build_sdist('<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\results\\\\package\\\\self-check-assets\\\\sdist')"
+        "from setuptools.build_meta import build_sdist;build_sdist('<ARTIFACT_ROOT>/results/package/self-check-assets/sdist')"
       ],
       "returncode": 0,
       "stdout": "running sdist\nrunning egg_info\ncreating wheelgate.egg-info\nwriting wheelgate.egg-info\\PKG-INFO\nwriting dependency_links to wheelgate.egg-info\\dependency_links.txt\nwriting entry points to wheelgate.egg-info\\entry_points.txt\nwriting top-level names to wheelgate.egg-info\\top_level.txt\nwriting manifest file 'wheelgate.egg-info\\SOURCES.txt'\nreading manifest file 'wheelgate.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'wheelgate.egg-info\\SOURCES.txt'\nrunning check\ncreating wheelgate-1.0.0\ncreating wheelgate-1.0.0\\wheelgate\ncreating wheelgate-1.0.0\\wheelgate.egg-info\ncopying files to wheelgate-1.0.0...\ncopying LICENSE -> wheelgate-1.0.0\ncopying MANIFEST.in -> wheelgate-1.0.0\ncopying README.md -> wheelgate-1.0.0\ncopying pyproject.toml -> wheelgate-1.0.0\ncopying setup.py -> wheelgate-1.0.0\ncopying wheelgate\\__init__.py -> wheelgate-1.0.0\\wheelgate\ncopying wheelgate\\__main__.py -> wheelgate-1.0.0\\wheelgate\ncopying wheelgate\\contractio.py -> wheelgate-1.0.0\\wheelgate\ncopying wheelgate\\footprint.py -> wheelgate-1.0.0\\wheelgate\ncopying wheelgate\\profile_worker.py -> wheelgate-1.0.0\\wheelgate\ncopying wheelgate\\runner.py -> wheelgate-1.0.0\\wheelgate\ncopying wheelgate\\worker.py -> wheelgate-1.0.0\\wheelgate\ncopying wheelgate.egg-info\\PKG-INFO -> wheelgate-1.0.0\\wheelgate.egg-info\ncopying wheelgate.egg-info\\SOURCES.txt -> wheelgate-1.0.0\\wheelgate.egg-info\ncopying wheelgate.egg-info\\dependency_links.txt -> wheelgate-1.0.0\\wheelgate.egg-info\ncopying wheelgate.egg-info\\entry_points.txt -> wheelgate-1.0.0\\wheelgate.egg-info\ncopying wheelgate.egg-info\\top_level.txt -> wheelgate-1.0.0\\wheelgate.egg-info\ncopying wheelgate.egg-info\\SOURCES.txt -> wheelgate-1.0.0\\wheelgate.egg-info\nWriting wheelgate-1.0.0\\setup.cfg\nCreating tar archive\nremoving 'wheelgate-1.0.0' (and everything under it)\n",
@@ -53,10 +53,10 @@
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\builder\\Scripts\\python.exe",
         "-I",
         "-c",
-        "from setuptools.build_meta import build_wheel;build_wheel('<PROJECTS_ROOT>\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\new_three\\\\experiments\\\\wheelgate-replay-6953e325\\\\wheelgate\\\\artifact\\\\results\\\\package\\\\self-check-assets\\\\rebuilt')"
+        "from setuptools.build_meta import build_wheel;build_wheel('<ARTIFACT_ROOT>/results/package/self-check-assets/rebuilt')"
       ],
       "returncode": 0,
-      "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\wheelgate\ncopying wheelgate\\contractio.py -> build\\lib\\wheelgate\ncopying wheelgate\\footprint.py -> build\\lib\\wheelgate\ncopying wheelgate\\profile_worker.py -> build\\lib\\wheelgate\ncopying wheelgate\\runner.py -> build\\lib\\wheelgate\ncopying wheelgate\\worker.py -> build\\lib\\wheelgate\ncopying wheelgate\\__init__.py -> build\\lib\\wheelgate\ncopying wheelgate\\__main__.py -> build\\lib\\wheelgate\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\wheelgate\ncopying build\\lib\\wheelgate\\contractio.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\footprint.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\profile_worker.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\runner.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\worker.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\__main__.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\nrunning install_egg_info\nrunning egg_info\nwriting wheelgate.egg-info\\PKG-INFO\nwriting dependency_links to wheelgate.egg-info\\dependency_links.txt\nwriting entry points to wheelgate.egg-info\\entry_points.txt\nwriting top-level names to wheelgate.egg-info\\top_level.txt\nreading manifest file 'wheelgate.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'wheelgate.egg-info\\SOURCES.txt'\nCopying wheelgate.egg-info to build\\bdist.win-amd64\\wheel\\.\\wheelgate-1.0.0-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\wheelgate-1.0.0.dist-info\\WHEEL\ncreating '<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\package\\self-check-assets\\rebuilt\\.tmp-39w1pnil\\wheelgate-1.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it\nadding 'wheelgate/__init__.py'\nadding 'wheelgate/__main__.py'\nadding 'wheelgate/contractio.py'\nadding 'wheelgate/footprint.py'\nadding 'wheelgate/profile_worker.py'\nadding 'wheelgate/runner.py'\nadding 'wheelgate/worker.py'\nadding 'wheelgate-1.0.0.dist-info/licenses/LICENSE'\nadding 'wheelgate-1.0.0.dist-info/METADATA'\nadding 'wheelgate-1.0.0.dist-info/WHEEL'\nadding 'wheelgate-1.0.0.dist-info/entry_points.txt'\nadding 'wheelgate-1.0.0.dist-info/top_level.txt'\nadding 'wheelgate-1.0.0.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\n",
+      "stdout": "running bdist_wheel\nrunning build\nrunning build_py\ncreating build\\lib\\wheelgate\ncopying wheelgate\\contractio.py -> build\\lib\\wheelgate\ncopying wheelgate\\footprint.py -> build\\lib\\wheelgate\ncopying wheelgate\\profile_worker.py -> build\\lib\\wheelgate\ncopying wheelgate\\runner.py -> build\\lib\\wheelgate\ncopying wheelgate\\worker.py -> build\\lib\\wheelgate\ncopying wheelgate\\__init__.py -> build\\lib\\wheelgate\ncopying wheelgate\\__main__.py -> build\\lib\\wheelgate\ninstalling to build\\bdist.win-amd64\\wheel\nrunning install\nrunning install_lib\ncreating build\\bdist.win-amd64\\wheel\ncreating build\\bdist.win-amd64\\wheel\\wheelgate\ncopying build\\lib\\wheelgate\\contractio.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\footprint.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\profile_worker.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\runner.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\worker.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\__init__.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\ncopying build\\lib\\wheelgate\\__main__.py -> build\\bdist.win-amd64\\wheel\\.\\wheelgate\nrunning install_egg_info\nrunning egg_info\nwriting wheelgate.egg-info\\PKG-INFO\nwriting dependency_links to wheelgate.egg-info\\dependency_links.txt\nwriting entry points to wheelgate.egg-info\\entry_points.txt\nwriting top-level names to wheelgate.egg-info\\top_level.txt\nreading manifest file 'wheelgate.egg-info\\SOURCES.txt'\nreading manifest template 'MANIFEST.in'\nadding license file 'LICENSE'\nwriting manifest file 'wheelgate.egg-info\\SOURCES.txt'\nCopying wheelgate.egg-info to build\\bdist.win-amd64\\wheel\\.\\wheelgate-1.0.0-py3.12.egg-info\nrunning install_scripts\ncreating build\\bdist.win-amd64\\wheel\\wheelgate-1.0.0.dist-info\\WHEEL\ncreating '<ARTIFACT_ROOT>/results/package/self-check-assets/rebuilt/.tmp-39w1pnil/wheelgate-1.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it\nadding 'wheelgate/__init__.py'\nadding 'wheelgate/__main__.py'\nadding 'wheelgate/contractio.py'\nadding 'wheelgate/footprint.py'\nadding 'wheelgate/profile_worker.py'\nadding 'wheelgate/runner.py'\nadding 'wheelgate/worker.py'\nadding 'wheelgate-1.0.0.dist-info/licenses/LICENSE'\nadding 'wheelgate-1.0.0.dist-info/METADATA'\nadding 'wheelgate-1.0.0.dist-info/WHEEL'\nadding 'wheelgate-1.0.0.dist-info/entry_points.txt'\nadding 'wheelgate-1.0.0.dist-info/top_level.txt'\nadding 'wheelgate-1.0.0.dist-info/RECORD'\nremoving build\\bdist.win-amd64\\wheel\n",
       "stderr": "",
       "seconds": 0.23696849998668768,
       "timeout": false
@@ -105,8 +105,8 @@
     {
       "argv": [
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\direct-wheel\\venv\\Scripts\\wheelgate.exe",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\contracts\\fixture.json",
+        "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl",
+        "<ARTIFACT_ROOT>/contracts/fixture.json",
         "--output",
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\direct-wheel\\good.json"
       ],
@@ -119,8 +119,8 @@
     {
       "argv": [
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\direct-wheel\\venv\\Scripts\\wheelgate.exe",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\contracts\\fixture.json",
+        "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl",
+        "<ARTIFACT_ROOT>/contracts/fixture.json",
         "--output",
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\direct-wheel\\missing.json"
       ],
@@ -174,8 +174,8 @@
     {
       "argv": [
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\sdist-wheel\\venv\\Scripts\\wheelgate.exe",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\contracts\\fixture.json",
+        "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl",
+        "<ARTIFACT_ROOT>/contracts/fixture.json",
         "--output",
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\sdist-wheel\\good.json"
       ],
@@ -188,8 +188,8 @@
     {
       "argv": [
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\sdist-wheel\\venv\\Scripts\\wheelgate.exe",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl",
-        "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\contracts\\fixture.json",
+        "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl",
+        "<ARTIFACT_ROOT>/contracts/fixture.json",
         "--output",
         "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\sdist-wheel\\missing.json"
       ],
@@ -220,10 +220,10 @@
             "install",
             "--no-index",
             "--no-deps",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\package\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl"
+            "<ARTIFACT_ROOT>/results/package/self-check-assets/direct/wheelgate-1.0.0-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\package\\self-check-assets\\direct\\wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
+          "stdout": "Processing <ARTIFACT_ROOT>/results/package/self-check-assets/direct/wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
           "stderr": "",
           "seconds": 0.4716455000161659,
           "timeout": false
@@ -323,8 +323,8 @@
           "process": {
             "argv": [
               "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\direct-wheel\\venv\\Scripts\\wheelgate.exe",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\contracts\\fixture.json",
+              "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl",
+              "<ARTIFACT_ROOT>/contracts/fixture.json",
               "--output",
               "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\direct-wheel\\good.json"
             ],
@@ -361,10 +361,10 @@
                   "install",
                   "--no-index",
                   "--no-deps",
-                  "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl"
+                  "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl"
                 ],
                 "returncode": 0,
-                "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
+                "stdout": "Processing <ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
                 "stderr": "",
                 "seconds": 0.3582884999923408,
                 "timeout": false
@@ -989,8 +989,8 @@
           "process": {
             "argv": [
               "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\direct-wheel\\venv\\Scripts\\wheelgate.exe",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\contracts\\fixture.json",
+              "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl",
+              "<ARTIFACT_ROOT>/contracts/fixture.json",
               "--output",
               "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\direct-wheel\\missing.json"
             ],
@@ -1027,10 +1027,10 @@
                   "install",
                   "--no-index",
                   "--no-deps",
-                  "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl"
+                  "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl"
                 ],
                 "returncode": 0,
-                "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
+                "stdout": "Processing <ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
                 "stderr": "",
                 "seconds": 0.45094919999246486,
                 "timeout": false
@@ -1611,10 +1611,10 @@
             "install",
             "--no-index",
             "--no-deps",
-            "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\package\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl"
+            "<ARTIFACT_ROOT>/results/package/self-check-assets/rebuilt/wheelgate-1.0.0-py3-none-any.whl"
           ],
           "returncode": 0,
-          "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\results\\package\\self-check-assets\\rebuilt\\wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
+          "stdout": "Processing <ARTIFACT_ROOT>/results/package/self-check-assets/rebuilt/wheelgate-1.0.0-py3-none-any.whl\nInstalling collected packages: wheelgate\nSuccessfully installed wheelgate-1.0.0\n",
           "stderr": "",
           "seconds": 0.4885498999792617,
           "timeout": false
@@ -1714,8 +1714,8 @@
           "process": {
             "argv": [
               "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\sdist-wheel\\venv\\Scripts\\wheelgate.exe",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\contracts\\fixture.json",
+              "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl",
+              "<ARTIFACT_ROOT>/contracts/fixture.json",
               "--output",
               "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\sdist-wheel\\good.json"
             ],
@@ -1752,10 +1752,10 @@
                   "install",
                   "--no-index",
                   "--no-deps",
-                  "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl"
+                  "<ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl"
                 ],
                 "returncode": 0,
-                "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-direct\\wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
+                "stdout": "Processing <ARTIFACT_ROOT>/inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
                 "stderr": "",
                 "seconds": 0.3696080000081565,
                 "timeout": false
@@ -2380,8 +2380,8 @@
           "process": {
             "argv": [
               "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\sdist-wheel\\venv\\Scripts\\wheelgate.exe",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl",
-              "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\contracts\\fixture.json",
+              "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl",
+              "<ARTIFACT_ROOT>/contracts/fixture.json",
               "--output",
               "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-packaging-4hjbbo0o\\sdist-wheel\\missing.json"
             ],
@@ -2418,10 +2418,10 @@
                   "install",
                   "--no-index",
                   "--no-deps",
-                  "<PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl"
+                  "<ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl"
                 ],
                 "returncode": 0,
-                "stdout": "Processing <PROJECTS_ROOT>\\2026-07-13\\new-chat-4\\completion_workspace\\new_three\\experiments\\wheelgate-replay-6953e325\\wheelgate\\artifact\\inputs\\fixture-rebuilt\\wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
+                "stdout": "Processing <ARTIFACT_ROOT>/inputs/fixture-rebuilt/wg_fixture-0.1.0-py3-none-any.whl\nInstalling collected packages: wg-fixture\nSuccessfully installed wg-fixture-0.1.0\n",
                 "stderr": "",
                 "seconds": 0.36542370001552626,
                 "timeout": false
