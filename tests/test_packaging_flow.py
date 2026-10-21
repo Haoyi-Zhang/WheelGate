@@ -66,10 +66,14 @@ class PackagingFlowExit(unittest.TestCase):
                  mock.patch.object(flow.sys, 'argv', ['packaging_flow.py', '--output', str(out)]), \
                  mock.patch('subprocess.run', side_effect=AssertionError('No native processes allowed')) as native, \
                  contextlib.redirect_stdout(io.StringIO()):
-                code = flow.main()
+                # Linux platform.platform() may spawn `uname -p` on first use.
+                # This no-process control-flow fixture owns its metadata too.
+                with mock.patch.object(flow.platform, 'platform', return_value='owned-unit-platform'):
+                    code = flow.main()
             native.assert_not_called()
             result = json.loads(out.read_text(encoding='utf-8'))
         self.assertEqual(calls, {'ordinary': 2, 'gate': 2, 'cwc': 4})
+        self.assertEqual(result['platform'], 'owned-unit-platform')
         self.assertEqual([r['route'] for r in result['runs']], ['direct-wheel', 'sdist-wheel'])
         for row in result['runs']:
             self.assertEqual(row['ordinary']['process']['stdout'], 'retained stdout')
