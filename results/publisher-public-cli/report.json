@@ -2,6 +2,7 @@
   "schema": 1,
   "status": "executed",
   "record_kind": "compact-source-bound-public-CLI-result",
+  "receipt_representation": "path-normalized-public-copy",
   "all_expected": true,
   "scope": "3 public CLI observations, kept separate from retained6/45/24studies and previous manual-stage results. Child receipts contain their ordinary elapsed fields; no new performance claim.",
   "runtime": {
@@ -13,7 +14,8 @@
   },
   "execution_helper": {
     "file": "scripts/publisher_cli_replay.py",
-    "sha256": "fd2bbc52ae4a123176a385eda0d8036bedeb2bb0f5f02574ba3417b6284eb131"
+    "sha256": "fd2bbc52ae4a123176a385eda0d8036bedeb2bb0f5f02574ba3417b6284eb131",
+    "binding_scope": "recorded-execution-source"
   },
   "runtime_source_bindings": [
     {
@@ -332,12 +334,12 @@
     "storage": "private-unabridged-wrapper-report-not-this-projected-file",
     "bytes": 16679,
     "sha256": "50498848b8bd48f4a159020e2d94b60fcd91f6cb7c7f567e1d4538839657947b",
-    "location": "Unabridged execution wrapper report retained separately; all three raw operation receipts are included here."
+    "location": "Unabridged execution wrapper report retained separately; the three included operation receipts are path-normalized public copies."
   },
   "transformations": [
-    "The three *-public-cli.json operation receipts are byte-preserved from the actual run, including paths, ordinary elapsed fields, failures, setup processes, origins and footprints.",
+    "The three *-public-cli.json operation receipts are path-normalized public copies of recorded execution captures. Paths use the documented portable aliases; the included files are not byte-identical to the pre-normalization captures.",
     "This report is a compact projection of the unabridged execution-wrapper report, not a replacement native run. Repeated host-absolute input/dependency paths are represented by artifact-relative paths or basenames; repeated argv/stdout/stderr are omitted. Original wrapper bytes are bound above.",
-    "Readiness, pip return codes, operation result, identities and ownership counts are selected directly from the included raw receipts. No raw operation receipt fields were removed or rewritten."
+    "Readiness, pip return codes, operation results and ownership counts are selected from the included public copies. Each raw_receipt.sha256/bytes pair binds its current included file; its recorded_sha256/recorded_bytes pair preserves the historical pre-normalization identity. Pre-normalization captures are not bundled here, and their recorded identities are not checksums of the current public copies. The execution_helper identity refers to the source used for that recorded run, not necessarily the current generator."
   ],
   "interpretation": "Three new public-entry observations are separate from the earlier stage-level observations and retained6/45/24studies. Expected FAIL is a subject operation failure after ready setup, not an invalid experiment. No timing campaign, installed console-launcher, native-library-internal trace, offline prerequisite bundle or new defect-recall measurement is claimed."
 }

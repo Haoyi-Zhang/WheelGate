@@ -204,6 +204,19 @@ To repeat the self-package comparison in a host with CWC dependencies installed:
 python scripts/packaging_flow.py --output /tmp/wg-self-flow/comparison.json
 ```
 
+For a fresh positive self-package comparison, exit 0 and `COMPLETE` require
+ordinary, gate, and both CWC checks to pass on both routes. Execution finishing
+is recorded separately as `execution_completed`; it does not imply success.
+`FAIL` (including CWC `REJECT`) exits 1; `BLOCKED` or `INVALID` exits 2.
+For mixed outcomes, the summary priority is `INVALID`, `BLOCKED`, then `FAIL`;
+`unexpected_results` retains every non-passing route/method/status, and the
+original processes and gate details remain in `runs`. The small wrapper
+regressions can run without building or installing anything:
+
+```sh
+python -B -m unittest discover -s tests -p test_packaging_flow.py -v
+```
+
 The optional `--comparison-wheel-dir` instead reads pinned pure-Python dependency
 wheels through zipimport without installing them or running startup hooks. The
 record identifies the dependency versions and inputs actually used. Component
@@ -290,3 +303,13 @@ artifact rendering dependency into the wheel. The replay host requires both
 ## Portable path notation
 
 Published execution records use `<PYTHON_ROOT>`, `<NODE_ROOT>` and `<RUNTIME_ROOT>` for local tool installations, `<DEPENDENCIES_ROOT>` for local dependencies, and `<PROJECTS_ROOT>`, `<ARTIFACT_ROOT>`, `<SOURCE_ROOT>` and `<WORK_ROOT>` for the workspace, artifact checkout, source checkout and temporary work directory of the recorded run. These are path aliases, not literal directories or claims that historical temporary files are included in this bundle. Substitute the corresponding local roots when replaying a command. Recorded tool versions, source/input identities, measurements, outcomes and failures are unchanged. Current file inventories bind the portable published bytes; any `recorded_` identity denotes pre-normalization bytes.
+
+The retained `results/publisher-public-cli/report.json` labels its three receipts
+as `path-normalized-public-copy`: each `raw_receipt.sha256`/`bytes` pair identifies
+the included current file, while its `recorded_sha256`/`recorded_bytes` pair preserves
+the separately recorded execution-capture identity. Those original captures are
+not bundled here. Fresh `scripts/publisher_cli_replay.py` output is instead an
+`execution-capture`; it does not normalize child receipt paths and binds each
+file with `raw_receipt_sha256` and `raw_receipt_bytes`. A retained execution-time
+generator hash (including `execution_helper.sha256` or `script_sha256`) is not
+an assertion that a subsequently updated generator still has those bytes.

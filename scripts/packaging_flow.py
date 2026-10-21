@@ -90,7 +90,8 @@ def main():
                     "runpy.run_module('check_wheel_contents',run_name='__main__')")
     result = {"schema": 1, "experiment": "supplied-wheelgate-self-package-flow",
               "scope": "One owned software package, two release routes, no external maintainer deployment",
-              "status": "RUNNING", "script_sha256": digest(pathlib.Path(__file__)),
+              "status": "RUNNING", "execution_completed": False, "all_expected": False,
+              "script_sha256": digest(pathlib.Path(__file__)),
               "started_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
               "python": sys.version, "platform": platform.platform(),
               "comparison_dependencies": dependencies,
@@ -111,7 +112,8 @@ def main():
         if package["returncode"] != 0 or package["timeout"]:
             result["status"] = "INCOMPLETE"; save(); return 1
         record = json.loads(package_record.read_text(encoding="utf-8"))
-        if record["status"] != "COMPLETE" or not record["payloads_equal"]:
+        if (record["status"] != "COMPLETE" or not record["payloads_equal"]
+                or sorted(row["route"] for row in record["routes"]) != ["direct-wheel", "sdist-wheel"]):
             raise AssertionError("Package-flow precondition failed")
         result["package_record"] = {"file": "self-check.json", "sha256": digest(package_record)}
         version_code = (f"import importlib.metadata as m,sys;sys.path[:0]={dependency_paths!r};"
@@ -140,15 +142,29 @@ def main():
                 checks[preset] = {"status": status, "process": cp}
             result["runs"].append({"route": row["route"], "wheel": row["wheel"], "sha256": row["sha256"],
                                    "setup": setup, "unit_tests": row["unit_tests"],
-                                   "ordinary": {"status": "PASS" if ordinary["returncode"] == 0 else "FAIL", "process": ordinary},
+                                   "ordinary": {"status": "INVALID" if ordinary["timeout"] else
+                                                ("PASS" if ordinary["returncode"] == 0 else "FAIL"),
+                                                "process": ordinary},
                                    "gate": gate, "cwc": checks})
             save()
             print(row["route"], result["runs"][-1]["ordinary"]["status"], gate["status"],
                   {p: c["status"] for p, c in checks.items()}, flush=True)
-    result["status"] = "COMPLETE"
+    unexpected = []
+    for row in result["runs"]:
+        outcomes = [("ordinary", row["ordinary"]["status"]), ("gate", row["gate"]["status"])]
+        outcomes.extend(("cwc:" + preset, check["status"]) for preset, check in row["cwc"].items())
+        unexpected.extend({"route": row["route"], "method": method, "status": status}
+                          for method, status in outcomes if status != "PASS")
+    statuses = {row["status"] for row in unexpected}
+    result["execution_completed"] = True
+    result["all_expected"] = not unexpected
+    result["unexpected_results"] = unexpected
+    result["status"] = ("INVALID" if "INVALID" in statuses else
+                        "BLOCKED" if "BLOCKED" in statuses else
+                        "FAIL" if unexpected else "COMPLETE")
     result["completed_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat()
     save()
-    return 0
+    return {"COMPLETE": 0, "FAIL": 1, "BLOCKED": 2, "INVALID": 2}[result["status"]]
 
 
 if __name__ == "__main__":

@@ -121,10 +121,14 @@ def execute_plan(planned, output_dir, temp_root):
             completed = subprocess.run(argv, cwd=ROOT, env=env, capture_output=True,
                                        text=True, encoding="utf-8", errors="replace", timeout=300)
             row.update(returncode=completed.returncode, stdout=completed.stdout, stderr=completed.stderr)
-            receipt = json.loads(target.read_text(encoding="utf-8")) if target.exists() else {}
+            captured = target.read_bytes() if target.exists() else None
+            receipt = json.loads(captured.decode("utf-8")) if captured is not None else {}
             row.update(status=receipt.get("status", "INVALID"),
                        matches_expected=case_matches(case, receipt, completed.returncode),
                        raw_receipt=str(target))
+            if captured is not None:
+                row.update(raw_receipt_sha256=hashlib.sha256(captured).hexdigest(),
+                           raw_receipt_bytes=len(captured))
         except (OSError, ValueError, subprocess.TimeoutExpired) as exc:
             row.update(status="BLOCKED", matches_expected=False, error=type(exc).__name__ + ": " + str(exc))
         rows.append(row)
@@ -132,6 +136,8 @@ def execute_plan(planned, output_dir, temp_root):
     report = {**planned, "status": "executed", "python": sys.version, "platform": platform.platform(),
               "script_sha256": sha(__file__), "results": rows,
               "all_expected": all(row["matches_expected"] for row in rows),
+              "receipt_representation": "execution-capture",
+              "receipt_identity_scope": "raw_receipt_sha256 and raw_receipt_bytes bind the fresh child output as read. This generator does not normalize receipt paths. A subsequently path-normalized public copy needs its own current byte identity, distinct from any recorded pre-normalization identity.",
               "scope": "3 public CLI observations, kept separate from retained6/45/24studies and previous manual-stage results. Child receipts contain their ordinary elapsed fields; no new performance claim."}
     (output_dir / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     return report
@@ -157,4 +163,3 @@ def main():
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
