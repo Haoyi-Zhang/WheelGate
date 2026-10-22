@@ -24,7 +24,7 @@ import zipfile
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from wheelgate.runner import clean_env, execute, prepare, probe, venv_python
-from cwc_baseline import verify_sources
+from cwc_baseline import cwc_status, verify_sources
 
 API = '''from importlib.resources import files
 import json
@@ -189,7 +189,7 @@ def main():
                                         opts+=['--toplevel','wg_matrix','--package',str(original/'wg_matrix'),
                                                '--package-omit','.*,CVS,RCS,*.pyc,*.pyo,*.egg-info,__pycache__']
                                     proc=execute([sys.executable,'-I','-c',cwc_launcher,*opts,wheel],neutral,env)
-                                    row['content_checks'][preset]={'status':'PASS' if proc['returncode']==0 else 'REJECT', 'process':proc}
+                                    row['content_checks'][preset]={'status':cwc_status(proc), 'process':proc}
                             else:
                                 row['gate']={'status':'NOT_APPLICABLE','reason':'This is a development installation, not the selected wheel-release profile.'}
                         row['ordinary_status']='PASS' if row['ordinary']['returncode']==0 else 'FAIL'

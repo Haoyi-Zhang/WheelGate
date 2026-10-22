@@ -182,7 +182,10 @@ def audit_historical() -> dict[str, int]:
     record = load(path)
     require(record["status"] == "COMPLETE", "historical replay incomplete")
     require(record["classification"].startswith("configuration-faithful replay"), "historical replay classification changed")
-    require(record["script_sha256"] == sha256(ROOT / "scripts/historical_replay.py"), "historical replay script drift")
+    record_script(record["script_sha256"], [
+        ROOT / "scripts/provenance/historical_replay.py",
+        ROOT / "scripts/historical_replay.py",
+    ])
     evidence = record["evidence"]
     require(evidence["affected_source_commit"] == "30112f19d9b3f21ccfe0986350efac17098c065b", "affected source commit changed")
     require(evidence["fix_commit"] == "37f6ed3d6b246b129c35f8aba4dbf69b34a83b28", "fix commit changed")

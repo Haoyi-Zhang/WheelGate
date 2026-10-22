@@ -29,7 +29,7 @@ import venv
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from wheelgate.runner import clean_env, execute, prepare, probe
-from cwc_baseline import verify_sources
+from cwc_baseline import cwc_status, verify_sources
 
 ISSUE = "https://github.com/theatlantic/django-xml/issues/18"
 FIX_COMMIT = "37f6ed3d6b246b129c35f8aba4dbf69b34a83b28"
@@ -223,8 +223,8 @@ def main() -> int:
             default = cwc_process(wheel, source / "djxml", False, cwc_work)
             reference = cwc_process(wheel, source / "djxml", True, cwc_work)
             description["cwc"] = {
-                "default": {"status":"PASS" if default["returncode"] == 0 else "REJECT", "process":default},
-                "reference": {"status":"PASS" if reference["returncode"] == 0 else "REJECT", "process":reference},
+                "default": {"status":cwc_status(default), "process":default},
+                "reference": {"status":cwc_status(reference), "process":reference},
             }
             if description["cwc"]["default"]["status"] != description["cwc_default"]:
                 raise AssertionError((name, description["cwc"]))

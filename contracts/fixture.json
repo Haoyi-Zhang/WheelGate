@@ -8,7 +8,7 @@
       "modules": [
         "wg_fixture"
       ],
-      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle"
+      "evidence": "inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl!wg_fixture/__init__.py: authored synthetic import obligation, not a historical oracle"
     },
     {
       "id": "consumer",
@@ -17,7 +17,7 @@
       "modules": [
         "wg_fixture"
       ],
-      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle",
+      "evidence": "inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl!wg_fixture/__init__.py: authored consumer returns the template message hello, not a historical oracle",
       "target": "wg_fixture:consumer",
       "equals": "hello"
     },
@@ -28,7 +28,7 @@
       "modules": [
         "wg_fixture"
       ],
-      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle",
+      "evidence": "inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl!wg_fixture/template.json: authored JSON resource schema=1 and message=hello, absent from fixture-rebuilt",
       "package": "wg_fixture",
       "resource": "template.json",
       "format": "json",
@@ -44,7 +44,7 @@
       "modules": [
         "wg_fixture"
       ],
-      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle",
+      "evidence": "inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl!wg_fixture-0.1.0.dist-info/entry_points.txt: authored wg-fixture command maps to wg_fixture:main, which prints the consumer message",
       "command": "wg-fixture",
       "equals": "hello\n"
     },
@@ -55,7 +55,7 @@
       "modules": [
         "wg_fixture"
       ],
-      "evidence": "examples/fixture/README.md: author-defined synthetic consumer contract, not a historical oracle",
+      "evidence": "inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl!wg_fixture-0.1.0.dist-info/entry_points.txt: authored wheelgate.fixture_plugins demo maps to wg_fixture:consumer",
       "group": "wheelgate.fixture_plugins",
       "name": "demo",
       "invoke": true,

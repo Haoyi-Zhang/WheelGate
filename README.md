@@ -125,6 +125,32 @@ python -m venv /tmp/wg-env
 The same command with `inputs/fixture-rebuilt/` must return a nonzero status
 because the promised resource is absent.
 
+### Smoke fixture
+
+`contracts/fixture.json` defines five author-specified synthetic obligations for
+`wg-fixture` 0.1.0, not a historical defect or an independently maintained oracle:
+
+- import `wg_fixture`;
+- call `wg_fixture:consumer`, expecting the string `hello`;
+- read `wg_fixture/template.json`, expecting JSON `{"schema": 1, "message": "hello"}`;
+- run the `wg-fixture` console command, expecting stdout `hello\n`;
+- load and invoke `demo` in the `wheelgate.fixture_plugins` entry-point group,
+  expecting the string `hello`.
+
+Both retained fixture wheels contain the same `wg_fixture/__init__.py` and
+entry-point declarations: `wg-fixture = wg_fixture:main` and
+`demo = wg_fixture:consumer`. The consumer reads `template.json` and returns its
+`message`; the console function prints that value. The healthy direct wheel
+contains the promised JSON resource. The rebuilt missing-resource wheel omits
+it, so importing the module alone can succeed while the resource-dependent
+obligations fail. These members can be inspected without importing either wheel.
+Each evidence pointer uses `archive.whl!member`: the path before `!` is a
+retained file relative to this artifact directory, and the remainder identifies
+the ZIP member. The five pointers identify the healthy wheel's module source,
+JSON resource, and entry-point declarations rather than a missing README.
+
+### Retained-study commands
+
 Regenerate manuscript tables from the selected records and audit consistency:
 
 ```sh
@@ -148,6 +174,20 @@ check-wheel-contents 0.6.1 from retained upstream sources:
 python scripts/route_matrix.py --output /tmp/routes/matrix.json
 ```
 
+The three CWC wrappers (`cwc_baseline.py`, `route_matrix.py`, and
+`historical_replay.py`) treat exit 0 as `PASS`, exit 1 as content `REJECT`, and
+exit 2 (invalid invocation) as `CALLERROR`. Launch failure (127) or timeout is
+`BLOCKED`; other unexpected exits are `INVALID`. `CALLERROR` is a comparison-tool
+call outcome, not a WheelGate qualification status or a content rejection.
+Raw argv, streams, return code and the
+timeout flag remain in the receipt. The standalone CWC wrapper exits 2 for a
+call error, blocked or invalid call, 1 for content rejection, and 0 for acceptance. Its
+no-build stub regressions run with:
+
+```sh
+python -B -m unittest discover -s tests -p test_cwc_wrappers.py -v
+```
+
 `requirements-comparison.txt` records the host-side dependencies used by that
 comparison. Subject environments do not inherit those packages.
 
@@ -169,8 +209,14 @@ Retained file references (not process arguments or temporary origins) may use
 Windows or POSIX separators. `scripts/evidence_paths.py` resolves only relative
 references inside the artifact or record directory; it rejects absolute paths,
 drive syntax, traversal, and paths resolving outside that directory. New
-requalification and self-package records write POSIX separators. The original
-route generator is retained unchanged because its hash binds the selected study.
+requalification and self-package records write POSIX separators. The selected
+route study retains its execution-time generator at
+`results/routes/provenance/route_matrix.py`; updated wrapper error handling does
+not rewrite that source or the selected records.
+The historical replay likewise retains its exact execution-time generator at
+`scripts/provenance/historical_replay.py`, read only for its source binding, not
+as a runnable entry point. The audit checks that retained hash without attributing
+the historical run to the updated wrapper.
 
 `scripts/reproduce.py` reruns the context and historical studies, route
 requalification, and software installation study in a fresh copy. Its

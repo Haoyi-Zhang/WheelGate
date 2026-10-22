@@ -18,6 +18,16 @@ SOURCES = ROOT / "third_party/source"
 DEPENDENCIES = ("attrs", "click", "packaging", "pydantic")
 
 
+def cwc_status(process: dict[str, object]) -> str:
+    """Only exits 0/1 establish a CWC content decision; retain other failures."""
+    if process.get("timeout"):
+        return "BLOCKED"
+    # execute() uses 127 when the process cannot be launched.
+    return {0: "PASS", 1: "REJECT", 2: "CALLERROR", 127: "BLOCKED"}.get(
+        process.get("returncode"), "INVALID"
+    )
+
+
 def verify_sources() -> None:
     """Verify every retained upstream source file against SHA-256 and Git blob ID."""
     rows = json.loads((SOURCES / "manifest.json").read_text(encoding="utf-8"))
@@ -80,15 +90,25 @@ def run_check(
         returncode = None
         stdout = exc.stdout or ""
         stderr = exc.stderr or ""
-    return {
+        if isinstance(stdout, bytes):
+            stdout = stdout.decode("utf-8", errors="surrogateescape")
+        if isinstance(stderr, bytes):
+            stderr = stderr.decode("utf-8", errors="surrogateescape")
+    except OSError as exc:
+        timed_out = False
+        returncode = 127
+        stdout = ""
+        stderr = str(exc)
+    receipt = {
         "argv": command,
         "returncode": returncode,
         "stdout": stdout,
         "stderr": stderr,
         "seconds": time.perf_counter() - started,
         "timeout": timed_out,
-        "status": "TIMEOUT" if timed_out else ("PASS" if returncode == 0 else "REJECT"),
     }
+    receipt["status"] = cwc_status(receipt)
+    return receipt
 
 
 def main() -> int:
@@ -137,7 +157,10 @@ def main() -> int:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(rendered, encoding="utf-8")
     print(rendered, end="")
-    return 0 if all(row["process"]["status"] == "PASS" for row in receipts) else 1
+    statuses = {row["process"]["status"] for row in receipts}
+    if statuses - {"PASS", "REJECT"}:
+        return 2
+    return 1 if "REJECT" in statuses else 0
 
 
 if __name__ == "__main__":
