@@ -23,7 +23,7 @@ import zipfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
-from wheelgate.runner import clean_env, execute, prepare, probe
+from wheelgate.runner import clean_env, execute, prepare, probe, venv_python
 from cwc_baseline import verify_sources
 
 API = '''from importlib.resources import files
@@ -47,6 +47,12 @@ assert value == "hello", repr(value)
 from importlib.resources import files
 assert json.loads(files("wg_matrix").joinpath("template.json").read_text()) == {"schema":1,"message":"hello"}
 print("MATRIX_JSON=" + json.dumps({"value":value,"origin":wg_matrix.__file__,"prefix":sys.prefix}))
+'''
+WHEEL_OWNERSHIP = '''
+import importlib.metadata as metadata
+owner = metadata.distribution('wg-matrix')
+assert any(pathlib.Path(owner.locate_file(item)).resolve() == pathlib.Path(wg_matrix.__file__).resolve()
+           for item in (owner.files or ())), 'Imported module is not owned by selected distribution'
 '''
 
 
@@ -91,7 +97,7 @@ def contracts():
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--output', type=pathlib.Path, default=ROOT/'results/v3/routes.json')
+    parser.add_argument('--output', type=pathlib.Path, default=ROOT/'results/routes/matrix.json')
     parser.add_argument('--repetitions', type=int, default=3)
     args=parser.parse_args()
     if args.repetitions < 1: parser.error('repetitions must be positive')
@@ -122,7 +128,7 @@ def main():
     try:
         with tempfile.TemporaryDirectory(prefix='wheelgate-route-') as td:
             temp=pathlib.Path(td);builder=temp/'builder';venv.EnvBuilder(with_pip=True).create(builder)
-            py=builder/'bin/python';home=temp/'home';home.mkdir();env=clean_env(home,py.parent)
+            py=venv_python(builder);home=temp/'home';home.mkdir();env=clean_env(home,py.parent)
             env['SOURCE_DATE_EPOCH']='1704067200'
             run([py,'-I','-m','pip','install','--no-index','--no-deps',
                  ROOT/'third_party/setuptools-78.1.1-py3-none-any.whl'],temp,env)
@@ -171,7 +177,8 @@ def main():
                             row['smoke']=execute([subject,'-I','-c','import wg_matrix;print(wg_matrix.__file__)'],neutral,subject_env)
                             ordinary_code=CONSUMER
                             if route.endswith('wheel'):
-                                ordinary_code += '\nimport subprocess\ncommand = pathlib.Path(sys.executable).parent / \"wg-matrix\"\ncp = subprocess.run([str(command)], capture_output=True, text=True, timeout=10)\nassert cp.returncode == 0, cp.stderr\nassert cp.stdout == \"hello\\n\", repr(cp.stdout)\n'
+                                ordinary_code += WHEEL_OWNERSHIP
+                                ordinary_code += '\nimport subprocess\ncommand = pathlib.Path(sys.executable).parent / (\"wg-matrix.exe\" if sys.platform == \"win32\" else \"wg-matrix\")\ncp = subprocess.run([str(command)], capture_output=True, text=True, timeout=10)\nassert cp.returncode == 0, cp.stderr\nassert cp.stdout == \"hello\\n\", repr(cp.stdout)\n'
                             row['ordinary']=execute([subject,'-I','-c',ordinary_code],neutral,subject_env)
                             if route.endswith('wheel'):
                                 row['gate']=probe(spec,subject,subject_env,work/'gate',identity=setup['wheel_identity'])
