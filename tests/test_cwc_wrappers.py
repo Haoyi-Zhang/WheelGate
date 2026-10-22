@@ -148,6 +148,9 @@ class CWCWrappers(unittest.TestCase):
             self.assertEqual(code, expected)
             self.assertEqual([r["process"]["status"] for r in json.loads(output.getvalue())["runs"]], statuses)
 
+    @unittest.skipUnless(all((ROOT / p).is_file() for p in
+                         ("results/routes/matrix.json", "results/historical/django-xml-replay.json")),
+                         "Requires retained study records; fresh reproduction has not generated them yet")
     def test_retained_zero_one_projections_are_unchanged(self):
         for relative, field, expected in (
             ("results/routes/matrix.json", "content_checks", {0: 27, 1: 9}),
@@ -159,6 +162,8 @@ class CWCWrappers(unittest.TestCase):
                 self.assertEqual(Counter(c["process"]["returncode"] for c in checks), expected)
                 self.assertTrue(all(cwc.cwc_status(c["process"]) == c["status"] for c in checks))
 
+    @unittest.skipUnless((ROOT / "results/historical/django-xml-replay.json").is_file(),
+                         "Requires the retained historical receipt; wrapper regressions remain active")
     def test_historical_audit_preserves_execution_time_source_binding(self):
         # Read the actual audit body, but never call its report-writing main().
         tree = ast.parse((ROOT / "scripts/audit.py").read_text(encoding="utf-8"))
