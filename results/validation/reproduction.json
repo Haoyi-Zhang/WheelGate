@@ -2,7 +2,7 @@
   "status": "PASS",
   "validated_at": "2026-10-08T13:59:09.607944+00:00",
   "method": "Fresh copy outside the delivered package; dynamic context study, django-xml configuration replay, route-wheel requalification, WheelGate packaging check, manuscript generation, and audit rerun. The retained 45-observation route matrix was re-audited rather than rebuilt in this validation; use reproduce.py --full-route to rebuild it.",
-  "fresh_copy": "/mnt/data/wheelgate_replay_check/wheelgate",
+  "fresh_copy": "<PROJECT_ROOT>",
   "stages": {
     "source_unittest": "PASS",
     "source_pytest": "PASS",
