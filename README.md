@@ -14,6 +14,24 @@ The workflow figure is generated directly with Matplotlib and embedded fonts:
 `python plots/draw_workflow.py --output-dir ../paper/figures`.
 Install `requirements-figures.txt` for figure regeneration. In the full bundle,
 `paper/build.py` regenerates the workflow before compiling.
+Rendering occurs in the isolated build tree after engine preflight. A renderer
+or compiler failure preserves the delivered manuscript and workflow figure.
+
+### Release-job placement
+
+Keep the ordinary installed-wheel tests as the semantic baseline. After a build,
+pass the exact produced wheel and reviewed contract to the public command:
+
+```sh
+python -m wheelgate /path/to/produced.whl /path/to/contract.json --output /path/to/new-receipt.json
+```
+
+When called from a tox/cibuildwheel job, the controller creates its own fresh
+installation; it does not reuse that job's already-installed subject environment.
+This additional setup is not included in the retained post-setup medians
+(0.64 seconds for one operation and 1.95 seconds for three). This is integration
+guidance, not evidence of maintainer adoption, an executed tox comparison, or a
+new independently discovered third-party context defect.
 
 `wheelgate/runner.py` validates artifact identity, creates the isolated
 installation, checks profile prerequisites, and coordinates operation workers.
