@@ -9,6 +9,7 @@ standard library.
 from __future__ import annotations
 
 import importlib.metadata as metadata
+import hashlib
 import os
 import pathlib
 import re
@@ -229,8 +230,30 @@ class AccessRecorder:
         self.active = False
 
 
+def external_input_receipt(declarations: list[dict[str, str]]) -> list[dict[str, Any]]:
+    """Verify exact data inputs before observation; no directory/code allowlists.
+
+    The caller also checks their final identities. This supports trusted, stable
+    test inputs, not atomic byte-consumption tracing or a hostile-race guarantee.
+    """
+    rows = []
+    for item in declarations:
+        path = pathlib.Path(item["path"]).resolve()
+        observed = None
+        if path.is_file() and path.suffix.lower() not in _CODE_SUFFIXES:
+            try:
+                observed = hashlib.sha256(path.read_bytes()).hexdigest()
+            except OSError:
+                pass
+        rows.append({"path": str(path), "expected_sha256": item["sha256"],
+                     "observed_sha256": observed, "evidence": item["evidence"],
+                     "satisfied": observed is not None and observed == item["sha256"]})
+    return rows
+
+
 def inspect_file_access(
-    paths: Iterable[pathlib.Path], allowed_distributions: list[str]
+    paths: Iterable[pathlib.Path], allowed_distributions: list[str],
+    external_inputs: list[dict[str, str]] | None = None,
 ) -> dict[str, Any]:
     """Classify non-code file reads recorded by :class:`AccessRecorder`."""
     allowed = {normalize(name) for name in allowed_distributions}
@@ -239,10 +262,22 @@ def inspect_file_access(
     prefix = pathlib.Path(sys.prefix).resolve()
     accesses: list[dict[str, Any]] = []
     violations: list[dict[str, Any]] = []
+    declared = {pathlib.Path(item["path"]).resolve(): item
+                for item in external_input_receipt(external_inputs or [])}
     for path in sorted(set(paths), key=str):
         row, invalid = _classify_path(
             path, allowed, inventory, site_roots, stdlib_roots, prefix
         )
+        item = declared.get(path)
+        # A data declaration never admits code or overrides another installed
+        # distribution's ownership. Modules have a separate, unchanged policy.
+        if row["classification"] == "external-file" and item is not None:
+            row["input_expected_sha256"] = item["expected_sha256"]
+            row["input_observed_sha256"] = item["observed_sha256"]
+            row["input_evidence"] = item["evidence"]
+            if item["satisfied"]:
+                row["classification"] = "declared-external-input"
+                invalid = False
         accesses.append(row)
         if invalid:
             violations.append(dict(row))
@@ -251,4 +286,5 @@ def inspect_file_access(
         "access_count": len(accesses),
         "accesses": accesses,
         "violations": violations,
+        "external_input_postflight": list(declared.values()),
     }

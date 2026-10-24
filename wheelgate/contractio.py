@@ -14,7 +14,7 @@ from typing import Any
 
 _NAME = re.compile(r"[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?\Z")
 _VERSION = re.compile(r"[A-Za-z0-9][A-Za-z0-9.!+_-]*\Z")
-_COMMON = {"id", "kind", "distribution", "version", "modules", "evidence", "profiles", "timeout"}
+_COMMON = {"id", "kind", "distribution", "version", "modules", "evidence", "profiles", "timeout", "external_inputs"}
 _FIELDS = {
     "import": set(),
     "call": {"target", "args", "kwargs", "equals", "contains"},
@@ -85,6 +85,25 @@ def validate_v2(spec: dict[str, Any]) -> None:
             raise ValueError("Concrete anchors must be conventional dotted module identifiers")
         if len(set(contract["modules"])) != len(contract["modules"]):
             raise ValueError("Duplicate module anchor")
+        inputs = contract.get("external_inputs", [])
+        if not isinstance(inputs, list):
+            raise ValueError("external_inputs must be a list of exact data-file declarations")
+        input_paths = set()
+        for item in inputs:
+            if not isinstance(item, dict) or set(item) != {"path", "sha256", "evidence"}:
+                raise ValueError("Each external input requires path, sha256 and evidence")
+            if not isinstance(item["path"], str) or not pathlib.Path(item["path"]).is_absolute():
+                raise ValueError("External input path must be absolute on the execution host")
+            path = pathlib.Path(item["path"]).resolve()
+            if path.suffix.lower() in {".py", ".pyc", ".pyo", ".so", ".pyd", ".dll", ".dylib"}:
+                raise ValueError("External input declarations do not authorize code")
+            if path in input_paths:
+                raise ValueError("Duplicate external input path")
+            input_paths.add(path)
+            if not isinstance(item["sha256"], str) or not re.fullmatch(r"[0-9a-f]{64}", item["sha256"]):
+                raise ValueError("External input sha256 must be 64 lowercase hexadecimal digits")
+            if not isinstance(item["evidence"], str) or not item["evidence"].strip():
+                raise ValueError("External input evidence is required")
         if "kwargs" in contract and not all(isinstance(key, str) for key in contract["kwargs"]):
             raise ValueError("kwargs keys must be strings")
         if kind == "call":

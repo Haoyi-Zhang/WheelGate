@@ -6,7 +6,19 @@ installs the artifact in a fresh environment, checks static ownership, and
 records newly loaded Python modules and read-capable non-code file opens attempted during execution.
 A successful operation is accepted only when those concrete origins belong to
 the target distribution, declared prerequisite distributions, or the standard
-library.
+library. Stable caller-supplied non-code files can additionally be declared by
+exact path, SHA-256 and evidence. This does not admit external code or directories.
+
+## External data and supported observation scope
+
+`docs/EXTERNAL-INPUTS.md` gives the original-wheel release rehearsal, exact
+declaration format, ordinary-test comparison and supported-mechanism matrix.
+The original latex2pydata 0.5.0 file-loading API on upstream test data produces
+ordinary PASS, default-gate INVALID, then declared-input PASS with the same
+four-line consumer adapter and assertion. This is not a publisher bug, a field
+incident or maintainer adoption. The canonical retained record is
+`results/external-input-qualified/summary.json`; the initial separately
+executed acquisition run remains under `results/external-input-replay/`.
 
 ## Implementation
 
@@ -331,11 +343,17 @@ three-input public-entry replay can be repeated on the selected Windows/Python
 profile without modifying the controller:
 
 ```powershell
-python -B scripts/publisher_cli_replay.py --dependency-dir D:/wheel-inputs --execute --output-dir D:/wheel-cli-replay --temp-root D:/wheel-tmp
+python -B scripts/publisher_cli_replay.py --current-runtime --dependency-dir D:/wheel-inputs --execute --output-dir D:/wheel-cli-replay --temp-root D:/wheel-tmp
 ```
 
 Both output paths must be fresh. The helper verifies the original inputs and
 runtime bindings before installation and uses explicit local, no-index inputs.
+`--current-runtime` explicitly binds a fresh run to the current implementation;
+omitting it retains the original-source guard and rejects changed runtime bytes.
+Historical publisher receipts are not relabelled as current observations.
+`evidence/publisher-wheels/runtime-at-original-replay.json` preserves the exact
+three changed historical modules consumed by the original binding tests; the
+other four bound modules remain unchanged.
 The three observations are not pooled with the retained 6/45/24-study counts
 and supply no new timing estimate.
 
@@ -346,8 +364,10 @@ versions describe the selected study profile rather than a deployment update
 recommendation.
 
 Installed-software testing stages these study fixtures beside the neutral test
-suite, not inside either software wheel. Runtime-byte checks read the installed
-module files, so the package test also validates their supplied source bindings.
+suite, not inside either software wheel. Runtime-byte checks read unchanged
+installed modules and the preserved original bytes for the three subsequently
+modified modules; they validate historical source bindings, not an assertion
+that the current policy was used in those runs.
 
 ## Render retained qualification times
 

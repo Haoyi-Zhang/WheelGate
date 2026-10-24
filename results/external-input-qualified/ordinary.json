@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "setup": {
+    "wheel_identity": {
+      "name": "latex2pydata",
+      "version": "0.5.0"
+    },
+    "venv_seconds": 2.3637734999647364,
+    "install": {
+      "argv": [
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-gzitp1p0\\venv\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\P123\\work\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl"
+      ],
+      "returncode": 0,
+      "stdout": "Processing d:\\codexprojects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\p123\\work\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl\nInstalling collected packages: latex2pydata\nSuccessfully installed latex2pydata-0.5.0\n",
+      "stderr": "",
+      "seconds": 0.532219999935478,
+      "timeout": false
+    },
+    "dependency_check": {
+      "argv": [
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-gzitp1p0\\venv\\Scripts\\python.exe",
+        "-I",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": "",
+      "seconds": 0.28503260004799813,
+      "timeout": false
+    },
+    "environment": {
+      "status": "READY",
+      "receipt": {
+        "distributions": [
+          {
+            "name": "latex2pydata",
+            "version": "0.5.0"
+          },
+          {
+            "name": "pip",
+            "version": "25.0.1"
+          }
+        ],
+        "implementation": "CPython",
+        "prefix": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-gzitp1p0\\venv",
+        "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
+      },
+      "process": {
+        "argv": [
+          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-gzitp1p0\\venv\\Scripts\\python.exe",
+          "-I",
+          "-c",
+          "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
+        ],
+        "returncode": 0,
+        "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"latex2pydata\", \"version\": \"0.5.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}], \"implementation\": \"CPython\", \"prefix\": \"C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\wg-context-ordinary-gzitp1p0\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+        "stderr": "",
+        "seconds": 0.06909240002278239,
+        "timeout": false
+      }
+    },
+    "seconds": 3.2504894000012428,
+    "status": "READY"
+  },
+  "process": {
+    "argv": [
+      "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-gzitp1p0\\venv\\Scripts\\python.exe",
+      "-I",
+      "-c",
+      "import importlib.metadata as m, pathlib, latex2pydata\nd=m.distribution('latex2pydata')\nassert pathlib.Path(latex2pydata.__file__).resolve() in {pathlib.Path(d.locate_file(f)).resolve() for f in d.files}\nfrom pathlib import Path\nimport latex2pydata\nvalue = latex2pydata.load(Path('D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\peer_review_below7_repair_20261024\\\\P123\\\\work\\\\artifact\\\\results\\\\external-input-qualified\\\\upstream-data.json'))\nassert value == {'key1': 'value1', 'key2': 'value2', 'key3': 'multiline\\nvalue\\n\"double quote\"\\nbackslashes \\\\ \\\\ \\\\\\\\\\n'}\n"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "",
+    "seconds": 0.07834700006060302,
+    "timeout": false
+  }
+}

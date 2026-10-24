@@ -1,0 +1,24 @@
+{
+  "schema": 2,
+  "contracts": [
+    {
+      "id": "publisher-file-load",
+      "kind": "script",
+      "distribution": "latex2pydata",
+      "version": "0.5.0",
+      "modules": [
+        "latex2pydata",
+        "latex2pydata.loading"
+      ],
+      "code": "from pathlib import Path\nimport latex2pydata\nvalue = latex2pydata.load(Path('D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\peer_review_below7_repair_20261024\\\\P123\\\\work\\\\artifact\\\\results\\\\external-input-replay\\\\upstream-data.json'))\nassert value == {'key1': 'value1', 'key2': 'value2', 'key3': 'multiline\\nvalue\\n\"double quote\"\\nbackslashes \\\\ \\\\ \\\\\\\\\\n'}\n",
+      "evidence": "https://pypi.org/project/latex2pydata/0.5.0/ documents load(pathlib.Path); https://raw.githubusercontent.com/gpoore/latex2pydata/ceee4aa242b1f2f42063b5abcd75a7bc36530bf3/latex/test/toplevel_dict_test_pass.json",
+      "external_inputs": [
+        {
+          "path": "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\P123\\work\\artifact\\results\\external-input-replay\\upstream-data.json",
+          "sha256": "5caf7af779906e28787bcb47b45640f4981bc1c5ed9011370f178bbbc67214d3",
+          "evidence": "Caller-selected upstream data file for the documented Path-loading API, not wheel-owned package data. https://raw.githubusercontent.com/gpoore/latex2pydata/ceee4aa242b1f2f42063b5abcd75a7bc36530bf3/latex/test/toplevel_dict_test_pass.json"
+        }
+      ]
+    }
+  ]
+}

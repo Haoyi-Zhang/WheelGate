@@ -3,6 +3,7 @@
 No package installation, third-party imports, native execution, or benchmarks.
 """
 import hashlib
+import base64
 import importlib.util
 import json
 from pathlib import Path
@@ -64,16 +65,27 @@ class PublisherInputs(unittest.TestCase):
                         self.assertEqual(copied.read_bytes(), z.read(notice['archive_member']))
                         self.assertEqual(digest(copied), notice['sha256'])
 
-    def test_protocol_and_inventory_bind_unchanged_runtime_sources(self):
+    def test_protocol_and_inventory_bind_original_runtime_sources(self):
         inv, protocol = load(EVIDENCE/'source-inventory.json'), load(RESULTS/'protocol.json')
         self.assertEqual(inv['runtime_source_bindings'], protocol['existing_runtime_source_bindings'])
         bindings = inv['runtime_source_bindings']
         self.assertEqual(len(bindings), 7)
+        # The external-input policy is a new implementation, not a retagging of
+        # prior publisher observations. Preserve exactly the changed old bytes.
+        old = load(EVIDENCE/'runtime-at-original-replay.json')
+        historical = {row['file']: row for row in old['files']}
         for binding in bindings:
             rel = binding['file']
             self.assertTrue(rel.startswith('artifact/wheelgate/'))
             package = Path(wheelgate.__file__).resolve().parent
-            self.assertEqual(digest(relative(package, rel[len('artifact/wheelgate/'):])), binding['sha256'])
+            name = rel[len('artifact/wheelgate/'):]
+            if name in historical:
+                row = historical[name]
+                content = base64.b64decode(row['bytes_base64'], validate=True)
+                self.assertEqual(hashlib.sha256(content).hexdigest(), binding['sha256'])
+                self.assertEqual(row['sha256'], binding['sha256'])
+            else:
+                self.assertEqual(digest(relative(package, name)), binding['sha256'])
 
     def test_installed_suite_stages_evidence_without_copying_runtime(self):
         path = ROOT/'scripts/package_check.py'

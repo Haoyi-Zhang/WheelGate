@@ -39,13 +39,16 @@ def verified_file(path, row):
     return path
 
 
-def plan(dependency_dir):
+def plan(dependency_dir, current_runtime=False):
     evidence = ROOT / "evidence/publisher-wheels"
     inventory = json.loads((evidence / "source-inventory.json").read_text(encoding="utf-8"))
     bindings = inventory["runtime_source_bindings"]
+    actual_bindings = []
     for binding in bindings:
         runtime = ROOT / binding["file"].removeprefix("artifact/")
-        if sha(runtime) != binding["sha256"]:
+        actual = sha(runtime)
+        actual_bindings.append({"file": binding["file"], "sha256": actual})
+        if not current_runtime and actual != binding["sha256"]:
             raise ValueError("Retained runtime source differs: " + binding["file"])
     prerequisites = [row for row in inventory["inputs"] if row.get("input_kind") == "publisher-download"]
     if len(prerequisites) != 7:
@@ -72,7 +75,9 @@ def plan(dependency_dir):
     return {"status": "verified-local-input-plan", "cases": rows,
             "dependency_inputs": [{"file": str(p), "sha256": row["sha256"], "bytes": row["bytes"]}
                                   for p, row in zip(dependencies, prerequisites, strict=True)],
-            "runtime_source_bindings": bindings,
+            "runtime_source_bindings": actual_bindings,
+            "historical_runtime_source_bindings": bindings,
+            "runtime_binding_scope": "explicit-current-runtime-replay" if current_runtime else "unchanged-retained-runtime",
             "scope": "Public CLI reachability on3 original inputs, no repetitions. Seven dependencies are external local inputs, not bundled by the artifact."}
 
 
@@ -147,10 +152,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--dependency-dir", type=Path, required=True)
     parser.add_argument("--execute", action="store_true")
+    parser.add_argument("--current-runtime", action="store_true",
+                        help="Bind a fresh replay to current bytes, preserving historical bindings separately")
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--temp-root", type=Path)
     args = parser.parse_args()
-    planned = plan(args.dependency_dir)
+    planned = plan(args.dependency_dir, current_runtime=args.current_runtime)
     if not args.execute:
         print(json.dumps(planned, indent=2))
         return 0

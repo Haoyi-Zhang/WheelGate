@@ -1,0 +1,61 @@
+{
+  "scope": "documented original-wheel Path API on original upstream test data; policy declaration rehearsal, not field incident",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.28000-SP0",
+  "execution_helper_sha256": "032983bee963b7ab6b594b49c032102fbdd6b00700435c396f8fa33795a1789d",
+  "source": {
+    "commit": "ceee4aa242b1f2f42063b5abcd75a7bc36530bf3",
+    "path": "latex/test/toplevel_dict_test_pass.json",
+    "url": "https://raw.githubusercontent.com/gpoore/latex2pydata/ceee4aa242b1f2f42063b5abcd75a7bc36530bf3/latex/test/toplevel_dict_test_pass.json",
+    "input_sha256": "5caf7af779906e28787bcb47b45640f4981bc1c5ed9011370f178bbbc67214d3",
+    "api_documentation": "https://pypi.org/project/latex2pydata/0.5.0/"
+  },
+  "wheel_sha256": "7c4092562082985453f47f52db31e1f8c2edcf5d7f855f4c614cfba12808675b",
+  "ordinary": "PASS",
+  "gate_undeclared": "INVALID",
+  "gate_declared": "PASS",
+  "same_oracle": true,
+  "extra_declarations": {
+    "files": 1,
+    "fields": [
+      "path",
+      "sha256",
+      "evidence"
+    ]
+  },
+  "contract_hashes": {
+    "undeclared": "8fdf472717203b1f2a54de32a59d0f0ba1c8139eeb0c8eb4a50cc113dd8bca85",
+    "declared": "60a4e3f446fe216df0d5f23530fc6c2365982e67b31047c796f8f8c39dd4c099"
+  },
+  "reused_receipt_fields": [
+    "wheel identity",
+    "module anchors",
+    "environment inventory",
+    "process consistency",
+    "operation oracle"
+  ],
+  "disposition": "Declare the legitimate external input; do not modify the publisher wheel or weaken the assertion.",
+  "runtime_sources": [
+    {
+      "file": "wheelgate/runner.py",
+      "sha256": "2cc386b3f52621c3af6968a0814b9b138d4373dbe487c1bc77acb2f4a5eb1f36"
+    },
+    {
+      "file": "wheelgate/worker.py",
+      "sha256": "b5732d77e82ea5a0f7d57759b087f579e15f99c31d9fe7995de78fb9fe5efd5f"
+    },
+    {
+      "file": "wheelgate/footprint.py",
+      "sha256": "458c2c55392288e0d8974f863eaadb58d9b4b03b814c484252e9f6e6656e40bd"
+    },
+    {
+      "file": "wheelgate/contractio.py",
+      "sha256": "692a00ae1c68caa04911b3c57ab8208cdd5899582e3bb46d568ebd8dc97c06b9"
+    },
+    {
+      "file": "wheelgate/paths.py",
+      "sha256": "d20ce0a2fe67ab21ac31e87270349ca3cf472eb30a7bda97069d39f5912f7a94"
+    }
+  ],
+  "valid": true
+}

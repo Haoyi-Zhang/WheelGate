@@ -17,7 +17,7 @@ import traceback
 import tempfile
 
 try:  # package import in unit tests
-    from .footprint import AccessRecorder, inspect_file_access, inspect_new_modules, snapshot
+    from .footprint import AccessRecorder, external_input_receipt, inspect_file_access, inspect_new_modules, snapshot
     from .paths import command_basename, resource_parts
 except ImportError:  # copied standalone; -I intentionally omits the script directory
     import importlib.util
@@ -28,6 +28,7 @@ except ImportError:  # copied standalone; -I intentionally omits the script dire
     _helper = importlib.util.module_from_spec(_helper_spec)
     _helper_spec.loader.exec_module(_helper)
     AccessRecorder = _helper.AccessRecorder
+    external_input_receipt = _helper.external_input_receipt
     inspect_file_access = _helper.inspect_file_access
     inspect_new_modules = _helper.inspect_new_modules
     snapshot = _helper.snapshot
@@ -158,6 +159,10 @@ def _console_capture():
 
 def _evaluate_console_child(c: dict) -> dict:
     start = time.perf_counter()
+    inputs = external_input_receipt(c.get("external_inputs", []))
+    if not all(row["satisfied"] for row in inputs):
+        return {"id": c["id"], "status": "INVALID", "seconds": time.perf_counter() - start,
+                "external_input_preflight": inputs, "reason": "Declared input identity not established; operation not run"}
     # Worker-owned capture files are infrastructure, prepared before observing
     # the consumer. Package imports and all entry-point behavior remain observed.
     capture = _console_capture()
@@ -184,8 +189,9 @@ def _evaluate_console_child(c: dict) -> dict:
                 stream.close()
     allowed = _allowed(c)
     footprint = inspect_new_modules(before, allowed)
-    file_footprint = inspect_file_access(access_recorder.paths, allowed)
-    violations = footprint["violations"] or file_footprint["violations"]
+    file_footprint = inspect_file_access(access_recorder.paths, allowed, c.get("external_inputs"))
+    post_invalid = any(not row["satisfied"] for row in file_footprint.get("external_input_postflight", []))
+    violations = footprint["violations"] or file_footprint["violations"] or post_invalid
     if violations and status == "PASS":
         detail["operation_status"] = status
         detail["context_message"] = (
@@ -202,6 +208,7 @@ def _evaluate_console_child(c: dict) -> dict:
         "seconds": time.perf_counter() - start,
         "footprint": footprint,
         "file_footprint": file_footprint,
+        "external_input_preflight": inputs,
         **detail,
     }
 
@@ -324,6 +331,10 @@ def operation(c: dict) -> dict:
 
 def evaluate(c: dict) -> dict:
     start = time.perf_counter()
+    inputs = external_input_receipt(c.get("external_inputs", []))
+    if not all(row["satisfied"] for row in inputs):
+        return {"id": c["id"], "status": "INVALID", "seconds": time.perf_counter() - start,
+                "external_input_preflight": inputs, "reason": "Declared input identity not established; operation not run"}
     before = snapshot()
     access_recorder = AccessRecorder()
     access_recorder.start()
@@ -351,9 +362,10 @@ def evaluate(c: dict) -> dict:
         detail["footprint"] = footprint
     file_footprint = detail.get("file_footprint")
     if file_footprint is None:
-        file_footprint = inspect_file_access(access_recorder.paths, allowed)
+        file_footprint = inspect_file_access(access_recorder.paths, allowed, c.get("external_inputs"))
         detail["file_footprint"] = file_footprint
-    violations = footprint.get("violations") or file_footprint.get("violations")
+    post_invalid = any(not row["satisfied"] for row in file_footprint.get("external_input_postflight", []))
+    violations = footprint.get("violations") or file_footprint.get("violations") or post_invalid
     if violations and status == "PASS":
         detail["operation_status"] = status
         detail["context_message"] = (
@@ -364,7 +376,8 @@ def evaluate(c: dict) -> dict:
         detail["context_warning"] = (
             "The failed operation also touched code or data outside the declared runtime profile"
         )
-    return {"id": c["id"], "status": status, "seconds": time.perf_counter() - start, **detail}
+    return {"id": c["id"], "status": status, "seconds": time.perf_counter() - start,
+            "external_input_preflight": inputs, **detail}
 
 
 def main() -> int:
