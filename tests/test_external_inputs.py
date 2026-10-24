@@ -1,13 +1,15 @@
 """Bounded data exceptions: stable input identities, not code or directory grants."""
 import copy
 import hashlib
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 import tempfile
+from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
 from wheelgate.footprint import external_input_receipt, inspect_file_access
-from wheelgate.runner import canonical_contract_digest, validate
+from wheelgate import contractio
+from wheelgate.runner import canonical_contract_digest, qualify, validate
 from wheelgate.worker import evaluate, _evaluate_console_child
 
 
@@ -35,6 +37,34 @@ class ExternalInputPolicy(unittest.TestCase):
         validate(spec)
         without = copy.deepcopy(spec); del without["contracts"][0]["external_inputs"]
         self.assertNotEqual(canonical_contract_digest(spec), canonical_contract_digest(without))
+
+    def reject_execution_before_setup(self, path):
+        spec = specification({**self.item, "path": path})
+        for schema in (1, 2):
+            spec["schema"] = schema
+            with self.subTest(schema=schema, path=path):
+                for check in (validate, canonical_contract_digest):
+                    with self.assertRaisesRegex(ValueError, "absolute on the execution host"):
+                        check(spec)
+                with patch("wheelgate.runner.wheel_identity") as identity, \
+                     patch("wheelgate.runner.prepare") as prepare:
+                    with self.assertRaisesRegex(ValueError, "absolute on the execution host"):
+                        qualify("not-opened.whl", spec)
+                identity.assert_not_called()
+                prepare.assert_not_called()
+
+    def test_native_host_rejects_foreign_and_relative_execution_paths(self):
+        foreign = "/archive/data.json" if Path("C:/").is_absolute() else r"C:\archive\data.json"
+        self.assertFalse(Path(foreign).is_absolute())
+        self.reject_execution_before_setup(foreign)
+        self.reject_execution_before_setup("relative.json")
+
+    def test_both_execution_host_path_flavours_keep_strict_rejection(self):
+        for flavour, foreign in ((PurePosixPath, r"C:\archive\data.json"),
+                                 (PureWindowsPath, "/archive/data.json")):
+            with self.subTest(flavour=flavour.__name__), \
+                 patch.object(contractio, "pathlib", SimpleNamespace(Path=flavour)):
+                self.reject_execution_before_setup(foreign)
 
     def test_schema_rejects_incomplete_relative_code_and_wildcard(self):
         for edit in ({"path": "relative.json"}, {"path": str(self.path.with_suffix('.py'))},

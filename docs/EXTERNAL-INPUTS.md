@@ -59,6 +59,16 @@ the oracle are reused. An ordinary installed test can implement the same exact
 file policy and make the same decision. No engineer-hour or general maintenance
 benefit estimate is inferred from this one adaptation.
 
+Offline receipt verification is separate from a new execution. The retained
+rehearsal is a Windows run; its paths and script text remain literal historical
+data when read on Linux. `tests/test_external_replay_record.py` checks the retained
+contract/receipt/summary bindings using the original canonical JSON encoding
+(sorted keys, compact separators, UTF-8, finite numbers), without resolving or
+rewriting paths. This checks document integrity, not authenticity, current file
+availability or Linux execution. The runtime `canonical_contract_digest` still
+requires full current-host validation, including native absolute input paths.
+A fresh replay must use new host-bound contracts and a new output directory.
+
 No wildcard, directory, generated-code or other-distribution grant is added.
 All declared files must exist and match before the operation, or it returns
 INVALID without running. Identity is checked again afterward. Mutation invalidates
