@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import base64
 import csv
+from email.parser import Parser
 import hashlib
 import io
 import json
@@ -289,6 +290,19 @@ def audit_routes() -> dict[str, int]:
     }
 
 
+def audit_installed_identity(wheel: Path, identity: dict) -> str:
+    """Bind an installed identity to its actual wheel, including retained wheels."""
+    with zipfile.ZipFile(wheel) as archive:
+        names = [n for n in archive.namelist() if n.endswith('.dist-info/METADATA') and n.count('/') == 1]
+        require(len(names) == 1, "one distribution metadata record required")
+        metadata = Parser().parsestr(archive.read(names[0]).decode('utf-8'))
+    version = metadata.get('Version')
+    require(metadata.get('Name') == 'wheelgate' and bool(version), "unexpected software metadata")
+    require(identity['version'] == version and '/site-packages/wheelgate/' in identity['module'].replace('\\', '/'),
+            "installed software identity differs from its wheel")
+    return version
+
+
 def audit_package() -> dict[str, object]:
     path = ROOT / "results/package/self-check.json"
     record = load(path)
@@ -300,6 +314,7 @@ def audit_package() -> dict[str, object]:
     require(record["payloads_equal"] is True and len(record["routes"]) == 2, "software package routes incomplete")
     unit_counts: list[int] = []
     wheel_hashes: set[str] = set()
+    installed_versions: set[str] = set()
     for row in record["routes"]:
         wheel = resolve_result_path(path, row["wheel"])
         require(sha256(wheel) == row["sha256"], f"software wheel hash drift: {wheel}")
@@ -309,7 +324,7 @@ def audit_package() -> dict[str, object]:
         for key in ["identity", "unit_tests", "cli"]:
             check_process(row[key], 0)
         identity = json.loads(row["identity"]["stdout"])
-        require(identity["version"] == "1.0.0" and "/site-packages/wheelgate/" in identity["module"].replace('\\','/'), "installed software identity changed")
+        installed_versions.add(audit_installed_identity(wheel, identity))
         test_output = row["unit_tests"]["stdout"] + row["unit_tests"]["stderr"]
         unit_counts.append(recorded_test_count(test_output))
         with zipfile.ZipFile(wheel) as archive:
@@ -324,7 +339,9 @@ def audit_package() -> dict[str, object]:
         require(smoke["missing"]["report"]["status"] == "FAIL", "missing report status changed")
     require(len(wheel_hashes) == 1, "direct and sdist-derived software wheel bytes differ")
     require(len(set(unit_counts)) == 1, "installed routes ran different test suites")
-    sdist = ROOT / "results/package/self-check-assets/sdist/wheelgate-1.0.0.tar.gz"
+    require(len(installed_versions) == 1, "installed software versions differ between routes")
+    version = next(iter(installed_versions))
+    sdist = ROOT / f"results/package/self-check-assets/sdist/wheelgate-{version}.tar.gz"
     require(sdist.is_file(), "software sdist missing")
     source_log = (VALIDATION / "source-tests.txt").read_text(encoding="utf-8")
     require(recorded_test_count(source_log) == unit_counts[0],

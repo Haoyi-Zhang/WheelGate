@@ -141,12 +141,12 @@ Run the source suite:
 python -m unittest discover -s tests -v
 ```
 
-Install the retained software wheel and qualify the healthy fixture:
+Install the current software wheel and qualify the healthy fixture:
 
 ```sh
 python -m venv /tmp/wg-env
 /tmp/wg-env/bin/python -m pip install --no-index --no-deps \
-  results/package/self-check-assets/direct/wheelgate-1.0.0-py3-none-any.whl
+  dist/wheelgate-1.1.0-py3-none-any.whl
 /tmp/wg-env/bin/wheelgate \
   inputs/fixture-direct/wg_fixture-0.1.0-py3-none-any.whl \
   contracts/fixture.json --output /tmp/wg-report.json
@@ -154,6 +154,22 @@ python -m venv /tmp/wg-env
 
 The same command with `inputs/fixture-rebuilt/` must return a nonzero status
 because the promised resource is absent.
+
+`dist/` is the installation entry for the current source, including exact
+external-data declarations. Its manifest binds all runtime modules and records
+17 external-input regressions after each of direct-wheel and sdist-derived
+installation. The two distribution files share the software version in
+`wheelgate/__init__.py`; this is package metadata, not a manuscript revision.
+To build and verify both routes again, choose fresh output and raw-log paths:
+
+```sh
+python scripts/build_distribution.py --output /tmp/wheelgate-dist --log-dir /tmp/wheelgate-build-logs
+```
+
+The software packages under `results/` are frozen inputs of their adjacent
+installation studies. They do not include the later external-input extension
+and are not the current installation entry. Their recorded outcomes and source
+payloads are retained, not reassigned to the new build.
 
 ### Smoke fixture
 
@@ -257,17 +273,18 @@ portability record. Run `scripts/packaging_flow.py` and
 validations. `scripts/audit.py` checks the retained study set, not these separate
 additional outputs.
 
-## Current portability and self-package validation
+## Retained portability and self-package validation
 
 The source suite includes seven offline original-input binding tests and three
 artifact-only public-entry helper tests; the test runner reports its executed
 and skipped counts. The retained installation study records 140 tests, and the
 separate self-package comparison executed 193 tests per route.
-`results/current/packaging-flow/comparison.json` records the current
+`results/current/packaging-flow/comparison.json` records an earlier
 direct/sdist-derived build, 193 installed tests on each route,
 unchanged CWC default/reference checks, and ordinary/gate operations with the
 same import, canonical-name, and version-command expectations. All pass on both
-routes. This is positive self-package validation, not an external maintainer
+routes. Despite the directory name, this record predates the external-input
+extension and does not validate the modules in `dist/`. This is positive self-package validation, not an external maintainer
 deployment or additional defect-recall result.
 `results/current/portability/route-requalification.json` records ten
 source-bound Windows runs over the same two route-wheel contents: five pass

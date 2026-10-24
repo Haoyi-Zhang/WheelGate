@@ -1,0 +1,36 @@
+{
+  "software": "wheelgate",
+  "version": "1.1.0",
+  "status": "PASS",
+  "source_payload": {
+    "wheelgate/__init__.py": "2b85bdbd501067c80615d62888c60082ca1ba1ebd5ec004697a5a27009b22170",
+    "wheelgate/__main__.py": "8fda124942c1535a5de3d48057be3524a626b1f648786b7b6c0ec5fcc2aa1fec",
+    "wheelgate/contractio.py": "692a00ae1c68caa04911b3c57ab8208cdd5899582e3bb46d568ebd8dc97c06b9",
+    "wheelgate/footprint.py": "458c2c55392288e0d8974f863eaadb58d9b4b03b814c484252e9f6e6656e40bd",
+    "wheelgate/paths.py": "d20ce0a2fe67ab21ac31e87270349ca3cf472eb30a7bda97069d39f5912f7a94",
+    "wheelgate/profile_worker.py": "0e6e374d95c6b21c1d8bc1af1079ea60d0ceb0929d4d20f4d963f2f7bf70989f",
+    "wheelgate/runner.py": "2cc386b3f52621c3af6968a0814b9b138d4373dbe487c1bc77acb2f4a5eb1f36",
+    "wheelgate/worker.py": "b5732d77e82ea5a0f7d57759b087f579e15f99c31d9fe7995de78fb9fe5efd5f"
+  },
+  "files": {
+    "wheelgate-1.1.0-py3-none-any.whl": "1ce5aeac38242113cb5d1fe67ea3a6abca339aa6f5eaa5ceee8af4d816b05747",
+    "wheelgate-1.1.0.tar.gz": "5bf6ceff1dacf504e7efa3406ff4abb330d4ea55e00df206cc45e98081a5b6fc"
+  },
+  "routes": [
+    {
+      "route": "direct-wheel",
+      "payload_matches_current_source": true,
+      "external_input_tests_passed": 17,
+      "installed_version": "1.1.0",
+      "console_entrypoint_passed": true
+    },
+    {
+      "route": "sdist-wheel",
+      "payload_matches_current_source": true,
+      "external_input_tests_passed": 17,
+      "installed_version": "1.1.0",
+      "console_entrypoint_passed": true
+    }
+  ],
+  "scope": "Current owned software installation and external-input regressions; retained study measurements are unchanged."
+}

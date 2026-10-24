@@ -29,14 +29,14 @@
 The raw records distinguish `FAIL`, `BLOCKED`, and `INVALID`; none of these is
 silently converted into an upstream defect count.
 
-## Additional current validation (not pooled with retained studies)
+## Additional retained validation (not pooled with the original studies)
 
 - Host-independent contract-path admission and bundle-reference normalization
   are tested using harmless owned fixtures. The earlier Windows source-suite
   record contains 200 tests; later artifact-only helper tests do not retroactively
   extend that execution. This is not a native Linux test run.
 - `results/current/packaging-flow/comparison.json` and its `self-check.json` record
-  direct and sdist-derived builds of the supplied WheelGate package, 193 tests
+  direct and sdist-derived builds of the then-supplied WheelGate package, 193 tests
   after each installation, and unchanged CWC default/reference checks. Ordinary
   and gate operations use the same three expectations and pass on both routes.
   Positive self-package validation adds no external maintainer deployment or
@@ -45,6 +45,12 @@ silently converted into an upstream defect count.
   retained wheel contents five times each. New input/source bindings and fresh
   timings remain separate from the original 45 route observations and ten
   retained requalification observations.
+
+These saved self-package builds predate the external-input extension. The
+directory name `results/current` does not make their software payload current.
+The installation entry for the present source is `dist/`; its manifest binds
+the runtime modules and the direct-wheel/sdist-derived external-input tests.
+The build command and its separate raw-log output are documented in README.md.
 
 The original publisher inputs and categorical receipts in
 `results/publisher-wheel-replay/` form a separate extension. The selected
