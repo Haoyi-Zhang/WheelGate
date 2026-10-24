@@ -8,7 +8,7 @@
   "artifact_kind": "wheel",
   "wheel": "latex2pydata-0.5.0-py3-none-any.whl",
   "sha256": "7c4092562082985453f47f52db31e1f8c2edcf5d7f855f4c614cfba12808675b",
-  "contract_sha256": "8fdf472717203b1f2a54de32a59d0f0ba1c8139eeb0c8eb4a50cc113dd8bca85",
+  "contract_sha256": "6a0b6a94bb353ca10e2189e458ce02b2f25364c3010ac906a53738ef96d6c055",
   "profile": "base",
   "execution_mode": "isolated",
   "setup": {
@@ -16,27 +16,27 @@
       "name": "latex2pydata",
       "version": "0.5.0"
     },
-    "venv_seconds": 2.2901928999926895,
+    "venv_seconds": 2.2421551001025364,
     "install": {
       "argv": [
-        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Scripts\\python.exe",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Scripts\\python.exe",
         "-I",
         "-m",
         "pip",
         "install",
         "--no-index",
         "--no-deps",
-        "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\P123\\work\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl"
+        "D:\\LaTeXTools\\builds\\wheelgate-input-refresh\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl"
       ],
       "returncode": 0,
-      "stdout": "Processing d:\\codexprojects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\p123\\work\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl\nInstalling collected packages: latex2pydata\nSuccessfully installed latex2pydata-0.5.0\n",
+      "stdout": "Processing d:\\latextools\\builds\\wheelgate-input-refresh\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl\nInstalling collected packages: latex2pydata\nSuccessfully installed latex2pydata-0.5.0\n",
       "stderr": "",
-      "seconds": 0.48387949995230883,
+      "seconds": 0.47886570007540286,
       "timeout": false
     },
     "dependency_check": {
       "argv": [
-        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Scripts\\python.exe",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Scripts\\python.exe",
         "-I",
         "-m",
         "pip",
@@ -45,7 +45,7 @@
       "returncode": 0,
       "stdout": "No broken requirements found.\n",
       "stderr": "",
-      "seconds": 0.28160740004386753,
+      "seconds": 0.27370730007532984,
       "timeout": false
     },
     "environment": {
@@ -62,29 +62,29 @@
           }
         ],
         "implementation": "CPython",
-        "prefix": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv",
+        "prefix": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv",
         "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
       },
       "process": {
         "argv": [
-          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Scripts\\python.exe",
+          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Scripts\\python.exe",
           "-I",
           "-c",
           "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
         ],
         "returncode": 0,
-        "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"latex2pydata\", \"version\": \"0.5.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}], \"implementation\": \"CPython\", \"prefix\": \"C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+        "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"latex2pydata\", \"version\": \"0.5.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}], \"implementation\": \"CPython\", \"prefix\": \"C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
         "stderr": "",
-        "seconds": 0.07244230003561825,
+        "seconds": 0.06688029994256794,
         "timeout": false
       }
     },
-    "seconds": 3.128454599995166,
+    "seconds": 3.06196690001525,
     "status": "READY"
   },
   "status": "INVALID",
   "mode": "isolated",
-  "seconds": 0.6838821999263018,
+  "seconds": 0.6287384000606835,
   "profile_preflight": {
     "status": "READY",
     "requirements": [],
@@ -104,18 +104,18 @@
           {
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata-0.5.0.dist-info\\METADATA",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata-0.5.0.dist-info\\METADATA",
             "version": "0.5.0"
           },
           {
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata-0.5.0.dist-info\\RECORD",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata-0.5.0.dist-info\\RECORD",
             "version": "0.5.0"
           },
           {
             "classification": "external-file",
-            "origin": "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\P123\\work\\artifact\\results\\external-input-qualified\\upstream-data.json"
+            "origin": "D:\\LaTeXTools\\builds\\wheelgate-input-refresh\\captured-inputs\\external-input-qualified\\upstream-data.json"
           }
         ],
         "allowed_distributions": [
@@ -125,7 +125,7 @@
         "violations": [
           {
             "classification": "external-file",
-            "origin": "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\P123\\work\\artifact\\results\\external-input-qualified\\upstream-data.json"
+            "origin": "D:\\LaTeXTools\\builds\\wheelgate-input-refresh\\captured-inputs\\external-input-qualified\\upstream-data.json"
           }
         ]
       },
@@ -154,49 +154,49 @@
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
             "module": "latex2pydata",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\__init__.py",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\__init__.py",
             "version": "0.5.0"
           },
           {
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
             "module": "latex2pydata.err",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\err.py",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\err.py",
             "version": "0.5.0"
           },
           {
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
             "module": "latex2pydata.fmtversion",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\fmtversion.py",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\fmtversion.py",
             "version": "0.5.0"
           },
           {
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
             "module": "latex2pydata.loading",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\loading.py",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\loading.py",
             "version": "0.5.0"
           },
           {
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
             "module": "latex2pydata.schema",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\schema.py",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\schema.py",
             "version": "0.5.0"
           },
           {
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
             "module": "latex2pydata.util",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\util.py",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\util.py",
             "version": "0.5.0"
           },
           {
             "classification": "declared-distribution",
             "distribution": "latex2pydata",
             "module": "latex2pydata.version",
-            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\version.py",
+            "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\version.py",
             "version": "0.5.0"
           }
         ],
@@ -208,41 +208,41 @@
         {
           "distribution": "latex2pydata",
           "module": "latex2pydata",
-          "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\__init__.py",
+          "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\__init__.py",
           "version": "0.5.0"
         },
         {
           "distribution": "latex2pydata",
           "module": "latex2pydata.loading",
-          "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\loading.py",
+          "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\loading.py",
           "version": "0.5.0"
         },
         {
           "distribution": "latex2pydata",
           "module": "latex2pydata",
-          "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\__init__.py",
+          "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\__init__.py",
           "version": "0.5.0"
         },
         {
           "distribution": "latex2pydata",
           "module": "latex2pydata.loading",
-          "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Lib\\site-packages\\latex2pydata\\loading.py",
+          "origin": "C:\\Users\\Administrator\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Lib\\site-packages\\latex2pydata\\loading.py",
           "version": "0.5.0"
         }
       ],
-      "seconds": 0.6003147000446916,
+      "seconds": 0.5518525999505073,
       "status": "INVALID",
       "process": {
         "argv": [
-          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\venv\\Scripts\\python.exe",
+          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\venv\\Scripts\\python.exe",
           "-I",
-          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\probes\\0\\worker.py",
-          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-q0dy9dqm\\probes\\0\\contract.json"
+          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\probes\\0\\worker.py",
+          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wheelgate-9m_586kj\\probes\\0\\contract.json"
         ],
         "returncode": 2,
-        "stdout": "WHEELGATE_JSON={\"context_message\": \"Operation loaded code or read data outside the declared runtime profile\", \"external_input_preflight\": [], \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_RUNTIME>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata-0.5.0.dist-info\\\\METADATA\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata-0.5.0.dist-info\\\\RECORD\", \"version\": \"0.5.0\"}, {\"classification\": \"external-file\", \"origin\": \"D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\peer_review_below7_repair_20261024\\\\P123\\\\work\\\\artifact\\\\results\\\\external-input-qualified\\\\upstream-data.json\"}], \"allowed_distributions\": [\"latex2pydata\"], \"external_input_postflight\": [], \"violations\": [{\"classification\": \"external-file\", \"origin\": \"D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\peer_review_below7_repair_20261024\\\\P123\\\\work\\\\artifact\\\\results\\\\external-input-qualified\\\\upstream-data.json\"}]}, \"footprint\": {\"allowed_distributions\": [\"latex2pydata\"], \"module_count\": 10, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_RUNTIME>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_RUNTIME>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"encodings.utf_8_sig\", \"origin\": \"<PYTHON_RUNTIME>\\\\Lib\\\\encodings\\\\utf_8_sig.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.err\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\err.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.fmtversion\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\fmtversion.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.schema\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\schema.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.util\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\util.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.version\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\version.py\", \"version\": \"0.5.0\"}], \"violations\": []}, \"id\": \"publisher-file-load\", \"operation_status\": \"PASS\", \"origins\": [{\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-q0dy9dqm\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}], \"seconds\": 0.6003147000446916, \"status\": \"INVALID\"}\n",
+        "stdout": "WHEELGATE_JSON={\"context_message\": \"Operation loaded code or read data outside the declared runtime profile\", \"external_input_preflight\": [], \"file_footprint\": {\"access_count\": 4, \"accesses\": [{\"classification\": \"stdlib-archive\", \"origin\": \"<PYTHON_RUNTIME>\\\\python312.zip\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata-0.5.0.dist-info\\\\METADATA\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata-0.5.0.dist-info\\\\RECORD\", \"version\": \"0.5.0\"}, {\"classification\": \"external-file\", \"origin\": \"D:\\\\LaTeXTools\\\\builds\\\\wheelgate-input-refresh\\\\captured-inputs\\\\external-input-qualified\\\\upstream-data.json\"}], \"allowed_distributions\": [\"latex2pydata\"], \"external_input_postflight\": [], \"violations\": [{\"classification\": \"external-file\", \"origin\": \"D:\\\\LaTeXTools\\\\builds\\\\wheelgate-input-refresh\\\\captured-inputs\\\\external-input-qualified\\\\upstream-data.json\"}]}, \"footprint\": {\"allowed_distributions\": [\"latex2pydata\"], \"module_count\": 10, \"modules\": [{\"classification\": \"stdlib\", \"module\": \"email.feedparser\", \"origin\": \"<PYTHON_RUNTIME>\\\\Lib\\\\email\\\\feedparser.py\"}, {\"classification\": \"stdlib\", \"module\": \"email.parser\", \"origin\": \"<PYTHON_RUNTIME>\\\\Lib\\\\email\\\\parser.py\"}, {\"classification\": \"stdlib\", \"module\": \"encodings.utf_8_sig\", \"origin\": \"<PYTHON_RUNTIME>\\\\Lib\\\\encodings\\\\utf_8_sig.py\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.err\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\err.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.fmtversion\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\fmtversion.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.schema\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\schema.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.util\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\util.py\", \"version\": \"0.5.0\"}, {\"classification\": \"declared-distribution\", \"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.version\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\version.py\", \"version\": \"0.5.0\"}], \"violations\": []}, \"id\": \"publisher-file-load\", \"operation_status\": \"PASS\", \"origins\": [{\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\__init__.py\", \"version\": \"0.5.0\"}, {\"distribution\": \"latex2pydata\", \"module\": \"latex2pydata.loading\", \"origin\": \"C:\\\\Users\\\\Administrator\\\\AppData\\\\Local\\\\Temp\\\\wheelgate-9m_586kj\\\\venv\\\\Lib\\\\site-packages\\\\latex2pydata\\\\loading.py\", \"version\": \"0.5.0\"}], \"seconds\": 0.5518525999505073, \"status\": \"INVALID\"}\n",
         "stderr": "",
-        "seconds": 0.6821453999727964,
+        "seconds": 0.6271640999475494,
         "timeout": false
       }
     }

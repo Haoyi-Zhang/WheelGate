@@ -5,27 +5,27 @@
       "name": "latex2pydata",
       "version": "0.5.0"
     },
-    "venv_seconds": 2.3252376000164077,
+    "venv_seconds": 2.2447017000522465,
     "install": {
       "argv": [
-        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-w7k3dalr\\venv\\Scripts\\python.exe",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-ivm3c6n6\\venv\\Scripts\\python.exe",
         "-I",
         "-m",
         "pip",
         "install",
         "--no-index",
         "--no-deps",
-        "D:\\CodexProjects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\P123\\work\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl"
+        "D:\\LaTeXTools\\builds\\wheelgate-input-refresh\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl"
       ],
       "returncode": 0,
-      "stdout": "Processing d:\\codexprojects\\2026-07-13\\new-chat-4\\completion_workspace\\library_review\\private\\peer_review_below7_repair_20261024\\p123\\work\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl\nInstalling collected packages: latex2pydata\nSuccessfully installed latex2pydata-0.5.0\n",
+      "stdout": "Processing d:\\latextools\\builds\\wheelgate-input-refresh\\artifact\\evidence\\publisher-wheels\\inputs\\latex2pydata-0.5.0-py3-none-any.whl\nInstalling collected packages: latex2pydata\nSuccessfully installed latex2pydata-0.5.0\n",
       "stderr": "",
-      "seconds": 0.4853149000555277,
+      "seconds": 0.4747205999447033,
       "timeout": false
     },
     "dependency_check": {
       "argv": [
-        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-w7k3dalr\\venv\\Scripts\\python.exe",
+        "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-ivm3c6n6\\venv\\Scripts\\python.exe",
         "-I",
         "-m",
         "pip",
@@ -34,7 +34,7 @@
       "returncode": 0,
       "stdout": "No broken requirements found.\n",
       "stderr": "",
-      "seconds": 0.2777879999484867,
+      "seconds": 0.28300900000613183,
       "timeout": false
     },
     "environment": {
@@ -51,37 +51,37 @@
           }
         ],
         "implementation": "CPython",
-        "prefix": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-w7k3dalr\\venv",
+        "prefix": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-ivm3c6n6\\venv",
         "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]"
       },
       "process": {
         "argv": [
-          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-w7k3dalr\\venv\\Scripts\\python.exe",
+          "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-ivm3c6n6\\venv\\Scripts\\python.exe",
           "-I",
           "-c",
           "import importlib.metadata as m,json,platform,sys;rows=sorted([{'name':d.metadata.get('Name'),'version':d.version} for d in m.distributions() if d.metadata.get('Name')],key=lambda x:(x['name'].lower(),x['version']));print('WHEELGATE_ENV='+json.dumps({'python':sys.version,'implementation':platform.python_implementation(),'prefix':sys.prefix,'distributions':rows},sort_keys=True))"
         ],
         "returncode": 0,
-        "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"latex2pydata\", \"version\": \"0.5.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}], \"implementation\": \"CPython\", \"prefix\": \"C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\wg-context-ordinary-w7k3dalr\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
+        "stdout": "WHEELGATE_ENV={\"distributions\": [{\"name\": \"latex2pydata\", \"version\": \"0.5.0\"}, {\"name\": \"pip\", \"version\": \"25.0.1\"}], \"implementation\": \"CPython\", \"prefix\": \"C:\\\\Users\\\\ADMINI~1\\\\AppData\\\\Local\\\\Temp\\\\wg-context-ordinary-ivm3c6n6\\\\venv\", \"python\": \"3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]\"}\n",
         "stderr": "",
-        "seconds": 0.06932590005453676,
+        "seconds": 0.06887879990972579,
         "timeout": false
       }
     },
-    "seconds": 3.1580174999544397,
+    "seconds": 3.0716942000435665,
     "status": "READY"
   },
   "process": {
     "argv": [
-      "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-w7k3dalr\\venv\\Scripts\\python.exe",
+      "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\wg-context-ordinary-ivm3c6n6\\venv\\Scripts\\python.exe",
       "-I",
       "-c",
-      "import importlib.metadata as m, pathlib, latex2pydata\nd=m.distribution('latex2pydata')\nassert pathlib.Path(latex2pydata.__file__).resolve() in {pathlib.Path(d.locate_file(f)).resolve() for f in d.files}\nfrom pathlib import Path\nimport latex2pydata\nvalue = latex2pydata.load(Path('D:\\\\CodexProjects\\\\2026-07-13\\\\new-chat-4\\\\completion_workspace\\\\library_review\\\\private\\\\peer_review_below7_repair_20261024\\\\P123\\\\work\\\\artifact\\\\results\\\\external-input-replay\\\\upstream-data.json'))\nassert value == {'key1': 'value1', 'key2': 'value2', 'key3': 'multiline\\nvalue\\n\"double quote\"\\nbackslashes \\\\ \\\\ \\\\\\\\\\n'}\n"
+      "import importlib.metadata as m, pathlib, latex2pydata\nd=m.distribution('latex2pydata')\nassert pathlib.Path(latex2pydata.__file__).resolve() in {pathlib.Path(d.locate_file(f)).resolve() for f in d.files}\nfrom pathlib import Path\nimport latex2pydata\nvalue = latex2pydata.load(Path('D:\\\\LaTeXTools\\\\builds\\\\wheelgate-input-refresh\\\\captured-inputs\\\\external-input-replay\\\\upstream-data.json'))\nassert value == {'key1': 'value1', 'key2': 'value2', 'key3': 'multiline\\nvalue\\n\"double quote\"\\nbackslashes \\\\ \\\\ \\\\\\\\\\n'}\n"
     ],
     "returncode": 0,
     "stdout": "",
     "stderr": "",
-    "seconds": 0.07338640000671148,
+    "seconds": 0.07559509994462132,
     "timeout": false
   }
 }

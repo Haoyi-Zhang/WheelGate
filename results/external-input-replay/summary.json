@@ -2,6 +2,7 @@
   "scope": "documented original-wheel Path API on original upstream test data; policy declaration rehearsal, not field incident",
   "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
   "platform": "Windows-11-10.0.28000-SP0",
+  "execution_helper_sha256": "032983bee963b7ab6b594b49c032102fbdd6b00700435c396f8fa33795a1789d",
   "source": {
     "commit": "ceee4aa242b1f2f42063b5abcd75a7bc36530bf3",
     "path": "latex/test/toplevel_dict_test_pass.json",
@@ -23,8 +24,8 @@
     ]
   },
   "contract_hashes": {
-    "undeclared": "97166d9625aeffa504a695db2d8f8c91c580d0a7222d83e024404bd95f983430",
-    "declared": "c641a7d8f95c6b931ecfc2e7a907cff379ecc6c74d199b102ade364103dfddf1"
+    "undeclared": "24f60ffee0468eb06ee9fe9f19b3719389392e430d44afaf57d51bf138c73abc",
+    "declared": "88d0897600546b35f50e651a4385a1805f827d7ac08d1b53339ff3aab48d11d9"
   },
   "reused_receipt_fields": [
     "wheel identity",

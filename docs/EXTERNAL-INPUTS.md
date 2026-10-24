@@ -59,9 +59,12 @@ the oracle are reused. An ordinary installed test can implement the same exact
 file policy and make the same decision. No engineer-hour or general maintenance
 benefit estimate is inferred from this one adaptation.
 
-Offline receipt verification is separate from a new execution. The retained
-rehearsal is a Windows run; its paths and script text remain literal historical
-data when read on Linux. `tests/test_external_replay_record.py` checks the retained
+Offline receipt verification is separate from a new execution. Both retained
+rehearsals were executed with the listed driver and worker sources on Windows,
+using the same original wheel, input bytes and assertion. Their contract paths
+and script text are literal execution-host data when read on Linux. The public
+CLI receipt is a separate executed check of the declared contract.
+`tests/test_external_replay_record.py` checks the retained
 contract/receipt/summary bindings using the original canonical JSON encoding
 (sorted keys, compact separators, UTF-8, finite numbers), without resolving or
 rewriting paths. This checks document integrity, not authenticity, current file

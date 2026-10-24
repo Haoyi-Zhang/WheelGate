@@ -24,8 +24,8 @@
     ]
   },
   "contract_hashes": {
-    "undeclared": "8fdf472717203b1f2a54de32a59d0f0ba1c8139eeb0c8eb4a50cc113dd8bca85",
-    "declared": "60a4e3f446fe216df0d5f23530fc6c2365982e67b31047c796f8f8c39dd4c099"
+    "undeclared": "6a0b6a94bb353ca10e2189e458ce02b2f25364c3010ac906a53738ef96d6c055",
+    "declared": "4641620d71aac617f43a7559632d4b8a49f011fcb49e21def1570619df8cbf28"
   },
   "reused_receipt_fields": [
     "wheel identity",
