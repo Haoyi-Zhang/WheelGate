@@ -69,6 +69,14 @@ availability or Linux execution. The runtime `canonical_contract_digest` still
 requires full current-host validation, including native absolute input paths.
 A fresh replay must use new host-bound contracts and a new output directory.
 
+The five receipts marked `python-runtime-path-normalized-copy` under
+`results/external-input-qualified/` and `results/external-input-replay/` use
+`<PYTHON_RUNTIME>` for the recorded Python root, consistently in standard-library
+origins and their serialized output. They are display representations, not
+byte-exact captures or new executions. Relative suffixes, external-input paths,
+identities, classifications, measurements and decisions are unchanged; the alias
+does not authorize a runtime path or recompute a classification.
+
 No wildcard, directory, generated-code or other-distribution grant is added.
 All declared files must exist and match before the operation, or it returns
 INVALID without running. Identity is checked again afterward. Mutation invalidates
